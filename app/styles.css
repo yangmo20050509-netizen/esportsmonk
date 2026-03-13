@@ -220,6 +220,60 @@ body::after {
   gap: 20px;
 }
 
+main {
+  position: relative;
+}
+
+.view,
+.blueprint {
+  position: relative;
+  isolation: isolate;
+}
+
+.view::before,
+.blueprint::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: 2%;
+  top: 28px;
+  width: min(440px, 46vw);
+  height: min(320px, 34vw);
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 22% 36%, rgba(255, 245, 220, 0.94), transparent 38%),
+    radial-gradient(circle at 68% 50%, rgba(244, 204, 122, 0.42), transparent 42%),
+    radial-gradient(circle at 88% 40%, rgba(255, 183, 77, 0.22), transparent 24%);
+  filter: blur(42px);
+  opacity: 0.85;
+  transform: translate3d(0, 0, 0);
+}
+
+#overview::before {
+  top: 120px;
+}
+
+#teams::before {
+  top: 78px;
+  right: 4%;
+}
+
+#players::before {
+  top: 52px;
+  right: 5%;
+  width: min(520px, 58vw);
+  height: min(360px, 40vw);
+  background:
+    radial-gradient(circle at 18% 35%, rgba(255, 247, 228, 0.96), transparent 34%),
+    radial-gradient(circle at 58% 48%, rgba(241, 213, 154, 0.5), transparent 40%),
+    radial-gradient(circle at 88% 44%, rgba(251, 204, 129, 0.26), transparent 24%);
+}
+
+#predictions::before {
+  top: 64px;
+  width: min(500px, 52vw);
+}
+
 .hero {
   grid-template-columns: 1.25fr 0.95fr;
   margin: 26px 0 24px;
@@ -825,6 +879,16 @@ pre {
   .hero h2 {
     max-width: 12ch;
     font-size: 2.2rem;
+  }
+
+  .view::before,
+  .blueprint::before {
+    top: 42px;
+    right: -6%;
+    width: 82vw;
+    height: 52vw;
+    opacity: 0.78;
+    filter: blur(34px);
   }
 
   .panel h3,
