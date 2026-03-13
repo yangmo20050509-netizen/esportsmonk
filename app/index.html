@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>电竞高僧 | LOL 观赛看板 Demo</title>
+    <meta
+      name="description"
+      content="英雄联盟观赛看板、战队页、选手页与高僧预测的静态演示。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <div class="backdrop"></div>
+    <div class="shell">
+      <header class="topbar">
+        <div class="brand">
+          <div class="brand-mark">僧</div>
+          <div>
+            <p class="eyebrow">eSports Monk</p>
+            <h1>电竞高僧</h1>
+          </div>
+        </div>
+        <nav class="desktop-nav" aria-label="主导航">
+          <button class="nav-btn is-active" data-view="overview">首页</button>
+          <button class="nav-btn" data-view="teams">战队</button>
+          <button class="nav-btn" data-view="players">选手</button>
+          <button class="nav-btn" data-view="predictions">高僧预测</button>
+        </nav>
+        <div class="top-actions">
+          <div class="search-pill">LPL / LCK / MSI</div>
+          <div class="signal-pill">
+            <span class="dot"></span>
+            数据同步正常
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">只做英雄联盟</p>
+            <h2>把观赛、资料卡、预测，压成一个足够狠的看板。</h2>
+            <p class="hero-text">
+              Footmob 的核心价值是高频、干净、可信。电竞高僧照这个逻辑走，
+              但把节目效果交给“高僧预测”，把信息密度交给战队页和选手页。
+            </p>
+            <div class="hero-tags">
+              <span>赛程看板</span>
+              <span>战队画像</span>
+              <span>选手 Rank</span>
+              <span>AI 证据链预测</span>
+            </div>
+          </div>
+          <div class="hero-match" id="hero-match"></div>
+        </section>
+
+        <section class="view is-active" id="overview">
+          <div class="grid grid-overview">
+            <article class="panel live-panel">
+              <div class="panel-head">
+                <div>
+                  <p class="eyebrow">Live Matches</p>
+                  <h3>正在打</h3>
+                </div>
+                <span class="panel-tag">LoL Esports</span>
+              </div>
+              <div class="card-stack" id="live-list"></div>
+            </article>
+
+            <article class="panel schedule-panel">
+              <div class="panel-head">
+                <div>
+                  <p class="eyebrow">Upcoming</p>
+                  <h3>即将开赛</h3>
+                </div>
+                <span class="panel-tag">72h</span>
+              </div>
+              <div class="schedule-list" id="upcoming-list"></div>
+            </article>
+
+            <article class="panel ranking-panel">
+              <div class="panel-head">
+                <div>
+                  <p class="eyebrow">Power Ranking</p>
+                  <h3>战队强度榜</h3>
+                </div>
+                <span class="panel-tag">综合评分</span>
+              </div>
+              <div id="ranking-list"></div>
+            </article>
+
+            <article class="panel spotlight-panel" id="spotlight-player"></article>
+          </div>
+        </section>
+
+        <section class="view" id="teams">
+          <div class="section-title">
+            <div>
+              <p class="eyebrow">Teams</p>
+              <h3>战队页 Demo</h3>
+            </div>
+            <div class="chip-row" id="team-switcher"></div>
+          </div>
+          <div class="grid grid-team">
+            <article class="panel team-summary" id="team-summary"></article>
+            <article class="panel roster-panel">
+              <div class="panel-head">
+                <div>
+                  <p class="eyebrow">Roster</p>
+                  <h3>首发阵容</h3>
+                </div>
+                <span class="panel-tag">近 30 天</span>
+              </div>
+              <div class="roster-list" id="roster-list"></div>
+            </article>
+            <article class="panel match-panel">
+              <div class="panel-head">
+                <div>
+                  <p class="eyebrow">Recent Series</p>
+                  <h3>近期系列赛</h3>
+                </div>
+                <span class="panel-tag">Bo3 / Bo5</span>
+              </div>
+              <div class="match-history" id="team-history"></div>
+            </article>
+            <article class="panel heat-panel">
+              <div class="panel-head">
+                <div>
+                  <p class="eyebrow">Strength Map</p>
+                  <h3>能力热区</h3>
+                </div>
+                <span class="panel-tag">AI 摘要</span>
+              </div>
+              <div id="team-heat"></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="view" id="players">
+          <div class="section-title">
+            <div>
+              <p class="eyebrow">Players</p>
+              <h3>选手页 Demo</h3>
+            </div>
+            <div class="chip-row" id="player-switcher"></div>
+          </div>
+          <div class="grid grid-player">
+            <article class="panel player-hero" id="player-card"></article>
+            <article class="panel rank-panel">
+              <div class="panel-head">
+                <div>
+                  <p class="eyebrow">Solo Queue</p>
+                  <h3>Rank 快照</h3>
+                </div>
+                <span class="panel-tag">Riot API</span>
+              </div>
+              <div id="rank-card"></div>
+            </article>
+            <article class="panel pool-panel">
+              <div class="panel-head">
+                <div>
+                  <p class="eyebrow">Champion Pool</p>
+                  <h3>英雄池</h3>
+                </div>
+                <span class="panel-tag">最近 20 场</span>
+              </div>
+              <div id="champion-pool"></div>
+            </article>
+            <article class="panel stat-panel">
+              <div class="panel-head">
+                <div>
+                  <p class="eyebrow">Match History</p>
+                  <h3>比赛记录</h3>
+                </div>
+                <span class="panel-tag">职业赛</span>
+              </div>
+              <div class="player-history" id="player-history"></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="view" id="predictions">
+          <div class="section-title">
+            <div>
+              <p class="eyebrow">Monk Forecast</p>
+              <h3>高僧预测 Demo</h3>
+            </div>
+            <div class="signal-pill is-ghost">
+              预测只输出结构化结论，骚话单独生成
+            </div>
+          </div>
+          <div class="prediction-layout">
+            <article class="panel prediction-blueprint">
+              <div class="panel-head">
+                <div>
+                  <p class="eyebrow">Pipeline</p>
+                  <h3>AI 接入方式</h3>
+                </div>
+                <span class="panel-tag">别让模型胡说</span>
+              </div>
+              <ol class="blueprint-list">
+                <li>先拿确定性数据做特征：近期战绩、红蓝方、版本英雄、对位、Rank 活跃度。</li>
+                <li>规则层先做 baseline，模型只做解释、风险提示和节目化表达。</li>
+                <li>前端分开展示概率和文案，别把娱乐词条包装成事实。</li>
+              </ol>
+              <div class="schema-card">
+                <span class="schema-label">结构化输出</span>
+                <pre>{
+  "winner": "T1",
+  "confidence": 64,
+  "factors": ["中野节奏", "BP 容错", "后期决策"],
+  "riskTags": ["一级团波动"],
+  "monkLine": "佛光偏向 T1，但别上头。"
+}</pre>
+              </div>
+            </article>
+            <div class="prediction-list" id="prediction-list"></div>
+          </div>
+        </section>
+
+        <section class="blueprint">
+          <article class="panel roadmap-panel">
+            <div class="panel-head">
+              <div>
+                <p class="eyebrow">MVP Blueprint</p>
+                <h3>产品落地路线</h3>
+              </div>
+              <span class="panel-tag">6 周内能做完</span>
+            </div>
+            <div class="roadmap-grid">
+              <div>
+                <h4>阶段 1</h4>
+                <p>赛程、比分、战队页、选手页。先证明 DAU 和复访。</p>
+              </div>
+              <div>
+                <h4>阶段 2</h4>
+                <p>高僧预测、开赛提醒、系列赛前瞻，开始做分享传播。</p>
+              </div>
+              <div>
+                <h4>阶段 3</h4>
+                <p>桌面组件、移动端小组件、直播中实时卡片和推送。</p>
+              </div>
+            </div>
+          </article>
+        </section>
+      </main>
+
+      <nav class="mobile-nav" aria-label="底部导航">
+        <button class="nav-btn is-active" data-view="overview">首页</button>
+        <button class="nav-btn" data-view="teams">战队</button>
+        <button class="nav-btn" data-view="players">选手</button>
+        <button class="nav-btn" data-view="predictions">预测</button>
+      </nav>
+    </div>
+  </body>
+</html>
