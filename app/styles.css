@@ -247,6 +247,31 @@ main {
   filter: blur(42px);
   opacity: 0.85;
   transform: translate3d(0, 0, 0);
+  transform-origin: center;
+  animation: ambientFloat 18s ease-in-out infinite alternate,
+    ambientPulse 24s ease-in-out infinite;
+  will-change: transform, opacity, filter;
+}
+
+.view::after,
+.blueprint::after {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  right: 16%;
+  top: 112px;
+  width: min(260px, 30vw);
+  height: min(220px, 24vw);
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 35% 40%, rgba(255, 252, 244, 0.88), transparent 32%),
+    radial-gradient(circle at 62% 58%, rgba(231, 192, 120, 0.26), transparent 40%);
+  filter: blur(30px);
+  opacity: 0.62;
+  transform: translate3d(0, 0, 0);
+  transform-origin: center;
+  animation: ambientDrift 22s ease-in-out infinite alternate;
+  will-change: transform, opacity, filter;
 }
 
 #overview::before {
@@ -267,11 +292,79 @@ main {
     radial-gradient(circle at 18% 35%, rgba(255, 247, 228, 0.96), transparent 34%),
     radial-gradient(circle at 58% 48%, rgba(241, 213, 154, 0.5), transparent 40%),
     radial-gradient(circle at 88% 44%, rgba(251, 204, 129, 0.26), transparent 24%);
+  animation-duration: 16s, 21s;
+}
+
+#players::after {
+  right: 12%;
+  top: 144px;
+  width: min(320px, 36vw);
+  height: min(250px, 28vw);
+  background:
+    radial-gradient(circle at 28% 32%, rgba(255, 250, 240, 0.82), transparent 30%),
+    radial-gradient(circle at 70% 50%, rgba(234, 201, 136, 0.22), transparent 38%);
 }
 
 #predictions::before {
   top: 64px;
   width: min(500px, 52vw);
+}
+
+@keyframes ambientFloat {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(-18px, 12px, 0) scale(1.04);
+  }
+
+  100% {
+    transform: translate3d(22px, -10px, 0) scale(0.98);
+  }
+}
+
+@keyframes ambientPulse {
+  0% {
+    opacity: 0.74;
+    filter: blur(38px);
+  }
+
+  50% {
+    opacity: 0.9;
+    filter: blur(46px);
+  }
+
+  100% {
+    opacity: 0.8;
+    filter: blur(42px);
+  }
+}
+
+@keyframes ambientDrift {
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.96);
+    opacity: 0.42;
+  }
+
+  50% {
+    transform: translate3d(16px, -12px, 0) scale(1.05);
+    opacity: 0.68;
+  }
+
+  100% {
+    transform: translate3d(-14px, 14px, 0) scale(1);
+    opacity: 0.5;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .view::before,
+  .view::after,
+  .blueprint::before,
+  .blueprint::after {
+    animation: none;
+  }
 }
 
 .hero {
@@ -889,6 +982,15 @@ pre {
     height: 52vw;
     opacity: 0.78;
     filter: blur(34px);
+  }
+
+  .view::after,
+  .blueprint::after {
+    top: 96px;
+    right: 4%;
+    width: 54vw;
+    height: 36vw;
+    filter: blur(24px);
   }
 
   .panel h3,
