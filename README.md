@@ -22,3 +22,19 @@ python -m http.server 8080
 - 选手页：Rank 快照、英雄池、比赛记录
 - 高僧预测：娱乐化表达 + 证据因子 + 风险提示
 - 产品方案：见 `docs/solution.md`
+
+## 静态托管
+
+Cloudflare Pages 直接托管 `app` 目录即可。
+
+```powershell
+cd C:\Users\18550\Desktop\电竞高僧
+cmd /c npx wrangler login
+cmd /c npx wrangler pages deploy app --project-name esports-monk-self-use
+```
+
+发布后自用页地址是：
+
+```text
+https://<你的-pages-域名>/self-use/?team=BLG&player=Bin
+```
