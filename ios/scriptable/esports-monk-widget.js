@@ -1,5 +1,6 @@
 const DEFAULT_TEAM = "BLG";
 const DEFAULT_PLAYER = "Bin";
+const APP_WEB_URL = "";
 const TEAM_FOCUS_MAP = {
   bin: "BLG",
   xun: "BLG",
@@ -41,6 +42,12 @@ function parseArgs() {
   const player = PLAYER_NAME_ALIASES[normalizedPlayerKey] || rawPlayer;
   const team = parts[0] || TEAM_FOCUS_MAP[normalizedPlayerKey] || DEFAULT_TEAM;
   return { team, player };
+}
+
+function buildAppUrl(team, player) {
+  if (!APP_WEB_URL) return "";
+  const separator = APP_WEB_URL.includes("?") ? "&" : "?";
+  return `${APP_WEB_URL}${separator}team=${encodeURIComponent(team)}&player=${encodeURIComponent(player)}`;
 }
 
 function parseAssignedJson(raw, variableName) {
@@ -200,6 +207,8 @@ function addLineText(stack, text, options = {}) {
 async function createWidget(matches, team, player) {
   const { nextMatch, lastMatch, board } = selectFocus(matches, team);
   const widget = new ListWidget();
+  const appUrl = buildAppUrl(team, player);
+  if (appUrl) widget.url = appUrl;
   widget.backgroundGradient = new LinearGradient();
   widget.backgroundGradient.colors = [new Color("#101317"), new Color("#151b24")];
   widget.backgroundGradient.locations = [0, 1];

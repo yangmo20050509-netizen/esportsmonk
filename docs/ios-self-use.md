@@ -35,6 +35,7 @@
 4. 先运行一次，授权网络访问
 5. 长按桌面，添加 `Scriptable` 中号小组件
 6. 给小组件参数填 `BLG|Bin`
+7. 把 `ios/scriptable/esports-monk-widget.js` 里的 `APP_WEB_URL` 改成你部署好的 H5 地址，小组件点开就会直接进网页
 
 ### 这条路的特点
 
@@ -65,6 +66,7 @@
 2. 把整个项目当静态站打开
 3. iPhone Safari 打开 `app/self-use/index.html`
 4. 点分享，`添加到主屏幕`
+5. 如果地址带 `?team=BLG&player=Bin`，网页会直接切到对应主队和选手
 
 ## 两条路怎么分工
 

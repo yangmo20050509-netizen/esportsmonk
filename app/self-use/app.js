@@ -10,6 +10,17 @@ const state = {
 
 const $ = (selector) => document.querySelector(selector);
 
+function readUrlPreferences(defaults) {
+  const params = new URLSearchParams(window.location.search);
+  const team = params.get("team")?.trim();
+  const player = params.get("player")?.trim();
+
+  return {
+    team: team || defaults.team,
+    player: player || defaults.player,
+  };
+}
+
 function loadPreferences(defaults) {
   try {
     const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
@@ -322,9 +333,11 @@ async function init(forceReload = false) {
         : "当前 MVP 只追官方赛程，选手位只做关注标记。";
     }
     state.data = await loadData();
-    const defaults = loadPreferences(state.data.focusDefaults);
-    state.team = defaults.team;
-    state.player = defaults.player;
+    const savedPreferences = loadPreferences(state.data.focusDefaults);
+    const resolvedPreferences = readUrlPreferences(savedPreferences);
+    state.team = resolvedPreferences.team;
+    state.player = resolvedPreferences.player;
+    savePreferences();
     bindEvents();
     rerender();
     if (hint) hint.textContent = "快照加载成功。网页版看快照，实机推荐 Scriptable。";
