@@ -1,16 +1,17 @@
 {
-  "generatedAt": "2026-03-17T08:40:53.015Z",
-  "generatedAtLocal": "2026/3/17 16:40:53",
+  "generatedAt": "2026-03-17T10:25:21.641Z",
+  "generatedAtLocal": "2026/3/17 18:25:21",
   "focusDefaults": {
     "team": "BLG",
     "player": "Bin",
     "playerTeamMap": {
       "Bin": "BLG",
-      "knight": "BLG",
-      "Elk": "BLG",
+      "XUN": "BLG",
+      "Knight": "BLG",
+      "Yxl": "BLG",
+      "Viper": "BLG",
       "ON": "BLG",
-      "Xun": "BLG",
-      "Beichuan": "BLG"
+      "Wenbo": "BLG"
     }
   },
   "sources": {

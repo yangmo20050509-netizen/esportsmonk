@@ -1,12 +1,22 @@
 const DEFAULT_TEAM = "BLG";
 const DEFAULT_PLAYER = "Bin";
 const TEAM_FOCUS_MAP = {
-  Bin: "BLG",
+  bin: "BLG",
+  xun: "BLG",
   knight: "BLG",
-  Elk: "BLG",
-  ON: "BLG",
-  Xun: "BLG",
-  Beichuan: "BLG",
+  yxl: "BLG",
+  viper: "BLG",
+  on: "BLG",
+  wenbo: "BLG",
+};
+const PLAYER_NAME_ALIASES = {
+  bin: "Bin",
+  xun: "XUN",
+  knight: "Knight",
+  yxl: "Yxl",
+  viper: "Viper",
+  on: "ON",
+  wenbo: "Wenbo",
 };
 
 const URLS = {
@@ -26,8 +36,10 @@ function parseArgs() {
     .split("|")
     .map((item) => item.trim())
     .filter(Boolean);
-  const player = parts[1] || DEFAULT_PLAYER;
-  const team = parts[0] || TEAM_FOCUS_MAP[player] || DEFAULT_TEAM;
+  const rawPlayer = parts[1] || DEFAULT_PLAYER;
+  const normalizedPlayerKey = rawPlayer.toLowerCase();
+  const player = PLAYER_NAME_ALIASES[normalizedPlayerKey] || rawPlayer;
+  const team = parts[0] || TEAM_FOCUS_MAP[normalizedPlayerKey] || DEFAULT_TEAM;
   return { team, player };
 }
 

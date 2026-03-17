@@ -92,9 +92,9 @@ const teams = [
       "BLG 的爆点在中野辅，只要第一波节奏成，比赛会被他们拖进高强度打架模式。",
     roster: [
       { role: "Top", name: "Bin", note: "压制力顶，单带威慑强" },
-      { role: "Jungle", name: "Xun", note: "前期开团角度凶，节奏起伏也大" },
+      { role: "Jungle", name: "XUN", note: "前期控图和反蹲都凶，节奏起手快" },
       { role: "Mid", name: "Knight", note: "法核和刺客双线稳定" },
-      { role: "ADC", name: "Elk", note: "高伤害输出点，反打手感好" },
+      { role: "ADC", name: "Viper", note: "线权稳定，团战收口更冷静" },
       { role: "Support", name: "ON", note: "开团意识好，偶尔会送一脚" },
     ],
     heat: [

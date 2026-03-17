@@ -21,11 +21,12 @@ const TOURNAMENTS = [
 
 const TEAM_FOCUS_MAP = {
   Bin: "BLG",
-  knight: "BLG",
-  Elk: "BLG",
+  XUN: "BLG",
+  Knight: "BLG",
+  Yxl: "BLG",
+  Viper: "BLG",
   ON: "BLG",
-  Xun: "BLG",
-  Beichuan: "BLG",
+  Wenbo: "BLG",
 };
 
 async function fetchText(url) {
