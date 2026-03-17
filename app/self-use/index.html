@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>电竞高僧 | 自用观赛助手</title>
+    <meta
+      name="description"
+      content="BLG/Bin 默认关注的 LOL 自用观赛助手，当前覆盖 LPL 与 First Stand 官方赛程。"
+    />
+    <meta name="theme-color" content="#101317" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <div class="ambient"></div>
+    <main class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">eSports Monk / Self Use</p>
+          <h1>电竞高僧</h1>
+        </div>
+        <button class="ghost-btn" id="refresh-button" type="button">刷新快照</button>
+      </header>
+
+      <section class="hero-card" id="focus-card"></section>
+
+      <section class="panel settings-panel">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Focus</p>
+            <h2>主队和选手</h2>
+          </div>
+          <span class="sync-text" id="sync-text">加载中</span>
+        </div>
+        <div class="settings-grid">
+          <label class="field">
+            <span>主队</span>
+            <select id="team-select"></select>
+          </label>
+          <label class="field">
+            <span>选手</span>
+            <input id="player-input" type="text" maxlength="24" placeholder="默认 Bin" />
+          </label>
+        </div>
+        <div class="hint-row">
+          <button class="primary-btn" id="save-preference" type="button">保存偏好</button>
+          <p id="preference-hint">当前 MVP 只追官方赛程，选手位只做关注标记。</p>
+        </div>
+      </section>
+
+      <section class="panel summary-panel">
+        <div class="summary-grid" id="summary-grid"></div>
+      </section>
+
+      <section class="panel">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Filter</p>
+            <h2>赛程筛选</h2>
+          </div>
+        </div>
+        <div class="chip-row" id="filter-row"></div>
+      </section>
+
+      <section class="panel schedule-panel">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Official Schedule</p>
+            <h2>官方赛程</h2>
+          </div>
+          <span class="schedule-note">腾讯官方源快照</span>
+        </div>
+        <div class="schedule-groups" id="schedule-groups"></div>
+      </section>
+
+      <section class="panel install-panel">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">iPhone</p>
+            <h2>不上架 App Store 的用法</h2>
+          </div>
+        </div>
+        <ol class="install-steps">
+          <li>主路用 Scriptable 小组件，直接在手机本地拉腾讯官方数据。</li>
+          <li>网页版只适合看快照，因为浏览器被腾讯源的 CORS 卡住了。</li>
+          <li>如果你要更像 App，再把这页挂到静态站，Safari 添加到主屏幕就行。</li>
+        </ol>
+      </section>
+    </main>
+  </body>
+</html>

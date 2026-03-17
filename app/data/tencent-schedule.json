@@ -1,0 +1,2811 @@
+{
+  "generatedAt": "2026-03-17T08:40:53.015Z",
+  "generatedAtLocal": "2026/3/17 16:40:53",
+  "focusDefaults": {
+    "team": "BLG",
+    "player": "Bin",
+    "playerTeamMap": {
+      "Bin": "BLG",
+      "knight": "BLG",
+      "Elk": "BLG",
+      "ON": "BLG",
+      "Xun": "BLG",
+      "Beichuan": "BLG"
+    }
+  },
+  "sources": {
+    "teamList": "https://lpl.qq.com/web201612/data/LOL_MATCH2_TEAM_LIST.js",
+    "gameList": "https://lpl.qq.com/web201612/data/LOL_MATCH2_GAME_LIST_BRIEF.js",
+    "tournaments": [
+      {
+        "slug": "lpl",
+        "label": "LPL",
+        "bigGameId": "5",
+        "gameId": "237",
+        "gameName": "2026职业联赛",
+        "startDate": "2026-01-01",
+        "endDate": "2026-06-01",
+        "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+      },
+      {
+        "slug": "first-stand",
+        "label": "First Stand",
+        "bigGameId": "220",
+        "gameId": "238",
+        "gameName": "全球先锋赛2026",
+        "startDate": "2026-03-16",
+        "endDate": "2026-03-24",
+        "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_238.js"
+      }
+    ]
+  },
+  "tournaments": [
+    {
+      "slug": "lpl",
+      "label": "LPL",
+      "bigGameId": "5",
+      "gameId": "237",
+      "gameName": "2026职业联赛",
+      "startDate": "2026-01-01",
+      "endDate": "2026-06-01"
+    },
+    {
+      "slug": "first-stand",
+      "label": "First Stand",
+      "bigGameId": "220",
+      "gameId": "238",
+      "gameName": "全球先锋赛2026",
+      "startDate": "2026-03-16",
+      "endDate": "2026-03-24"
+    }
+  ],
+  "teams": [
+    {
+      "shortName": "AL",
+      "name": "AL",
+      "logo": "https://img.crawler.qq.com/lolwebvideo/20250618145633/b8741548f37b60a6693cdb6f4949a7fd/0"
+    },
+    {
+      "shortName": "BFX",
+      "name": "BFX",
+      "logo": "https://img.crawler.qq.com/lolwebvideo/20260309172157/527e28e49444ec8cccb0e71f01b579b6/0"
+    },
+    {
+      "shortName": "BLG",
+      "name": "BLG",
+      "logo": "https://img.crawler.qq.com/lolwebvideo/20250618144525/49342dadcecf162e8ac94fad6eb91540/0"
+    },
+    {
+      "shortName": "EDG",
+      "name": "EDG",
+      "logo": "https://img.crawler.qq.com/lolwebvideo/20230103153103/7c5a8db3be3d7c93114ac47a801d64cb/0"
+    },
+    {
+      "shortName": "G2",
+      "name": "G2",
+      "logo": "https://img.crawler.qq.com/lolwebvideo/20250618120148/0654f8b663a3973eb8debcf929cb919e/0"
+    },
+    {
+      "shortName": "GEN",
+      "name": "GEN",
+      "logo": "https://img.crawler.qq.com/lolwebvideo/20250618115826/f8c9046000eaa71e3f5743a9165067b8/0"
+    },
+    {
+      "shortName": "IG",
+      "name": "IG",
+      "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152918/562affbb9f99b0e472644f93a19291e7/0"
+    },
+    {
+      "shortName": "JDG",
+      "name": "北京JDG",
+      "logo": "https://img.crawler.qq.com/lolwebvideo/20230921143554/1e5189e914e40bfe18045bccbfc7ef82/0"
+    },
+    {
+      "shortName": "LGD",
+      "name": "LGD",
+      "logo": "https://img.crawler.qq.com/lolwebvideo/20230103153121/0cef697fa6d0416e672c2fd90f30718c/0"
+    },
+    {
+      "shortName": "LNG",
+      "name": "苏州LNG",
+      "logo": "https://img.crawler.qq.com/lolwebvideo/20240920155556/f4510f27cb1d914d0d3204c8dbab6217/0"
+    },
+    {
+      "shortName": "LOUD",
+      "name": "LOUD",
+      "logo": "https://img.crawler.qq.com/lolwebvideo/20260309172138/22e090bfd9239263efb98bb50f8ea60b/0"
+    },
+    {
+      "shortName": "LYON",
+      "name": "LYON",
+      "logo": "https://img.crawler.qq.com/lolwebvideo/20260309172113/55b77a400d7356cdb4797f98f64e2ce8/0"
+    },
+    {
+      "shortName": "NIP",
+      "name": "深圳NIP",
+      "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152746/c8a8f59fadc0da0bda0c4997e3f62afb/0"
+    },
+    {
+      "shortName": "OMG",
+      "name": "OMG",
+      "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152756/56c5bb71d14d13ec280908542ac8e1a9/0"
+    },
+    {
+      "shortName": "TBD",
+      "name": "待定",
+      "logo": "https://img.crawler.qq.com/lolwebvideo/20171204150327/6fa86a8e4d50f72b5fb016beb8492153/0"
+    },
+    {
+      "shortName": "TES",
+      "name": "TES",
+      "logo": "https://img.crawler.qq.com/lolwebvideo/20240920155538/5beb948638f00bcda68fc4942e3f0a51/0"
+    },
+    {
+      "shortName": "TSW",
+      "name": "TSW",
+      "logo": "https://img.crawler.qq.com/lolwebvideo/20250928155223/51db1ab979a23e49d55fd2c17cd8cfb4/0"
+    },
+    {
+      "shortName": "TT",
+      "name": "TT",
+      "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152930/f1e243799a62f73f37af8f10be9dd977/0"
+    },
+    {
+      "shortName": "UP",
+      "name": "UP",
+      "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152805/12c63663ab401c815ccded42a5ad47e6/0"
+    },
+    {
+      "shortName": "WBG",
+      "name": "WBG",
+      "logo": "https://img.crawler.qq.com/lolwebvideo/20240920155612/8df4b2b15f3e97f047ac978711134748/0"
+    },
+    {
+      "shortName": "WE",
+      "name": "西安WE",
+      "logo": "https://img.crawler.qq.com/lolwebvideo/20230103153050/5c22150153baa973f73adf4909a041ec/0"
+    }
+  ],
+  "matches": [
+    {
+      "id": "13060",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第一周",
+      "bo": "BO3",
+      "venue": "上海",
+      "matchDate": "2026-01-14 17:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 2,
+      "scoreB": 1,
+      "teamA": {
+        "id": "41",
+        "name": "WBG",
+        "shortName": "WBG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20240920155612/8df4b2b15f3e97f047ac978711134748/0"
+      },
+      "teamB": {
+        "id": "2",
+        "name": "IG",
+        "shortName": "IG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152918/562affbb9f99b0e472644f93a19291e7/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13061",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第一周",
+      "bo": "BO3",
+      "venue": "北京JDG",
+      "matchDate": "2026-01-14 19:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 0,
+      "scoreB": 2,
+      "teamA": {
+        "id": "42",
+        "name": "TES",
+        "shortName": "TES",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20240920155538/5beb948638f00bcda68fc4942e3f0a51/0"
+      },
+      "teamB": {
+        "id": "29",
+        "name": "北京JDG",
+        "shortName": "JDG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230921143554/1e5189e914e40bfe18045bccbfc7ef82/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13062",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第一周",
+      "bo": "BO3",
+      "venue": "上海",
+      "matchDate": "2026-01-15 15:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 2,
+      "scoreB": 0,
+      "teamA": {
+        "id": "4",
+        "name": "LGD",
+        "shortName": "LGD",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103153121/0cef697fa6d0416e672c2fd90f30718c/0"
+      },
+      "teamB": {
+        "id": "685",
+        "name": "UP",
+        "shortName": "UP",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152805/12c63663ab401c815ccded42a5ad47e6/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13063",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第一周",
+      "bo": "BO3",
+      "venue": "上海",
+      "matchDate": "2026-01-15 17:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 0,
+      "scoreB": 2,
+      "teamA": {
+        "id": "2",
+        "name": "IG",
+        "shortName": "IG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152918/562affbb9f99b0e472644f93a19291e7/0"
+      },
+      "teamB": {
+        "id": "422",
+        "name": "AL",
+        "shortName": "AL",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20250618145633/b8741548f37b60a6693cdb6f4949a7fd/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13064",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第一周",
+      "bo": "BO3",
+      "venue": "上海",
+      "matchDate": "2026-01-15 19:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 1,
+      "scoreB": 2,
+      "teamA": {
+        "id": "41",
+        "name": "WBG",
+        "shortName": "WBG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20240920155612/8df4b2b15f3e97f047ac978711134748/0"
+      },
+      "teamB": {
+        "id": "57",
+        "name": "BLG",
+        "shortName": "BLG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20250618144525/49342dadcecf162e8ac94fad6eb91540/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13106",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第一周",
+      "bo": "BO3",
+      "venue": "苏州",
+      "matchDate": "2026-01-16 17:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 2,
+      "scoreB": 0,
+      "teamA": {
+        "id": "9",
+        "name": "苏州LNG",
+        "shortName": "LNG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20240920155556/f4510f27cb1d914d0d3204c8dbab6217/0"
+      },
+      "teamB": {
+        "id": "6",
+        "name": "OMG",
+        "shortName": "OMG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152756/56c5bb71d14d13ec280908542ac8e1a9/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13066",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第一周",
+      "bo": "BO3",
+      "venue": "西安",
+      "matchDate": "2026-01-16 19:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 2,
+      "scoreB": 0,
+      "teamA": {
+        "id": "12",
+        "name": "西安WE",
+        "shortName": "WE",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103153050/5c22150153baa973f73adf4909a041ec/0"
+      },
+      "teamB": {
+        "id": "1",
+        "name": "EDG",
+        "shortName": "EDG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103153103/7c5a8db3be3d7c93114ac47a801d64cb/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13067",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第一周",
+      "bo": "BO3",
+      "venue": "苏州",
+      "matchDate": "2026-01-17 17:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 2,
+      "scoreB": 1,
+      "teamA": {
+        "id": "57",
+        "name": "BLG",
+        "shortName": "BLG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20250618144525/49342dadcecf162e8ac94fad6eb91540/0"
+      },
+      "teamB": {
+        "id": "422",
+        "name": "AL",
+        "shortName": "AL",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20250618145633/b8741548f37b60a6693cdb6f4949a7fd/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13068",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第一周",
+      "bo": "BO3",
+      "venue": "苏州",
+      "matchDate": "2026-01-17 19:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 1,
+      "scoreB": 2,
+      "teamA": {
+        "id": "29",
+        "name": "北京JDG",
+        "shortName": "JDG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230921143554/1e5189e914e40bfe18045bccbfc7ef82/0"
+      },
+      "teamB": {
+        "id": "2",
+        "name": "IG",
+        "shortName": "IG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152918/562affbb9f99b0e472644f93a19291e7/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13069",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第一周",
+      "bo": "BO3",
+      "venue": "苏州",
+      "matchDate": "2026-01-18 17:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 0,
+      "scoreB": 2,
+      "teamA": {
+        "id": "42",
+        "name": "TES",
+        "shortName": "TES",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20240920155538/5beb948638f00bcda68fc4942e3f0a51/0"
+      },
+      "teamB": {
+        "id": "57",
+        "name": "BLG",
+        "shortName": "BLG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20250618144525/49342dadcecf162e8ac94fad6eb91540/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13070",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第一周",
+      "bo": "BO3",
+      "venue": "苏州",
+      "matchDate": "2026-01-18 19:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 1,
+      "scoreB": 2,
+      "teamA": {
+        "id": "422",
+        "name": "AL",
+        "shortName": "AL",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20250618145633/b8741548f37b60a6693cdb6f4949a7fd/0"
+      },
+      "teamB": {
+        "id": "29",
+        "name": "北京JDG",
+        "shortName": "JDG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230921143554/1e5189e914e40bfe18045bccbfc7ef82/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13071",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第二周",
+      "bo": "BO3",
+      "venue": "西安",
+      "matchDate": "2026-01-19 15:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 0,
+      "scoreB": 2,
+      "teamA": {
+        "id": "438",
+        "name": "TT",
+        "shortName": "TT",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152930/f1e243799a62f73f37af8f10be9dd977/0"
+      },
+      "teamB": {
+        "id": "12",
+        "name": "西安WE",
+        "shortName": "WE",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103153050/5c22150153baa973f73adf4909a041ec/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13072",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第二周",
+      "bo": "BO3",
+      "venue": "苏州",
+      "matchDate": "2026-01-19 17:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 2,
+      "scoreB": 1,
+      "teamA": {
+        "id": "42",
+        "name": "TES",
+        "shortName": "TES",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20240920155538/5beb948638f00bcda68fc4942e3f0a51/0"
+      },
+      "teamB": {
+        "id": "41",
+        "name": "WBG",
+        "shortName": "WBG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20240920155612/8df4b2b15f3e97f047ac978711134748/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13073",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第二周",
+      "bo": "BO3",
+      "venue": "深圳",
+      "matchDate": "2026-01-19 19:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 1,
+      "scoreB": 2,
+      "teamA": {
+        "id": "1",
+        "name": "EDG",
+        "shortName": "EDG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103153103/7c5a8db3be3d7c93114ac47a801d64cb/0"
+      },
+      "teamB": {
+        "id": "587",
+        "name": "深圳NIP",
+        "shortName": "NIP",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152746/c8a8f59fadc0da0bda0c4997e3f62afb/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13074",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第二周",
+      "bo": "BO3",
+      "venue": "苏州",
+      "matchDate": "2026-01-20 17:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 2,
+      "scoreB": 0,
+      "teamA": {
+        "id": "422",
+        "name": "AL",
+        "shortName": "AL",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20250618145633/b8741548f37b60a6693cdb6f4949a7fd/0"
+      },
+      "teamB": {
+        "id": "41",
+        "name": "WBG",
+        "shortName": "WBG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20240920155612/8df4b2b15f3e97f047ac978711134748/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13075",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第二周",
+      "bo": "BO3",
+      "venue": "苏州",
+      "matchDate": "2026-01-20 19:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 0,
+      "scoreB": 2,
+      "teamA": {
+        "id": "2",
+        "name": "IG",
+        "shortName": "IG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152918/562affbb9f99b0e472644f93a19291e7/0"
+      },
+      "teamB": {
+        "id": "57",
+        "name": "BLG",
+        "shortName": "BLG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20250618144525/49342dadcecf162e8ac94fad6eb91540/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13076",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第二周",
+      "bo": "BO3",
+      "venue": "苏州",
+      "matchDate": "2026-01-21 17:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 2,
+      "scoreB": 1,
+      "teamA": {
+        "id": "9",
+        "name": "苏州LNG",
+        "shortName": "LNG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20240920155556/f4510f27cb1d914d0d3204c8dbab6217/0"
+      },
+      "teamB": {
+        "id": "4",
+        "name": "LGD",
+        "shortName": "LGD",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103153121/0cef697fa6d0416e672c2fd90f30718c/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13077",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第二周",
+      "bo": "BO3",
+      "venue": "苏州",
+      "matchDate": "2026-01-21 19:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 2,
+      "scoreB": 1,
+      "teamA": {
+        "id": "2",
+        "name": "IG",
+        "shortName": "IG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152918/562affbb9f99b0e472644f93a19291e7/0"
+      },
+      "teamB": {
+        "id": "42",
+        "name": "TES",
+        "shortName": "TES",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20240920155538/5beb948638f00bcda68fc4942e3f0a51/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13078",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第二周",
+      "bo": "BO3",
+      "venue": "苏州",
+      "matchDate": "2026-01-22 15:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 0,
+      "scoreB": 2,
+      "teamA": {
+        "id": "6",
+        "name": "OMG",
+        "shortName": "OMG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152756/56c5bb71d14d13ec280908542ac8e1a9/0"
+      },
+      "teamB": {
+        "id": "685",
+        "name": "UP",
+        "shortName": "UP",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152805/12c63663ab401c815ccded42a5ad47e6/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13079",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第二周",
+      "bo": "BO3",
+      "venue": "苏州",
+      "matchDate": "2026-01-22 17:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 0,
+      "scoreB": 2,
+      "teamA": {
+        "id": "438",
+        "name": "TT",
+        "shortName": "TT",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152930/f1e243799a62f73f37af8f10be9dd977/0"
+      },
+      "teamB": {
+        "id": "1",
+        "name": "EDG",
+        "shortName": "EDG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103153103/7c5a8db3be3d7c93114ac47a801d64cb/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13080",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第二周",
+      "bo": "BO3",
+      "venue": "深圳",
+      "matchDate": "2026-01-22 19:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 1,
+      "scoreB": 2,
+      "teamA": {
+        "id": "12",
+        "name": "西安WE",
+        "shortName": "WE",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103153050/5c22150153baa973f73adf4909a041ec/0"
+      },
+      "teamB": {
+        "id": "587",
+        "name": "深圳NIP",
+        "shortName": "NIP",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152746/c8a8f59fadc0da0bda0c4997e3f62afb/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13081",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第二周",
+      "bo": "BO3",
+      "venue": "苏州",
+      "matchDate": "2026-01-23 15:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 2,
+      "scoreB": 1,
+      "teamA": {
+        "id": "6",
+        "name": "OMG",
+        "shortName": "OMG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152756/56c5bb71d14d13ec280908542ac8e1a9/0"
+      },
+      "teamB": {
+        "id": "4",
+        "name": "LGD",
+        "shortName": "LGD",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103153121/0cef697fa6d0416e672c2fd90f30718c/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13082",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第二周",
+      "bo": "BO3",
+      "venue": "苏州",
+      "matchDate": "2026-01-23 17:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 2,
+      "scoreB": 1,
+      "teamA": {
+        "id": "1",
+        "name": "EDG",
+        "shortName": "EDG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103153103/7c5a8db3be3d7c93114ac47a801d64cb/0"
+      },
+      "teamB": {
+        "id": "438",
+        "name": "TT",
+        "shortName": "TT",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152930/f1e243799a62f73f37af8f10be9dd977/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13083",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第二周",
+      "bo": "BO3",
+      "venue": "北京JDG",
+      "matchDate": "2026-01-23 19:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 2,
+      "scoreB": 0,
+      "teamA": {
+        "id": "29",
+        "name": "北京JDG",
+        "shortName": "JDG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230921143554/1e5189e914e40bfe18045bccbfc7ef82/0"
+      },
+      "teamB": {
+        "id": "57",
+        "name": "BLG",
+        "shortName": "BLG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20250618144525/49342dadcecf162e8ac94fad6eb91540/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13084",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第二周",
+      "bo": "BO3",
+      "venue": "上海",
+      "matchDate": "2026-01-24 17:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 1,
+      "scoreB": 2,
+      "teamA": {
+        "id": "42",
+        "name": "TES",
+        "shortName": "TES",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20240920155538/5beb948638f00bcda68fc4942e3f0a51/0"
+      },
+      "teamB": {
+        "id": "422",
+        "name": "AL",
+        "shortName": "AL",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20250618145633/b8741548f37b60a6693cdb6f4949a7fd/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13085",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第二周",
+      "bo": "BO3",
+      "venue": "北京JDG",
+      "matchDate": "2026-01-24 19:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 2,
+      "scoreB": 0,
+      "teamA": {
+        "id": "41",
+        "name": "WBG",
+        "shortName": "WBG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20240920155612/8df4b2b15f3e97f047ac978711134748/0"
+      },
+      "teamB": {
+        "id": "29",
+        "name": "北京JDG",
+        "shortName": "JDG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230921143554/1e5189e914e40bfe18045bccbfc7ef82/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13086",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第二周",
+      "bo": "BO3",
+      "venue": "西安",
+      "matchDate": "2026-01-25 17:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 1,
+      "scoreB": 2,
+      "teamA": {
+        "id": "587",
+        "name": "深圳NIP",
+        "shortName": "NIP",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152746/c8a8f59fadc0da0bda0c4997e3f62afb/0"
+      },
+      "teamB": {
+        "id": "12",
+        "name": "西安WE",
+        "shortName": "WE",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103153050/5c22150153baa973f73adf4909a041ec/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13087",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第二周",
+      "bo": "BO3",
+      "venue": "上海",
+      "matchDate": "2026-01-25 19:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 2,
+      "scoreB": 0,
+      "teamA": {
+        "id": "42",
+        "name": "TES",
+        "shortName": "TES",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20240920155538/5beb948638f00bcda68fc4942e3f0a51/0"
+      },
+      "teamB": {
+        "id": "2",
+        "name": "IG",
+        "shortName": "IG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152918/562affbb9f99b0e472644f93a19291e7/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13088",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第三周",
+      "bo": "BO3",
+      "venue": "西安",
+      "matchDate": "2026-01-26 17:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 2,
+      "scoreB": 0,
+      "teamA": {
+        "id": "12",
+        "name": "西安WE",
+        "shortName": "WE",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103153050/5c22150153baa973f73adf4909a041ec/0"
+      },
+      "teamB": {
+        "id": "438",
+        "name": "TT",
+        "shortName": "TT",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152930/f1e243799a62f73f37af8f10be9dd977/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13089",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第三周",
+      "bo": "BO3",
+      "venue": "北京JDG",
+      "matchDate": "2026-01-26 19:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 1,
+      "scoreB": 2,
+      "teamA": {
+        "id": "57",
+        "name": "BLG",
+        "shortName": "BLG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20250618144525/49342dadcecf162e8ac94fad6eb91540/0"
+      },
+      "teamB": {
+        "id": "29",
+        "name": "北京JDG",
+        "shortName": "JDG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230921143554/1e5189e914e40bfe18045bccbfc7ef82/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13090",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第三周",
+      "bo": "BO3",
+      "venue": "苏州",
+      "matchDate": "2026-01-27 15:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 0,
+      "scoreB": 2,
+      "teamA": {
+        "id": "685",
+        "name": "UP",
+        "shortName": "UP",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152805/12c63663ab401c815ccded42a5ad47e6/0"
+      },
+      "teamB": {
+        "id": "9",
+        "name": "苏州LNG",
+        "shortName": "LNG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20240920155556/f4510f27cb1d914d0d3204c8dbab6217/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13091",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第三周",
+      "bo": "BO3",
+      "venue": "上海",
+      "matchDate": "2026-01-27 17:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 2,
+      "scoreB": 1,
+      "teamA": {
+        "id": "41",
+        "name": "WBG",
+        "shortName": "WBG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20240920155612/8df4b2b15f3e97f047ac978711134748/0"
+      },
+      "teamB": {
+        "id": "42",
+        "name": "TES",
+        "shortName": "TES",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20240920155538/5beb948638f00bcda68fc4942e3f0a51/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13092",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第三周",
+      "bo": "BO3",
+      "venue": "上海",
+      "matchDate": "2026-01-27 19:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 2,
+      "scoreB": 1,
+      "teamA": {
+        "id": "422",
+        "name": "AL",
+        "shortName": "AL",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20250618145633/b8741548f37b60a6693cdb6f4949a7fd/0"
+      },
+      "teamB": {
+        "id": "2",
+        "name": "IG",
+        "shortName": "IG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152918/562affbb9f99b0e472644f93a19291e7/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13093",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第三周",
+      "bo": "BO3",
+      "venue": "苏州",
+      "matchDate": "2026-01-28 15:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 1,
+      "scoreB": 2,
+      "teamA": {
+        "id": "685",
+        "name": "UP",
+        "shortName": "UP",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152805/12c63663ab401c815ccded42a5ad47e6/0"
+      },
+      "teamB": {
+        "id": "4",
+        "name": "LGD",
+        "shortName": "LGD",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103153121/0cef697fa6d0416e672c2fd90f30718c/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13094",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第三周",
+      "bo": "BO3",
+      "venue": "苏州",
+      "matchDate": "2026-01-28 17:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 0,
+      "scoreB": 2,
+      "teamA": {
+        "id": "6",
+        "name": "OMG",
+        "shortName": "OMG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152756/56c5bb71d14d13ec280908542ac8e1a9/0"
+      },
+      "teamB": {
+        "id": "9",
+        "name": "苏州LNG",
+        "shortName": "LNG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20240920155556/f4510f27cb1d914d0d3204c8dbab6217/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13095",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第三周",
+      "bo": "BO3",
+      "venue": "深圳",
+      "matchDate": "2026-01-28 19:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 1,
+      "scoreB": 2,
+      "teamA": {
+        "id": "587",
+        "name": "深圳NIP",
+        "shortName": "NIP",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152746/c8a8f59fadc0da0bda0c4997e3f62afb/0"
+      },
+      "teamB": {
+        "id": "1",
+        "name": "EDG",
+        "shortName": "EDG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103153103/7c5a8db3be3d7c93114ac47a801d64cb/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13096",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第三周",
+      "bo": "BO3",
+      "venue": "深圳",
+      "matchDate": "2026-01-29 17:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 0,
+      "scoreB": 2,
+      "teamA": {
+        "id": "438",
+        "name": "TT",
+        "shortName": "TT",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152930/f1e243799a62f73f37af8f10be9dd977/0"
+      },
+      "teamB": {
+        "id": "587",
+        "name": "深圳NIP",
+        "shortName": "NIP",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152746/c8a8f59fadc0da0bda0c4997e3f62afb/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13097",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第三周",
+      "bo": "BO3",
+      "venue": "上海",
+      "matchDate": "2026-01-29 19:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 1,
+      "scoreB": 2,
+      "teamA": {
+        "id": "29",
+        "name": "北京JDG",
+        "shortName": "JDG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230921143554/1e5189e914e40bfe18045bccbfc7ef82/0"
+      },
+      "teamB": {
+        "id": "41",
+        "name": "WBG",
+        "shortName": "WBG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20240920155612/8df4b2b15f3e97f047ac978711134748/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13098",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第三周",
+      "bo": "BO3",
+      "venue": "上海",
+      "matchDate": "2026-01-30 17:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 0,
+      "scoreB": 2,
+      "teamA": {
+        "id": "685",
+        "name": "UP",
+        "shortName": "UP",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152805/12c63663ab401c815ccded42a5ad47e6/0"
+      },
+      "teamB": {
+        "id": "6",
+        "name": "OMG",
+        "shortName": "OMG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152756/56c5bb71d14d13ec280908542ac8e1a9/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13099",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第三周",
+      "bo": "BO3",
+      "venue": "上海",
+      "matchDate": "2026-01-30 19:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 1,
+      "scoreB": 2,
+      "teamA": {
+        "id": "57",
+        "name": "BLG",
+        "shortName": "BLG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20250618144525/49342dadcecf162e8ac94fad6eb91540/0"
+      },
+      "teamB": {
+        "id": "42",
+        "name": "TES",
+        "shortName": "TES",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20240920155538/5beb948638f00bcda68fc4942e3f0a51/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13100",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第三周",
+      "bo": "BO3",
+      "venue": "上海",
+      "matchDate": "2026-01-31 17:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 1,
+      "scoreB": 2,
+      "teamA": {
+        "id": "29",
+        "name": "北京JDG",
+        "shortName": "JDG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230921143554/1e5189e914e40bfe18045bccbfc7ef82/0"
+      },
+      "teamB": {
+        "id": "422",
+        "name": "AL",
+        "shortName": "AL",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20250618145633/b8741548f37b60a6693cdb6f4949a7fd/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13101",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第三周",
+      "bo": "BO3",
+      "venue": "上海",
+      "matchDate": "2026-01-31 19:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 2,
+      "scoreB": 0,
+      "teamA": {
+        "id": "57",
+        "name": "BLG",
+        "shortName": "BLG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20250618144525/49342dadcecf162e8ac94fad6eb91540/0"
+      },
+      "teamB": {
+        "id": "2",
+        "name": "IG",
+        "shortName": "IG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152918/562affbb9f99b0e472644f93a19291e7/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13102",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第三周",
+      "bo": "BO3",
+      "venue": "苏州",
+      "matchDate": "2026-02-01 17:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 1,
+      "scoreB": 2,
+      "teamA": {
+        "id": "4",
+        "name": "LGD",
+        "shortName": "LGD",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103153121/0cef697fa6d0416e672c2fd90f30718c/0"
+      },
+      "teamB": {
+        "id": "9",
+        "name": "苏州LNG",
+        "shortName": "LNG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20240920155556/f4510f27cb1d914d0d3204c8dbab6217/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13103",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第三周",
+      "bo": "BO3",
+      "venue": "上海",
+      "matchDate": "2026-02-01 19:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 2,
+      "scoreB": 0,
+      "teamA": {
+        "id": "422",
+        "name": "AL",
+        "shortName": "AL",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20250618145633/b8741548f37b60a6693cdb6f4949a7fd/0"
+      },
+      "teamB": {
+        "id": "42",
+        "name": "TES",
+        "shortName": "TES",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20240920155538/5beb948638f00bcda68fc4942e3f0a51/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13104",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第四周",
+      "bo": "BO3",
+      "venue": "苏州",
+      "matchDate": "2026-02-02 17:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 1,
+      "scoreB": 2,
+      "teamA": {
+        "id": "4",
+        "name": "LGD",
+        "shortName": "LGD",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103153121/0cef697fa6d0416e672c2fd90f30718c/0"
+      },
+      "teamB": {
+        "id": "6",
+        "name": "OMG",
+        "shortName": "OMG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152756/56c5bb71d14d13ec280908542ac8e1a9/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13105",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第四周",
+      "bo": "BO3",
+      "venue": "苏州",
+      "matchDate": "2026-02-02 19:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 2,
+      "scoreB": 0,
+      "teamA": {
+        "id": "57",
+        "name": "BLG",
+        "shortName": "BLG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20250618144525/49342dadcecf162e8ac94fad6eb91540/0"
+      },
+      "teamB": {
+        "id": "41",
+        "name": "WBG",
+        "shortName": "WBG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20240920155612/8df4b2b15f3e97f047ac978711134748/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13065",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第四周",
+      "bo": "BO3",
+      "venue": "苏州",
+      "matchDate": "2026-02-03 17:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 2,
+      "scoreB": 0,
+      "teamA": {
+        "id": "9",
+        "name": "苏州LNG",
+        "shortName": "LNG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20240920155556/f4510f27cb1d914d0d3204c8dbab6217/0"
+      },
+      "teamB": {
+        "id": "685",
+        "name": "UP",
+        "shortName": "UP",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152805/12c63663ab401c815ccded42a5ad47e6/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13107",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第四周",
+      "bo": "BO3",
+      "venue": "北京JDG",
+      "matchDate": "2026-02-03 19:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 1,
+      "scoreB": 2,
+      "teamA": {
+        "id": "2",
+        "name": "IG",
+        "shortName": "IG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152918/562affbb9f99b0e472644f93a19291e7/0"
+      },
+      "teamB": {
+        "id": "29",
+        "name": "北京JDG",
+        "shortName": "JDG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230921143554/1e5189e914e40bfe18045bccbfc7ef82/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13108",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第四周",
+      "bo": "BO3",
+      "venue": "西安",
+      "matchDate": "2026-02-04 17:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 2,
+      "scoreB": 0,
+      "teamA": {
+        "id": "1",
+        "name": "EDG",
+        "shortName": "EDG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103153103/7c5a8db3be3d7c93114ac47a801d64cb/0"
+      },
+      "teamB": {
+        "id": "12",
+        "name": "西安WE",
+        "shortName": "WE",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103153050/5c22150153baa973f73adf4909a041ec/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13109",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第四周",
+      "bo": "BO3",
+      "venue": "上海",
+      "matchDate": "2026-02-04 19:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 1,
+      "scoreB": 2,
+      "teamA": {
+        "id": "41",
+        "name": "WBG",
+        "shortName": "WBG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20240920155612/8df4b2b15f3e97f047ac978711134748/0"
+      },
+      "teamB": {
+        "id": "422",
+        "name": "AL",
+        "shortName": "AL",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20250618145633/b8741548f37b60a6693cdb6f4949a7fd/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13110",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第四周",
+      "bo": "BO3",
+      "venue": "深圳",
+      "matchDate": "2026-02-05 17:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 2,
+      "scoreB": 0,
+      "teamA": {
+        "id": "587",
+        "name": "深圳NIP",
+        "shortName": "NIP",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152746/c8a8f59fadc0da0bda0c4997e3f62afb/0"
+      },
+      "teamB": {
+        "id": "438",
+        "name": "TT",
+        "shortName": "TT",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152930/f1e243799a62f73f37af8f10be9dd977/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13111",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第四周",
+      "bo": "BO3",
+      "venue": "北京JDG",
+      "matchDate": "2026-02-05 19:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 0,
+      "scoreB": 2,
+      "teamA": {
+        "id": "29",
+        "name": "北京JDG",
+        "shortName": "JDG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230921143554/1e5189e914e40bfe18045bccbfc7ef82/0"
+      },
+      "teamB": {
+        "id": "42",
+        "name": "TES",
+        "shortName": "TES",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20240920155538/5beb948638f00bcda68fc4942e3f0a51/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13112",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第四周",
+      "bo": "BO3",
+      "venue": "上海",
+      "matchDate": "2026-02-06 15:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 0,
+      "scoreB": 2,
+      "teamA": {
+        "id": "2",
+        "name": "IG",
+        "shortName": "IG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152918/562affbb9f99b0e472644f93a19291e7/0"
+      },
+      "teamB": {
+        "id": "41",
+        "name": "WBG",
+        "shortName": "WBG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20240920155612/8df4b2b15f3e97f047ac978711134748/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13113",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第四周",
+      "bo": "BO3",
+      "venue": "上海",
+      "matchDate": "2026-02-06 17:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 2,
+      "scoreB": 1,
+      "teamA": {
+        "id": "422",
+        "name": "AL",
+        "shortName": "AL",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20250618145633/b8741548f37b60a6693cdb6f4949a7fd/0"
+      },
+      "teamB": {
+        "id": "57",
+        "name": "BLG",
+        "shortName": "BLG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20250618144525/49342dadcecf162e8ac94fad6eb91540/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13120",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段组内赛",
+      "roundName": "第四周",
+      "bo": "BO3",
+      "venue": "上海",
+      "matchDate": "2026-02-07 19:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 2,
+      "scoreB": 0,
+      "teamA": {
+        "id": "587",
+        "name": "深圳NIP",
+        "shortName": "NIP",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152746/c8a8f59fadc0da0bda0c4997e3f62afb/0"
+      },
+      "teamB": {
+        "id": "12",
+        "name": "西安WE",
+        "shortName": "WE",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103153050/5c22150153baa973f73adf4909a041ec/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13114",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段骑士之路",
+      "roundName": "第一轮",
+      "bo": "BO5",
+      "venue": "上海",
+      "matchDate": "2026-02-09 14:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 3,
+      "scoreB": 2,
+      "teamA": {
+        "id": "42",
+        "name": "TES",
+        "shortName": "TES",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20240920155538/5beb948638f00bcda68fc4942e3f0a51/0"
+      },
+      "teamB": {
+        "id": "12",
+        "name": "西安WE",
+        "shortName": "WE",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103153050/5c22150153baa973f73adf4909a041ec/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13115",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段骑士之路",
+      "roundName": "第一轮",
+      "bo": "BO5",
+      "venue": "上海",
+      "matchDate": "2026-02-09 17:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 1,
+      "scoreB": 3,
+      "teamA": {
+        "id": "2",
+        "name": "IG",
+        "shortName": "IG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152918/562affbb9f99b0e472644f93a19291e7/0"
+      },
+      "teamB": {
+        "id": "587",
+        "name": "深圳NIP",
+        "shortName": "NIP",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152746/c8a8f59fadc0da0bda0c4997e3f62afb/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13116",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段骑士之路",
+      "roundName": "第二轮",
+      "bo": "BO5",
+      "venue": "上海",
+      "matchDate": "2026-02-10 14:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 0,
+      "scoreB": 3,
+      "teamA": {
+        "id": "438",
+        "name": "TT",
+        "shortName": "TT",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152930/f1e243799a62f73f37af8f10be9dd977/0"
+      },
+      "teamB": {
+        "id": "9",
+        "name": "苏州LNG",
+        "shortName": "LNG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20240920155556/f4510f27cb1d914d0d3204c8dbab6217/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13117",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段骑士之路",
+      "roundName": "第二轮",
+      "bo": "BO5",
+      "venue": "上海",
+      "matchDate": "2026-02-10 17:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 1,
+      "scoreB": 3,
+      "teamA": {
+        "id": "1",
+        "name": "EDG",
+        "shortName": "EDG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103153103/7c5a8db3be3d7c93114ac47a801d64cb/0"
+      },
+      "teamB": {
+        "id": "6",
+        "name": "OMG",
+        "shortName": "OMG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152756/56c5bb71d14d13ec280908542ac8e1a9/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13118",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段骑士之路",
+      "roundName": "第三轮",
+      "bo": "BO5",
+      "venue": "上海",
+      "matchDate": "2026-02-11 14:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 3,
+      "scoreB": 0,
+      "teamA": {
+        "id": "2",
+        "name": "IG",
+        "shortName": "IG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152918/562affbb9f99b0e472644f93a19291e7/0"
+      },
+      "teamB": {
+        "id": "6",
+        "name": "OMG",
+        "shortName": "OMG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152756/56c5bb71d14d13ec280908542ac8e1a9/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13119",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段骑士之路",
+      "roundName": "第三轮",
+      "bo": "BO5",
+      "venue": "上海",
+      "matchDate": "2026-02-11 17:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 3,
+      "scoreB": 1,
+      "teamA": {
+        "id": "12",
+        "name": "西安WE",
+        "shortName": "WE",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103153050/5c22150153baa973f73adf4909a041ec/0"
+      },
+      "teamB": {
+        "id": "9",
+        "name": "苏州LNG",
+        "shortName": "LNG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20240920155556/f4510f27cb1d914d0d3204c8dbab6217/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13121",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段淘汰赛",
+      "roundName": "第一天",
+      "bo": "BO5",
+      "venue": "苏州",
+      "matchDate": "2026-02-24 14:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 3,
+      "scoreB": 2,
+      "teamA": {
+        "id": "29",
+        "name": "北京JDG",
+        "shortName": "JDG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230921143554/1e5189e914e40bfe18045bccbfc7ef82/0"
+      },
+      "teamB": {
+        "id": "42",
+        "name": "TES",
+        "shortName": "TES",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20240920155538/5beb948638f00bcda68fc4942e3f0a51/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13122",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段淘汰赛",
+      "roundName": "第一天",
+      "bo": "BO5",
+      "venue": "苏州",
+      "matchDate": "2026-02-24 17:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 3,
+      "scoreB": 0,
+      "teamA": {
+        "id": "422",
+        "name": "AL",
+        "shortName": "AL",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20250618145633/b8741548f37b60a6693cdb6f4949a7fd/0"
+      },
+      "teamB": {
+        "id": "12",
+        "name": "西安WE",
+        "shortName": "WE",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103153050/5c22150153baa973f73adf4909a041ec/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13123",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段淘汰赛",
+      "roundName": "第二天",
+      "bo": "BO5",
+      "venue": "苏州",
+      "matchDate": "2026-02-25 14:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 3,
+      "scoreB": 0,
+      "teamA": {
+        "id": "41",
+        "name": "WBG",
+        "shortName": "WBG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20240920155612/8df4b2b15f3e97f047ac978711134748/0"
+      },
+      "teamB": {
+        "id": "2",
+        "name": "IG",
+        "shortName": "IG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152918/562affbb9f99b0e472644f93a19291e7/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13124",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段淘汰赛",
+      "roundName": "第二天",
+      "bo": "BO5",
+      "venue": "苏州",
+      "matchDate": "2026-02-25 17:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 3,
+      "scoreB": 0,
+      "teamA": {
+        "id": "57",
+        "name": "BLG",
+        "shortName": "BLG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20250618144525/49342dadcecf162e8ac94fad6eb91540/0"
+      },
+      "teamB": {
+        "id": "587",
+        "name": "深圳NIP",
+        "shortName": "NIP",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152746/c8a8f59fadc0da0bda0c4997e3f62afb/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13125",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段淘汰赛",
+      "roundName": "第三天",
+      "bo": "BO5",
+      "venue": "苏州",
+      "matchDate": "2026-02-26 17:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 3,
+      "scoreB": 2,
+      "teamA": {
+        "id": "29",
+        "name": "北京JDG",
+        "shortName": "JDG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230921143554/1e5189e914e40bfe18045bccbfc7ef82/0"
+      },
+      "teamB": {
+        "id": "422",
+        "name": "AL",
+        "shortName": "AL",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20250618145633/b8741548f37b60a6693cdb6f4949a7fd/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13126",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段淘汰赛",
+      "roundName": "第四天",
+      "bo": "BO5",
+      "venue": "苏州",
+      "matchDate": "2026-02-27 17:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 0,
+      "scoreB": 3,
+      "teamA": {
+        "id": "41",
+        "name": "WBG",
+        "shortName": "WBG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20240920155612/8df4b2b15f3e97f047ac978711134748/0"
+      },
+      "teamB": {
+        "id": "57",
+        "name": "BLG",
+        "shortName": "BLG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20250618144525/49342dadcecf162e8ac94fad6eb91540/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13127",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段淘汰赛",
+      "roundName": "第五天",
+      "bo": "BO5",
+      "venue": "苏州",
+      "matchDate": "2026-02-28 17:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 3,
+      "scoreB": 0,
+      "teamA": {
+        "id": "42",
+        "name": "TES",
+        "shortName": "TES",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20240920155538/5beb948638f00bcda68fc4942e3f0a51/0"
+      },
+      "teamB": {
+        "id": "12",
+        "name": "西安WE",
+        "shortName": "WE",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103153050/5c22150153baa973f73adf4909a041ec/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13128",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段淘汰赛",
+      "roundName": "第六天",
+      "bo": "BO5",
+      "venue": "苏州",
+      "matchDate": "2026-03-01 17:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 3,
+      "scoreB": 1,
+      "teamA": {
+        "id": "2",
+        "name": "IG",
+        "shortName": "IG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152918/562affbb9f99b0e472644f93a19291e7/0"
+      },
+      "teamB": {
+        "id": "587",
+        "name": "深圳NIP",
+        "shortName": "NIP",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152746/c8a8f59fadc0da0bda0c4997e3f62afb/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13129",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段淘汰赛",
+      "roundName": "第七天",
+      "bo": "BO5",
+      "venue": "苏州",
+      "matchDate": "2026-03-02 17:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 2,
+      "scoreB": 3,
+      "teamA": {
+        "id": "42",
+        "name": "TES",
+        "shortName": "TES",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20240920155538/5beb948638f00bcda68fc4942e3f0a51/0"
+      },
+      "teamB": {
+        "id": "41",
+        "name": "WBG",
+        "shortName": "WBG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20240920155612/8df4b2b15f3e97f047ac978711134748/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13130",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段淘汰赛",
+      "roundName": "第八天",
+      "bo": "BO5",
+      "venue": "苏州",
+      "matchDate": "2026-03-03 17:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 1,
+      "scoreB": 3,
+      "teamA": {
+        "id": "2",
+        "name": "IG",
+        "shortName": "IG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152918/562affbb9f99b0e472644f93a19291e7/0"
+      },
+      "teamB": {
+        "id": "422",
+        "name": "AL",
+        "shortName": "AL",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20250618145633/b8741548f37b60a6693cdb6f4949a7fd/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13131",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段淘汰赛",
+      "roundName": "第九天",
+      "bo": "BO5",
+      "venue": "苏州",
+      "matchDate": "2026-03-04 17:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 2,
+      "scoreB": 3,
+      "teamA": {
+        "id": "29",
+        "name": "北京JDG",
+        "shortName": "JDG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230921143554/1e5189e914e40bfe18045bccbfc7ef82/0"
+      },
+      "teamB": {
+        "id": "57",
+        "name": "BLG",
+        "shortName": "BLG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20250618144525/49342dadcecf162e8ac94fad6eb91540/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13132",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段淘汰赛",
+      "roundName": "第十天",
+      "bo": "BO5",
+      "venue": "苏州",
+      "matchDate": "2026-03-05 17:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 3,
+      "scoreB": 1,
+      "teamA": {
+        "id": "41",
+        "name": "WBG",
+        "shortName": "WBG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20240920155612/8df4b2b15f3e97f047ac978711134748/0"
+      },
+      "teamB": {
+        "id": "422",
+        "name": "AL",
+        "shortName": "AL",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20250618145633/b8741548f37b60a6693cdb6f4949a7fd/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13133",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段淘汰赛",
+      "roundName": "第十一天",
+      "bo": "BO5",
+      "venue": "苏州",
+      "matchDate": "2026-03-07 17:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 0,
+      "scoreB": 3,
+      "teamA": {
+        "id": "41",
+        "name": "WBG",
+        "shortName": "WBG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20240920155612/8df4b2b15f3e97f047ac978711134748/0"
+      },
+      "teamB": {
+        "id": "29",
+        "name": "北京JDG",
+        "shortName": "JDG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230921143554/1e5189e914e40bfe18045bccbfc7ef82/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13134",
+      "bigGameId": "5",
+      "gameId": "237",
+      "tournamentSlug": "lpl",
+      "tournamentLabel": "LPL",
+      "tournamentName": "2026职业联赛",
+      "stageName": "第一赛段淘汰赛",
+      "roundName": "决赛",
+      "bo": "BO5",
+      "venue": "苏州",
+      "matchDate": "2026-03-08 17:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 3,
+      "scoreB": 1,
+      "teamA": {
+        "id": "57",
+        "name": "BLG",
+        "shortName": "BLG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20250618144525/49342dadcecf162e8ac94fad6eb91540/0"
+      },
+      "teamB": {
+        "id": "29",
+        "name": "北京JDG",
+        "shortName": "JDG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230921143554/1e5189e914e40bfe18045bccbfc7ef82/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_237.js"
+    },
+    {
+      "id": "13195",
+      "bigGameId": "220",
+      "gameId": "238",
+      "tournamentSlug": "first-stand",
+      "tournamentLabel": "First Stand",
+      "tournamentName": "全球先锋赛2026",
+      "stageName": "小组赛",
+      "roundName": "第一天",
+      "bo": "BO5",
+      "venue": "圣保罗",
+      "matchDate": "2026-03-16 21:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 3,
+      "scoreB": 2,
+      "teamA": {
+        "id": "57",
+        "name": "BLG",
+        "shortName": "BLG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20250618144525/49342dadcecf162e8ac94fad6eb91540/0"
+      },
+      "teamB": {
+        "id": "1130",
+        "name": "BFX",
+        "shortName": "BFX",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20260309172157/527e28e49444ec8cccb0e71f01b579b6/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_238.js"
+    },
+    {
+      "id": "13196",
+      "bigGameId": "220",
+      "gameId": "238",
+      "tournamentSlug": "first-stand",
+      "tournamentLabel": "First Stand",
+      "tournamentName": "全球先锋赛2026",
+      "stageName": "小组赛",
+      "roundName": "第一天",
+      "bo": "BO5",
+      "venue": "圣保罗",
+      "matchDate": "2026-03-17 02:00:00",
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 3,
+      "scoreB": 0,
+      "teamA": {
+        "id": "117",
+        "name": "G2",
+        "shortName": "G2",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20250618120148/0654f8b663a3973eb8debcf929cb919e/0"
+      },
+      "teamB": {
+        "id": "1018",
+        "name": "TSW",
+        "shortName": "TSW",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20250928155223/51db1ab979a23e49d55fd2c17cd8cfb4/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_238.js"
+    },
+    {
+      "id": "13197",
+      "bigGameId": "220",
+      "gameId": "238",
+      "tournamentSlug": "first-stand",
+      "tournamentLabel": "First Stand",
+      "tournamentName": "全球先锋赛2026",
+      "stageName": "小组赛",
+      "roundName": "第二天",
+      "bo": "BO5",
+      "venue": "圣保罗",
+      "matchDate": "2026-03-17 21:00:00",
+      "status": "upcoming",
+      "statusText": "未开始",
+      "scoreA": 0,
+      "scoreB": 0,
+      "teamA": {
+        "id": "137",
+        "name": "GEN",
+        "shortName": "GEN",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20250618115826/f8c9046000eaa71e3f5743a9165067b8/0"
+      },
+      "teamB": {
+        "id": "29",
+        "name": "北京JDG",
+        "shortName": "JDG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230921143554/1e5189e914e40bfe18045bccbfc7ef82/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_238.js"
+    },
+    {
+      "id": "13198",
+      "bigGameId": "220",
+      "gameId": "238",
+      "tournamentSlug": "first-stand",
+      "tournamentLabel": "First Stand",
+      "tournamentName": "全球先锋赛2026",
+      "stageName": "小组赛",
+      "roundName": "第二天",
+      "bo": "BO5",
+      "venue": "圣保罗",
+      "matchDate": "2026-03-18 02:00:00",
+      "status": "upcoming",
+      "statusText": "未开始",
+      "scoreA": 0,
+      "scoreB": 0,
+      "teamA": {
+        "id": "699",
+        "name": "LYON",
+        "shortName": "LYON",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20260309172113/55b77a400d7356cdb4797f98f64e2ce8/0"
+      },
+      "teamB": {
+        "id": "900",
+        "name": "LOUD",
+        "shortName": "LOUD",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20260309172138/22e090bfd9239263efb98bb50f8ea60b/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_238.js"
+    },
+    {
+      "id": "13199",
+      "bigGameId": "220",
+      "gameId": "238",
+      "tournamentSlug": "first-stand",
+      "tournamentLabel": "First Stand",
+      "tournamentName": "全球先锋赛2026",
+      "stageName": "小组赛",
+      "roundName": "第三天",
+      "bo": "BO5",
+      "venue": "圣保罗",
+      "matchDate": "2026-03-18 21:00:00",
+      "status": "upcoming",
+      "statusText": "未开始",
+      "scoreA": 0,
+      "scoreB": 0,
+      "teamA": {
+        "id": "57",
+        "name": "BLG",
+        "shortName": "BLG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20250618144525/49342dadcecf162e8ac94fad6eb91540/0"
+      },
+      "teamB": {
+        "id": "117",
+        "name": "G2",
+        "shortName": "G2",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20250618120148/0654f8b663a3973eb8debcf929cb919e/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_238.js"
+    },
+    {
+      "id": "13200",
+      "bigGameId": "220",
+      "gameId": "238",
+      "tournamentSlug": "first-stand",
+      "tournamentLabel": "First Stand",
+      "tournamentName": "全球先锋赛2026",
+      "stageName": "小组赛",
+      "roundName": "第三天",
+      "bo": "BO5",
+      "venue": "圣保罗",
+      "matchDate": "2026-03-19 02:00:00",
+      "status": "upcoming",
+      "statusText": "未开始",
+      "scoreA": 0,
+      "scoreB": 0,
+      "teamA": {
+        "id": "1130",
+        "name": "BFX",
+        "shortName": "BFX",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20260309172157/527e28e49444ec8cccb0e71f01b579b6/0"
+      },
+      "teamB": {
+        "id": "1018",
+        "name": "TSW",
+        "shortName": "TSW",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20250928155223/51db1ab979a23e49d55fd2c17cd8cfb4/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_238.js"
+    },
+    {
+      "id": "13201",
+      "bigGameId": "220",
+      "gameId": "238",
+      "tournamentSlug": "first-stand",
+      "tournamentLabel": "First Stand",
+      "tournamentName": "全球先锋赛2026",
+      "stageName": "小组赛",
+      "roundName": "第四天",
+      "bo": "BO5",
+      "venue": "圣保罗",
+      "matchDate": "2026-03-19 21:00:00",
+      "status": "upcoming",
+      "statusText": "未开始",
+      "scoreA": 0,
+      "scoreB": 0,
+      "teamA": {
+        "id": "85",
+        "name": "待定",
+        "shortName": "TBD",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20171204150327/6fa86a8e4d50f72b5fb016beb8492153/0"
+      },
+      "teamB": {
+        "id": "85",
+        "name": "待定",
+        "shortName": "TBD",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20171204150327/6fa86a8e4d50f72b5fb016beb8492153/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_238.js"
+    },
+    {
+      "id": "13202",
+      "bigGameId": "220",
+      "gameId": "238",
+      "tournamentSlug": "first-stand",
+      "tournamentLabel": "First Stand",
+      "tournamentName": "全球先锋赛2026",
+      "stageName": "小组赛",
+      "roundName": "第四天",
+      "bo": "BO5",
+      "venue": "圣保罗",
+      "matchDate": "2026-03-20 02:00:00",
+      "status": "upcoming",
+      "statusText": "未开始",
+      "scoreA": 0,
+      "scoreB": 0,
+      "teamA": {
+        "id": "85",
+        "name": "待定",
+        "shortName": "TBD",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20171204150327/6fa86a8e4d50f72b5fb016beb8492153/0"
+      },
+      "teamB": {
+        "id": "85",
+        "name": "待定",
+        "shortName": "TBD",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20171204150327/6fa86a8e4d50f72b5fb016beb8492153/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_238.js"
+    },
+    {
+      "id": "13203",
+      "bigGameId": "220",
+      "gameId": "238",
+      "tournamentSlug": "first-stand",
+      "tournamentLabel": "First Stand",
+      "tournamentName": "全球先锋赛2026",
+      "stageName": "小组赛",
+      "roundName": "第五天",
+      "bo": "BO5",
+      "venue": "圣保罗",
+      "matchDate": "2026-03-20 21:00:00",
+      "status": "upcoming",
+      "statusText": "未开始",
+      "scoreA": 0,
+      "scoreB": 0,
+      "teamA": {
+        "id": "85",
+        "name": "待定",
+        "shortName": "TBD",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20171204150327/6fa86a8e4d50f72b5fb016beb8492153/0"
+      },
+      "teamB": {
+        "id": "85",
+        "name": "待定",
+        "shortName": "TBD",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20171204150327/6fa86a8e4d50f72b5fb016beb8492153/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_238.js"
+    },
+    {
+      "id": "13204",
+      "bigGameId": "220",
+      "gameId": "238",
+      "tournamentSlug": "first-stand",
+      "tournamentLabel": "First Stand",
+      "tournamentName": "全球先锋赛2026",
+      "stageName": "小组赛",
+      "roundName": "第五天",
+      "bo": "BO5",
+      "venue": "圣保罗",
+      "matchDate": "2026-03-21 02:00:00",
+      "status": "upcoming",
+      "statusText": "未开始",
+      "scoreA": 0,
+      "scoreB": 0,
+      "teamA": {
+        "id": "85",
+        "name": "待定",
+        "shortName": "TBD",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20171204150327/6fa86a8e4d50f72b5fb016beb8492153/0"
+      },
+      "teamB": {
+        "id": "85",
+        "name": "待定",
+        "shortName": "TBD",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20171204150327/6fa86a8e4d50f72b5fb016beb8492153/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_238.js"
+    },
+    {
+      "id": "13205",
+      "bigGameId": "220",
+      "gameId": "238",
+      "tournamentSlug": "first-stand",
+      "tournamentLabel": "First Stand",
+      "tournamentName": "全球先锋赛2026",
+      "stageName": "淘汰赛",
+      "roundName": "半决赛",
+      "bo": "BO5",
+      "venue": "圣保罗",
+      "matchDate": "2026-03-21 21:00:00",
+      "status": "upcoming",
+      "statusText": "未开始",
+      "scoreA": 0,
+      "scoreB": 0,
+      "teamA": {
+        "id": "85",
+        "name": "待定",
+        "shortName": "TBD",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20171204150327/6fa86a8e4d50f72b5fb016beb8492153/0"
+      },
+      "teamB": {
+        "id": "85",
+        "name": "待定",
+        "shortName": "TBD",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20171204150327/6fa86a8e4d50f72b5fb016beb8492153/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_238.js"
+    },
+    {
+      "id": "13206",
+      "bigGameId": "220",
+      "gameId": "238",
+      "tournamentSlug": "first-stand",
+      "tournamentLabel": "First Stand",
+      "tournamentName": "全球先锋赛2026",
+      "stageName": "淘汰赛",
+      "roundName": "半决赛",
+      "bo": "BO5",
+      "venue": "圣保罗",
+      "matchDate": "2026-03-22 02:00:00",
+      "status": "upcoming",
+      "statusText": "未开始",
+      "scoreA": 0,
+      "scoreB": 0,
+      "teamA": {
+        "id": "85",
+        "name": "待定",
+        "shortName": "TBD",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20171204150327/6fa86a8e4d50f72b5fb016beb8492153/0"
+      },
+      "teamB": {
+        "id": "85",
+        "name": "待定",
+        "shortName": "TBD",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20171204150327/6fa86a8e4d50f72b5fb016beb8492153/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_238.js"
+    },
+    {
+      "id": "13207",
+      "bigGameId": "220",
+      "gameId": "238",
+      "tournamentSlug": "first-stand",
+      "tournamentLabel": "First Stand",
+      "tournamentName": "全球先锋赛2026",
+      "stageName": "淘汰赛",
+      "roundName": "决赛",
+      "bo": "BO5",
+      "venue": "圣保罗",
+      "matchDate": "2026-03-22 21:00:00",
+      "status": "upcoming",
+      "statusText": "未开始",
+      "scoreA": 0,
+      "scoreB": 0,
+      "teamA": {
+        "id": "85",
+        "name": "待定",
+        "shortName": "TBD",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20171204150327/6fa86a8e4d50f72b5fb016beb8492153/0"
+      },
+      "teamB": {
+        "id": "85",
+        "name": "待定",
+        "shortName": "TBD",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20171204150327/6fa86a8e4d50f72b5fb016beb8492153/0"
+      },
+      "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_238.js"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "电竞高僧自用观赛助手",
+  "short_name": "电竞高僧",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#101317",
+  "theme_color": "#101317",
+  "icons": [
+    {
+      "src": "../favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
