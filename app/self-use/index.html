@@ -6,36 +6,63 @@
     <title>电竞高僧 | 自用观赛助手</title>
     <meta
       name="description"
-      content="BLG/Bin 默认关注的 LOL 自用观赛助手，当前覆盖 LPL 与 First Stand 官方赛程。"
+      content="BLG 和 Bin 默认关注的 LOL 自用观赛助手，覆盖 LPL 与 First Stand 官方赛程快照。"
     />
-    <meta name="theme-color" content="#101317" />
+    <meta name="theme-color" content="#06070a" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
-    <link rel="stylesheet" href="./styles.css" />
-    <script src="./app.js" defer></script>
+    <link rel="stylesheet" href="./styles.css?v=20260319b" />
+    <script src="./app.js?v=20260319b" defer></script>
   </head>
   <body>
-    <div class="ambient"></div>
+    <div class="ambient ambient-a"></div>
+    <div class="ambient ambient-b"></div>
+
     <main class="app-shell">
       <header class="topbar">
-        <div>
+        <div class="brand-block">
           <p class="eyebrow">eSports Monk / Self Use</p>
           <h1>电竞高僧</h1>
+          <p class="brand-copy">只认官方赛程快照，给你一个打开手机就能看明白的观赛台。</p>
         </div>
-        <button class="ghost-btn" id="refresh-button" type="button">刷新快照</button>
+        <div class="topbar-actions">
+          <span class="status-pill" id="sync-text">官方快照同步中</span>
+          <button class="ghost-btn" id="refresh-button" type="button">刷新快照</button>
+        </div>
       </header>
 
       <section class="hero-card" id="focus-card"></section>
 
+      <section class="panel widget-panel">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Medium Widget Lab</p>
+            <h2>三张中号卡</h2>
+          </div>
+          <span class="section-note">战绩 / 当前比赛 / 高僧判断</span>
+        </div>
+        <div class="widget-grid" id="widget-grid"></div>
+      </section>
+
+      <section class="panel summary-panel">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Focus Board</p>
+            <h2>主队面板</h2>
+          </div>
+          <span class="section-note">BLG 默认，后面再扩</span>
+        </div>
+        <div class="summary-grid" id="summary-grid"></div>
+      </section>
+
       <section class="panel settings-panel">
         <div class="section-head">
           <div>
-            <p class="eyebrow">Focus</p>
-            <h2>主队和选手</h2>
+            <p class="eyebrow">Preferences</p>
+            <h2>关注对象</h2>
           </div>
-          <span class="sync-text" id="sync-text">加载中</span>
         </div>
         <div class="settings-grid">
           <label class="field">
@@ -49,20 +76,17 @@
         </div>
         <div class="hint-row">
           <button class="primary-btn" id="save-preference" type="button">保存偏好</button>
-          <p id="preference-hint">当前 MVP 只追官方赛程，选手位只做关注标记。</p>
+          <p id="preference-hint">选手只做关注标记，赛程和比分仍然只认官方。</p>
         </div>
-      </section>
-
-      <section class="panel summary-panel">
-        <div class="summary-grid" id="summary-grid"></div>
       </section>
 
       <section class="panel">
         <div class="section-head">
           <div>
-            <p class="eyebrow">Filter</p>
+            <p class="eyebrow">Filters</p>
             <h2>赛程筛选</h2>
           </div>
+          <span class="section-note">默认先看主队</span>
         </div>
         <div class="chip-row" id="filter-row"></div>
       </section>
@@ -71,25 +95,32 @@
         <div class="section-head">
           <div>
             <p class="eyebrow">Official Schedule</p>
-            <h2>官方赛程</h2>
+            <h2>官方赛程流</h2>
           </div>
-          <span class="schedule-note">腾讯官方源快照</span>
+          <span class="section-note">LPL + First Stand</span>
         </div>
         <div class="schedule-groups" id="schedule-groups"></div>
       </section>
 
-      <section class="panel install-panel">
+      <section class="panel notes-panel">
         <div class="section-head">
           <div>
-            <p class="eyebrow">iPhone</p>
-            <h2>不上架 App Store 的用法</h2>
+            <p class="eyebrow">Usage</p>
+            <h2>现在这版怎么用</h2>
           </div>
         </div>
-        <ol class="install-steps">
-          <li>主路用 Scriptable 小组件，直接在手机本地拉腾讯官方数据。</li>
-          <li>网页版只适合看快照，因为浏览器被腾讯源的 CORS 卡住了。</li>
-          <li>如果你要更像 App，再把这页挂到静态站，Safari 添加到主屏幕就行。</li>
-        </ol>
+        <div class="note-grid">
+          <article class="note-card">
+            <p class="note-label">iPhone 主力入口</p>
+            <h3>Scriptable 小组件</h3>
+            <p>小组件负责抬手就看，点开再跳这个 H5。主屏体验会比单纯网页顺手很多。</p>
+          </article>
+          <article class="note-card">
+            <p class="note-label">当前边界</p>
+            <h3>只盯赛程和系列赛比分</h3>
+            <p>这版先不碰局内事件流，别自己给自己找麻烦。先把“随时看明白”做扎实。</p>
+          </article>
+        </div>
       </section>
     </main>
   </body>
