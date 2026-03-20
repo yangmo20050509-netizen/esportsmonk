@@ -1,0 +1,33 @@
+name: Refresh Esports Monk
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "7,22,37,52 * * * *"
+
+jobs:
+  refresh-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Build live site data
+        run: node scripts/build-site-data.mjs
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: gemini-3-flash-preview
+
+      - name: Prepare release bundle
+        run: node scripts/prepare-release.mjs
+
+      - name: Deploy to EdgeOne Pages
+        run: npx edgeone pages deploy ./release/esportsmonk-online -n esportsmonk-online -t ${{ secrets.EDGEONE_API_TOKEN }}

@@ -1,4 +1,4 @@
-{
+window.__SITE_DATA__ = {
   "generatedAt": "2026-03-20T13:36:37.818Z",
   "generatedAtLocal": "2026/3/20 21:36:37",
   "copy": {
@@ -1241,4 +1241,4 @@
       }
     ]
   }
-}
+};

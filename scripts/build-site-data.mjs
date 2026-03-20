@@ -12,6 +12,7 @@ const projectRoot = path.resolve(__dirname, "..");
 const scheduleScript = path.join(projectRoot, "scripts", "build-self-use-data.mjs");
 const schedulePath = path.join(projectRoot, "app", "data", "tencent-schedule.json");
 const outputPath = path.join(projectRoot, "app", "data", "site-data.json");
+const inlineOutputPath = path.join(projectRoot, "app", "data", "site-data.inline.js");
 
 const GEMINI_MODEL = process.env.GEMINI_MODEL || "gemini-3-flash-preview";
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY || "";
@@ -1082,12 +1083,18 @@ async function main() {
 
   await mkdir(path.dirname(outputPath), { recursive: true });
   await writeFile(outputPath, `${JSON.stringify(siteData, null, 2)}\n`, "utf8");
+  await writeFile(
+    inlineOutputPath,
+    `window.__SITE_DATA__ = ${JSON.stringify(siteData, null, 2)};\n`,
+    "utf8",
+  );
 
   console.log(
     JSON.stringify(
       {
         ok: true,
         output: outputPath,
+        inlineOutput: inlineOutputPath,
         aiSource: siteData.copy.aiSource,
         teamCount: siteData.teams.items.length,
         playerCount: siteData.players.items.length,

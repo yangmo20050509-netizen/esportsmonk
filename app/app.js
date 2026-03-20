@@ -656,15 +656,27 @@ function bindEvents() {
 }
 
 async function loadData() {
-  const response = await fetch(`./data/site-data.json?ts=${Date.now()}`, {
-    cache: "no-store",
-  });
-
-  if (!response.ok) {
-    throw new Error(`加载站点数据失败 ${response.status}`);
+  if (window.__SITE_DATA__) {
+    return window.__SITE_DATA__;
   }
 
-  return response.json();
+  try {
+    const response = await fetch(`./data/site-data.json?ts=${Date.now()}`, {
+      cache: "no-store",
+    });
+
+    if (!response.ok) {
+      throw new Error(`加载站点数据失败 ${response.status}`);
+    }
+
+    return response.json();
+  } catch (error) {
+    if (window.__SITE_DATA__) {
+      return window.__SITE_DATA__;
+    }
+
+    throw error;
+  }
 }
 
 async function init() {
@@ -686,7 +698,7 @@ async function init() {
     $("#hero-copy").innerHTML = `
       <p class="eyebrow">加载失败</p>
       <h2>官网数据还没准备好。</h2>
-      <p class="hero-text">${escapeHtml(error.message)}</p>
+      <p class="hero-text">${escapeHtml(error.message || "站点数据文件未发布或路径配错。")}</p>
     `;
   }
 }
