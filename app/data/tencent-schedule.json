@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-20T15:29:01.228Z",
-  "generatedAtLocal": "2026/3/20 23:29:01",
+  "generatedAt": "2026-03-20T16:40:19.308Z",
+  "generatedAtLocal": "2026/3/21 00:40:19",
   "focusDefaults": {
     "team": "BLG",
     "player": "Bin",
@@ -2670,9 +2670,9 @@
       "bo": "BO5",
       "venue": "圣保罗",
       "matchDate": "2026-03-20 21:00:00",
-      "status": "in_progress",
-      "statusText": "进行中/待确认",
-      "scoreA": 2,
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 3,
       "scoreB": 0,
       "teamA": {
         "id": "117",
@@ -2700,9 +2700,9 @@
       "bo": "BO5",
       "venue": "圣保罗",
       "matchDate": "2026-03-21 02:00:00",
-      "status": "upcoming",
-      "statusText": "未开始",
-      "scoreA": 0,
+      "status": "in_progress",
+      "statusText": "进行中/待确认",
+      "scoreA": 1,
       "scoreB": 0,
       "teamA": {
         "id": "29",
@@ -2735,16 +2735,16 @@
       "scoreA": 0,
       "scoreB": 0,
       "teamA": {
-        "id": "85",
-        "name": "待定",
-        "shortName": "待定",
-        "logo": "https://img.crawler.qq.com/lolwebvideo/20171204150327/6fa86a8e4d50f72b5fb016beb8492153/0"
+        "id": "137",
+        "name": "GEN",
+        "shortName": "GEN",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20250618115826/f8c9046000eaa71e3f5743a9165067b8/0"
       },
       "teamB": {
-        "id": "85",
-        "name": "待定",
-        "shortName": "待定",
-        "logo": "https://img.crawler.qq.com/lolwebvideo/20171204150327/6fa86a8e4d50f72b5fb016beb8492153/0"
+        "id": "117",
+        "name": "G2",
+        "shortName": "G2",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20250618120148/0654f8b663a3973eb8debcf929cb919e/0"
       },
       "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_238.js"
     },

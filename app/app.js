@@ -5,6 +5,16 @@ const state = {
   siteData: null,
 };
 
+const TEAM_THEMES = {
+  BLG: { accent: "#3d78d7", soft: "rgba(61, 120, 215, 0.16)", glow: "rgba(61, 120, 215, 0.2)" },
+  JDG: { accent: "#c73c2d", soft: "rgba(199, 60, 45, 0.14)", glow: "rgba(199, 60, 45, 0.18)" },
+  AL: { accent: "#16735f", soft: "rgba(22, 115, 95, 0.14)", glow: "rgba(22, 115, 95, 0.18)" },
+  WBG: { accent: "#b63830", soft: "rgba(182, 56, 48, 0.14)", glow: "rgba(182, 56, 48, 0.18)" },
+  LNG: { accent: "#2b5c73", soft: "rgba(43, 92, 115, 0.14)", glow: "rgba(43, 92, 115, 0.18)" },
+  TES: { accent: "#c86b24", soft: "rgba(200, 107, 36, 0.14)", glow: "rgba(200, 107, 36, 0.18)" },
+  G2: { accent: "#2c2c2c", soft: "rgba(44, 44, 44, 0.12)", glow: "rgba(44, 44, 44, 0.16)" },
+};
+
 const $ = (selector) => document.querySelector(selector);
 
 function readQueryState() {
@@ -34,6 +44,24 @@ function renderBadge(team, className = "team-badge") {
   return `<div class="${className}">${escapeHtml(label)}</div>`;
 }
 
+function getCurrentTeamItem() {
+  return state.siteData?.teams?.items.find((item) => item.id === state.currentTeam) || null;
+}
+
+function getCurrentPlayerItem() {
+  return state.siteData?.players?.items.find((item) => item.id === state.currentPlayer) || null;
+}
+
+function getTeamTheme(teamId) {
+  return (
+    TEAM_THEMES[teamId] || {
+      accent: "#8d7147",
+      soft: "rgba(181, 144, 75, 0.14)",
+      glow: "rgba(181, 144, 75, 0.18)",
+    }
+  );
+}
+
 function renderNav(targetId) {
   const navHtml = Object.entries(state.siteData.copy.nav)
     .map(
@@ -61,55 +89,6 @@ function renderTopbar() {
 
   renderNav("#desktop-nav");
   renderNav("#mobile-nav");
-}
-
-function renderHero() {
-  const { hero } = state.siteData.copy;
-  const { heroMatch } = state.siteData;
-
-  $("#hero-copy").innerHTML = `
-    <p class="eyebrow">${escapeHtml(hero.eyebrow)}</p>
-    <p class="hero-text">${escapeHtml(hero.body)}</p>
-    <div class="hero-tags">
-      ${hero.tags.map((tag) => `<span>${escapeHtml(tag)}</span>`).join("")}
-    </div>
-  `;
-
-  $("#hero-match").innerHTML = `
-    <p class="eyebrow">${escapeHtml(heroMatch.league)}</p>
-    <h3>${escapeHtml(heroMatch.headline)}</h3>
-    <p class="prediction-copy">${escapeHtml(heroMatch.summary)}</p>
-    <div class="scoreboard">
-      <div class="team-side">
-        ${renderBadge(heroMatch.left)}
-        <div>
-          <div class="team-name">${escapeHtml(heroMatch.left.code)}</div>
-          <div class="team-sub">${escapeHtml(heroMatch.left.sub)}</div>
-        </div>
-      </div>
-      <div class="score">VS</div>
-      <div class="team-side right">
-        <div>
-          <div class="team-name">${escapeHtml(heroMatch.right.code)}</div>
-          <div class="team-sub">${escapeHtml(heroMatch.right.sub)}</div>
-        </div>
-        ${renderBadge(heroMatch.right)}
-      </div>
-    </div>
-    <div class="summary-grid">
-      ${heroMatch.metrics
-        .map(
-          (item) => `
-            <div class="summary-strip">
-              <span class="subdued">${escapeHtml(item.label)}</span>
-              <strong>${escapeHtml(item.value)}</strong>
-            </div>
-          `,
-        )
-        .join("")}
-    </div>
-    <p class="list-note">${escapeHtml(heroMatch.detail)}</p>
-  `;
 }
 
 function renderEmptyCard(message) {
@@ -159,6 +138,124 @@ function renderMatchCard(match) {
         <span class="subdued">${escapeHtml(match.matchDate.slice(5, 16))}</span>
       </div>
     </article>
+  `;
+}
+
+function renderHero() {
+  const team = getCurrentTeamItem();
+  const player = getCurrentPlayerItem();
+
+  if (!team) {
+    $("#hero-match").innerHTML = renderEmptyCard("当前主队数据尚未接入。");
+    return;
+  }
+
+  const theme = getTeamTheme(team.id);
+  const heroPlayer =
+    player && player.teamCode === team.id
+      ? player
+      : state.siteData.players.items.find((item) => item.teamCode === team.id) || null;
+  const selectablePlayers = state.siteData.players.items.filter((item) => item.teamCode === team.id);
+  const nextLine = team.docket.find((item) => item.label === "下一场" || item.label === "此刻对局") || null;
+  const metrics = [
+    { label: "赛段战绩", value: team.overview.seriesRecord },
+    { label: "单局局差", value: team.metrics?.[1]?.text || "--" },
+    { label: "近五走势", value: team.metrics?.[2]?.text || "--" },
+    { label: "下一场", value: nextLine?.value || "等待排表" },
+  ];
+
+  $("#hero-match").setAttribute(
+    "style",
+    `--team-accent:${theme.accent};--team-soft:${theme.soft};--team-glow:${theme.glow};`,
+  );
+
+  $("#hero-match").innerHTML = `
+    <div class="dynamic-topline">
+      <div>
+        <p class="eyebrow">主队动态</p>
+        <h2>${escapeHtml(team.shortName)}</h2>
+      </div>
+      <span class="team-tone-pill">${escapeHtml(team.stageAward || team.rankingLabel)}</span>
+    </div>
+    <div class="dynamic-selector-block">
+      <div class="dynamic-selector-label">主队</div>
+      <div class="dynamic-selector-row">
+        ${state.siteData.teams.items
+          .map(
+            (item) => `
+              <button class="chip-btn ${item.id === state.currentTeam ? "is-active" : ""}" data-team="${escapeHtml(item.id)}">
+                ${escapeHtml(item.id)}
+              </button>
+            `,
+          )
+          .join("")}
+      </div>
+    </div>
+    <div class="dynamic-selector-block">
+      <div class="dynamic-selector-label">选手</div>
+      <div class="dynamic-selector-row">
+        ${
+          selectablePlayers.length
+            ? selectablePlayers
+                .map(
+                  (item) => `
+                    <button class="chip-btn ${item.id === state.currentPlayer ? "is-active" : ""}" data-player="${escapeHtml(item.id)}">
+                      ${escapeHtml(item.name)}
+                    </button>
+                  `,
+                )
+                .join("")
+            : `<span class="subdued">当前只接入 BLG 重点选手。</span>`
+        }
+      </div>
+    </div>
+    <div class="dynamic-grid">
+      <div class="dynamic-main">
+        <div class="dynamic-brand">
+          ${renderBadge({ code: team.id, logo: team.logo }, "team-badge dynamic-badge")}
+          <div>
+            <div class="team-name">${escapeHtml(team.shortName)}</div>
+            <div class="team-sub">${escapeHtml(team.region)} / ${escapeHtml(team.rankingLabel)}</div>
+          </div>
+        </div>
+        <p class="dynamic-copy">${escapeHtml(team.summary)}</p>
+        <div class="dynamic-metrics">
+          ${metrics
+            .map(
+              (item) => `
+                <div class="summary-strip">
+                  <span class="subdued">${escapeHtml(item.label)}</span>
+                  <strong>${escapeHtml(item.value)}</strong>
+                </div>
+              `,
+            )
+            .join("")}
+        </div>
+        <div class="dynamic-note">
+          <span class="dynamic-note-label">主队近况</span>
+          <p>${escapeHtml(team.statement)}</p>
+        </div>
+      </div>
+      <div class="dynamic-sidecard">
+        <p class="eyebrow">观战关切</p>
+        <h3>${escapeHtml(heroPlayer ? `${heroPlayer.name} / ${heroPlayer.role}` : "当前未接入该队重点选手")}</h3>
+        <p class="prediction-copy">${escapeHtml(heroPlayer?.note || team.statement)}</p>
+        <div class="dynamic-side-list">
+          ${team.docket
+            .slice(0, 3)
+            .map(
+              (item) => `
+                <div class="summary-strip">
+                  <span class="subdued">${escapeHtml(item.label)}</span>
+                  <strong>${escapeHtml(item.value)}</strong>
+                </div>
+              `,
+            )
+            .join("")}
+        </div>
+        <p class="list-note">${escapeHtml(nextLine?.note || "等待下一场已确认对阵。")}</p>
+      </div>
+    </div>
   `;
 }
 
@@ -281,7 +378,8 @@ function renderTeamSwitcher() {
 
 function renderTeamDetail() {
   const copy = state.siteData.copy.sections.teams;
-  const team = state.siteData.teams.items.find((item) => item.id === state.currentTeam);
+  const team = getCurrentTeamItem();
+  if (!team) return;
 
   $("#team-summary").innerHTML = `
     <div class="team-title">
@@ -385,6 +483,10 @@ function renderTeamDetail() {
 }
 
 function renderPlayerSwitcher() {
+  const visiblePlayers = state.siteData.players.items.filter(
+    (player) => player.teamCode === state.currentTeam,
+  );
+
   $("#players-header").innerHTML = `
     <div>
       <p class="eyebrow">${escapeHtml(state.siteData.copy.sections.players.eyebrow)}</p>
@@ -393,17 +495,27 @@ function renderPlayerSwitcher() {
     <span class="signal-pill is-ghost">${escapeHtml(state.siteData.copy.sections.players.intro)}</span>
   `;
 
-  $("#player-switcher").innerHTML = state.siteData.players.items
-    .map(
-      (player) =>
-        `<button class="chip-btn ${player.id === state.currentPlayer ? "is-active" : ""}" data-player="${escapeHtml(player.id)}">${escapeHtml(player.name)}</button>`,
-    )
-    .join("");
+  $("#player-switcher").innerHTML = visiblePlayers.length
+    ? visiblePlayers
+        .map(
+          (player) =>
+            `<button class="chip-btn ${player.id === state.currentPlayer ? "is-active" : ""}" data-player="${escapeHtml(player.id)}">${escapeHtml(player.name)}</button>`,
+        )
+        .join("")
+    : `<span class="subdued">当前主队还没有接入选手观察数据。</span>`;
 }
 
 function renderPlayerDetail() {
   const copy = state.siteData.copy.sections.players;
-  const player = state.siteData.players.items.find((item) => item.id === state.currentPlayer);
+  const player = getCurrentPlayerItem();
+  if (!player || player.teamCode !== state.currentTeam) {
+    const empty = renderEmptyCard("当前主队还没有接入选手观察数据。");
+    $("#player-card").innerHTML = empty;
+    $("#player-track").innerHTML = empty;
+    $("#player-notes").innerHTML = empty;
+    $("#player-history").innerHTML = empty;
+    return;
+  }
 
   $("#player-card").innerHTML = `
     <div class="player-card-head">
@@ -457,10 +569,9 @@ function renderPlayerDetail() {
       ${player.observation
         .map(
           (item) => `
-            <article class="summary-strip">
-              <span class="subdued">观察项</span>
-              <strong>${escapeHtml(item)}</strong>
-            </article>
+            <div class="team-statement">
+              ${escapeHtml(item)}
+            </div>
           `,
         )
         .join("")}
@@ -495,7 +606,10 @@ function renderPlayerDetail() {
 
 function renderPredictions() {
   const copy = state.siteData.copy.sections.predictions;
-  const blueprint = state.siteData.predictions.blueprint;
+  const currentPrediction =
+    state.siteData.predictions.items.find((item) => item.teamId === state.currentTeam) ||
+    state.siteData.predictions.items[0] ||
+    null;
 
   $("#predictions-header").innerHTML = `
     <div>
@@ -505,104 +619,71 @@ function renderPredictions() {
     <span class="signal-pill is-ghost">${escapeHtml(copy.note)}</span>
   `;
 
-  $("#prediction-blueprint").innerHTML = `
-    <div class="panel-head">
-      <div>
-        <p class="eyebrow">${escapeHtml(copy.eyebrow)}</p>
-        <h3>${escapeHtml(copy.blueprintTitle)}</h3>
+  if (!currentPrediction) {
+    $("#prediction-list").innerHTML = renderEmptyCard("当前没有可用于高僧预测的已确认对阵。");
+    return;
+  }
+
+  $("#prediction-list").innerHTML = `
+    <article class="prediction-card prediction-card--single">
+      <div class="prediction-head">
+        <div>
+          <p class="eyebrow">${escapeHtml(currentPrediction.stageLabel)}</p>
+          <h4>${escapeHtml(currentPrediction.matchLabel)}</h4>
+        </div>
+        <div class="prediction-score">
+          <span class="confidence-pill">${escapeHtml(currentPrediction.statusText)} / ${escapeHtml(currentPrediction.confidence)}%</span>
+          <span class="upset-pill">${escapeHtml(currentPrediction.predictedScore)}</span>
+        </div>
       </div>
-      <span class="panel-tag">${escapeHtml(copy.blueprintTag)}</span>
-    </div>
-    <ol class="blueprint-list">
-      ${blueprint.steps.map((step) => `<li>${escapeHtml(step)}</li>`).join("")}
-    </ol>
-    <div class="schema-card">
-      <span class="schema-label">结构化输出</span>
-      <pre>${escapeHtml(JSON.stringify(blueprint.schema, null, 2))}</pre>
-    </div>
-  `;
-
-  $("#prediction-list").innerHTML = state.siteData.predictions.items
-    .map(
-      (item) => `
-        <article class="prediction-card">
-          <div class="prediction-head">
-            <div>
-              <p class="eyebrow">${escapeHtml(item.stageLabel)}</p>
-              <h4>${escapeHtml(item.matchLabel)}</h4>
-            </div>
-            <div class="prediction-score">
-              <span class="confidence-pill">${escapeHtml(item.statusText)} / ${escapeHtml(item.winner)} ${escapeHtml(item.confidence)}%</span>
-              <span class="upset-pill">冷门指数 ${escapeHtml(item.upset)}</span>
-            </div>
+      <div class="scoreboard">
+        <div class="team-side">
+          ${renderBadge({ code: currentPrediction.teamA.code, logo: currentPrediction.teamA.logo })}
+          <div>
+            <div class="team-name">${escapeHtml(currentPrediction.teamA.code)}</div>
+            <div class="team-sub">${escapeHtml(currentPrediction.teamA.recordText || currentPrediction.timeLabel)}</div>
           </div>
-          <div class="scoreboard">
-            <div class="team-side">
-              ${renderBadge({ code: item.teamA.code, logo: item.teamA.logo })}
-              <div>
-                <div class="team-name">${escapeHtml(item.teamA.code)}</div>
-                <div class="team-sub">${escapeHtml(item.timeLabel)}</div>
-              </div>
-            </div>
-            <div class="score">${escapeHtml(item.status === "upcoming" ? "VS" : item.actualScore)}</div>
-            <div class="team-side right">
-              <div>
-                <div class="team-name">${escapeHtml(item.teamB.code)}</div>
-                <div class="team-sub">禅断偏向 ${escapeHtml(item.winner)}</div>
-              </div>
-              ${renderBadge({ code: item.teamB.code, logo: item.teamB.logo })}
-            </div>
+        </div>
+        <div class="score">${escapeHtml(currentPrediction.predictedScore)}</div>
+        <div class="team-side right">
+          <div>
+            <div class="team-name">${escapeHtml(currentPrediction.teamB.code)}</div>
+            <div class="team-sub">${escapeHtml(currentPrediction.teamB.recordText || currentPrediction.verdict)}</div>
           </div>
-          <div class="confidence-track">
-            <div class="confidence-fill" style="width: ${item.confidence}%"></div>
-          </div>
-          <div class="factor-list">
-            ${item.factors
-              .map(
-                (factor) => `
-                  <div class="summary-strip">
-                    <span class="subdued">证据</span>
-                    <strong>${escapeHtml(factor)}</strong>
-                  </div>
-                `,
-              )
-              .join("")}
-          </div>
-          <div class="risk-line">
-            <span class="risk-pill">${escapeHtml(item.headline)}</span>
-            <span class="subdued">${escapeHtml(item.risk)}</span>
-          </div>
-          <p class="prediction-copy">${escapeHtml(item.line)}</p>
-        </article>
-      `,
-    )
-    .join("");
-}
-
-function renderDataBrief() {
-  const copy = state.siteData.copy.sections.dataBrief;
-
-  $("#data-brief").innerHTML = `
-    <div class="panel-head">
-      <div>
-        <p class="eyebrow">${escapeHtml(copy.eyebrow)}</p>
-        <h3>${escapeHtml(copy.title)}</h3>
+          ${renderBadge({ code: currentPrediction.teamB.code, logo: currentPrediction.teamB.logo })}
+        </div>
       </div>
-      <span class="panel-tag">${escapeHtml(copy.tag || "数据说明")}</span>
-    </div>
-    <p class="prediction-copy">${escapeHtml(copy.body)}</p>
-    <div class="roadmap-grid">
-      ${state.siteData.dataBrief.items
-        .map(
-          (item) => `
-            <div>
-              <h4>${escapeHtml(item.label)}</h4>
-              <p>${escapeHtml(item.value)}</p>
-            </div>
-          `,
-        )
-        .join("")}
-    </div>
+      <div class="prediction-meta">
+        <span>${escapeHtml(currentPrediction.timeLabel)}</span>
+        <span>${escapeHtml(currentPrediction.verdict)}</span>
+      </div>
+      <div class="confidence-track">
+        <div class="confidence-fill" style="width: ${currentPrediction.confidence}%"></div>
+      </div>
+      <div class="prediction-insight">
+        <div class="dynamic-note">
+          <span class="dynamic-note-label">高僧见解</span>
+          <p>${escapeHtml(currentPrediction.line)}</p>
+        </div>
+        <div class="factor-list">
+          <div class="factor-title">入算因子</div>
+          ${currentPrediction.factors
+            .map(
+              (factor) => `
+                <div class="summary-strip">
+                  <span class="subdued">因子</span>
+                  <strong>${escapeHtml(factor)}</strong>
+                </div>
+              `,
+            )
+            .join("")}
+        </div>
+      </div>
+      <div class="risk-line">
+        <span class="risk-pill">${escapeHtml(currentPrediction.headline)}</span>
+        <span class="subdued">${escapeHtml(currentPrediction.risk)}</span>
+      </div>
+    </article>
   `;
 }
 
@@ -625,7 +706,6 @@ function rerender() {
   renderPlayerSwitcher();
   renderPlayerDetail();
   renderPredictions();
-  renderDataBrief();
   renderViewVisibility();
 }
 
@@ -634,7 +714,7 @@ function bindEvents() {
     const viewButton = event.target.closest("[data-view]");
     if (viewButton) {
       state.currentView = viewButton.dataset.view;
-      renderViewVisibility();
+      rerender();
       window.scrollTo({ top: 0, behavior: "smooth" });
       return;
     }
@@ -642,14 +722,29 @@ function bindEvents() {
     const teamButton = event.target.closest("[data-team]");
     if (teamButton) {
       state.currentTeam = teamButton.dataset.team;
+      const availablePlayers = state.siteData.players.items.filter(
+        (item) => item.teamCode === state.currentTeam,
+      );
+      if (
+        availablePlayers.length &&
+        !availablePlayers.some((item) => item.id === state.currentPlayer)
+      ) {
+        state.currentPlayer = availablePlayers[0].id;
+      }
+      renderHero();
+      renderOverview();
       renderTeamSwitcher();
       renderTeamDetail();
+      renderPlayerSwitcher();
+      renderPlayerDetail();
+      renderPredictions();
       return;
     }
 
     const playerButton = event.target.closest("[data-player]");
     if (playerButton) {
       state.currentPlayer = playerButton.dataset.player;
+      renderHero();
       renderPlayerSwitcher();
       renderPlayerDetail();
     }
@@ -693,13 +788,14 @@ async function init() {
     state.currentPlayer = playerIds.has(queryState.player)
       ? queryState.player
       : state.siteData.players.defaultPlayer;
+
     bindEvents();
     rerender();
   } catch (error) {
-    $("#hero-copy").innerHTML = `
+    $("#hero-match").innerHTML = `
       <p class="eyebrow">加载失败</p>
-      <h2>官网数据还没准备好。</h2>
-      <p class="hero-text">${escapeHtml(error.message || "站点数据文件未发布或路径配错。")}</p>
+      <h2>官网数据暂时不可用。</h2>
+      <p class="hero-text">${escapeHtml(error.message || "站点数据文件未发布或路径配置错误。")}</p>
     `;
   }
 }

@@ -19,72 +19,42 @@ const GEMINI_API_KEY = process.env.GEMINI_API_KEY || "";
 
 const NAV_LABELS = {
   overview: "首页",
-  teams: "战队",
-  players: "选手",
-  predictions: "预测",
+  teams: "战队档案",
+  players: "选手观察",
+  predictions: "高僧预测",
 };
 
 const REGION_MAP = {
   AL: "LPL",
   BLG: "LPL",
+  BFX: "LCP",
   EDG: "LPL",
+  G2: "LEC",
+  GEN: "LCK",
   IG: "LPL",
   JDG: "LPL",
   LGD: "LPL",
   LNG: "LPL",
+  LOUD: "CBLOL",
+  LYON: "LLA",
   NIP: "LPL",
   OMG: "LPL",
   TES: "LPL",
+  TSW: "PCS",
   TT: "LPL",
   UP: "LPL",
   WBG: "LPL",
   WE: "LPL",
-  G2: "LEC",
-  BFX: "LCP",
-  GEN: "LCK",
-  LYON: "LLA",
-  LOUD: "CBLOL",
-  TSW: "PCS",
 };
 
 const FOCUS_TEAM_IDS = ["BLG", "JDG", "AL", "WBG", "LNG", "TES"];
 
 const FOCUS_PLAYERS = [
-  {
-    id: "bin",
-    name: "Bin",
-    role: "上路",
-    teamCode: "BLG",
-    watch: "重点观察边线处理与推进深度。",
-  },
-  {
-    id: "xun",
-    name: "XUN",
-    role: "打野",
-    teamCode: "BLG",
-    watch: "重点观察前十五分钟资源控制与节奏落点。",
-  },
-  {
-    id: "knight",
-    name: "Knight",
-    role: "中路",
-    teamCode: "BLG",
-    watch: "重点观察中期接团与法核收束能力。",
-  },
-  {
-    id: "viper",
-    name: "Viper",
-    role: "下路",
-    teamCode: "BLG",
-    watch: "重点观察线权处理与中后段输出稳定性。",
-  },
-  {
-    id: "on",
-    name: "ON",
-    role: "辅助",
-    teamCode: "BLG",
-    watch: "重点观察开团时机与保护质量。",
-  },
+  { id: "bin", name: "Bin", role: "上路", teamCode: "BLG", watch: "看对线压力和敢不敢把兵线推深。" },
+  { id: "xun", name: "XUN", role: "打野", teamCode: "BLG", watch: "看前十五分钟资源规划和抓边效率。" },
+  { id: "knight", name: "Knight", role: "中路", teamCode: "BLG", watch: "看中期接团次序和技能落点。" },
+  { id: "viper", name: "Viper", role: "下路", teamCode: "BLG", watch: "看线权转换和中后段输出稳定度。" },
+  { id: "on", name: "ON", role: "辅助", teamCode: "BLG", watch: "看先手时机和保后排的判断。" },
 ];
 
 const FALLBACK_COPY = {
@@ -92,84 +62,65 @@ const FALLBACK_COPY = {
   description: "聚合英雄联盟重点赛事的官方赛程、比分、战队信息与比赛预测。",
   brandEyebrow: "ESPORTS MONK",
   brandName: "电竞高僧",
-  scopePill: "LPL / First Stand",
-  signalText: "更新于",
-  hero: {
-    eyebrow: "英雄联盟观赛站",
-    title: "",
-    body: "赛程、比分、战队页和比赛预测集中展示，打开就能看。",
-    tags: ["官方赛程", "实时比分", "战队资料", "比赛预测"],
-  },
+  scopePill: "LPL / First Stand / 主队动态",
+  signalText: "官源同步于",
   sections: {
     overview: {
-      liveEyebrow: "实时赛况",
-      liveTitle: "进行中的比赛",
-      liveTag: "官方更新",
-      upcomingEyebrow: "未来赛程",
+      liveEyebrow: "此刻对局",
+      liveTitle: "正在进行",
+      liveTag: "官源实况",
+      upcomingEyebrow: "将启赛程",
       upcomingTitle: "接下来",
       upcomingTag: "未来 72 小时",
-      rankingEyebrow: "战绩概览",
-      rankingTitle: "第一赛段排名",
+      rankingEyebrow: "赛段席次",
+      rankingTitle: "第一赛段榜单",
       rankingTag: "LPL 已完赛",
-      spotlightEyebrow: "重点选手",
-      spotlightTitle: "今日关注",
+      spotlightEyebrow: "主队关注",
+      spotlightTitle: "重点观察",
     },
     teams: {
-      eyebrow: "战队",
-      title: "战队信息",
-      note: "展示已接入战队的赛程、战绩和近期结果。",
-      docketTitle: "赛程与结果",
+      eyebrow: "战队档案",
+      title: "战队档案",
+      note: "保留赛程、赛果、走势与关键指标。",
+      docketTitle: "赛程与赛果",
       historyTitle: "最近四场",
       heatTitle: "关键指标",
     },
     players: {
-      eyebrow: "选手",
-      title: "重点选手",
-      trackTitle: "角色与赛程",
-      notesTitle: "比赛观察",
+      eyebrow: "选手观察",
+      title: "选手观察",
+      trackTitle: "赛程与角色",
+      notesTitle: "观赛要点",
       historyTitle: "战队近况",
-      intro: "展示主队重点选手的角色、所在战队赛程与近期赛果。",
+      intro: "默认跟随主队重点选手，保留角色信息、战队赛程和近期赛果。",
     },
     predictions: {
-      eyebrow: "预测",
-      title: "比赛预测",
-      note: "预测基于已接入赛程、赛果与战队状态生成，结论与依据分开展示。",
-      blueprintTitle: "方法说明",
-      blueprintTag: "预测框架",
-    },
-    dataBrief: {
-      eyebrow: "数据说明",
-      title: "当前数据范围",
-      body: "当前接入 LPL 第一赛段与 First Stand 的官方公开赛程、比分、赛段与战队信息。",
-      tag: "已接入范围",
+      eyebrow: "高僧预测",
+      title: "高僧预测",
+      note: "只围绕下一场已确认对阵，给出比分判断和高僧见解。",
     },
   },
 };
+
+const AI_COPY_BLOCKLIST = [
+  "装懂",
+  "写上墙",
+  "梭哈",
+  "嘴硬",
+  "当空气",
+  "玄学",
+  "神谕",
+  "天命",
+  "阵卷",
+  "观席",
+  "禅断",
+];
 
 function parseMatchDate(value) {
   return new Date(String(value).replace(/-/g, "/"));
 }
 
-function sortMatches(matches, direction = 1) {
-  return [...matches].sort((left, right) => {
-    const delta = parseMatchDate(left.matchDate) - parseMatchDate(right.matchDate);
-    return delta * direction;
-  });
-}
-
-function signed(value) {
-  return value > 0 ? `+${value}` : `${value}`;
-}
-
-function clamp(value, min, max) {
-  return Math.max(min, Math.min(max, value));
-}
-
-function isKnownTeam(teamCode) {
-  return teamCode && teamCode !== "TBD" && teamCode !== "待定";
-}
-
-function formatDateTime(value) {
+function formatDateShort(value) {
   return new Intl.DateTimeFormat("zh-CN", {
     month: "2-digit",
     day: "2-digit",
@@ -179,7 +130,7 @@ function formatDateTime(value) {
   }).format(parseMatchDate(value));
 }
 
-function formatLongDateTime(value) {
+function formatDateLong(value) {
   return new Intl.DateTimeFormat("zh-CN", {
     month: "long",
     day: "numeric",
@@ -197,20 +148,39 @@ function formatCountdown(value, now = new Date()) {
   const days = Math.floor(totalMinutes / (24 * 60));
   const hours = Math.floor((totalMinutes % (24 * 60)) / 60);
   const minutes = totalMinutes % 60;
-
   if (days > 0) return `${days}天 ${hours}小时`;
   if (hours > 0) return `${hours}小时 ${minutes}分钟`;
   return `${minutes}分钟`;
 }
 
-function resultLabel(result) {
-  if (result === "win") return "胜";
-  if (result === "loss") return "负";
-  return "平";
+function sortMatches(matches, direction = 1) {
+  return [...matches].sort((left, right) => {
+    return (parseMatchDate(left.matchDate) - parseMatchDate(right.matchDate)) * direction;
+  });
+}
+
+function clamp(value, min, max) {
+  return Math.max(min, Math.min(max, value));
+}
+
+function signed(value) {
+  return value > 0 ? `+${value}` : `${value}`;
+}
+
+function isKnownTeam(teamCode) {
+  return Boolean(teamCode && teamCode !== "TBD" && teamCode !== "待定");
 }
 
 function renderRecentForm(results) {
-  return results.length ? results.map(resultLabel).join(" ") : "暂无";
+  return results.length
+    ? results
+        .map((result) => {
+          if (result === "win") return "胜";
+          if (result === "loss") return "负";
+          return "平";
+        })
+        .join(" ")
+    : "暂无";
 }
 
 function teamNameLookup(data) {
@@ -250,26 +220,22 @@ function getSeriesResult(match, teamCode) {
 
 function buildStageAwards(data) {
   const awards = {};
-  const lplCompleted = sortMatches(
+  const completedLpl = sortMatches(
     data.matches.filter((match) => match.tournamentSlug === "lpl" && match.status === "completed"),
     -1,
   );
-  const lplFinal = lplCompleted.find(
+  const finalMatch = completedLpl.find(
     (match) => match.roundName === "决赛" || String(match.stageName).includes("决赛"),
   );
 
-  if (lplFinal) {
+  if (finalMatch) {
     const champion =
-      Number(lplFinal.scoreA) > Number(lplFinal.scoreB)
-        ? lplFinal.teamA.shortName
-        : lplFinal.teamB.shortName;
-    const runnerUp = champion === lplFinal.teamA.shortName ? lplFinal.teamB.shortName : lplFinal.teamA.shortName;
-    awards[champion] = "LPL 第一赛段冠军";
-    awards[runnerUp] = "LPL 第一赛段亚军";
-  }
-
-  for (const teamCode of ["AL", "WBG"]) {
-    awards[teamCode] ||= "LPL 第一赛段四强";
+      Number(finalMatch.scoreA) > Number(finalMatch.scoreB)
+        ? finalMatch.teamA.shortName
+        : finalMatch.teamB.shortName;
+    const runnerUp = champion === finalMatch.teamA.shortName ? finalMatch.teamB.shortName : finalMatch.teamA.shortName;
+    awards[champion] = "第一赛段冠军";
+    awards[runnerUp] = "第一赛段亚军";
   }
 
   return awards;
@@ -328,13 +294,10 @@ function buildRankingRows(data, teamMap) {
 
 function buildTeamRecord(data, teamCode) {
   const allMatches = getTeamMatches(data, teamCode);
-  const completed = sortMatches(
-    allMatches.filter((match) => match.status === "completed"),
-    -1,
-  );
+  const completed = sortMatches(allMatches.filter((match) => match.status === "completed"), -1);
   const liveMatch = allMatches.find((match) => match.status === "in_progress") || null;
   const upcomingMatches = sortMatches(
-    allMatches.filter((match) => match.status !== "completed"),
+    allMatches.filter((match) => match.status === "upcoming"),
     1,
   );
   const nextKnownMatch =
@@ -351,14 +314,8 @@ function buildTeamRecord(data, teamCode) {
   const latestMatch = completed[0] || null;
   const wins = completed.filter((match) => getSeriesResult(match, teamCode) === "win").length;
   const losses = completed.filter((match) => getSeriesResult(match, teamCode) === "loss").length;
-  const gameWins = completed.reduce(
-    (sum, match) => sum + getPerspective(match, teamCode).scoreFor,
-    0,
-  );
-  const gameLosses = completed.reduce(
-    (sum, match) => sum + getPerspective(match, teamCode).scoreAgainst,
-    0,
-  );
+  const gameWins = completed.reduce((sum, match) => sum + getPerspective(match, teamCode).scoreFor, 0);
+  const gameLosses = completed.reduce((sum, match) => sum + getPerspective(match, teamCode).scoreAgainst, 0);
   const recent = completed.slice(0, 5).map((match) => getSeriesResult(match, teamCode));
   const recentWins = recent.filter((result) => result === "win").length;
 
@@ -381,11 +338,10 @@ function buildTeamRecord(data, teamCode) {
 
   return {
     teamCode,
-    allMatches,
     completed,
     liveMatch,
-    nextMatch,
     nextKnownMatch,
+    nextMatch,
     latestMatch,
     wins,
     losses,
@@ -406,64 +362,59 @@ function buildTeamRecord(data, teamCode) {
 }
 
 function buildAllTeamRecords(data) {
-  const uniqueCodes = new Set();
+  const teamCodes = new Set();
   for (const match of data.matches) {
-    uniqueCodes.add(match.teamA.shortName);
-    uniqueCodes.add(match.teamB.shortName);
+    teamCodes.add(match.teamA.shortName);
+    teamCodes.add(match.teamB.shortName);
   }
 
   return Object.fromEntries(
-    [...uniqueCodes].map((teamCode) => [teamCode, buildTeamRecord(data, teamCode)]),
+    [...teamCodes].map((teamCode) => [teamCode, buildTeamRecord(data, teamCode)]),
   );
 }
 
 function buildMetricBars(record) {
-  const stability = clamp(record.winRate, 35, 96);
-  const tension = clamp(50 + record.gameDiff * 4, 18, 98);
+  const stability = clamp(record.winRate, 30, 96);
+  const pressure = clamp(50 + record.gameDiff * 4, 18, 98);
   const recent = clamp(record.recentWins * 20, 20, 100);
-  const continuity = clamp(
-    48 + (record.streakType === "win" ? record.streakCount * 10 : -record.streakCount * 8),
+  const momentum = clamp(
+    46 + (record.streakType === "win" ? record.streakCount * 10 : -record.streakCount * 8),
     18,
     92,
   );
 
   return [
     { label: "胜率", value: stability, text: `${record.winRate}%` },
-    { label: "局差", value: tension, text: signed(record.gameDiff) },
+    { label: "局差", value: pressure, text: signed(record.gameDiff) },
     { label: "近五", value: recent, text: `${record.recentWins}/5` },
-    { label: "走势", value: continuity, text: record.streakLabel },
+    { label: "走势", value: momentum, text: record.streakLabel },
   ];
 }
 
-function fallbackTeamStatement(teamCode, record, stageAward, nextMatch) {
+function buildTeamStatement(teamCode, record, stageAward, nextMatch) {
   const opponent = nextMatch ? getPerspective(nextMatch, teamCode).opponent.shortName : "待定";
-  const firstSentence = stageAward
-    ? `${stageAward}已确认，当前状态以官方赛果为准。`
-    : record.winRate >= 70
-      ? "近期胜率和局差处在前列，整体状态稳定。"
+  const formSentence =
+    record.winRate >= 70
+      ? "近况稳定，能把领先盘稳稳收住。"
       : record.winRate >= 55
-        ? "近期表现平稳，关键局处理仍需继续观察。"
-        : "近期波动较大，前中期节奏仍需观察。";
-
-  const secondSentence = nextMatch
-    ? `下一场将对阵 ${opponent}。`
-    : "下一场对阵尚未确认。";
-
-  return `${firstSentence}${secondSentence}`;
+        ? "账面不虚，关键局处理还得继续盯。"
+        : "波动偏大，前中期的节奏控制还得多看一眼。";
+  const awardSentence = stageAward ? `${stageAward}已经落袋。` : "";
+  const nextSentence = nextMatch ? `下一场已确认对阵 ${opponent}。` : "下一场对阵还没排定。";
+  return `${awardSentence}${formSentence}${nextSentence}`;
 }
 
 function buildTeamCards(data, teamMap, records, stageAwards, rankingRows) {
   const rankingMap = new Map(rankingRows.map((row) => [row.teamCode, row]));
 
   return FOCUS_TEAM_IDS.map((teamCode) => {
-    const baseTeam = teamMap.get(teamCode) || { shortName: teamCode, name: teamCode, logo: "" };
+    const team = teamMap.get(teamCode) || { shortName: teamCode, name: teamCode, logo: "" };
     const record = records[teamCode];
     const nextMatch = record.liveMatch || record.nextKnownMatch || record.nextMatch;
     const latestMatch = record.latestMatch;
     const ranking = rankingMap.get(teamCode);
 
     const docket = [];
-
     if (nextMatch) {
       const perspective = getPerspective(nextMatch, teamCode);
       docket.push({
@@ -472,10 +423,9 @@ function buildTeamCards(data, teamMap, records, stageAwards, rankingRows) {
         note:
           nextMatch.status === "in_progress"
             ? `${nextMatch.tournamentLabel} ${nextMatch.bo} / 当前比分 ${perspective.scoreFor}:${perspective.scoreAgainst}`
-            : `${formatLongDateTime(nextMatch.matchDate)} / ${nextMatch.tournamentLabel} ${nextMatch.bo}`,
+            : `${formatDateLong(nextMatch.matchDate)} / ${nextMatch.tournamentLabel} ${nextMatch.bo}`,
       });
     }
-
     if (latestMatch) {
       const perspective = getPerspective(latestMatch, teamCode);
       docket.push({
@@ -484,7 +434,6 @@ function buildTeamCards(data, teamMap, records, stageAwards, rankingRows) {
         note: `${latestMatch.tournamentLabel} / ${latestMatch.stageName}${latestMatch.roundName ? ` / ${latestMatch.roundName}` : ""}`,
       });
     }
-
     docket.push({
       label: "账面",
       value: `${record.wins}-${record.losses}`,
@@ -493,23 +442,22 @@ function buildTeamCards(data, teamMap, records, stageAwards, rankingRows) {
 
     return {
       id: teamCode,
-      name: baseTeam.name,
+      name: team.name,
       shortName: teamCode,
-      logo: baseTeam.logo,
+      logo: team.logo,
       region: REGION_MAP[teamCode] || "LPL",
       stageAward: stageAwards[teamCode] || "",
       rankingLabel: ranking ? `第一赛段第 ${ranking.rank}` : "当前未进榜",
-      summary: `${teamCode} 当前系列赛 ${record.wins}-${record.losses}，局差 ${signed(record.gameDiff)}，近五场 ${record.recentText}。`,
-      statement: fallbackTeamStatement(teamCode, record, stageAwards[teamCode], nextMatch),
+      summary: `${teamCode} 当前系列赛 ${record.wins}-${record.losses}，单局 ${record.gameWins}-${record.gameLosses}，近五场 ${record.recentText}。`,
+      statement: buildTeamStatement(teamCode, record, stageAwards[teamCode], nextMatch),
       metrics: buildMetricBars(record),
       docket,
       history: record.completed.slice(0, 4).map((match) => {
         const perspective = getPerspective(match, teamCode);
-        const result = getSeriesResult(match, teamCode);
         return {
           opponent: perspective.opponent.shortName,
           result: `${perspective.scoreFor}:${perspective.scoreAgainst}`,
-          outcome: result,
+          outcome: getSeriesResult(match, teamCode),
           note: `${match.tournamentLabel} / ${match.stageName}${match.roundName ? ` / ${match.roundName}` : ""}`,
         };
       }),
@@ -526,33 +474,19 @@ function buildTeamCards(data, teamMap, records, stageAwards, rankingRows) {
 function buildPlayerCards(records) {
   return FOCUS_PLAYERS.map((player) => {
     const record = records[player.teamCode];
-    const focusMatch = record.liveMatch || record.nextKnownMatch || record.nextMatch || record.latestMatch;
-    const latest = record.latestMatch ? getPerspective(record.latestMatch, player.teamCode) : null;
-    const trackLabel =
-      focusMatch?.status === "in_progress"
-        ? "此刻对局"
-        : focusMatch?.status === "upcoming"
-          ? "下一场"
-          : "最近一场";
+    const nextMatch = record.liveMatch || record.nextKnownMatch || record.nextMatch;
+    const latestMatch = record.latestMatch ? getPerspective(record.latestMatch, player.teamCode) : null;
     const track = [
+      { label: "角色", value: player.role, note: `${player.teamCode} 当前关注位` },
       {
-        label: "当前角色",
-        value: `${player.teamCode} / ${player.role}`,
-        note: "当前展示角色信息，不展示未接入的个人排位数据。",
+        label: nextMatch?.status === "in_progress" ? "此刻对局" : "下一场",
+        value: nextMatch ? `${player.teamCode} vs ${getPerspective(nextMatch, player.teamCode).opponent.shortName}` : "等待排表",
+        note: nextMatch ? `${formatDateLong(nextMatch.matchDate)} / ${nextMatch.tournamentLabel}` : "当前没有已确认对阵",
       },
       {
-        label: trackLabel,
-        value: focusMatch
-          ? `${player.teamCode} vs ${getPerspective(focusMatch, player.teamCode).opponent.shortName}`
-          : "等待官源排表",
-        note: focusMatch
-          ? `${formatLongDateTime(focusMatch.matchDate)} / ${focusMatch.tournamentLabel} ${focusMatch.bo}`
-          : "官方暂未给出已确认对阵。",
-      },
-      {
-        label: "战队账面",
-        value: `${record.wins}-${record.losses}`,
-        note: `近五场 ${record.recentText} / 局差 ${signed(record.gameDiff)}`,
+        label: "最近一场",
+        value: latestMatch ? `${latestMatch.scoreFor}:${latestMatch.scoreAgainst}` : "--",
+        note: latestMatch ? `对阵 ${latestMatch.opponent.shortName}` : "最近一场暂未写入",
       },
     ];
 
@@ -561,18 +495,18 @@ function buildPlayerCards(records) {
       name: player.name,
       role: player.role,
       teamCode: player.teamCode,
-      summary: `${player.name} 当前效力于 ${player.teamCode}，页面展示角色信息、所在战队赛程与近期赛果。`,
+      summary: `${player.name} 当前归属 ${player.teamCode}，这里保留角色、赛程和战队近期赛果。`,
       note: player.watch,
       tags: ["角色归属", "战队赛程", "近期赛果"],
       track,
       observation: [
         player.watch,
-        latest
-          ? `最近一场 ${player.teamCode} ${latest.scoreFor}:${latest.scoreAgainst} ${latest.opponent.shortName}。`
-          : "最近一场尚未写入。",
+        latestMatch
+          ? `最近一场 ${player.teamCode} ${latestMatch.scoreFor}:${latestMatch.scoreAgainst} ${latestMatch.opponent.shortName}。`
+          : "最近一场还没有确认结果。",
         record.nextKnownMatch
           ? `下一场已确认对阵 ${getPerspective(record.nextKnownMatch, player.teamCode).opponent.shortName}。`
-          : "下一场对阵尚未确认。",
+          : "下一场对阵还没确认。",
       ],
       history: record.completed.slice(0, 4).map((match) => {
         const perspective = getPerspective(match, player.teamCode);
@@ -587,59 +521,7 @@ function buildPlayerCards(records) {
   });
 }
 
-function buildHeroMatch(records, teamMap, stageAwards) {
-  const blg = records.BLG;
-  const focusMatch = blg.liveMatch || blg.nextKnownMatch || blg.latestMatch || blg.nextMatch;
-  const perspective = focusMatch ? getPerspective(focusMatch, "BLG") : null;
-  const opponent = perspective ? perspective.opponent.shortName : "待定";
-  const opponentRecord = opponent !== "待定" ? records[opponent] : null;
-
-  return {
-    league: focusMatch ? `${focusMatch.tournamentLabel} / ${focusMatch.stageName}` : "主队注目",
-      headline: focusMatch ? `BLG 对 ${opponent}` : "BLG 等待下一场已确认对阵",
-      summary:
-        blg.liveMatch
-          ? `BLG 当前正在对阵 ${opponent}，页面会随最新赛况更新。`
-          : blg.nextKnownMatch
-            ? `BLG 下一场将对阵 ${opponent}，开赛时间与赛段信息已确认。`
-            : blg.latestMatch
-              ? `BLG 与 ${opponent} 的上一场系列赛已经结束，当前展示已确认赛果。`
-              : "BLG 下一场对阵暂未确认，当前先展示最近一场正式赛果。",
-    left: {
-      code: "BLG",
-      sub: stageAwards.BLG || `系列赛 ${blg.wins}-${blg.losses}`,
-      logo: teamMap.get("BLG")?.logo || "",
-    },
-    right: {
-      code: opponent,
-      sub: opponentRecord ? `系列赛 ${opponentRecord.wins}-${opponentRecord.losses}` : "等待官源排表",
-      logo: perspective?.opponent.logo || "",
-    },
-    metrics: [
-      {
-        label: "主队账面",
-        value: `${blg.wins}-${blg.losses}`,
-      },
-      {
-        label: blg.liveMatch ? "当前比分" : "最近结果",
-        value: perspective ? `${perspective.scoreFor}:${perspective.scoreAgainst}` : "--",
-      },
-      {
-        label: blg.nextKnownMatch ? "下一场倒计时" : "当前状态",
-        value: blg.nextKnownMatch
-          ? formatCountdown(blg.nextKnownMatch.matchDate)
-          : blg.liveMatch
-            ? "进行中"
-            : "等待排表",
-      },
-    ],
-    detail: focusMatch
-      ? `${formatLongDateTime(focusMatch.matchDate)} / ${focusMatch.bo} / ${focusMatch.roundName || focusMatch.stageName}`
-      : "等待下一场已确认对阵",
-  };
-}
-
-function buildOverview(data, teamMap, records, rankingRows, players) {
+function buildOverview(data, teamMap, rankingRows, players) {
   const liveMatches = sortMatches(
     data.matches.filter(
       (match) =>
@@ -649,6 +531,7 @@ function buildOverview(data, teamMap, records, rankingRows, players) {
     ),
     1,
   );
+
   const upcomingMatches = sortMatches(
     data.matches.filter(
       (match) =>
@@ -657,11 +540,11 @@ function buildOverview(data, teamMap, records, rankingRows, players) {
         isKnownTeam(match.teamB.shortName),
     ),
     1,
-  );
+  ).slice(0, 5);
 
   return {
     liveMatches,
-    upcomingMatches: upcomingMatches.slice(0, 5),
+    upcomingMatches,
     ranking: rankingRows.slice(0, 8).map((row) => ({
       rank: row.rank,
       teamCode: row.teamCode,
@@ -676,227 +559,150 @@ function buildOverview(data, teamMap, records, rankingRows, players) {
   };
 }
 
-function computeConfidence(recordA, recordB, status, scoreDelta = 0) {
+function computeConfidence(recordA, recordB, headToHead, restDiffHours, bo) {
   const winRateEdge = recordA.winRate - recordB.winRate;
   const diffEdge = recordA.gameDiff - recordB.gameDiff;
   const recentEdge = recordA.recentWins - recordB.recentWins;
-  const liveEdge = status === "in_progress" ? scoreDelta * 9 : 0;
-  const raw = 56 + winRateEdge * 0.32 + diffEdge * 0.85 + recentEdge * 4 + liveEdge;
+  const h2hEdge = headToHead.edge * 6;
+  const restEdge = clamp(restDiffHours / 12, -2, 2) * 2.5;
+  const boEdge = bo === "BO5" ? 2 : 0;
+  const raw = 55 + winRateEdge * 0.32 + diffEdge * 0.9 + recentEdge * 3.8 + h2hEdge + restEdge + boEdge;
   return clamp(Math.round(raw), 42, 84);
 }
 
-function buildPredictionCandidates(data, records) {
-  const liveKnown = sortMatches(
-    data.matches.filter(
-      (match) =>
-        match.status === "in_progress" &&
-        isKnownTeam(match.teamA.shortName) &&
-        isKnownTeam(match.teamB.shortName),
-    ),
-    1,
-  )[0];
-
-  const nextKnown = sortMatches(
-    data.matches.filter(
-      (match) =>
-        match.status === "upcoming" &&
-        isKnownTeam(match.teamA.shortName) &&
-        isKnownTeam(match.teamB.shortName),
-    ),
-    1,
-  ).slice(0, 2);
-
-  const recentResolved = sortMatches(
+function findHeadToHead(data, teamA, teamB) {
+  const matches = sortMatches(
     data.matches.filter(
       (match) =>
         match.status === "completed" &&
-        (match.teamA.shortName === "BLG" || match.teamB.shortName === "BLG"),
+        ((match.teamA.shortName === teamA && match.teamB.shortName === teamB) ||
+          (match.teamA.shortName === teamB && match.teamB.shortName === teamA)),
     ),
     -1,
-  )[0];
+  );
 
-  const ordered = [liveKnown, ...nextKnown, recentResolved].filter(Boolean);
-  const seen = new Set();
-  return ordered.filter((match) => {
-    if (seen.has(match.id)) return false;
-    seen.add(match.id);
-    return true;
-  });
-}
-
-function fallbackPredictionCopy(item) {
-  if (item.status === "resolved") {
-    return {
-      headline: `${item.winner} 已兑现赛果`,
-      line: `${item.winner} 赢下了这场系列赛，当前展示复盘结果。`,
-      risk: "已结束比赛只展示结果，不再给出赛前判断。",
-    };
-  }
-
-  if (item.status === "live") {
-    return {
-      headline: `${item.winner} 当前更占优`,
-      line: `当前比分和既有战绩都更偏向 ${item.winner}。`,
-      risk: "比赛仍在进行，结论会随实时比分变化。",
-    };
-  }
+  const teamAWins = matches.filter((match) => getSeriesResult(match, teamA) === "win").length;
+  const teamBWins = matches.filter((match) => getSeriesResult(match, teamB) === "win").length;
 
   return {
-    headline: `${item.winner} 赛前占优`,
-    line: `${item.winner} 的近期战绩和局差更好，赛前判断略占上风。`,
-    risk: "赛前结论只基于已确认对阵与已接入数据。",
+    teamAWins,
+    teamBWins,
+    edge: teamAWins - teamBWins,
+    text: matches.length ? `交手 ${teamA} ${teamAWins}-${teamBWins} ${teamB}` : "当前赛程内无已确认交手",
   };
 }
 
-function buildPredictions(data, records) {
-  return buildPredictionCandidates(data, records).map((match) => {
-    const recordA = records[match.teamA.shortName] || buildTeamRecord(data, match.teamA.shortName);
-    const recordB = records[match.teamB.shortName] || buildTeamRecord(data, match.teamB.shortName);
-    const liveDelta = Number(match.scoreA) - Number(match.scoreB);
-    const confidenceA = computeConfidence(recordA, recordB, match.status, liveDelta);
-    const favoredTeam =
-      match.status === "completed"
-        ? Number(match.scoreA) > Number(match.scoreB)
-          ? match.teamA.shortName
-          : match.teamB.shortName
-        : confidenceA >= 56
-          ? match.teamA.shortName
-          : match.teamB.shortName;
+function getRestHours(record, nextMatchDate) {
+  const latestMatch = record.latestMatch;
+  if (!latestMatch) return 0;
+  const diff = parseMatchDate(nextMatchDate) - parseMatchDate(latestMatch.matchDate);
+  return Math.max(0, Math.round(diff / 3600000));
+}
+
+function buildPredictedScore(match, favoredTeam, confidence) {
+  const targetA = match.teamA.shortName;
+  const isFavoredA = favoredTeam === targetA;
+  if (match.bo === "BO5") {
+    if (confidence >= 70) return isFavoredA ? "3:1" : "1:3";
+    return isFavoredA ? "3:2" : "2:3";
+  }
+  if (confidence >= 70) return isFavoredA ? "2:0" : "0:2";
+  return isFavoredA ? "2:1" : "1:2";
+}
+
+function buildPredictionFactors(match, recordA, recordB, headToHead, restA, restB) {
+  return [
+    `赛段战绩 ${match.teamA.shortName} ${recordA.wins}-${recordA.losses}，${match.teamB.shortName} ${recordB.wins}-${recordB.losses}`,
+    `近五场 ${match.teamA.shortName} ${recordA.recentText}，${match.teamB.shortName} ${recordB.recentText}`,
+    `局差 ${match.teamA.shortName} ${signed(recordA.gameDiff)}，${match.teamB.shortName} ${signed(recordB.gameDiff)}`,
+    headToHead.text,
+    `休整 ${match.teamA.shortName} ${restA}h，${match.teamB.shortName} ${restB}h`,
+    `${match.bo} / ${match.tournamentLabel} / ${match.stageName}`,
+  ];
+}
+
+function fallbackPredictionCopy(item) {
+  return {
+    headline: `${item.favoredTeam} 略占上风`,
+    line: `${item.favoredTeam} 这一侧盘面更顺，先看它把前两局握在手里。`,
+    risk: "赛前只看已确认赛程与赛果，临场首发和状态一变，断语也得跟着变。",
+  };
+}
+
+function buildTeamPredictions(data, records) {
+  return FOCUS_TEAM_IDS.map((teamId) => {
+    const record = records[teamId];
+    const match = record?.nextKnownMatch || null;
+    if (!record || !match) {
+      return {
+        id: `prediction-${teamId}`,
+        teamId,
+        matchLabel: `${teamId} 下一场待定`,
+        stageLabel: "等待官源排表",
+        timeLabel: "暂无已确认时间",
+        statusText: "待开盘",
+        confidence: 50,
+        predictedScore: "--",
+        verdict: "等待下一场已确认对阵",
+        teamA: { code: teamId, logo: "", recordText: record ? `系列 ${record.wins}-${record.losses}` : "待接入" },
+        teamB: { code: "待定", logo: "", recordText: "等待排表" },
+        favoredTeam: teamId,
+        factors: ["当前官源还没有给出下一场已确认对阵。"],
+        headline: "等待官源排表",
+        line: "赛程未落纸前，不妄开口。",
+        risk: "对阵没定，先不写比分。",
+      };
+    }
+
+    const recordA = records[match.teamA.shortName];
+    const recordB = records[match.teamB.shortName];
+    const headToHead = findHeadToHead(data, match.teamA.shortName, match.teamB.shortName);
+    const restA = getRestHours(recordA, match.matchDate);
+    const restB = getRestHours(recordB, match.matchDate);
+    const confidenceA = computeConfidence(recordA, recordB, headToHead, restA - restB, match.bo);
+    const favoredTeam = confidenceA >= 56 ? match.teamA.shortName : match.teamB.shortName;
     const confidence =
       favoredTeam === match.teamA.shortName
         ? confidenceA
         : clamp(100 - confidenceA, 42, 84);
-    const upset = clamp(100 - confidence + 12, 16, 48);
-    const winnerRecord = favoredTeam === match.teamA.shortName ? recordA : recordB;
-    const loserRecord = favoredTeam === match.teamA.shortName ? recordB : recordA;
-    const fallback = fallbackPredictionCopy({
-      status:
-        match.status === "completed"
-          ? "resolved"
-          : match.status === "in_progress"
-            ? "live"
-            : "upcoming",
-      winner: favoredTeam,
-    });
+    const predictedScore = buildPredictedScore(match, favoredTeam, confidence);
+    const fallback = fallbackPredictionCopy({ favoredTeam });
 
     return {
-      id: match.id,
+      id: `prediction-${teamId}`,
+      teamId,
       matchLabel: `${match.teamA.shortName} vs ${match.teamB.shortName}`,
       stageLabel: `${match.tournamentLabel} / ${match.stageName}`,
-      timeLabel: formatLongDateTime(match.matchDate),
-      status:
-        match.status === "completed"
-          ? "resolved"
-          : match.status === "in_progress"
-            ? "live"
-            : "upcoming",
-      statusText:
-        match.status === "completed"
-          ? "已兑现"
-          : match.status === "in_progress"
-            ? "盘中"
-            : "赛前",
-      winner: favoredTeam,
+      timeLabel: `${formatDateLong(match.matchDate)} / ${match.bo}`,
+      statusText: "赛前",
       confidence,
-      upset,
-      factors: [
-        `${favoredTeam} 系列赛 ${winnerRecord.wins}-${winnerRecord.losses}`,
-        `近五场 ${winnerRecord.recentText}`,
-        `局差 ${signed(winnerRecord.gameDiff)} 对 ${signed(loserRecord.gameDiff)}`,
-      ],
-      fallback,
+      predictedScore,
+      verdict: `${favoredTeam} 稍占上风`,
+      favoredTeam,
       teamA: {
         code: match.teamA.shortName,
         logo: match.teamA.logo,
-        score: Number(match.scoreA),
+        recordText: `系列 ${recordA.wins}-${recordA.losses} / 局差 ${signed(recordA.gameDiff)}`,
       },
       teamB: {
         code: match.teamB.shortName,
         logo: match.teamB.logo,
-        score: Number(match.scoreB),
+        recordText: `系列 ${recordB.wins}-${recordB.losses} / 局差 ${signed(recordB.gameDiff)}`,
       },
-      actualScore: `${match.scoreA}:${match.scoreB}`,
+      factors: buildPredictionFactors(match, recordA, recordB, headToHead, restA, restB),
+      headline: fallback.headline,
+      line: fallback.line,
+      risk: fallback.risk,
+      resources: {
+        seriesRecord: [recordA.wins, recordA.losses, recordB.wins, recordB.losses],
+        gameDiff: [recordA.gameDiff, recordB.gameDiff],
+        recentForm: [recordA.recentText, recordB.recentText],
+        headToHead: headToHead.text,
+        restHours: [restA, restB],
+        bo: match.bo,
+      },
     };
   });
-}
-
-function buildDataBrief(data, rankingRows) {
-  return {
-    items: [
-      {
-        label: "数据来源",
-        value: "腾讯英雄联盟赛事公开赛程",
-      },
-      {
-        label: "赛事覆盖",
-        value: "LPL 第一赛段 + First Stand",
-      },
-      {
-        label: "最近更新",
-        value: data.generatedAtLocal,
-      },
-      {
-        label: "当前榜首",
-        value: rankingRows[0] ? `${rankingRows[0].teamCode} ${rankingRows[0].seriesWins}-${rankingRows[0].seriesLosses}` : "等待刷新",
-      },
-      {
-        label: "当前未展示",
-        value: "LCK 与选手个人排位数据",
-      },
-    ],
-  };
-}
-
-function buildBlueprint() {
-  return {
-    steps: [
-      "统一接入已确认的赛程、赛果与阶段信息。",
-      "战队页聚合近期赛果、下一场与核心战绩指标。",
-      "比赛预测基于规则层结论生成，展示依据、结论与风险。",
-    ],
-    schema: {
-      winner: "BLG",
-      confidence: 64,
-      factors: ["系列赛 10-4", "近五场 胜 胜 胜 负 胜", "局差 +14"],
-      risk: "结论会随最新赛程与状态变化。",
-      line: "结论与依据同步展示。",
-    },
-  };
-}
-
-function buildAiContext(heroMatch, teamCards, playerCards, predictions, data) {
-  return {
-    heroMatch: {
-      headline: heroMatch.headline,
-      summary: heroMatch.summary,
-      detail: heroMatch.detail,
-    },
-    teams: teamCards.map((team) => ({
-      id: team.id,
-      name: team.shortName,
-      stageAward: team.stageAward,
-      record: team.overview.seriesRecord,
-      gameRecord: team.overview.gameRecord,
-      streak: team.overview.streakLabel,
-      next: team.docket[0]?.value || "暂无已确认下一场",
-    })),
-    players: playerCards.map((player) => ({
-      id: player.id,
-      name: player.name,
-      role: player.role,
-      track: player.track[1]?.value || "暂无已确认下一场",
-      watch: player.note,
-    })),
-    predictions: predictions.map((item) => ({
-      id: item.id,
-      match: item.matchLabel,
-      status: item.statusText,
-      favored: item.winner,
-      confidence: item.confidence,
-      factors: item.factors,
-    })),
-    generatedAt: data.generatedAtLocal,
-  };
 }
 
 function sanitizeJsonText(raw) {
@@ -908,133 +714,85 @@ function sanitizeJsonText(raw) {
     .trim();
 }
 
+function sanitizeAiPredictionText(value, fallback) {
+  const text = String(value || "").trim();
+  if (!text) return fallback;
+  const hit = AI_COPY_BLOCKLIST.some((blocked) => text.includes(blocked));
+  return hit ? fallback : text;
+}
+
 async function callGeminiJson(prompt) {
-  if (!GEMINI_API_KEY) {
-    return null;
-  }
+  if (!GEMINI_API_KEY) return null;
 
-  const body = JSON.stringify({
-    contents: [{ role: "user", parts: [{ text: prompt }] }],
-    generationConfig: {
-      responseMimeType: "application/json",
-      temperature: 0.75,
-    },
-  });
-
-  const curlBinary = process.platform === "win32" ? "curl.exe" : "curl";
-  const { stdout } = await execFileAsync(
-    curlBinary,
-    [
-      "-sS",
-      "--connect-timeout",
-      "25",
-      "--max-time",
-      "120",
-      "-H",
-      `x-goog-api-key: ${GEMINI_API_KEY}`,
-      "-H",
-      "Content-Type: application/json",
-      "-d",
-      body,
-      `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent`,
-    ],
+  const response = await fetch(
+    `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_API_KEY}`,
     {
-      maxBuffer: 1024 * 1024 * 8,
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        contents: [{ role: "user", parts: [{ text: prompt }] }],
+        generationConfig: {
+          responseMimeType: "application/json",
+          temperature: 0.6,
+        },
+      }),
     },
   );
 
-  const payload = JSON.parse(stdout);
-  const text = payload.candidates?.[0]?.content?.parts?.[0]?.text;
-  if (!text) return null;
-  return JSON.parse(sanitizeJsonText(text));
-}
-
-async function buildAiCopy(heroMatch, teamCards, playerCards, predictions, data) {
-  const context = buildAiContext(heroMatch, teamCards, playerCards, predictions, data);
-  const prompt = [
-    "你在给一个英雄联盟观赛产品官网写中文正式版文案。",
-    "风格要求：克制、清醒、利落，允许轻微禅意，但不能玄，不能像体育媒体标题党。",
-    "语气要求：像正式上线产品，不像 demo，不像广告腔，不像解说稿。",
-    "注意：板块名已经固定，不需要你改导航名。",
-    "禁止词：奇招、反弹、写死、嘴硬、气势、翻盘、压制、悬念、神仙、天命、梭哈。",
-    "句子必须直接陈述，不要比喻，不要反问，不要夸张。",
-    "只返回 JSON，不要代码块，不要解释。",
-    "JSON schema:",
-    JSON.stringify(
-      {
-        hero: { title: "", body: "" },
-        teams: { BLG: { statement: "" } },
-        players: { bin: { summary: "", note: "" } },
-        predictions: { "match-id": { headline: "", line: "", risk: "" } },
-        dataBrief: { body: "" },
-      },
-      null,
-      2,
-    ),
-    "上下文：",
-    JSON.stringify(context, null, 2),
-    "要求补充：",
-    "1. hero.title 控制在 26 个汉字以内。",
-    "2. hero.body 控制在 70 个汉字以内。",
-    "3. teams 每队只写一句 statement。",
-    "4. players 每人写一条 summary 和一条 note，必须贴合角色与当前已接通的数据边界。",
-    "5. predictions 每场写 headline、line、risk，各自控制在 28 个汉字以内，必须直接写判断和依据。",
-    "6. dataBrief.body 控制在 80 个汉字以内。",
-  ].join("\n");
+  if (!response.ok) return null;
+  const data = await response.json();
+  const raw = data.candidates?.[0]?.content?.parts?.[0]?.text;
+  if (!raw) return null;
 
   try {
-    return await callGeminiJson(prompt);
-  } catch (error) {
-    return {
-      error: error.message,
-    };
+    return JSON.parse(sanitizeJsonText(raw));
+  } catch {
+    return null;
   }
 }
 
-const AI_COPY_BLOCKLIST = [
-  /奇招/u,
-  /触底反弹/u,
-  /写死/u,
-  /嘴硬/u,
-  /气势/u,
-  /翻盘/u,
-  /压制/u,
-  /悬念/u,
-  /神仙/u,
-  /天命/u,
-  /梭哈/u,
-  /豪赌/u,
-  /剧本/u,
-  /血脉/u,
-];
+async function buildAiPredictionCopy(predictions) {
+  const payload = predictions
+    .filter((item) => item.predictedScore !== "--")
+    .map((item) => ({
+      id: item.id,
+      match: item.matchLabel,
+      stage: item.stageLabel,
+      verdict: item.verdict,
+      predictedScore: item.predictedScore,
+      confidence: item.confidence,
+      factors: item.factors,
+    }));
 
-function sanitizeAiPredictionText(value, fallback) {
-  const text = String(value || "")
-    .replace(/\s+/g, " ")
-    .trim();
+  if (!payload.length) return null;
 
-  if (!text) {
-    return fallback;
-  }
+  const prompt = [
+    "你在写英雄联盟观赛站的预测卡文案。",
+    "风格要求：克制、利落、专业，在结论下方那一句可以稍微神神叨叨一点，让人觉得有气口，但不能像疯话。",
+    "每场输出三个字段：headline、line、risk。",
+    "headline 控制在 16 个汉字以内。",
+    "line 控制在 38 个汉字以内，要像高僧留的一句断语。",
+    "risk 控制在 28 个汉字以内。",
+    "严禁出现这些词：装懂、写上墙、梭哈、嘴硬、当空气、玄学、神谕、天命、阵卷、观席、禅断。",
+    "返回 JSON，格式为 { predictions: { [id]: { headline, line, risk } } }。",
+    JSON.stringify(payload, null, 2),
+  ].join("\n");
 
-  if (AI_COPY_BLOCKLIST.some((pattern) => pattern.test(text))) {
-    return fallback;
-  }
-
-  return text;
+  return callGeminiJson(prompt);
 }
 
-function applyAiCopy(siteData, aiCopy) {
-  if (!aiCopy || aiCopy.error) {
-    siteData.copy.aiSource = aiCopy?.error ? `fallback:${aiCopy.error}` : "fallback:no-key";
+function applyAiPredictionCopy(siteData, aiCopy) {
+  if (!aiCopy?.predictions) {
+    siteData.copy.aiSource = "fallback";
     return siteData;
   }
 
   for (const item of siteData.predictions.items) {
-    const aiPrediction = aiCopy.predictions?.[item.id];
-    item.headline = sanitizeAiPredictionText(aiPrediction?.headline, item.headline);
-    item.line = sanitizeAiPredictionText(aiPrediction?.line, item.line);
-    item.risk = sanitizeAiPredictionText(aiPrediction?.risk, item.risk);
+    const aiPrediction = aiCopy.predictions[item.id];
+    if (!aiPrediction) continue;
+    item.headline = sanitizeAiPredictionText(aiPrediction.headline, item.headline);
+    item.line = sanitizeAiPredictionText(aiPrediction.line, item.line);
+    item.risk = sanitizeAiPredictionText(aiPrediction.risk, item.risk);
   }
 
   siteData.copy.aiSource = GEMINI_MODEL;
@@ -1053,11 +811,8 @@ async function main() {
   const records = buildAllTeamRecords(data);
   const teamCards = buildTeamCards(data, teamMap, records, stageAwards, rankingRows);
   const playerCards = buildPlayerCards(records);
-  const heroMatch = buildHeroMatch(records, teamMap, stageAwards);
-  const predictions = buildPredictions(data, records);
-  const overview = buildOverview(data, teamMap, records, rankingRows, playerCards);
-  const dataBrief = buildDataBrief(data, rankingRows);
-  const blueprint = buildBlueprint();
+  const overview = buildOverview(data, teamMap, rankingRows, playerCards);
+  const predictions = buildTeamPredictions(data, records);
 
   let siteData = {
     generatedAt: data.generatedAt,
@@ -1065,38 +820,24 @@ async function main() {
     copy: {
       ...FALLBACK_COPY,
       nav: NAV_LABELS,
-      sections: {
-        ...FALLBACK_COPY.sections,
-      },
-      hero: {
-        ...FALLBACK_COPY.hero,
-      },
       aiSource: "fallback",
     },
-    heroMatch,
     overview,
     teams: {
-      defaultTeam: "BLG",
+      defaultTeam: data.focusDefaults?.team || "BLG",
       items: teamCards,
     },
     players: {
-      defaultPlayer: "bin",
+      defaultPlayer: String(data.focusDefaults?.player || "Bin").toLowerCase(),
       items: playerCards,
     },
     predictions: {
-      items: predictions.map((item) => ({
-        ...item,
-        headline: item.fallback.headline,
-        line: item.fallback.line,
-        risk: item.fallback.risk,
-      })),
-      blueprint,
+      items: predictions,
     },
-    dataBrief,
   };
 
-  const aiCopy = await buildAiCopy(heroMatch, teamCards, playerCards, predictions, data);
-  siteData = applyAiCopy(siteData, aiCopy);
+  const aiCopy = await buildAiPredictionCopy(predictions);
+  siteData = applyAiPredictionCopy(siteData, aiCopy);
 
   await mkdir(path.dirname(outputPath), { recursive: true });
   await writeFile(outputPath, `${JSON.stringify(siteData, null, 2)}\n`, "utf8");
