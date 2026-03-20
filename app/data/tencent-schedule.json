@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-20T16:40:19.308Z",
-  "generatedAtLocal": "2026/3/21 00:40:19",
+  "generatedAt": "2026-03-20T17:35:18.966Z",
+  "generatedAtLocal": "2026/3/21 01:35:18",
   "focusDefaults": {
     "team": "BLG",
     "player": "Bin",
@@ -2703,7 +2703,7 @@
       "status": "in_progress",
       "statusText": "进行中/待确认",
       "scoreA": 1,
-      "scoreB": 0,
+      "scoreB": 1,
       "teamA": {
         "id": "29",
         "name": "北京JDG",

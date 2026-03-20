@@ -1,6 +1,6 @@
 window.__SITE_DATA__ = {
-  "generatedAt": "2026-03-20T16:40:19.308Z",
-  "generatedAtLocal": "2026/3/21 00:40:19",
+  "generatedAt": "2026-03-20T17:35:18.966Z",
+  "generatedAtLocal": "2026/3/21 01:35:18",
   "copy": {
     "title": "电竞高僧 | 英雄联盟观赛站",
     "description": "聚合英雄联盟重点赛事的官方赛程、比分、战队信息与比赛预测。",
@@ -69,7 +69,7 @@ window.__SITE_DATA__ = {
         "status": "in_progress",
         "statusText": "进行中/待确认",
         "scoreA": 1,
-        "scoreB": 0,
+        "scoreB": 1,
         "teamA": {
           "id": "29",
           "name": "北京JDG",
@@ -204,6 +204,7 @@ window.__SITE_DATA__ = {
       "name": "Bin",
       "role": "上路",
       "teamCode": "BLG",
+      "portrait": "",
       "summary": "Bin 当前归属 BLG，这里保留角色、赛程和战队近期赛果。",
       "note": "看对线压力和敢不敢把兵线推深。",
       "tags": [
@@ -377,7 +378,7 @@ window.__SITE_DATA__ = {
           {
             "label": "此刻对局",
             "value": "JDG vs LYON",
-            "note": "First Stand BO5 / 当前比分 1:0"
+            "note": "First Stand BO5 / 当前比分 1:1"
           },
           {
             "label": "最近一场",
@@ -741,6 +742,7 @@ window.__SITE_DATA__ = {
         "name": "Bin",
         "role": "上路",
         "teamCode": "BLG",
+        "portrait": "",
         "summary": "Bin 当前归属 BLG，这里保留角色、赛程和战队近期赛果。",
         "note": "看对线压力和敢不敢把兵线推深。",
         "tags": [
@@ -802,6 +804,7 @@ window.__SITE_DATA__ = {
         "name": "XUN",
         "role": "打野",
         "teamCode": "BLG",
+        "portrait": "",
         "summary": "XUN 当前归属 BLG，这里保留角色、赛程和战队近期赛果。",
         "note": "看前十五分钟资源规划和抓边效率。",
         "tags": [
@@ -863,6 +866,7 @@ window.__SITE_DATA__ = {
         "name": "Knight",
         "role": "中路",
         "teamCode": "BLG",
+        "portrait": "",
         "summary": "Knight 当前归属 BLG，这里保留角色、赛程和战队近期赛果。",
         "note": "看中期接团次序和技能落点。",
         "tags": [
@@ -924,6 +928,7 @@ window.__SITE_DATA__ = {
         "name": "Viper",
         "role": "下路",
         "teamCode": "BLG",
+        "portrait": "",
         "summary": "Viper 当前归属 BLG，这里保留角色、赛程和战队近期赛果。",
         "note": "看线权转换和中后段输出稳定度。",
         "tags": [
@@ -985,6 +990,7 @@ window.__SITE_DATA__ = {
         "name": "ON",
         "role": "辅助",
         "teamCode": "BLG",
+        "portrait": "",
         "summary": "ON 当前归属 BLG，这里保留角色、赛程和战队近期赛果。",
         "note": "看先手时机和保后排的判断。",
         "tags": [

@@ -1,4 +1,5 @@
 import { execFile } from "node:child_process";
+import { existsSync } from "node:fs";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { promisify } from "node:util";
@@ -13,6 +14,8 @@ const scheduleScript = path.join(projectRoot, "scripts", "build-self-use-data.mj
 const schedulePath = path.join(projectRoot, "app", "data", "tencent-schedule.json");
 const outputPath = path.join(projectRoot, "app", "data", "site-data.json");
 const inlineOutputPath = path.join(projectRoot, "app", "data", "site-data.inline.js");
+const playerAssetDir = path.join(projectRoot, "app", "assets", "players");
+const PLAYER_PORTRAIT_EXTENSIONS = [".png", ".webp", ".jpg", ".jpeg", ".avif"];
 
 const GEMINI_MODEL = process.env.GEMINI_MODEL || "gemini-3-flash-preview";
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY || "";
@@ -56,6 +59,16 @@ const FOCUS_PLAYERS = [
   { id: "viper", name: "Viper", role: "下路", teamCode: "BLG", watch: "看线权转换和中后段输出稳定度。" },
   { id: "on", name: "ON", role: "辅助", teamCode: "BLG", watch: "看先手时机和保后排的判断。" },
 ];
+
+function resolvePlayerPortrait(playerId) {
+  for (const ext of PLAYER_PORTRAIT_EXTENSIONS) {
+    const assetPath = path.join(playerAssetDir, `${playerId}${ext}`);
+    if (existsSync(assetPath)) {
+      return `./assets/players/${playerId}${ext}`;
+    }
+  }
+  return "";
+}
 
 const FALLBACK_COPY = {
   title: "电竞高僧 | 英雄联盟观赛站",
@@ -495,6 +508,7 @@ function buildPlayerCards(records) {
       name: player.name,
       role: player.role,
       teamCode: player.teamCode,
+      portrait: resolvePlayerPortrait(player.id),
       summary: `${player.name} 当前归属 ${player.teamCode}，这里保留角色、赛程和战队近期赛果。`,
       note: player.watch,
       tags: ["角色归属", "战队赛程", "近期赛果"],

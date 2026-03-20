@@ -44,6 +44,26 @@ function renderBadge(team, className = "team-badge") {
   return `<div class="${className}">${escapeHtml(label)}</div>`;
 }
 
+function renderPortrait(person, className = "player-headshot", options = {}) {
+  const label = options.label || person?.name || "选手";
+  const loading = options.loading || "lazy";
+  const fallbackMode = options.fallbackMode || "initial";
+  if (person?.portrait) {
+    return `
+      <div class="${className} is-image">
+        <img src="${escapeHtml(person.portrait)}" alt="${escapeHtml(label)}" loading="${escapeHtml(loading)}" />
+      </div>
+    `;
+  }
+
+  if (fallbackMode === "none") {
+    return "";
+  }
+
+  const fallback = person?.name?.slice(0, 1) || "•";
+  return `<div class="${className}">${escapeHtml(fallback)}</div>`;
+}
+
 function getCurrentTeamItem() {
   return state.siteData?.teams?.items.find((item) => item.id === state.currentTeam) || null;
 }
@@ -236,10 +256,15 @@ function renderHero() {
           <p>${escapeHtml(team.statement)}</p>
         </div>
       </div>
-      <div class="dynamic-sidecard">
-        <p class="eyebrow">观战关切</p>
-        <h3>${escapeHtml(heroPlayer ? `${heroPlayer.name} / ${heroPlayer.role}` : "当前未接入该队重点选手")}</h3>
-        <p class="prediction-copy">${escapeHtml(heroPlayer?.note || team.statement)}</p>
+      <div class="dynamic-sidecard ${heroPlayer?.portrait ? "has-portrait" : ""}">
+        <div class="dynamic-player-intro">
+          ${heroPlayer ? renderPortrait(heroPlayer, "dynamic-player-portrait", { label: `${heroPlayer.name} 定妆照`, loading: "eager", fallbackMode: "none" }) : ""}
+          <div class="dynamic-player-copy">
+            <p class="eyebrow">观战关切</p>
+            <h3>${escapeHtml(heroPlayer ? `${heroPlayer.name} / ${heroPlayer.role}` : "当前未接入该队重点选手")}</h3>
+            <p class="prediction-copy">${escapeHtml(heroPlayer?.note || team.statement)}</p>
+          </div>
+        </div>
         <div class="dynamic-side-list">
           ${team.docket
             .slice(0, 3)
@@ -335,7 +360,7 @@ function renderOverview() {
       <span class="panel-tag">${escapeHtml(spotlight.teamCode)}</span>
     </div>
     <div class="spotlight-grid">
-      <div class="player-headshot">${escapeHtml(spotlight.name.slice(0, 1))}</div>
+      ${renderPortrait(spotlight, "player-headshot", { label: `${spotlight.name} 定妆照` })}
       <div>
         <h3>${escapeHtml(spotlight.name)}</h3>
         <p class="subdued">${escapeHtml(spotlight.teamCode)} / ${escapeHtml(spotlight.role)}</p>
@@ -519,7 +544,7 @@ function renderPlayerDetail() {
 
   $("#player-card").innerHTML = `
     <div class="player-card-head">
-      <div class="player-headshot">${escapeHtml(player.name.slice(0, 1))}</div>
+      ${renderPortrait(player, "player-headshot", { label: `${player.name} 定妆照` })}
       <div>
         <p class="eyebrow">${escapeHtml(player.teamCode)} / ${escapeHtml(player.role)}</p>
         <h3>${escapeHtml(player.name)}</h3>
