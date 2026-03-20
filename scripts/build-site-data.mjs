@@ -18,10 +18,10 @@ const GEMINI_MODEL = process.env.GEMINI_MODEL || "gemini-3-flash-preview";
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY || "";
 
 const NAV_LABELS = {
-  overview: "山门",
-  teams: "阵卷",
-  players: "观席",
-  predictions: "禅断",
+  overview: "观赛",
+  teams: "战队",
+  players: "选手",
+  predictions: "研判",
 };
 
 const REGION_MAP = {
@@ -88,60 +88,62 @@ const FOCUS_PLAYERS = [
 ];
 
 const FALLBACK_COPY = {
-  title: "电竞高僧 | 官源观赛与禅断看板",
-  description: "电竞高僧，只做英雄联盟。把官源赛程、战队卷宗、主队关注席和禅断预判压进同一块看板里。",
+  title: "电竞高僧 | 英雄联盟观赛站",
+  description: "聚合英雄联盟重点赛事的赛程、比分、战队信息与比赛研判。",
   brandEyebrow: "ESPORTS MONK",
   brandName: "电竞高僧",
   scopePill: "LPL / First Stand / LoL",
-  signalText: "官源同步正常",
+  signalText: "数据已同步",
   hero: {
-    eyebrow: "只做英雄联盟",
-    title: "把官源赛程、阵卷、观席与禅断，压成一块够稳的看板。",
+    eyebrow: "英雄联盟观赛站",
+    title: "赛程、比分、战队与预测，在一个地方看全。",
     body:
-      "这站先把事实写干净。赛程、比分、赛段、队伍走势直接上墙；该等待补链的地方老老实实写清楚，不拿花活糊你。",
-    tags: ["官源赛程", "战队卷宗", "主队关注席", "禅断预判"],
+      "聚合已确认的赛程、比分、战队信息和重点比赛研判。更新状态清楚，数据范围明确，先把核心信息做好。",
+    tags: ["赛程比分", "战队信息", "选手关注", "比赛研判"],
   },
   sections: {
     overview: {
-      liveEyebrow: "此刻对局",
-      liveTitle: "正在进行",
-      liveTag: "官源实况",
-      upcomingEyebrow: "将启赛程",
+      liveEyebrow: "实时赛况",
+      liveTitle: "进行中的比赛",
+      liveTag: "官方更新",
+      upcomingEyebrow: "未来赛程",
       upcomingTitle: "接下来",
       upcomingTag: "未来 72 小时",
-      rankingEyebrow: "阵势次第",
-      rankingTitle: "第一赛段战绩榜",
-      rankingTag: "LPL 完赛记录",
-      spotlightEyebrow: "主队注目",
-      spotlightTitle: "今日看 Bin",
+      rankingEyebrow: "战绩概览",
+      rankingTitle: "第一赛段排名",
+      rankingTag: "LPL 已完赛",
+      spotlightEyebrow: "主队焦点",
+      spotlightTitle: "今日焦点选手",
     },
     teams: {
-      eyebrow: "阵卷",
-      title: "战队卷宗",
+      eyebrow: "战队",
+      title: "战队信息",
+      note: "基于当前已接入赛事数据整理战队近况与赛程。",
       docketTitle: "行程提要",
       historyTitle: "近局摘录",
-      heatTitle: "观测尺",
+      heatTitle: "数据概览",
     },
     players: {
-      eyebrow: "观席",
-      title: "主队关注席",
+      eyebrow: "选手",
+      title: "重点选手",
       trackTitle: "归队与赛历",
-      notesTitle: "观赛要点",
+      notesTitle: "观察重点",
       historyTitle: "所在战队近局",
-      intro: "当前只接主队关注名录、角色归属与赛历。个人 Rank 和单排对局，下一条链路再补。",
+      intro: "当前展示主队选手的角色归属、所在战队赛程与近期赛果。",
     },
     predictions: {
-      eyebrow: "禅断",
-      title: "禅断与证据",
-      note: "概率、依据、风险拆开写。文案可以有气质，事实不能漂。",
-      blueprintTitle: "断法",
-      blueprintTag: "构建期生成",
+      eyebrow: "研判",
+      title: "比赛研判",
+      note: "研判基于已接入赛程、赛果与战队状态生成，结论与依据分开展示。",
+      blueprintTitle: "方法说明",
+      blueprintTag: "研判框架",
     },
     dataBrief: {
-      eyebrow: "数据口径",
-      title: "只把能确认的写上墙",
+      eyebrow: "数据说明",
+      title: "当前数据范围",
       body:
-        "官网当前只接腾讯英雄联盟赛事公开赛程文件，覆盖 LPL 第一赛段与 First Stand。选手个人 Rank、个人对局与 LCK 全链路，暂时没有混进来装懂。",
+        "当前已接入 LPL 第一赛段与 First Stand 的赛程、比分、阶段与战队信息。更多赛事和选手个人数据将陆续接入。",
+      tag: "已接入范围",
     },
   },
 };
@@ -438,16 +440,16 @@ function buildMetricBars(record) {
 function fallbackTeamStatement(teamCode, record, stageAward, nextMatch) {
   const opponent = nextMatch ? getPerspective(nextMatch, teamCode).opponent.shortName : "待定";
   const firstSentence = stageAward
-    ? `${stageAward}已经落地。`
+    ? `${stageAward}已确认，当前状态以官方赛果为准。`
     : record.winRate >= 70
-      ? "这队近况够硬，账面也好看。"
+      ? "近期胜率和局差都在前列，整体状态稳定。"
       : record.winRate >= 55
-        ? "走势偏稳，但还没稳到能闭眼。"
-        : "起伏还在，前十五分钟尤其要盯。";
+        ? "近期表现稳定，关键局处理仍需继续观察。"
+        : "近期波动较大，前中期节奏是主要观察点。";
 
   const secondSentence = nextMatch
-    ? `下一场对 ${opponent}，看点不会少。`
-    : "当前还没有下一场已确认对阵。";
+    ? `下一场将对阵 ${opponent}。`
+    : "下一场对阵尚未确认。";
 
   return `${firstSentence}${secondSentence}`;
 }
@@ -596,15 +598,15 @@ function buildHeroMatch(records, teamMap, stageAwards) {
 
   return {
     league: focusMatch ? `${focusMatch.tournamentLabel} / ${focusMatch.stageName}` : "主队注目",
-    headline: focusMatch ? `BLG 对 ${opponent}` : "BLG 等待下一场已确认对阵",
-    summary:
-      blg.liveMatch
-        ? `BLG 此刻正在打 ${opponent}，官方状态已经切到进行中。`
-        : blg.nextKnownMatch
-          ? `BLG 下一场已确认对阵 ${opponent}，时点和赛段都能直接上墙。`
-          : blg.latestMatch
-            ? `BLG 最近一场刚打完 ${opponent}，现在先拿落地赛果说话。`
-            : "BLG 当前没有已确认下一场，主页先把最近落地结果摆出来。",
+      headline: focusMatch ? `BLG 对 ${opponent}` : "BLG 等待下一场已确认对阵",
+      summary:
+        blg.liveMatch
+          ? `BLG 当前正在对阵 ${opponent}，页面会随最新赛况更新。`
+          : blg.nextKnownMatch
+            ? `BLG 下一场将对阵 ${opponent}，开赛时间与赛段信息已确认。`
+            : blg.latestMatch
+              ? `BLG 最近一场对阵 ${opponent} 已结束，当前先展示已确认赛果。`
+              : "BLG 下一场对阵暂未确认，当前先展示最近一场正式赛果。",
     left: {
       code: "BLG",
       sub: stageAwards.BLG || `系列赛 ${blg.wins}-${blg.losses}`,
@@ -824,24 +826,24 @@ function buildDataBrief(data, rankingRows) {
   return {
     items: [
       {
-        label: "官源",
-        value: "腾讯英雄联盟赛事公开赛程文件",
+        label: "数据来源",
+        value: "腾讯英雄联盟赛事公开赛程",
       },
       {
-        label: "覆盖",
+        label: "赛事覆盖",
         value: "LPL 第一赛段 + First Stand",
       },
       {
-        label: "刷新",
+        label: "最近更新",
         value: data.generatedAtLocal,
       },
       {
-        label: "LPL 榜首",
+        label: "当前榜首",
         value: rankingRows[0] ? `${rankingRows[0].teamCode} ${rankingRows[0].seriesWins}-${rankingRows[0].seriesLosses}` : "等待刷新",
       },
       {
-        label: "未接链路",
-        value: "个人 Rank / 个人对局 / LCK 全量",
+        label: "后续接入",
+        value: "更多赛事、选手个人数据与扩展联赛",
       },
     ],
   };
@@ -850,16 +852,16 @@ function buildDataBrief(data, rankingRows) {
 function buildBlueprint() {
   return {
     steps: [
-      "先拉官源赛程与赛果，再整理成站内唯一口径。",
-      "阵卷只写账面、近局和下一场，不拿假资料补洞。",
-      "禅断先算规则层，再用模型把话说得像人，不让模型接管事实。",
+      "统一接入已确认的赛程、赛果与阶段信息。",
+      "战队页聚合近期赛果、下一场与核心战绩指标。",
+      "比赛研判基于规则层结论生成，展示依据、结论与风险。",
     ],
     schema: {
       winner: "BLG",
       confidence: 64,
       factors: ["系列赛 10-4", "近五场 胜 胜 胜 负 胜", "局差 +14"],
-      risk: "赛前卡只认已确认对阵与落地账面。",
-      line: "结论能有态度，事实必须有出处。",
+      risk: "结论会随最新赛程与状态变化。",
+      line: "结论与依据同步展示。",
     },
   };
 }
@@ -993,24 +995,6 @@ function applyAiCopy(siteData, aiCopy) {
   if (!aiCopy || aiCopy.error) {
     siteData.copy.aiSource = aiCopy?.error ? `fallback:${aiCopy.error}` : "fallback:no-key";
     return siteData;
-  }
-
-  for (const team of siteData.teams.items) {
-    const aiTeam = aiCopy.teams?.[team.id];
-    if (aiTeam?.statement) {
-      team.statement = aiTeam.statement;
-    }
-  }
-
-  for (const player of siteData.players.items) {
-    const aiPlayer = aiCopy.players?.[player.id];
-    if (aiPlayer?.summary) {
-      player.summary = aiPlayer.summary;
-    }
-    if (aiPlayer?.note) {
-      player.note = aiPlayer.note;
-      player.observation[0] = aiPlayer.note;
-    }
   }
 
   for (const item of siteData.predictions.items) {

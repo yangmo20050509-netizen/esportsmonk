@@ -267,7 +267,7 @@ function renderTeamSwitcher() {
       <p class="eyebrow">${escapeHtml(state.siteData.copy.sections.teams.eyebrow)}</p>
       <h3>${escapeHtml(state.siteData.copy.sections.teams.title)}</h3>
     </div>
-    <span class="signal-pill is-ghost">${escapeHtml(state.siteData.copy.description)}</span>
+    <span class="signal-pill is-ghost">${escapeHtml(state.siteData.copy.sections.teams.note || state.siteData.copy.description)}</span>
   `;
 
   $("#team-switcher").innerHTML = state.siteData.teams.items
@@ -587,7 +587,7 @@ function renderDataBrief() {
         <p class="eyebrow">${escapeHtml(copy.eyebrow)}</p>
         <h3>${escapeHtml(copy.title)}</h3>
       </div>
-      <span class="panel-tag">${escapeHtml(state.siteData.copy.aiSource)}</span>
+      <span class="panel-tag">${escapeHtml(copy.tag || "数据说明")}</span>
     </div>
     <p class="prediction-copy">${escapeHtml(copy.body)}</p>
     <div class="roadmap-grid">
