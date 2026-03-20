@@ -1,22 +1,22 @@
 window.__SITE_DATA__ = {
-  "generatedAt": "2026-03-20T13:56:56.369Z",
-  "generatedAtLocal": "2026/3/20 21:56:56",
+  "generatedAt": "2026-03-20T15:29:01.228Z",
+  "generatedAtLocal": "2026/3/20 23:29:01",
   "copy": {
     "title": "电竞高僧 | 英雄联盟观赛站",
-    "description": "聚合英雄联盟重点赛事的赛程、比分、战队信息与比赛研判。",
+    "description": "聚合英雄联盟重点赛事的官方赛程、比分、战队信息与比赛预测。",
     "brandEyebrow": "ESPORTS MONK",
     "brandName": "电竞高僧",
-    "scopePill": "LPL / First Stand / LoL",
-    "signalText": "数据已同步",
+    "scopePill": "LPL / First Stand",
+    "signalText": "更新于",
     "hero": {
       "eyebrow": "英雄联盟观赛站",
-      "title": "赛程、比分、战队与预测，在一个地方看全。",
-      "body": "聚合已确认的赛程、比分、战队信息和重点比赛研判。更新状态清楚，数据范围明确，先把核心信息做好。",
+      "title": "",
+      "body": "赛程、比分、战队页和比赛预测集中展示，打开就能看。",
       "tags": [
-        "赛程比分",
-        "战队信息",
-        "选手关注",
-        "比赛研判"
+        "官方赛程",
+        "实时比分",
+        "战队资料",
+        "比赛预测"
       ]
     },
     "sections": {
@@ -30,51 +30,51 @@ window.__SITE_DATA__ = {
         "rankingEyebrow": "战绩概览",
         "rankingTitle": "第一赛段排名",
         "rankingTag": "LPL 已完赛",
-        "spotlightEyebrow": "主队焦点",
-        "spotlightTitle": "今日焦点选手"
+        "spotlightEyebrow": "重点选手",
+        "spotlightTitle": "今日关注"
       },
       "teams": {
         "eyebrow": "战队",
         "title": "战队信息",
-        "note": "基于当前已接入赛事数据整理战队近况与赛程。",
-        "docketTitle": "行程提要",
-        "historyTitle": "近局摘录",
-        "heatTitle": "数据概览"
+        "note": "展示已接入战队的赛程、战绩和近期结果。",
+        "docketTitle": "赛程与结果",
+        "historyTitle": "最近四场",
+        "heatTitle": "关键指标"
       },
       "players": {
         "eyebrow": "选手",
         "title": "重点选手",
-        "trackTitle": "归队与赛历",
-        "notesTitle": "观察重点",
-        "historyTitle": "所在战队近局",
-        "intro": "当前展示主队选手的角色归属、所在战队赛程与近期赛果。"
+        "trackTitle": "角色与赛程",
+        "notesTitle": "比赛观察",
+        "historyTitle": "战队近况",
+        "intro": "展示主队重点选手的角色、所在战队赛程与近期赛果。"
       },
       "predictions": {
-        "eyebrow": "研判",
-        "title": "比赛研判",
-        "note": "研判基于已接入赛程、赛果与战队状态生成，结论与依据分开展示。",
+        "eyebrow": "预测",
+        "title": "比赛预测",
+        "note": "预测基于已接入赛程、赛果与战队状态生成，结论与依据分开展示。",
         "blueprintTitle": "方法说明",
-        "blueprintTag": "研判框架"
+        "blueprintTag": "预测框架"
       },
       "dataBrief": {
         "eyebrow": "数据说明",
         "title": "当前数据范围",
-        "body": "当前已接入 LPL 第一赛段与 First Stand 的赛程、比分、阶段与战队信息。更多赛事和选手个人数据将陆续接入。",
+        "body": "当前接入 LPL 第一赛段与 First Stand 的官方公开赛程、比分、赛段与战队信息。",
         "tag": "已接入范围"
       }
     },
     "nav": {
-      "overview": "观赛",
+      "overview": "首页",
       "teams": "战队",
       "players": "选手",
-      "predictions": "研判"
+      "predictions": "预测"
     },
     "aiSource": "gemini-3-flash-preview"
   },
   "heroMatch": {
     "league": "First Stand / 小组赛",
     "headline": "BLG 对 G2",
-    "summary": "BLG 最近一场对阵 G2 已结束，当前先展示已确认赛果。",
+    "summary": "BLG 与 G2 的上一场系列赛已经结束，当前展示已确认赛果。",
     "left": {
       "code": "BLG",
       "sub": "LPL 第一赛段冠军",
@@ -117,7 +117,7 @@ window.__SITE_DATA__ = {
         "matchDate": "2026-03-20 21:00:00",
         "status": "in_progress",
         "statusText": "进行中/待确认",
-        "scoreA": 1,
+        "scoreA": 2,
         "scoreB": 0,
         "teamA": {
           "id": "117",
@@ -253,18 +253,18 @@ window.__SITE_DATA__ = {
       "name": "Bin",
       "role": "上路",
       "teamCode": "BLG",
-      "summary": "Bin 当前挂在 BLG 关注席，先把归队、赛历和所在战队近况看清。",
-      "note": "看边线压迫和敢不敢把兵线推深。",
+      "summary": "Bin 当前效力于 BLG，页面展示角色信息、所在战队赛程与近期赛果。",
+      "note": "重点观察边线处理与推进深度。",
       "tags": [
-        "主队关注",
-        "真实赛历",
-        "不装 Rank"
+        "角色归属",
+        "战队赛程",
+        "近期赛果"
       ],
       "track": [
         {
-          "label": "当前归队",
+          "label": "当前角色",
           "value": "BLG / 上路",
-          "note": "当前只接角色与归队，不假装有个人 Rank。"
+          "note": "当前展示角色信息，不展示未接入的个人排位数据。"
         },
         {
           "label": "最近一场",
@@ -278,9 +278,9 @@ window.__SITE_DATA__ = {
         }
       ],
       "observation": [
-        "看边线压迫和敢不敢把兵线推深。",
+        "重点观察边线处理与推进深度。",
         "最近一场 BLG 3:0 G2。",
-        "下一场还没到已确认对阵。"
+        "下一场对阵尚未确认。"
       ],
       "history": [
         {
@@ -321,7 +321,7 @@ window.__SITE_DATA__ = {
         "region": "LPL",
         "stageAward": "LPL 第一赛段冠军",
         "rankingLabel": "第一赛段第 1",
-        "summary": "BLG 当前系列赛 12-4，局差 +18。近五场 胜 胜 胜 胜 胜。",
+        "summary": "BLG 当前系列赛 12-4，局差 +18，近五场 胜 胜 胜 胜 胜。",
         "statement": "LPL 第一赛段冠军已确认，当前状态以官方赛果为准。下一场对阵尚未确认。",
         "metrics": [
           {
@@ -398,7 +398,7 @@ window.__SITE_DATA__ = {
         "region": "LPL",
         "stageAward": "LPL 第一赛段亚军",
         "rankingLabel": "第一赛段第 3",
-        "summary": "JDG 当前系列赛 9-8，局差 +2。近五场 胜 负 负 胜 负。",
+        "summary": "JDG 当前系列赛 9-8，局差 +2，近五场 胜 负 负 胜 负。",
         "statement": "LPL 第一赛段亚军已确认，当前状态以官方赛果为准。下一场将对阵 LYON。",
         "metrics": [
           {
@@ -480,7 +480,7 @@ window.__SITE_DATA__ = {
         "region": "LPL",
         "stageAward": "LPL 第一赛段四强",
         "rankingLabel": "第一赛段第 2",
-        "summary": "AL 当前系列赛 10-4，局差 +11。近五场 负 胜 负 胜 胜。",
+        "summary": "AL 当前系列赛 10-4，局差 +11，近五场 负 胜 负 胜 胜。",
         "statement": "LPL 第一赛段四强已确认，当前状态以官方赛果为准。下一场对阵尚未确认。",
         "metrics": [
           {
@@ -557,7 +557,7 @@ window.__SITE_DATA__ = {
         "region": "LPL",
         "stageAward": "LPL 第一赛段四强",
         "rankingLabel": "第一赛段第 4",
-        "summary": "WBG 当前系列赛 8-7，局差 0。近五场 负 胜 胜 负 胜。",
+        "summary": "WBG 当前系列赛 8-7，局差 0，近五场 负 胜 胜 负 胜。",
         "statement": "LPL 第一赛段四强已确认，当前状态以官方赛果为准。下一场对阵尚未确认。",
         "metrics": [
           {
@@ -634,8 +634,8 @@ window.__SITE_DATA__ = {
         "region": "LPL",
         "stageAward": "",
         "rankingLabel": "第一赛段第 5",
-        "summary": "LNG 当前系列赛 7-1，局差 +11。近五场 负 胜 胜 胜 胜。",
-        "statement": "近期胜率和局差都在前列，整体状态稳定。下一场对阵尚未确认。",
+        "summary": "LNG 当前系列赛 7-1，局差 +11，近五场 负 胜 胜 胜 胜。",
+        "statement": "近期胜率和局差处在前列，整体状态稳定。下一场对阵尚未确认。",
         "metrics": [
           {
             "label": "胜率",
@@ -711,8 +711,8 @@ window.__SITE_DATA__ = {
         "region": "LPL",
         "stageAward": "",
         "rankingLabel": "第一赛段第 7",
-        "summary": "TES 当前系列赛 6-8，局差 -1。近五场 负 胜 负 胜 胜。",
-        "statement": "近期波动较大，前中期节奏是主要观察点。下一场对阵尚未确认。",
+        "summary": "TES 当前系列赛 6-8，局差 -1，近五场 负 胜 负 胜 胜。",
+        "statement": "近期波动较大，前中期节奏仍需观察。下一场对阵尚未确认。",
         "metrics": [
           {
             "label": "胜率",
@@ -790,18 +790,18 @@ window.__SITE_DATA__ = {
         "name": "Bin",
         "role": "上路",
         "teamCode": "BLG",
-        "summary": "Bin 当前挂在 BLG 关注席，先把归队、赛历和所在战队近况看清。",
-        "note": "看边线压迫和敢不敢把兵线推深。",
+        "summary": "Bin 当前效力于 BLG，页面展示角色信息、所在战队赛程与近期赛果。",
+        "note": "重点观察边线处理与推进深度。",
         "tags": [
-          "主队关注",
-          "真实赛历",
-          "不装 Rank"
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
         ],
         "track": [
           {
-            "label": "当前归队",
+            "label": "当前角色",
             "value": "BLG / 上路",
-            "note": "当前只接角色与归队，不假装有个人 Rank。"
+            "note": "当前展示角色信息，不展示未接入的个人排位数据。"
           },
           {
             "label": "最近一场",
@@ -815,9 +815,9 @@ window.__SITE_DATA__ = {
           }
         ],
         "observation": [
-          "看边线压迫和敢不敢把兵线推深。",
+          "重点观察边线处理与推进深度。",
           "最近一场 BLG 3:0 G2。",
-          "下一场还没到已确认对阵。"
+          "下一场对阵尚未确认。"
         ],
         "history": [
           {
@@ -851,18 +851,18 @@ window.__SITE_DATA__ = {
         "name": "XUN",
         "role": "打野",
         "teamCode": "BLG",
-        "summary": "XUN 当前挂在 BLG 关注席，先把归队、赛历和所在战队近况看清。",
-        "note": "看前十五分钟河道控制和第一波节奏落点。",
+        "summary": "XUN 当前效力于 BLG，页面展示角色信息、所在战队赛程与近期赛果。",
+        "note": "重点观察前十五分钟资源控制与节奏落点。",
         "tags": [
-          "主队关注",
-          "真实赛历",
-          "不装 Rank"
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
         ],
         "track": [
           {
-            "label": "当前归队",
+            "label": "当前角色",
             "value": "BLG / 打野",
-            "note": "当前只接角色与归队，不假装有个人 Rank。"
+            "note": "当前展示角色信息，不展示未接入的个人排位数据。"
           },
           {
             "label": "最近一场",
@@ -876,9 +876,9 @@ window.__SITE_DATA__ = {
           }
         ],
         "observation": [
-          "看前十五分钟河道控制和第一波节奏落点。",
+          "重点观察前十五分钟资源控制与节奏落点。",
           "最近一场 BLG 3:0 G2。",
-          "下一场还没到已确认对阵。"
+          "下一场对阵尚未确认。"
         ],
         "history": [
           {
@@ -912,18 +912,18 @@ window.__SITE_DATA__ = {
         "name": "Knight",
         "role": "中路",
         "teamCode": "BLG",
-        "summary": "Knight 当前挂在 BLG 关注席，先把归队、赛历和所在战队近况看清。",
-        "note": "看中期第一波接团和法核收束能力。",
+        "summary": "Knight 当前效力于 BLG，页面展示角色信息、所在战队赛程与近期赛果。",
+        "note": "重点观察中期接团与法核收束能力。",
         "tags": [
-          "主队关注",
-          "真实赛历",
-          "不装 Rank"
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
         ],
         "track": [
           {
-            "label": "当前归队",
+            "label": "当前角色",
             "value": "BLG / 中路",
-            "note": "当前只接角色与归队，不假装有个人 Rank。"
+            "note": "当前展示角色信息，不展示未接入的个人排位数据。"
           },
           {
             "label": "最近一场",
@@ -937,9 +937,9 @@ window.__SITE_DATA__ = {
           }
         ],
         "observation": [
-          "看中期第一波接团和法核收束能力。",
+          "重点观察中期接团与法核收束能力。",
           "最近一场 BLG 3:0 G2。",
-          "下一场还没到已确认对阵。"
+          "下一场对阵尚未确认。"
         ],
         "history": [
           {
@@ -973,18 +973,18 @@ window.__SITE_DATA__ = {
         "name": "Viper",
         "role": "下路",
         "teamCode": "BLG",
-        "summary": "Viper 当前挂在 BLG 关注席，先把归队、赛历和所在战队近况看清。",
-        "note": "看线权处理和中后段收口是不是够稳。",
+        "summary": "Viper 当前效力于 BLG，页面展示角色信息、所在战队赛程与近期赛果。",
+        "note": "重点观察线权处理与中后段输出稳定性。",
         "tags": [
-          "主队关注",
-          "真实赛历",
-          "不装 Rank"
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
         ],
         "track": [
           {
-            "label": "当前归队",
+            "label": "当前角色",
             "value": "BLG / 下路",
-            "note": "当前只接角色与归队，不假装有个人 Rank。"
+            "note": "当前展示角色信息，不展示未接入的个人排位数据。"
           },
           {
             "label": "最近一场",
@@ -998,9 +998,9 @@ window.__SITE_DATA__ = {
           }
         ],
         "observation": [
-          "看线权处理和中后段收口是不是够稳。",
+          "重点观察线权处理与中后段输出稳定性。",
           "最近一场 BLG 3:0 G2。",
-          "下一场还没到已确认对阵。"
+          "下一场对阵尚未确认。"
         ],
         "history": [
           {
@@ -1034,18 +1034,18 @@ window.__SITE_DATA__ = {
         "name": "ON",
         "role": "辅助",
         "teamCode": "BLG",
-        "summary": "ON 当前挂在 BLG 关注席，先把归队、赛历和所在战队近况看清。",
-        "note": "看开团时机和失误率，别只盯高光。",
+        "summary": "ON 当前效力于 BLG，页面展示角色信息、所在战队赛程与近期赛果。",
+        "note": "重点观察开团时机与保护质量。",
         "tags": [
-          "主队关注",
-          "真实赛历",
-          "不装 Rank"
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
         ],
         "track": [
           {
-            "label": "当前归队",
+            "label": "当前角色",
             "value": "BLG / 辅助",
-            "note": "当前只接角色与归队，不假装有个人 Rank。"
+            "note": "当前展示角色信息，不展示未接入的个人排位数据。"
           },
           {
             "label": "最近一场",
@@ -1059,9 +1059,9 @@ window.__SITE_DATA__ = {
           }
         ],
         "observation": [
-          "看开团时机和失误率，别只盯高光。",
+          "重点观察开团时机与保护质量。",
           "最近一场 BLG 3:0 G2。",
-          "下一场还没到已确认对阵。"
+          "下一场对阵尚未确认。"
         ],
         "history": [
           {
@@ -1102,32 +1102,32 @@ window.__SITE_DATA__ = {
         "status": "live",
         "statusText": "盘中",
         "winner": "G2",
-        "confidence": 63,
-        "upset": 48,
+        "confidence": 72,
+        "upset": 40,
         "factors": [
           "G2 系列赛 1-1",
           "近五场 负 胜",
           "局差 0 对 +2"
         ],
         "fallback": {
-          "headline": "G2 盘面更顺",
-          "line": "局还在走，但账面和当前比分都偏向 G2。",
-          "risk": "盘中信息跳得快，这张卡只能提醒方向，不能替代直播。"
+          "headline": "G2 当前更占优",
+          "line": "当前比分和既有战绩都更偏向 G2。",
+          "risk": "比赛仍在进行，结论会随实时比分变化。"
         },
         "teamA": {
           "code": "G2",
           "logo": "https://img.crawler.qq.com/lolwebvideo/20250618120148/0654f8b663a3973eb8debcf929cb919e/0",
-          "score": 1
+          "score": 2
         },
         "teamB": {
           "code": "BFX",
           "logo": "https://img.crawler.qq.com/lolwebvideo/20260309172157/527e28e49444ec8cccb0e71f01b579b6/0",
           "score": 0
         },
-        "actualScore": "1:0",
-        "headline": "G2 寻求在均势中突围",
-        "line": "系列赛 1-1 的焦灼，考验双方对版本理解的修正。",
-        "risk": "盘中局势瞬息万变，过往战绩无法完全对冲临场失误。"
+        "actualScore": "2:0",
+        "headline": "预测 G2 获胜概率为 72%。",
+        "line": "G2 局差数据优于对手，胜场表现稳定。",
+        "risk": "系列赛 1-1 状态，需观察多局制体力消耗。"
       },
       {
         "id": "13204",
@@ -1145,9 +1145,9 @@ window.__SITE_DATA__ = {
           "局差 +2 对 -2"
         ],
         "fallback": {
-          "headline": "JDG 稍占先手",
-          "line": "JDG 的账面更厚，赛前可以先往这边看，但别把风险当空气。",
-          "risk": "赛前卡只认已确认对阵与落地账面，不拿未落地首发乱编。"
+          "headline": "JDG 赛前占优",
+          "line": "JDG 的近期战绩和局差更好，赛前判断略占上风。",
+          "risk": "赛前结论只基于已确认对阵与已接入数据。"
         },
         "teamA": {
           "code": "JDG",
@@ -1160,9 +1160,9 @@ window.__SITE_DATA__ = {
           "score": 0
         },
         "actualScore": "0:0",
-        "headline": "JDG 面对弱旅的自我修正",
-        "line": "局差优势显著，纸面实力差距在数据模型中清晰可见。",
-        "risk": "状态波动是唯一变量，需警惕低位队伍的绝地反扑。"
+        "headline": "预测 JDG 获胜概率为 64%。",
+        "line": "JDG 局差为正且整体胜场数占优。",
+        "risk": "近五场胜率存在波动，稳定性存疑。"
       },
       {
         "id": "13199",
@@ -1180,9 +1180,9 @@ window.__SITE_DATA__ = {
           "局差 +18 对 0"
         ],
         "fallback": {
-          "headline": "BLG 已经兑付",
-          "line": "BLG 这场把结果写死了，赛果摆在墙上，不用再靠嘴硬。",
-          "risk": "已结束对局只做复盘，不再装成赛前判断。"
+          "headline": "BLG 已兑现赛果",
+          "line": "BLG 赢下了这场系列赛，当前展示复盘结果。",
+          "risk": "已结束比赛只展示结果，不再给出赛前判断。"
         },
         "teamA": {
           "code": "BLG",
@@ -1195,16 +1195,16 @@ window.__SITE_DATA__ = {
           "score": 0
         },
         "actualScore": "3:0",
-        "headline": "意料之中的统治级对决",
-        "line": "五连胜的势能与大额局差，锁定了极高的胜算。",
-        "risk": "已兑现的赛果证明，硬实力的鸿沟难以通过战术填补。"
+        "headline": "BLG 获胜预测已兑现。",
+        "line": "五连胜状态与 12-4 战绩符合数据预期。",
+        "risk": "赛果已确认，数据节点验证完毕。"
       }
     ],
     "blueprint": {
       "steps": [
         "统一接入已确认的赛程、赛果与阶段信息。",
         "战队页聚合近期赛果、下一场与核心战绩指标。",
-        "比赛研判基于规则层结论生成，展示依据、结论与风险。"
+        "比赛预测基于规则层结论生成，展示依据、结论与风险。"
       ],
       "schema": {
         "winner": "BLG",
@@ -1231,15 +1231,15 @@ window.__SITE_DATA__ = {
       },
       {
         "label": "最近更新",
-        "value": "2026/3/20 21:56:56"
+        "value": "2026/3/20 23:29:01"
       },
       {
         "label": "当前榜首",
         "value": "BLG 10-4"
       },
       {
-        "label": "后续接入",
-        "value": "更多赛事、选手个人数据与扩展联赛"
+        "label": "当前未展示",
+        "value": "LCK 与选手个人排位数据"
       }
     ]
   }

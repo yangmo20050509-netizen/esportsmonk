@@ -18,10 +18,10 @@ const GEMINI_MODEL = process.env.GEMINI_MODEL || "gemini-3-flash-preview";
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY || "";
 
 const NAV_LABELS = {
-  overview: "观赛",
+  overview: "首页",
   teams: "战队",
   players: "选手",
-  predictions: "研判",
+  predictions: "预测",
 };
 
 const REGION_MAP = {
@@ -55,51 +55,50 @@ const FOCUS_PLAYERS = [
     name: "Bin",
     role: "上路",
     teamCode: "BLG",
-    watch: "看边线压迫和敢不敢把兵线推深。",
+    watch: "重点观察边线处理与推进深度。",
   },
   {
     id: "xun",
     name: "XUN",
     role: "打野",
     teamCode: "BLG",
-    watch: "看前十五分钟河道控制和第一波节奏落点。",
+    watch: "重点观察前十五分钟资源控制与节奏落点。",
   },
   {
     id: "knight",
     name: "Knight",
     role: "中路",
     teamCode: "BLG",
-    watch: "看中期第一波接团和法核收束能力。",
+    watch: "重点观察中期接团与法核收束能力。",
   },
   {
     id: "viper",
     name: "Viper",
     role: "下路",
     teamCode: "BLG",
-    watch: "看线权处理和中后段收口是不是够稳。",
+    watch: "重点观察线权处理与中后段输出稳定性。",
   },
   {
     id: "on",
     name: "ON",
     role: "辅助",
     teamCode: "BLG",
-    watch: "看开团时机和失误率，别只盯高光。",
+    watch: "重点观察开团时机与保护质量。",
   },
 ];
 
 const FALLBACK_COPY = {
   title: "电竞高僧 | 英雄联盟观赛站",
-  description: "聚合英雄联盟重点赛事的赛程、比分、战队信息与比赛研判。",
+  description: "聚合英雄联盟重点赛事的官方赛程、比分、战队信息与比赛预测。",
   brandEyebrow: "ESPORTS MONK",
   brandName: "电竞高僧",
-  scopePill: "LPL / First Stand / LoL",
-  signalText: "数据已同步",
+  scopePill: "LPL / First Stand",
+  signalText: "更新于",
   hero: {
     eyebrow: "英雄联盟观赛站",
-    title: "赛程、比分、战队与预测，在一个地方看全。",
-    body:
-      "聚合已确认的赛程、比分、战队信息和重点比赛研判。更新状态清楚，数据范围明确，先把核心信息做好。",
-    tags: ["赛程比分", "战队信息", "选手关注", "比赛研判"],
+    title: "",
+    body: "赛程、比分、战队页和比赛预测集中展示，打开就能看。",
+    tags: ["官方赛程", "实时比分", "战队资料", "比赛预测"],
   },
   sections: {
     overview: {
@@ -112,37 +111,36 @@ const FALLBACK_COPY = {
       rankingEyebrow: "战绩概览",
       rankingTitle: "第一赛段排名",
       rankingTag: "LPL 已完赛",
-      spotlightEyebrow: "主队焦点",
-      spotlightTitle: "今日焦点选手",
+      spotlightEyebrow: "重点选手",
+      spotlightTitle: "今日关注",
     },
     teams: {
       eyebrow: "战队",
       title: "战队信息",
-      note: "基于当前已接入赛事数据整理战队近况与赛程。",
-      docketTitle: "行程提要",
-      historyTitle: "近局摘录",
-      heatTitle: "数据概览",
+      note: "展示已接入战队的赛程、战绩和近期结果。",
+      docketTitle: "赛程与结果",
+      historyTitle: "最近四场",
+      heatTitle: "关键指标",
     },
     players: {
       eyebrow: "选手",
       title: "重点选手",
-      trackTitle: "归队与赛历",
-      notesTitle: "观察重点",
-      historyTitle: "所在战队近局",
-      intro: "当前展示主队选手的角色归属、所在战队赛程与近期赛果。",
+      trackTitle: "角色与赛程",
+      notesTitle: "比赛观察",
+      historyTitle: "战队近况",
+      intro: "展示主队重点选手的角色、所在战队赛程与近期赛果。",
     },
     predictions: {
-      eyebrow: "研判",
-      title: "比赛研判",
-      note: "研判基于已接入赛程、赛果与战队状态生成，结论与依据分开展示。",
+      eyebrow: "预测",
+      title: "比赛预测",
+      note: "预测基于已接入赛程、赛果与战队状态生成，结论与依据分开展示。",
       blueprintTitle: "方法说明",
-      blueprintTag: "研判框架",
+      blueprintTag: "预测框架",
     },
     dataBrief: {
       eyebrow: "数据说明",
       title: "当前数据范围",
-      body:
-        "当前已接入 LPL 第一赛段与 First Stand 的赛程、比分、阶段与战队信息。更多赛事和选手个人数据将陆续接入。",
+      body: "当前接入 LPL 第一赛段与 First Stand 的官方公开赛程、比分、赛段与战队信息。",
       tag: "已接入范围",
     },
   },
@@ -442,10 +440,10 @@ function fallbackTeamStatement(teamCode, record, stageAward, nextMatch) {
   const firstSentence = stageAward
     ? `${stageAward}已确认，当前状态以官方赛果为准。`
     : record.winRate >= 70
-      ? "近期胜率和局差都在前列，整体状态稳定。"
+      ? "近期胜率和局差处在前列，整体状态稳定。"
       : record.winRate >= 55
-        ? "近期表现稳定，关键局处理仍需继续观察。"
-        : "近期波动较大，前中期节奏是主要观察点。";
+        ? "近期表现平稳，关键局处理仍需继续观察。"
+        : "近期波动较大，前中期节奏仍需观察。";
 
   const secondSentence = nextMatch
     ? `下一场将对阵 ${opponent}。`
@@ -501,7 +499,7 @@ function buildTeamCards(data, teamMap, records, stageAwards, rankingRows) {
       region: REGION_MAP[teamCode] || "LPL",
       stageAward: stageAwards[teamCode] || "",
       rankingLabel: ranking ? `第一赛段第 ${ranking.rank}` : "当前未进榜",
-      summary: `${teamCode} 当前系列赛 ${record.wins}-${record.losses}，局差 ${signed(record.gameDiff)}。近五场 ${record.recentText}。`,
+      summary: `${teamCode} 当前系列赛 ${record.wins}-${record.losses}，局差 ${signed(record.gameDiff)}，近五场 ${record.recentText}。`,
       statement: fallbackTeamStatement(teamCode, record, stageAwards[teamCode], nextMatch),
       metrics: buildMetricBars(record),
       docket,
@@ -538,9 +536,9 @@ function buildPlayerCards(records) {
           : "最近一场";
     const track = [
       {
-        label: "当前归队",
+        label: "当前角色",
         value: `${player.teamCode} / ${player.role}`,
-        note: "当前只接角色与归队，不假装有个人 Rank。",
+        note: "当前展示角色信息，不展示未接入的个人排位数据。",
       },
       {
         label: trackLabel,
@@ -549,7 +547,7 @@ function buildPlayerCards(records) {
           : "等待官源排表",
         note: focusMatch
           ? `${formatLongDateTime(focusMatch.matchDate)} / ${focusMatch.tournamentLabel} ${focusMatch.bo}`
-          : "官方还没给出已确认时点。",
+          : "官方暂未给出已确认对阵。",
       },
       {
         label: "战队账面",
@@ -563,9 +561,9 @@ function buildPlayerCards(records) {
       name: player.name,
       role: player.role,
       teamCode: player.teamCode,
-      summary: `${player.name} 当前挂在 ${player.teamCode} 关注席，先把归队、赛历和所在战队近况看清。`,
+      summary: `${player.name} 当前效力于 ${player.teamCode}，页面展示角色信息、所在战队赛程与近期赛果。`,
       note: player.watch,
-      tags: ["主队关注", "真实赛历", "不装 Rank"],
+      tags: ["角色归属", "战队赛程", "近期赛果"],
       track,
       observation: [
         player.watch,
@@ -574,7 +572,7 @@ function buildPlayerCards(records) {
           : "最近一场尚未写入。",
         record.nextKnownMatch
           ? `下一场已确认对阵 ${getPerspective(record.nextKnownMatch, player.teamCode).opponent.shortName}。`
-          : "下一场还没到已确认对阵。",
+          : "下一场对阵尚未确认。",
       ],
       history: record.completed.slice(0, 4).map((match) => {
         const perspective = getPerspective(match, player.teamCode);
@@ -605,7 +603,7 @@ function buildHeroMatch(records, teamMap, stageAwards) {
           : blg.nextKnownMatch
             ? `BLG 下一场将对阵 ${opponent}，开赛时间与赛段信息已确认。`
             : blg.latestMatch
-              ? `BLG 最近一场对阵 ${opponent} 已结束，当前先展示已确认赛果。`
+              ? `BLG 与 ${opponent} 的上一场系列赛已经结束，当前展示已确认赛果。`
               : "BLG 下一场对阵暂未确认，当前先展示最近一场正式赛果。",
     left: {
       code: "BLG",
@@ -729,24 +727,24 @@ function buildPredictionCandidates(data, records) {
 function fallbackPredictionCopy(item) {
   if (item.status === "resolved") {
     return {
-      headline: `${item.winner} 已经兑付`,
-      line: `${item.winner} 这场把结果写死了，赛果摆在墙上，不用再靠嘴硬。`,
-      risk: "已结束对局只做复盘，不再装成赛前判断。",
+      headline: `${item.winner} 已兑现赛果`,
+      line: `${item.winner} 赢下了这场系列赛，当前展示复盘结果。`,
+      risk: "已结束比赛只展示结果，不再给出赛前判断。",
     };
   }
 
   if (item.status === "live") {
     return {
-      headline: `${item.winner} 盘面更顺`,
-      line: `局还在走，但账面和当前比分都偏向 ${item.winner}。`,
-      risk: "盘中信息跳得快，这张卡只能提醒方向，不能替代直播。",
+      headline: `${item.winner} 当前更占优`,
+      line: `当前比分和既有战绩都更偏向 ${item.winner}。`,
+      risk: "比赛仍在进行，结论会随实时比分变化。",
     };
   }
 
   return {
-    headline: `${item.winner} 稍占先手`,
-    line: `${item.winner} 的账面更厚，赛前可以先往这边看，但别把风险当空气。`,
-    risk: "赛前卡只认已确认对阵与落地账面，不拿未落地首发乱编。",
+    headline: `${item.winner} 赛前占优`,
+    line: `${item.winner} 的近期战绩和局差更好，赛前判断略占上风。`,
+    risk: "赛前结论只基于已确认对阵与已接入数据。",
   };
 }
 
@@ -842,8 +840,8 @@ function buildDataBrief(data, rankingRows) {
         value: rankingRows[0] ? `${rankingRows[0].teamCode} ${rankingRows[0].seriesWins}-${rankingRows[0].seriesLosses}` : "等待刷新",
       },
       {
-        label: "后续接入",
-        value: "更多赛事、选手个人数据与扩展联赛",
+        label: "当前未展示",
+        value: "LCK 与选手个人排位数据",
       },
     ],
   };
@@ -854,7 +852,7 @@ function buildBlueprint() {
     steps: [
       "统一接入已确认的赛程、赛果与阶段信息。",
       "战队页聚合近期赛果、下一场与核心战绩指标。",
-      "比赛研判基于规则层结论生成，展示依据、结论与风险。",
+      "比赛预测基于规则层结论生成，展示依据、结论与风险。",
     ],
     schema: {
       winner: "BLG",
@@ -955,9 +953,11 @@ async function buildAiCopy(heroMatch, teamCards, playerCards, predictions, data)
   const context = buildAiContext(heroMatch, teamCards, playerCards, predictions, data);
   const prompt = [
     "你在给一个英雄联盟观赛产品官网写中文正式版文案。",
-    "风格要求：克制、清醒、利落，允许轻微禅意，但别装神弄鬼，别写玄学，别写互联网烂梗。",
-    "语气要求：像正式上线产品，不像 demo，不像广告腔。",
+    "风格要求：克制、清醒、利落，允许轻微禅意，但不能玄，不能像体育媒体标题党。",
+    "语气要求：像正式上线产品，不像 demo，不像广告腔，不像解说稿。",
     "注意：板块名已经固定，不需要你改导航名。",
+    "禁止词：奇招、反弹、写死、嘴硬、气势、翻盘、压制、悬念、神仙、天命、梭哈。",
+    "句子必须直接陈述，不要比喻，不要反问，不要夸张。",
     "只返回 JSON，不要代码块，不要解释。",
     "JSON schema:",
     JSON.stringify(
@@ -978,7 +978,7 @@ async function buildAiCopy(heroMatch, teamCards, playerCards, predictions, data)
     "2. hero.body 控制在 70 个汉字以内。",
     "3. teams 每队只写一句 statement。",
     "4. players 每人写一条 summary 和一条 note，必须贴合角色与当前已接通的数据边界。",
-    "5. predictions 每场写 headline、line、risk，各自控制在 28 个汉字以内。",
+    "5. predictions 每场写 headline、line、risk，各自控制在 28 个汉字以内，必须直接写判断和依据。",
     "6. dataBrief.body 控制在 80 个汉字以内。",
   ].join("\n");
 
@@ -991,6 +991,39 @@ async function buildAiCopy(heroMatch, teamCards, playerCards, predictions, data)
   }
 }
 
+const AI_COPY_BLOCKLIST = [
+  /奇招/u,
+  /触底反弹/u,
+  /写死/u,
+  /嘴硬/u,
+  /气势/u,
+  /翻盘/u,
+  /压制/u,
+  /悬念/u,
+  /神仙/u,
+  /天命/u,
+  /梭哈/u,
+  /豪赌/u,
+  /剧本/u,
+  /血脉/u,
+];
+
+function sanitizeAiPredictionText(value, fallback) {
+  const text = String(value || "")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  if (!text) {
+    return fallback;
+  }
+
+  if (AI_COPY_BLOCKLIST.some((pattern) => pattern.test(text))) {
+    return fallback;
+  }
+
+  return text;
+}
+
 function applyAiCopy(siteData, aiCopy) {
   if (!aiCopy || aiCopy.error) {
     siteData.copy.aiSource = aiCopy?.error ? `fallback:${aiCopy.error}` : "fallback:no-key";
@@ -999,9 +1032,9 @@ function applyAiCopy(siteData, aiCopy) {
 
   for (const item of siteData.predictions.items) {
     const aiPrediction = aiCopy.predictions?.[item.id];
-    if (aiPrediction?.headline) item.headline = aiPrediction.headline;
-    if (aiPrediction?.line) item.line = aiPrediction.line;
-    if (aiPrediction?.risk) item.risk = aiPrediction.risk;
+    item.headline = sanitizeAiPredictionText(aiPrediction?.headline, item.headline);
+    item.line = sanitizeAiPredictionText(aiPrediction?.line, item.line);
+    item.risk = sanitizeAiPredictionText(aiPrediction?.risk, item.risk);
   }
 
   siteData.copy.aiSource = GEMINI_MODEL;

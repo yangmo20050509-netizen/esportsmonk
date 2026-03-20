@@ -55,7 +55,9 @@ function renderTopbar() {
   $("#brand-eyebrow").textContent = copy.brandEyebrow;
   $("#brand-name").textContent = copy.brandName;
   $("#scope-pill").textContent = copy.scopePill;
-  $("#signal-text").textContent = `${copy.signalText} · ${generatedAtLocal}`;
+  $("#signal-text").textContent = generatedAtLocal
+    ? `${copy.signalText} ${generatedAtLocal}`
+    : copy.signalText;
 
   renderNav("#desktop-nav");
   renderNav("#mobile-nav");
@@ -360,7 +362,7 @@ function renderTeamDetail() {
         <p class="eyebrow">${escapeHtml(copy.eyebrow)}</p>
         <h3>${escapeHtml(copy.heatTitle)}</h3>
       </div>
-      <span class="panel-tag">站内观测</span>
+      <span class="panel-tag">关键指标</span>
     </div>
     <div class="heat-list">
       ${team.metrics
@@ -449,14 +451,14 @@ function renderPlayerDetail() {
         <p class="eyebrow">${escapeHtml(copy.eyebrow)}</p>
         <h3>${escapeHtml(copy.notesTitle)}</h3>
       </div>
-      <span class="panel-tag">观赛重点</span>
+      <span class="panel-tag">重点观察</span>
     </div>
     <div class="detail-list">
       ${player.observation
         .map(
           (item) => `
             <article class="summary-strip">
-              <span class="subdued">记一笔</span>
+              <span class="subdued">观察项</span>
               <strong>${escapeHtml(item)}</strong>
             </article>
           `,
