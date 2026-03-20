@@ -67,7 +67,6 @@ function renderHero() {
 
   $("#hero-copy").innerHTML = `
     <p class="eyebrow">${escapeHtml(hero.eyebrow)}</p>
-    <h2>${escapeHtml(hero.title)}</h2>
     <p class="hero-text">${escapeHtml(hero.body)}</p>
     <div class="hero-tags">
       ${hero.tags.map((tag) => `<span>${escapeHtml(tag)}</span>`).join("")}
