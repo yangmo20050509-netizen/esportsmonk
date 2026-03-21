@@ -29,3 +29,4 @@
 2026-03-21 01:56 调整官网头部 logo 呈现，裁切透明版图标并修正 index 头部乱码。
 2026-03-21 02:03 继续收头部 logo，去掉外框并重做紧裁切透明版图标。
 2026-03-21 11:30 修正 GitHub Actions 发版项目名，改成当前 EdgeOne 项目 esportsmonk。
+2026-03-21 11:38 强化 GitHub Actions 部署链，显式注入 EdgeOne token 并锁定 latest CLI。

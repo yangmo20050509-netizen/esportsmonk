@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     steps:
       - name: Checkout
@@ -29,5 +31,10 @@ jobs:
       - name: Prepare release bundle
         run: node scripts/prepare-release.mjs
 
+      - name: Check EdgeOne CLI
+        run: npx edgeone@latest --version
+
       - name: Deploy to EdgeOne Pages
-        run: npx edgeone pages deploy ./release/esportsmonk-online -n esportsmonk -t ${{ secrets.EDGEONE_API_TOKEN }}
+        env:
+          EDGEONE_API_TOKEN: ${{ secrets.EDGEONE_API_TOKEN }}
+        run: npx edgeone@latest pages deploy ./release/esportsmonk-online -n esportsmonk -t "$EDGEONE_API_TOKEN"
