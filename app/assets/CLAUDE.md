@@ -2,3 +2,4 @@
 2026-03-21 01:48 新增 players 目录占位，后续放 bin/xun/knight/viper/on 定妆照可直接生效。
 2026-03-21 01:56 新增 monk-mark-header.png，供官网头部使用的裁切透明版图标。
 2026-03-21 02:03 重生 monk-mark-header.png，去白底脏边并收紧可视区域。
+2026-03-21 22:46 新增 JDG 与 G2 选手官方定妆照素材，供官网按 player id 自动匹配渲染。

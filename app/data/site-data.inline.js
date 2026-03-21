@@ -1,6 +1,6 @@
 window.__SITE_DATA__ = {
-  "generatedAt": "2026-03-21T13:10:54.123Z",
-  "generatedAtLocal": "2026/3/21 21:10:54",
+  "generatedAt": "2026-03-21T14:44:19.380Z",
+  "generatedAtLocal": "2026/3/21 22:44:19",
   "copy": {
     "title": "电竞高僧 | 英雄联盟观赛站",
     "description": "聚合英雄联盟重点赛事的官方赛程、比分、战队信息与比赛预测。",
@@ -69,7 +69,7 @@ window.__SITE_DATA__ = {
         "status": "in_progress",
         "statusText": "进行中/待确认",
         "scoreA": 0,
-        "scoreB": 0,
+        "scoreB": 1,
         "teamA": {
           "id": "137",
           "name": "GEN",
@@ -927,7 +927,7 @@ window.__SITE_DATA__ = {
           {
             "label": "此刻对局",
             "value": "GEN vs G2",
-            "note": "First Stand BO5 / 当前比分 0:0"
+            "note": "First Stand BO5 / 当前比分 0:1"
           },
           {
             "label": "最近一场",
@@ -997,7 +997,7 @@ window.__SITE_DATA__ = {
           {
             "label": "此刻对局",
             "value": "G2 vs GEN",
-            "note": "First Stand BO5 / 当前比分 0:0"
+            "note": "First Stand BO5 / 当前比分 1:0"
           },
           {
             "label": "最近一场",
@@ -1629,7 +1629,7 @@ window.__SITE_DATA__ = {
         "name": "Xiaoxu",
         "role": "上路",
         "teamCode": "JDG",
-        "portrait": "",
+        "portrait": "./assets/players/xiaoxu.jpg",
         "summary": "看 Xiaoxu，不只看 上路 对位赢没赢，还看他怎么把 边线压制、换血胆气与先手身位 落成实账。JDG 下一场对 BLG，这一刀落得正不正，常比补了多少刀更早决定气口。",
         "note": "偏稳，愿意先把兵线和身位守住，给队伍留第二拍；但若被硬扯进连续乱战，他的节奏会被迫提前交。",
         "tags": [
@@ -1691,7 +1691,7 @@ window.__SITE_DATA__ = {
         "name": "JunJia",
         "role": "打野",
         "teamCode": "JDG",
-        "portrait": "",
+        "portrait": "./assets/players/junjia.jpg",
         "summary": "看 JunJia，不只看 打野 对位赢没赢，还看他怎么把 河道起手、资源先后与第一口节拍 落成实账。JDG 下一场对 BLG，这一刀落得正不正，常比补了多少刀更早决定气口。",
         "note": "看点在资源起手和河道顺序。若他先把第一层视野搭稳，JDG 才能把中后段秩序接上；若野区先失血，后头就得先补账。",
         "tags": [
@@ -1753,7 +1753,7 @@ window.__SITE_DATA__ = {
         "name": "HongQ",
         "role": "中路",
         "teamCode": "JDG",
-        "portrait": "",
+        "portrait": "./assets/players/hongq.jpg",
         "summary": "看 HongQ，不只看 中路 对位赢没赢，还看他怎么把 中线线权、转线衔接与团前落位 落成实账。JDG 下一场对 BLG，这一刀落得正不正，常比补了多少刀更早决定气口。",
         "note": "更像运转轴，不抢戏，重在转线衔接和团前站位；若被人压着守中线，JDG 的回合会少很多。",
         "tags": [
@@ -1815,7 +1815,7 @@ window.__SITE_DATA__ = {
         "name": "GALA",
         "role": "下路",
         "teamCode": "JDG",
-        "portrait": "",
+        "portrait": "./assets/players/gala.jpg",
         "summary": "看 GALA，不只看 下路 对位赢没赢，还看他怎么把 伤害收束、团战站位与残局清账 落成实账。JDG 下一场对 BLG，这一刀落得正不正，常比补了多少刀更早决定气口。",
         "note": "打的是正面算力和清账能力。队伍给出正面站位时，他很会把伤害打成实账；可若前排散，输出位也会被迫后撤。",
         "tags": [
@@ -1877,7 +1877,7 @@ window.__SITE_DATA__ = {
         "name": "Vampire",
         "role": "辅助",
         "teamCode": "JDG",
-        "portrait": "",
+        "portrait": "./assets/players/vampire.jpg",
         "summary": "看 Vampire，不只看 辅助 对位赢没赢，还看他怎么把 开门时机、团前视野与回身补位 落成实账。JDG 下一场对 BLG，这一刀落得正不正，常比补了多少刀更早决定气口。",
         "note": "更重秩序和衔接，擅长把团前站位理顺；可一旦局面被人抬快，第一拍也会显得保守。",
         "tags": [
@@ -4049,7 +4049,7 @@ window.__SITE_DATA__ = {
         "name": "BrokenBlade",
         "role": "上路",
         "teamCode": "G2",
-        "portrait": "",
+        "portrait": "./assets/players/brokenblade.jpg",
         "summary": "看 BrokenBlade，不只看 上路 对位赢没赢，还看他怎么把 边线压制、换血胆气与先手身位 落成实账。G2 下一场对 GEN，这一刀落得正不正，常比补了多少刀更早决定气口。",
         "note": "敢走边线高压，也敢接奇形怪状的对位。若他先把边线带出岔口，G2 的换位和奇手就更好落。",
         "tags": [
@@ -4105,7 +4105,7 @@ window.__SITE_DATA__ = {
         "name": "SkewMond",
         "role": "打野",
         "teamCode": "G2",
-        "portrait": "",
+        "portrait": "./assets/players/skewmond.jpg",
         "summary": "看 SkewMond，不只看 打野 对位赢没赢，还看他怎么把 河道起手、资源先后与第一口节拍 落成实账。G2 下一场对 GEN，这一刀落得正不正，常比补了多少刀更早决定气口。",
         "note": "喜欢把比赛带出熟路，前两波路径很会做文章；可若被人看穿节拍，G2 的花活会先少一层。",
         "tags": [
@@ -4161,7 +4161,7 @@ window.__SITE_DATA__ = {
         "name": "Caps",
         "role": "中路",
         "teamCode": "G2",
-        "portrait": "",
+        "portrait": "./assets/players/caps.png",
         "summary": "看 Caps，不只看 中路 对位赢没赢，还看他怎么把 中线线权、转线衔接与团前落位 落成实账。G2 下一场对 GEN，这一刀落得正不正，常比补了多少刀更早决定气口。",
         "note": "中段最会拆局的人，转线、换位和团前拉扯都敢玩；可若比赛被逼成正面算力题，他也得先补稳字。",
         "tags": [
@@ -4217,7 +4217,7 @@ window.__SITE_DATA__ = {
         "name": "Hans Sama",
         "role": "下路",
         "teamCode": "G2",
-        "portrait": "",
+        "portrait": "./assets/players/hans_sama.png",
         "summary": "看 Hans Sama，不只看 下路 对位赢没赢，还看他怎么把 伤害收束、团战站位与残局清账 落成实账。G2 下一场对 GEN，这一刀落得正不正，常比补了多少刀更早决定气口。",
         "note": "重在团里持续输出和跟队友连段。队友给出奇手时，他很会顺势补刀；可前排若先塌，站位也会先被掐。",
         "tags": [
@@ -4273,7 +4273,7 @@ window.__SITE_DATA__ = {
         "name": "Labrov",
         "role": "辅助",
         "teamCode": "G2",
-        "portrait": "",
+        "portrait": "./assets/players/labrov.jpg",
         "summary": "看 Labrov，不只看 辅助 对位赢没赢，还看他怎么把 开门时机、团前视野与回身补位 落成实账。G2 下一场对 GEN，这一刀落得正不正，常比补了多少刀更早决定气口。",
         "note": "敢先动，也敢陪着做非常规转线。若第一拍做成，G2 的局很怪也很难防；可空一拍，后头会被逼回正面。",
         "tags": [

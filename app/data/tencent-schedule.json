@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-21T13:10:54.123Z",
-  "generatedAtLocal": "2026/3/21 21:10:54",
+  "generatedAt": "2026-03-21T14:44:19.380Z",
+  "generatedAtLocal": "2026/3/21 22:44:19",
   "focusDefaults": {
     "team": "BLG",
     "player": "Bin",
@@ -2733,7 +2733,7 @@
       "status": "in_progress",
       "statusText": "进行中/待确认",
       "scoreA": 0,
-      "scoreB": 0,
+      "scoreB": 1,
       "teamA": {
         "id": "137",
         "name": "GEN",
