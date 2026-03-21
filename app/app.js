@@ -580,6 +580,27 @@ function renderPlayerDetail() {
     <div class="player-tags">
       ${player.tags.map((tag) => `<span class="player-badge">${escapeHtml(tag)}</span>`).join("")}
     </div>
+    ${
+      player.favoriteHeroes?.length
+        ? `
+      <div class="player-hero-pool">
+        <p class="eyebrow">常用英雄</p>
+        <div class="player-hero-pills">
+          ${player.favoriteHeroes
+            .slice(0, 3)
+            .map((hero) => {
+              const name = hero.heroCnName || hero.heroName || "未记名";
+              const games = Number.isFinite(Number(hero.games)) ? `${hero.games} 局` : "";
+              const rate =
+                Number.isFinite(Number(hero.winRate)) ? `${Math.round(Number(hero.winRate) * 100)}%` : "";
+              return `<span class="player-hero-pill">${escapeHtml([name, games, rate].filter(Boolean).join(" / "))}</span>`;
+            })
+            .join("")}
+        </div>
+      </div>
+    `
+        : ""
+    }
     <p class="player-quote">${escapeHtml(player.note)}</p>
   `;
 

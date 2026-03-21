@@ -289,12 +289,43 @@ function buildPlayerDataStats(profile) {
   return stats.slice(0, 3);
 }
 
+function buildPlayerHeroPool(profile) {
+  const pool = [];
+  const seen = new Set();
+
+  function pushHero(hero) {
+    if (!hero) return;
+    const name = String(hero.heroCnName || hero.heroName || hero.name || "").trim();
+    if (!name) return;
+    const key = name.toLowerCase();
+    if (seen.has(key)) return;
+    seen.add(key);
+    pool.push(hero);
+  }
+
+  (profile?.favoriteHeroes || []).forEach(pushHero);
+  (profile?.recentMatches || []).forEach((match) => {
+    if (!match?.heroName) return;
+    pushHero({
+      heroCnName: match.heroName,
+      heroName: match.heroName,
+      games: match.games ?? 1,
+      winRate: Number(match.win) === 1 ? 1 : Number(match.win) === 0 ? 0 : null,
+    });
+  });
+
+  return pool.slice(0, 3);
+}
+
 function buildPlayerHeroLine(profile) {
-  const hero = profile?.favoriteHeroes?.[0];
-  if (!hero) return "";
-  const rate = Number.isFinite(Number(hero.winRate)) ? `${Math.round(Number(hero.winRate) * 100)}%` : "";
-  const games = Number.isFinite(Number(hero.games)) ? `${hero.games} 局` : "";
-  return [hero.heroCnName || hero.heroName, games, rate].filter(Boolean).join(" / ");
+  const heroes = buildPlayerHeroPool(profile)
+    .map((hero) => {
+      const rate = Number.isFinite(Number(hero.winRate)) ? `${Math.round(Number(hero.winRate) * 100)}%` : "";
+      const games = Number.isFinite(Number(hero.games)) ? `${hero.games} 局` : "";
+      return [hero.heroCnName || hero.heroName, games, rate].filter(Boolean).join(" / ");
+    })
+    .filter(Boolean);
+  return heroes.join(" ｜ ");
 }
 
 function buildPlayerRecentFormLine(profile) {
@@ -771,6 +802,7 @@ function buildPlayerCards(records, playerProfiles) {
   return FOCUS_PLAYERS.map((player) => {
     const record = records[player.teamCode];
     const profile = playerProfiles[player.id] || null;
+    const favoriteHeroes = buildPlayerHeroPool(profile);
     const nextMatch = record.liveMatch || record.nextKnownMatch || record.nextMatch;
     const latestMatch = record.latestMatch ? getPerspective(record.latestMatch, player.teamCode) : null;
     const track = [
@@ -797,7 +829,7 @@ function buildPlayerCards(records, playerProfiles) {
       note: buildPlayerHeroLine(profile) ? `${player.watch} 常用英雄看 ${buildPlayerHeroLine(profile)}。` : player.watch,
       tags: buildPlayerTags(player, profile),
       profileStats: buildPlayerDataStats(profile),
-      favoriteHeroes: (profile?.favoriteHeroes || []).slice(0, 3),
+      favoriteHeroes,
       track,
       observation: [
         player.watch,

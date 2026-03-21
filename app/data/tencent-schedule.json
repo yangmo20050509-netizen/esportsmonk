@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-21T16:51:04.069Z",
-  "generatedAtLocal": "2026/3/22 00:51:04",
+  "generatedAt": "2026-03-21T17:48:47.518Z",
+  "generatedAtLocal": "2026/3/22 01:48:47",
   "focusDefaults": {
     "team": "BLG",
     "player": "Bin",
@@ -2762,7 +2762,7 @@
       "matchDate": "2026-03-22 02:00:00",
       "status": "in_progress",
       "statusText": "进行中/待确认",
-      "scoreA": 1,
+      "scoreA": 2,
       "scoreB": 0,
       "teamA": {
         "id": "57",
