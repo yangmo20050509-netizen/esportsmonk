@@ -98,11 +98,11 @@ const TEAM_STYLE_GUIDE = {
 };
 
 const PLAYER_STYLE_GUIDE = {
-  bin: "Bin 这一路值钱，不在补刀板，不在镜头声量，在他敢不敢把边线压成刀背，再逼人回头守塔。他若打得兴起，站位会伸得极前，这一下既能撕口，也最容易叫人抓住反手。",
-  xun: "XUN 的贵处在第一口气。河道先踩住，先锋先碰到，整队的章法就会顺；若前两趟起手落空，他也会被逼着替全队补账，刀就慢半拍。",
-  knight: "Knight 看似不吵，真值钱的是把线权、支援和团前脚步拆得极细。可他一旦被迫连续补线，整局中枢就会沉一层，队里那口快气也跟着矮下去。",
-  viper: "Viper 真正见功夫的地方在收束。团里只要给他留出半步，他就能把伤害一笔一笔算清；可若前排先塌，他再稳也得先还身位的债。",
-  on: "ON 要看的不是热闹，是先手那一下准不准，回身那一下稳不稳。先手若正，整队能一口压上去；回身若慢，后排便要替他吃整段苦头。",
+  bin: "Bin 最狠的一层，在边线压制和先手胆气。线一旦送到河道外，他就敢继续往前追，把整张边路压成一口喘不过气的窄门；可他也最容易打上头，站位伸得太深时，给对面留的就是整波反手的门缝。",
+  xun: "XUN 管的是全队第一口气。河道先踩住，先锋先碰到，BLG 的局就会顺着他的起手往前滚；若前两趟碰撞都慢半拍，他就会先被拖进补课，整队的锋口也会跟着钝下去。",
+  knight: "Knight 不靠大开大合吃饭，贵在把线权、转线和团前脚步拆得细。中段若由他把局心拢住，BLG 的攻守就会很整；可一旦被迫长时间守线补线，中枢会先沉，后面的快气也会跟着矮一截。",
+  viper: "Viper 的功夫全在收束。正面只要给他留出半步，他就能把伤害一层层算满，把残局打成清账；可若前排先断、身位先乱，他再稳也得先替队伍还站位的债。",
+  on: "ON 的价值不在热闹，在那一下先手准不准、回身稳不稳。开团若正，整队就能一口压进；可回身若慢，后排会先吃满苦头，整波团也容易从这里塌口。",
 };
 
 const FOCUS_PLAYERS = [
@@ -183,6 +183,9 @@ const AI_COPY_BLOCKLIST = [
   "把领先盘稳稳收住",
   "敢不敢把兵线推深",
   "盘面更顺",
+  "这一路值钱",
+  "真正贵在",
+  "最值钱的一层",
 ];
 
 function parseMatchDate(value) {
@@ -514,6 +517,10 @@ function buildTeamCards(data, teamMap, records, stageAwards, rankingRows) {
       note: `系列胜率 ${record.winRate}% / 局差 ${signed(record.gameDiff)}`,
     });
 
+    const strengthLine = TEAM_STYLE_GUIDE[teamCode]?.strengths?.[0]
+      ? `这队眼下最硬的一笔，是 ${TEAM_STYLE_GUIDE[teamCode].strengths[0]}。`
+      : "";
+
     return {
       id: teamCode,
       name: team.name,
@@ -522,7 +529,7 @@ function buildTeamCards(data, teamMap, records, stageAwards, rankingRows) {
       region: REGION_MAP[teamCode] || "LPL",
       stageAward: stageAwards[teamCode] || "",
       rankingLabel: ranking ? `第一赛段第 ${ranking.rank}` : "当前未进榜",
-      summary: `${teamCode} 当前系列赛 ${record.wins}-${record.losses}，单局 ${record.gameWins}-${record.gameLosses}，近五场 ${record.recentText}。${TEAM_STYLE_GUIDE[teamCode]?.strengths?.[0] ? ` 这队眼下最值钱的一层，是 ${TEAM_STYLE_GUIDE[teamCode].strengths[0]}。` : ""}`,
+      summary: `${teamCode} 当前系列赛 ${record.wins}-${record.losses}，单局 ${record.gameWins}-${record.gameLosses}，近五场 ${record.recentText}。${strengthLine}`,
       statement: buildTeamStatement(teamCode, record, stageAwards[teamCode], nextMatch),
       metrics: buildMetricBars(record),
       docket,
@@ -570,7 +577,7 @@ function buildPlayerCards(records) {
       role: player.role,
       teamCode: player.teamCode,
       portrait: resolvePlayerPortrait(player.id),
-      summary: `${player.name} 当前归属 ${player.teamCode}，这里看角色、赛程与战队近况，也看他这一路到底把力气使在什么地方。`,
+      summary: `${player.name} 当前归属 ${player.teamCode}。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。`,
       note: player.watch,
       tags: ["角色归属", "战队赛程", "近期赛果"],
       track,
@@ -739,10 +746,10 @@ function buildPredictionKnowledge(match) {
   ).map((player) => `${player.name}：${player.watch}`);
   return {
     teamA: teamAGuide
-      ? `${match.teamA.shortName}：${teamAGuide.identity}；长处是${teamAGuide.strengths.join("、")}；隐忧是${teamAGuide.risk}`
+      ? `${match.teamA.shortName}：门风是${teamAGuide.identity}；长板是${teamAGuide.strengths.join("、")}；明病是${teamAGuide.flaw}；翻船点是${teamAGuide.risk}`
       : `${match.teamA.shortName}：当前没有补充风格注释。`,
     teamB: teamBGuide
-      ? `${match.teamB.shortName}：${teamBGuide.identity}；长处是${teamBGuide.strengths.join("、")}；隐忧是${teamBGuide.risk}`
+      ? `${match.teamB.shortName}：门风是${teamBGuide.identity}；长板是${teamBGuide.strengths.join("、")}；明病是${teamBGuide.flaw}；翻船点是${teamBGuide.risk}`
       : `${match.teamB.shortName}：当前没有补充风格注释。`,
     focusPlayers: focusPlayers.length ? focusPlayers.join("；") : "当前没有接入该场重点选手的手法注释。",
   };
@@ -909,18 +916,18 @@ async function buildAiPredictionCopy(predictions) {
 
   const prompt = [
     "你在写英雄联盟观赛站“高僧预测”的断局文案。",
-    "说话口吻要像看过万局的老僧批注，可以直接用“老衲看”“依老衲看”“此局贵在”“病也在此”这类说法，文字要有古意、有锋芒，但必须让懂比赛的人一眼看懂。",
-    "别用翻译腔，别说盘口黑话，别拿空词硬装，更别写成神棍。要像在卷边批一段狠注，不像写公告。",
+    "说话口吻要像看过万局的老僧在卷边批注，可以直接用“老衲看”“依老衲看”“此局贵在”“病也在此”“若要翻案”这类说法。文字要有古意、有锋芒，但必须让懂比赛的人一眼看懂。",
+    "别用翻译腔，别说盘口黑话，别拿空词硬装，更别写成神棍。要像真正懂局的人在落狠话，不像写公告，更不像外国人学中文。",
     "每场输出三个字段：headline、line、risk。",
     "headline 控制在 8 到 16 个汉字，要像判词。",
-    "line 控制在 260 到 420 个汉字，分成三个自然段。第一段写看好谁、凭什么；第二段写这边的毛病、最可能露缝的地方；第三段写另一边怎么翻盘，怎么把局拖回自己的路数。",
+    "line 控制在 260 到 420 个汉字，分成三个自然段。第一段写看好谁、凭什么；第二段必须写这边真正的毛病、最可能露缝的地方；第三段必须写另一边怎么翻盘，怎么把局拖回自己的路数。",
     "risk 控制在 24 到 48 个汉字，只点最可能打脸的一处变数。",
-    "line 要落到节奏、资源、团战次序、边线、收束能力、纪律性、失误点这些真东西上。至少明确写出一处长板、一处毛病、一条翻案路径。",
-    "行文可以拽，可以像文言批注，但不能晦涩。能写“老衲看”“此局贵在”“病也在此”“若要翻案”，不能写得像外国人硬学中文。",
-    "禁止出现这些空话：‘先看他把前两局握在手里’、‘敢不敢把兵线推深’、‘盘面更顺’、‘稳稳收住’、‘看临场发挥’、‘一切皆有可能’。",
+    "line 要落到节奏、资源、团战次序、边线、收束能力、纪律性、失误点这些真东西上。至少明确写出一处长板、一处毛病、一条翻案路径，还要点到 1 名或 2 名关键选手。",
+    "行文可以拽，可以带一点文言批注气，但不能晦涩。允许你在这些边界里自由发挥句式和节奏，不要写成同一个模板反复套壳。",
+    "禁止出现这些空话：‘先看他把前两局握在手里’、‘敢不敢把兵线推深’、‘盘面更顺’、‘稳稳收住’、‘看临场发挥’、‘一切皆有可能’、‘这一路值钱’、‘他真正贵在’。",
     "严禁出现这些词：装懂、写上墙、梭哈、嘴硬、当空气、玄学、神谕、天命、阵卷、观席、禅断、盘口、收米、赔率。",
     "不要出现用户、本站、官网、模型、AI、数据源这些词。",
-    "把 knowledge 里的队伍门风、选手手法、短板和因子列表揉进断语里，不要原样复述列表。至少明确写出一处长板和一处毛病。",
+    "把 knowledge 里的队伍门风、选手手法、短板和因子列表揉进断语里，不要原样复述列表。一定要写出队伍特点，像‘先手凶’、‘转线稳’、‘纪律松’、‘容易上头’这种能落地的话。",
     "返回 JSON，格式为 { predictions: { [id]: { headline, line, risk } } }。",
     JSON.stringify(payload, null, 2),
   ].join("\n");
