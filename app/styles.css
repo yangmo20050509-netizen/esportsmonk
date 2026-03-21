@@ -1127,19 +1127,18 @@ body::after,
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
+  width: 34px;
   height: 44px;
   padding: 0;
-  border-radius: 14px;
-  background: rgba(255, 252, 247, 0.46);
-  border: 1px solid rgba(175, 151, 112, 0.12);
+  background: transparent;
+  border: 0;
   box-shadow: none;
 }
 
 .brand-mark-image {
   display: block;
-  width: 36px;
-  height: 36px;
+  width: 34px;
+  height: 44px;
   object-fit: contain;
   mix-blend-mode: multiply;
   filter: saturate(0.92) contrast(1.02);
