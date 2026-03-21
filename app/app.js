@@ -710,9 +710,9 @@ function renderPredictions() {
           ${currentPrediction.factors
             .map(
               (factor) => `
-                <div class="summary-strip">
-                  <span class="subdued">因子</span>
-                  <strong>${escapeHtml(factor)}</strong>
+                <div class="summary-strip factor-item">
+                  <span class="factor-item-label">${escapeHtml(factor.label || "因子")}</span>
+                  <p class="factor-item-value">${escapeHtml(factor.value || factor)}</p>
                 </div>
               `,
             )

@@ -1540,13 +1540,15 @@ body::after,
 
 .dynamic-note-copy {
   display: grid;
-  gap: 10px;
-  min-height: 160px;
+  gap: 14px;
+  min-height: 340px;
 }
 
 .dynamic-note-copy p {
   margin: 0;
-  line-height: 1.9;
+  line-height: 2;
+  font-size: 1.02rem;
+  color: #342c25;
 }
 
 .dynamic-sidecard {
@@ -1608,6 +1610,28 @@ body::after,
 .factor-list {
   display: grid;
   gap: 12px;
+}
+
+.factor-item {
+  display: grid;
+  gap: 6px;
+  align-items: start;
+}
+
+.factor-item-label {
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  color: #8a7452;
+  text-transform: uppercase;
+}
+
+.factor-item-value {
+  margin: 0;
+  font-family: "Noto Serif SC", "Source Han Serif SC", serif;
+  font-size: 0.98rem;
+  line-height: 1.85;
+  font-weight: 600;
+  color: #2f2923;
 }
 
 #predictions .section-title {

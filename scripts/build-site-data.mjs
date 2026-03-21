@@ -54,55 +54,55 @@ const FOCUS_TEAM_IDS = ["BLG", "JDG", "AL", "WBG", "LNG", "TES"];
 
 const TEAM_STYLE_GUIDE = {
   BLG: {
-    identity: "上中野肯先落子，盘面一旦抢到前手，往往会把地图一寸一寸压出来",
-    strengths: ["前中期争先意愿强", "边线施压持续", "优势局收束速度整"],
+    identity: "上中野肯先落子，盘面一旦抢到前手，常把河道、边线与团前站位一并压出来",
+    strengths: ["前中期争先意愿强", "资源逼抢凶", "一旦拿到主动便很会把局面压窄"],
     flaw: "热起来时脚步会压得过深，纪律偶尔松一口，给人反咬的缝",
-    risk: "若前两波资源没能先占，阵形会被拖进更吃耐心的后段",
-    monk: "老衲看 BLG，贵在先手狠，狠到能把河道与边线一并拿下；病也在此，手热时常把步子踏得太满。",
+    risk: "若前中期连续失手，后段容易把本该稳住的局面再打成对冲",
+    monk: "老衲看 BLG，像一柄先出鞘的快刀，见口就劈，见缝就进。它最可怕之处不在一波团有多响，而在前两手若叫它先写，后面半盘都得顺着它的气走。",
   },
   JDG: {
     identity: "节奏不急，转线和团战次序更讲章法，常在中后段把局面慢慢拧回来",
     strengths: ["中后段运营沉着", "正面团战层次清楚", "逆风时不轻易散架"],
     flaw: "前段若让出主动，整队会先替自己补课，刀就出得慢半拍",
     risk: "若前十五分钟连续掉资源，后段再稳也要先补窟窿",
-    monk: "老衲看 JDG，像把旧尺，量得稳，误差小。可尺子终究是后手器物，若前账欠得太多，后段就得拿时间去填。",
+    monk: "老衲看 JDG，像把老尺，不轻易失手，量出来的东西也整齐。可这把尺终究是后手器物，前账若欠得太厚，后面再稳也得先花时辰补漏。",
   },
   AL: {
     identity: "起手硬，碰撞多，肯把比赛拉进高频交锋的路数里",
     strengths: ["开局碰撞频繁", "先锋和转线欲望强", "状态上来时连段很猛"],
     flaw: "章法有时收不住，一旦前两脚踢空，队形会散得比别人快",
     risk: "一旦前几波出手失准，回身补线和资源时容易露空门",
-    monk: "老衲看 AL，讲究一个响字。钟声若中，能震得人发懵；钟声若空，空门也会跟着露出来。",
+    monk: "老衲看 AL，像寺里铜钟，撞得准时，满院都响；撞得偏时，回音先打在自己身上。它吃的是气势，赔的也是气势。",
   },
   WBG: {
     identity: "能拉长局面找第二落点，胜负常在中段之后才见分晓",
     strengths: ["中段再布置能力强", "关键团敢找角度", "拖长局面后仍有翻盘口"],
     flaw: "前盘若连着亏线，纪律会先塌一角，后面的腾挪就成了补漏",
     risk: "若线上连着失血，后续想腾挪就会被兵线和视野一起锁住",
-    monk: "老衲看 WBG，不怕棋长，只怕欠账。账若压得太厚，后手再巧也只是补墙。",
+    monk: "老衲看 WBG，不怕棋长，只怕欠账。账薄时，它后手能开花；账厚时，再巧的腾挪也只是补墙，不是真翻盘。",
   },
   LNG: {
     identity: "更重中枢控场，节拍不花，资源取舍偏稳",
     strengths: ["中野联动稳", "资源判断克制", "团前站位讲秩序"],
     flaw: "对面若连着强提节拍，它会先求稳，刀就容易晚一拍",
     risk: "若被对面强行提速，舒展不开时会显得有些慢",
-    monk: "老衲看 LNG，像守经之人，规矩齐，脚步稳。可经文背得再熟，也怕人催着翻页。",
+    monk: "老衲看 LNG，像守经之人，规矩齐，脚步稳。可经文背得再熟，也怕人逼着翻页，一急便少了那口从容。",
   },
   TES: {
     identity: "一旦手热，正面冲阵极凶，能把比赛硬生生抬进高压区",
     strengths: ["正面火力高", "敢接高风险团", "气势上来时连推带打"],
     flaw: "一旦前后排脱节，纪律会先散，整波团常在同一口气里一起塌",
     risk: "若前排和后手脱节，整队会在一波团里同时露口子",
-    monk: "老衲看 TES，赢时像急雷，响得人耳鸣；可雷若劈偏，反震也来得最狠。",
+    monk: "老衲看 TES，赢时像急雷，响得人耳鸣；雷若劈偏，反震也是一整串。它的气势来得最猛，散得也最吓人。",
   },
 };
 
 const PLAYER_STYLE_GUIDE = {
-  bin: "边线敢压，敢把刀口伸得很前。看他时别只看对线补刀，要看他敢不敢拿位置换节奏。",
-  xun: "更值钱的是起手时机和河道布子。若他能先把资源点踩住，整队的第一口气就会顺很多。",
-  knight: "胜负常不在华丽镜头，在他中段把线权和支援拆得多干净。看他，就看这层拆解功夫。",
-  viper: "他真正贵在收官时的手法。团里站得住，伤害就会越打越像账本，一笔一笔都算得清。",
-  on: "要看的是开团那一下和回身那一下。先手若准，整队立住；回身若慢，后排就要吃苦。",
+  bin: "Bin 这一路值钱，不在补刀板，不在镜头声量，在他敢不敢把边线压成刀背，再逼人回头守塔。他若打得兴起，站位会伸得极前，这一下既能撕口，也最容易叫人抓住反手。",
+  xun: "XUN 的贵处在第一口气。河道先踩住，先锋先碰到，整队的章法就会顺；若前两趟起手落空，他也会被逼着替全队补账，刀就慢半拍。",
+  knight: "Knight 看似不吵，真值钱的是把线权、支援和团前脚步拆得极细。可他一旦被迫连续补线，整局中枢就会沉一层，队里那口快气也跟着矮下去。",
+  viper: "Viper 真正见功夫的地方在收束。团里只要给他留出半步，他就能把伤害一笔一笔算清；可若前排先塌，他再稳也得先还身位的债。",
+  on: "ON 要看的不是热闹，是先手那一下准不准，回身那一下稳不稳。先手若正，整队能一口压上去；回身若慢，后排便要替他吃整段苦头。",
 };
 
 const FOCUS_PLAYERS = [
@@ -465,15 +465,17 @@ function buildTeamStatement(teamCode, record, stageAward, nextMatch) {
   const opponent = nextMatch ? getPerspective(nextMatch, teamCode).opponent.shortName : "待定";
   const formSentence =
     record.winRate >= 70
-      ? "这阵子赢面厚，先手一到，收官多半不拖泥带水。"
+      ? "这阵子账面厚，前十五分钟若叫它先得手，后面多半是它执笔。"
       : record.winRate >= 55
-        ? "账面站得住，可第三波转折里常要再验一次心性。"
+        ? "账面站得住，可第三波转折里常要再验一次心性，稍一松手便会露缝。"
         : "走势还浮，前十五分钟若拿不到主动，后段就容易被人牵着鼻子走。";
   const awardSentence = stageAward ? `${stageAward}在手。` : "";
   const identitySentence = guide?.monk || (guide ? `${guide.identity}。` : "");
-  const flawSentence = guide?.flaw ? `病在 ${guide.flaw}。` : "";
+  const flawSentence = guide?.flaw ? `可老衲也不替它遮丑，${guide.flaw}。` : "";
+  const riskText = guide?.risk ? String(guide.risk).replace(/^若/, "") : "";
+  const riskSentence = riskText ? `真要出岔子，多半也是${riskText}。` : "";
   const nextSentence = nextMatch ? `下一场已确认对阵 ${opponent}。` : "下一场对阵还没排定。";
-  return `${awardSentence}${identitySentence}${formSentence}${flawSentence}${nextSentence}`;
+  return `${awardSentence}${identitySentence}${formSentence}${flawSentence}${riskSentence}${nextSentence}`;
 }
 
 function buildTeamCards(data, teamMap, records, stageAwards, rankingRows) {
@@ -690,16 +692,42 @@ function buildPredictionFactors(match, recordA, recordB, headToHead, restA, rest
     (player) => player.teamCode === match.teamA.shortName || player.teamCode === match.teamB.shortName,
   )
     .slice(0, 2)
-    .map((player) => `${player.name}：${player.watch}`);
+    .map((player) => ({
+      label: `刀口 / ${player.name}`,
+      value: player.watch,
+    }));
   return [
-    `赛段战绩 ${match.teamA.shortName} ${recordA.wins}-${recordA.losses}，${match.teamB.shortName} ${recordB.wins}-${recordB.losses}`,
-    `近五场 ${match.teamA.shortName} ${recordA.recentText}，${match.teamB.shortName} ${recordB.recentText}`,
-    `局差 ${match.teamA.shortName} ${signed(recordA.gameDiff)}，${match.teamB.shortName} ${signed(recordB.gameDiff)}`,
-    headToHead.text,
-    `休整 ${match.teamA.shortName} ${restA}h，${match.teamB.shortName} ${restB}h`,
-    styleA && styleB ? `风格对照 ${match.teamA.shortName} ${styleA.strengths[0]}，${match.teamB.shortName} ${styleB.strengths[0]}` : "",
+    {
+      label: "账面",
+      value: `${match.teamA.shortName} ${recordA.wins}-${recordA.losses}，${match.teamB.shortName} ${recordB.wins}-${recordB.losses}`,
+    },
+    {
+      label: "近势",
+      value: `${match.teamA.shortName} ${recordA.recentText}，${match.teamB.shortName} ${recordB.recentText}`,
+    },
+    {
+      label: "局口",
+      value: `${match.teamA.shortName} ${signed(recordA.gameDiff)}，${match.teamB.shortName} ${signed(recordB.gameDiff)}`,
+    },
+    {
+      label: "旧账",
+      value: headToHead.text,
+    },
+    {
+      label: "歇脚",
+      value: `${match.teamA.shortName} ${restA}h，${match.teamB.shortName} ${restB}h`,
+    },
+    styleA && styleB
+      ? {
+          label: "门风",
+          value: `${match.teamA.shortName} ${styleA.strengths[0]}，${match.teamB.shortName} ${styleB.strengths[0]}`,
+        }
+      : null,
     ...focusNotes,
-    `${match.bo} / ${match.tournamentLabel} / ${match.stageName}`,
+    {
+      label: "局制",
+      value: `${match.bo} / ${match.tournamentLabel} / ${match.stageName}`,
+    },
   ].filter(Boolean);
 }
 
@@ -726,11 +754,12 @@ function fallbackPredictionCopy(item) {
   const favoredIdentity = favoredGuide?.identity || `${item.favoredTeam} 更能先把地图重心提起来`;
   const favoredStrength = favoredGuide?.strengths?.[0] || "前段更愿意争先";
   const favoredFlaw = favoredGuide?.flaw || `${item.favoredTeam} 一热起来，脚步就容易压过头`;
+  const underdogIdentity = underdogGuide?.identity || `${item.underdogTeam} 更偏后手应对`;
   const underdogRisk = underdogGuide?.risk || `${item.underdogTeam} 若迟迟拿不到主动，后手会越来越重`;
   return {
     headline: `老衲先押 ${item.favoredTeam}`,
-    line: `老衲看此局，${item.favoredTeam} 胜在 ${favoredStrength}，且 ${favoredIdentity}。若前两波资源先归它手里，后面的章法多半由它来写；只是它也有毛病，${favoredFlaw}。${item.underdogTeam} 若想翻案，得先把这口快气拖慢，再逼它在转折处自己露缝。`,
-    risk: `但 ${item.underdogTeam} 若能把比赛拖进久拉久扯的后段，${underdogRisk}，前面的判词就要改。`,
+    line: `老衲看此局，先不看热闹，只看谁先写棋盘。${item.favoredTeam} 胜在${favoredStrength}，且${favoredIdentity}；前两波资源若先归它手里，河道、边线与团前站位多半都要顺着它的气往下走，这口势一旦成形，后面的收束通常不难看。\n\n可它也不是无病之身，${favoredFlaw}。这种队最怕赢得太顺，手一热，脚步便会伸得过深，原本该稳住的地方反倒成了漏洞。真打到转折处，看的不是谁更响，而是谁先把自己那一下收住。\n\n${item.underdogTeam} 这一边原是${underdogIdentity}。它若想翻案，得先把前十五分钟拖成慢账，再把${item.favoredTeam}逼进补线、回防和二次落位的苦差里；若反被${item.favoredTeam}连着抢住前手，胜负多半不会拖到后段才分晓。`,
+    risk: `但 ${item.underdogTeam} 若真把比赛拖进久持之局，${underdogRisk}，老衲这句也得改口。`,
   };
 }
 
@@ -829,6 +858,7 @@ function sanitizeAiPredictionText(value, fallback) {
   const text = String(value || "").trim();
   if (!text) return fallback;
   const hit = AI_COPY_BLOCKLIST.some((blocked) => text.includes(blocked));
+  if (text.length < Math.min(60, fallback.length * 0.45)) return fallback;
   return hit ? fallback : text;
 }
 
@@ -879,17 +909,18 @@ async function buildAiPredictionCopy(predictions) {
 
   const prompt = [
     "你在写英雄联盟观赛站“高僧预测”的断局文案。",
-    "说话口吻要像见过很多局的老僧，可以偶尔用“老衲看”“依老衲看”这种说法，文字要有古意和压迫感，但必须说人话，必须能让懂比赛的人一眼看懂你在说什么。",
-    "别用翻译腔，别说盘口黑话，别拿空词硬装，更别写成神棍。",
+    "说话口吻要像看过万局的老僧批注，可以直接用“老衲看”“依老衲看”“此局贵在”“病也在此”这类说法，文字要有古意、有锋芒，但必须让懂比赛的人一眼看懂。",
+    "别用翻译腔，别说盘口黑话，别拿空词硬装，更别写成神棍。要像在卷边批一段狠注，不像写公告。",
     "每场输出三个字段：headline、line、risk。",
     "headline 控制在 8 到 16 个汉字，要像判词。",
-    "line 控制在 90 到 140 个汉字，分两句或三句，把为什么看好这一边写清楚。可以文一点，但要具体，要落到节奏、资源、团战次序、边线、收束能力、纪律性、失误点这些真东西上。",
+    "line 控制在 260 到 420 个汉字，分成三个自然段。第一段写看好谁、凭什么；第二段写这边的毛病、最可能露缝的地方；第三段写另一边怎么翻盘，怎么把局拖回自己的路数。",
     "risk 控制在 24 到 48 个汉字，只点最可能打脸的一处变数。",
-    "line 最好分成两句或三句，读起来要像一句正经断语落在纸上，有气口，但不能拿空腔充门面。",
-    "line 里可以有一点门派气，但不能出现‘先看他把前两局握在手里’、‘敢不敢把兵线推深’、‘盘面更顺’这种空腔。",
+    "line 要落到节奏、资源、团战次序、边线、收束能力、纪律性、失误点这些真东西上。至少明确写出一处长板、一处毛病、一条翻案路径。",
+    "行文可以拽，可以像文言批注，但不能晦涩。能写“老衲看”“此局贵在”“病也在此”“若要翻案”，不能写得像外国人硬学中文。",
+    "禁止出现这些空话：‘先看他把前两局握在手里’、‘敢不敢把兵线推深’、‘盘面更顺’、‘稳稳收住’、‘看临场发挥’、‘一切皆有可能’。",
     "严禁出现这些词：装懂、写上墙、梭哈、嘴硬、当空气、玄学、神谕、天命、阵卷、观席、禅断、盘口、收米、赔率。",
     "不要出现用户、本站、官网、模型、AI、数据源这些词。",
-    "把 knowledge 里的队伍门风、选手手法、短板和因子列表揉进断语里，不要原样复述列表。",
+    "把 knowledge 里的队伍门风、选手手法、短板和因子列表揉进断语里，不要原样复述列表。至少明确写出一处长板和一处毛病。",
     "返回 JSON，格式为 { predictions: { [id]: { headline, line, risk } } }。",
     JSON.stringify(payload, null, 2),
   ].join("\n");
