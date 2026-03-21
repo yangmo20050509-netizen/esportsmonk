@@ -115,6 +115,21 @@ function renderEmptyCard(message) {
   return `<article class="empty-card">${escapeHtml(message)}</article>`;
 }
 
+function renderParagraphBlock(text, className = "") {
+  const paragraphs = String(text || "")
+    .split(/\n+/)
+    .map((part) => part.trim())
+    .filter(Boolean);
+
+  if (!paragraphs.length) {
+    return `<p${className ? ` class="${className}"` : ""}></p>`;
+  }
+
+  return paragraphs
+    .map((paragraph) => `<p${className ? ` class="${className}"` : ""}>${escapeHtml(paragraph)}</p>`)
+    .join("");
+}
+
 function renderMatchCard(match) {
   const scoreText = match.status === "upcoming" ? "VS" : `${match.scoreA}:${match.scoreB}`;
   const statusLabel =
@@ -688,7 +703,7 @@ function renderPredictions() {
       <div class="prediction-insight">
         <div class="dynamic-note">
           <span class="dynamic-note-label">高僧见解</span>
-          <p>${escapeHtml(currentPrediction.line)}</p>
+          <div class="dynamic-note-copy">${renderParagraphBlock(currentPrediction.line)}</div>
         </div>
         <div class="factor-list">
           <div class="factor-title">入算因子</div>

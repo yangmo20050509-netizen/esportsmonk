@@ -52,12 +52,59 @@ const REGION_MAP = {
 
 const FOCUS_TEAM_IDS = ["BLG", "JDG", "AL", "WBG", "LNG", "TES"];
 
+const TEAM_STYLE_GUIDE = {
+  BLG: {
+    identity: "上中野肯先落子，盘面一旦抢到前手，往往会把地图一寸一寸压出来",
+    strengths: ["前中期争先意愿强", "边线施压持续", "优势局收束速度整"],
+    risk: "若前两波资源没能先占，阵形会被拖进更吃耐心的后段",
+    monk: "这队打得像先下手的刀，见血之后就不愿停。看好它时，要看它能不能先把河道和边线一并拿稳。",
+  },
+  JDG: {
+    identity: "节奏不急，转线和团战次序更讲章法，常在中后段把局面慢慢拧回来",
+    strengths: ["中后段运营沉着", "正面团战层次清楚", "逆风时不轻易散架"],
+    risk: "若前十五分钟连续掉资源，后段再稳也要先补窟窿",
+    monk: "这队不靠一脚踢翻棋盘，靠的是把每一手下到该落的地方。若让它顺利过渡到二十分钟后，盘根会越扎越深。",
+  },
+  AL: {
+    identity: "起手硬，碰撞多，肯把比赛拉进高频交锋的路数里",
+    strengths: ["开局碰撞频繁", "先锋和转线欲望强", "状态上来时连段很猛"],
+    risk: "一旦前几波出手失准，回身补线和资源时容易露空门",
+    monk: "这队讲一个先声夺人，出手时像撞钟，响起来够狠。可钟声若连着敲空，后手就会露得很明显。",
+  },
+  WBG: {
+    identity: "能拉长局面找第二落点，胜负常在中段之后才见分晓",
+    strengths: ["中段再布置能力强", "关键团敢找角度", "拖长局面后仍有翻盘口"],
+    risk: "若线上连着失血，后续想腾挪就会被兵线和视野一起锁住",
+    monk: "这队不怕棋下长，只怕前盘欠账太多。给它喘气之机，它总能再翻一手出来。",
+  },
+  LNG: {
+    identity: "更重中枢控场，节拍不花，资源取舍偏稳",
+    strengths: ["中野联动稳", "资源判断克制", "团前站位讲秩序"],
+    risk: "若被对面强行提速，舒展不开时会显得有些慢",
+    monk: "这队像守经的人，行步不乱，次序分明。可若被人逼着快走，它那口气未必来得及调匀。",
+  },
+  TES: {
+    identity: "一旦手热，正面冲阵极凶，能把比赛硬生生抬进高压区",
+    strengths: ["正面火力高", "敢接高风险团", "气势上来时连推带打"],
+    risk: "若前排和后手脱节，整队会在一波团里同时露口子",
+    monk: "这队赢时像急雷，落下来很响；可雷声太密，劈偏一次，反震也会跟着回来。",
+  },
+};
+
+const PLAYER_STYLE_GUIDE = {
+  bin: "边线敢压，敢把刀口伸得很前。看他时别只看对线补刀，要看他敢不敢拿位置换节奏。",
+  xun: "更值钱的是起手时机和河道布子。若他能先把资源点踩住，整队的第一口气就会顺很多。",
+  knight: "胜负常不在华丽镜头，在他中段把线权和支援拆得多干净。看他，就看这层拆解功夫。",
+  viper: "他真正贵在收官时的手法。团里站得住，伤害就会越打越像账本，一笔一笔都算得清。",
+  on: "要看的是开团那一下和回身那一下。先手若准，整队立住；回身若慢，后排就要吃苦。",
+};
+
 const FOCUS_PLAYERS = [
-  { id: "bin", name: "Bin", role: "上路", teamCode: "BLG", watch: "看对线压力和敢不敢把兵线推深。" },
-  { id: "xun", name: "XUN", role: "打野", teamCode: "BLG", watch: "看前十五分钟资源规划和抓边效率。" },
-  { id: "knight", name: "Knight", role: "中路", teamCode: "BLG", watch: "看中期接团次序和技能落点。" },
-  { id: "viper", name: "Viper", role: "下路", teamCode: "BLG", watch: "看线权转换和中后段输出稳定度。" },
-  { id: "on", name: "ON", role: "辅助", teamCode: "BLG", watch: "看先手时机和保后排的判断。" },
+  { id: "bin", name: "Bin", role: "上路", teamCode: "BLG", watch: PLAYER_STYLE_GUIDE.bin },
+  { id: "xun", name: "XUN", role: "打野", teamCode: "BLG", watch: PLAYER_STYLE_GUIDE.xun },
+  { id: "knight", name: "Knight", role: "中路", teamCode: "BLG", watch: PLAYER_STYLE_GUIDE.knight },
+  { id: "viper", name: "Viper", role: "下路", teamCode: "BLG", watch: PLAYER_STYLE_GUIDE.viper },
+  { id: "on", name: "ON", role: "辅助", teamCode: "BLG", watch: PLAYER_STYLE_GUIDE.on },
 ];
 
 function resolvePlayerPortrait(playerId) {
@@ -127,6 +174,9 @@ const AI_COPY_BLOCKLIST = [
   "阵卷",
   "观席",
   "禅断",
+  "把领先盘稳稳收住",
+  "敢不敢把兵线推深",
+  "盘面更顺",
 ];
 
 function parseMatchDate(value) {
@@ -405,16 +455,18 @@ function buildMetricBars(record) {
 }
 
 function buildTeamStatement(teamCode, record, stageAward, nextMatch) {
+  const guide = TEAM_STYLE_GUIDE[teamCode];
   const opponent = nextMatch ? getPerspective(nextMatch, teamCode).opponent.shortName : "待定";
   const formSentence =
     record.winRate >= 70
-      ? "近况稳定，能把领先盘稳稳收住。"
+      ? "这段时间气口足，拿到前手后收束比赛的手法比较整。"
       : record.winRate >= 55
-        ? "账面不虚，关键局处理还得继续盯。"
-        : "波动偏大，前中期的节奏控制还得多看一眼。";
-  const awardSentence = stageAward ? `${stageAward}已经落袋。` : "";
+        ? "账面站得住，但胜负常在第三波转折里见分晓。"
+        : "走势有起伏，前十五分钟若拿不到主动，后段就容易被人牵着走。";
+  const awardSentence = stageAward ? `${stageAward}在手，` : "";
+  const identitySentence = guide ? `${guide.identity}。` : "";
   const nextSentence = nextMatch ? `下一场已确认对阵 ${opponent}。` : "下一场对阵还没排定。";
-  return `${awardSentence}${formSentence}${nextSentence}`;
+  return `${awardSentence}${identitySentence}${formSentence}${nextSentence}`;
 }
 
 function buildTeamCards(data, teamMap, records, stageAwards, rankingRows) {
@@ -461,7 +513,7 @@ function buildTeamCards(data, teamMap, records, stageAwards, rankingRows) {
       region: REGION_MAP[teamCode] || "LPL",
       stageAward: stageAwards[teamCode] || "",
       rankingLabel: ranking ? `第一赛段第 ${ranking.rank}` : "当前未进榜",
-      summary: `${teamCode} 当前系列赛 ${record.wins}-${record.losses}，单局 ${record.gameWins}-${record.gameLosses}，近五场 ${record.recentText}。`,
+      summary: `${teamCode} 当前系列赛 ${record.wins}-${record.losses}，单局 ${record.gameWins}-${record.gameLosses}，近五场 ${record.recentText}。${TEAM_STYLE_GUIDE[teamCode]?.strengths?.[0] ? ` 这队眼下最值钱的一层，是 ${TEAM_STYLE_GUIDE[teamCode].strengths[0]}。` : ""}`,
       statement: buildTeamStatement(teamCode, record, stageAwards[teamCode], nextMatch),
       metrics: buildMetricBars(record),
       docket,
@@ -509,7 +561,7 @@ function buildPlayerCards(records) {
       role: player.role,
       teamCode: player.teamCode,
       portrait: resolvePlayerPortrait(player.id),
-      summary: `${player.name} 当前归属 ${player.teamCode}，这里保留角色、赛程和战队近期赛果。`,
+      summary: `${player.name} 当前归属 ${player.teamCode}，这里看角色、赛程与战队近况，也看他这一路到底把力气使在什么地方。`,
       note: player.watch,
       tags: ["角色归属", "战队赛程", "近期赛果"],
       track,
@@ -625,21 +677,49 @@ function buildPredictedScore(match, favoredTeam, confidence) {
 }
 
 function buildPredictionFactors(match, recordA, recordB, headToHead, restA, restB) {
+  const styleA = TEAM_STYLE_GUIDE[match.teamA.shortName];
+  const styleB = TEAM_STYLE_GUIDE[match.teamB.shortName];
+  const focusNotes = FOCUS_PLAYERS.filter(
+    (player) => player.teamCode === match.teamA.shortName || player.teamCode === match.teamB.shortName,
+  )
+    .slice(0, 2)
+    .map((player) => `${player.name}：${player.watch}`);
   return [
     `赛段战绩 ${match.teamA.shortName} ${recordA.wins}-${recordA.losses}，${match.teamB.shortName} ${recordB.wins}-${recordB.losses}`,
     `近五场 ${match.teamA.shortName} ${recordA.recentText}，${match.teamB.shortName} ${recordB.recentText}`,
     `局差 ${match.teamA.shortName} ${signed(recordA.gameDiff)}，${match.teamB.shortName} ${signed(recordB.gameDiff)}`,
     headToHead.text,
     `休整 ${match.teamA.shortName} ${restA}h，${match.teamB.shortName} ${restB}h`,
+    styleA && styleB ? `风格对照 ${match.teamA.shortName} ${styleA.strengths[0]}，${match.teamB.shortName} ${styleB.strengths[0]}` : "",
+    ...focusNotes,
     `${match.bo} / ${match.tournamentLabel} / ${match.stageName}`,
-  ];
+  ].filter(Boolean);
+}
+
+function buildPredictionKnowledge(match) {
+  const teamAGuide = TEAM_STYLE_GUIDE[match.teamA.shortName];
+  const teamBGuide = TEAM_STYLE_GUIDE[match.teamB.shortName];
+  const focusPlayers = FOCUS_PLAYERS.filter(
+    (player) => player.teamCode === match.teamA.shortName || player.teamCode === match.teamB.shortName,
+  ).map((player) => `${player.name}：${player.watch}`);
+  return {
+    teamA: teamAGuide
+      ? `${match.teamA.shortName}：${teamAGuide.identity}；长处是${teamAGuide.strengths.join("、")}；隐忧是${teamAGuide.risk}`
+      : `${match.teamA.shortName}：当前没有补充风格注释。`,
+    teamB: teamBGuide
+      ? `${match.teamB.shortName}：${teamBGuide.identity}；长处是${teamBGuide.strengths.join("、")}；隐忧是${teamBGuide.risk}`
+      : `${match.teamB.shortName}：当前没有补充风格注释。`,
+    focusPlayers: focusPlayers.length ? focusPlayers.join("；") : "当前没有接入该场重点选手的手法注释。",
+  };
 }
 
 function fallbackPredictionCopy(item) {
+  const favoredGuide = TEAM_STYLE_GUIDE[item.favoredTeam];
+  const styleLine = favoredGuide?.strengths?.[0] || "更能先把地图重心提起来";
   return {
-    headline: `${item.favoredTeam} 略占上风`,
-    line: `${item.favoredTeam} 这一侧盘面更顺，先看它把前两局握在手里。`,
-    risk: "赛前只看已确认赛程与赛果，临场首发和状态一变，断语也得跟着变。",
+    headline: `${item.favoredTeam} 可先记一笔`,
+    line: `${item.favoredTeam} 这边更像先执子的一方，${styleLine}。若前两波资源先入囊中，它多半会把节奏一段一段往前压，把对手逼进自己不愿走的路数；${item.underdogTeam} 若想翻案，得先把第一口气拖住，再逼它在后手里做选择。`,
+    risk: `${item.underdogTeam} 若能把开局碰撞拖成久拉久扯的中后段，这句断语就得改口。`,
   };
 }
 
@@ -680,7 +760,11 @@ function buildTeamPredictions(data, records) {
         ? confidenceA
         : clamp(100 - confidenceA, 42, 84);
     const predictedScore = buildPredictedScore(match, favoredTeam, confidence);
-    const fallback = fallbackPredictionCopy({ favoredTeam });
+    const fallback = fallbackPredictionCopy({
+      favoredTeam,
+      underdogTeam: favoredTeam === match.teamA.shortName ? match.teamB.shortName : match.teamA.shortName,
+    });
+    const knowledge = buildPredictionKnowledge(match);
 
     return {
       id: `prediction-${teamId}`,
@@ -707,6 +791,7 @@ function buildTeamPredictions(data, records) {
       headline: fallback.headline,
       line: fallback.line,
       risk: fallback.risk,
+      knowledge,
       resources: {
         seriesRecord: [recordA.wins, recordA.losses, recordB.wins, recordB.losses],
         gameDiff: [recordA.gameDiff, recordB.gameDiff],
@@ -714,6 +799,7 @@ function buildTeamPredictions(data, records) {
         headToHead: headToHead.text,
         restHours: [restA, restB],
         bo: match.bo,
+        style: knowledge,
       },
     };
   });
@@ -738,27 +824,26 @@ function sanitizeAiPredictionText(value, fallback) {
 async function callGeminiJson(prompt) {
   if (!GEMINI_API_KEY) return null;
 
-  const response = await fetch(
-    `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_API_KEY}`,
-    {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        contents: [{ role: "user", parts: [{ text: prompt }] }],
-        generationConfig: {
-          responseMimeType: "application/json",
-          temperature: 0.6,
-        },
-      }),
-    },
-  );
-
-  if (!response.ok) return null;
-  const data = await response.json();
-  const raw = data.candidates?.[0]?.content?.parts?.[0]?.text;
-  if (!raw) return null;
-
   try {
+    const response = await fetch(
+      `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_API_KEY}`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          contents: [{ role: "user", parts: [{ text: prompt }] }],
+          generationConfig: {
+            responseMimeType: "application/json",
+            temperature: 0.72,
+          },
+        }),
+      },
+    );
+
+    if (!response.ok) return null;
+    const data = await response.json();
+    const raw = data.candidates?.[0]?.content?.parts?.[0]?.text;
+    if (!raw) return null;
     return JSON.parse(sanitizeJsonText(raw));
   } catch {
     return null;
@@ -776,18 +861,24 @@ async function buildAiPredictionCopy(predictions) {
       predictedScore: item.predictedScore,
       confidence: item.confidence,
       factors: item.factors,
+      knowledge: item.knowledge,
     }));
 
   if (!payload.length) return null;
 
   const prompt = [
-    "你在写英雄联盟观赛站的预测卡文案。",
-    "风格要求：克制、利落、专业，在结论下方那一句可以稍微神神叨叨一点，让人觉得有气口，但不能像疯话。",
+    "你在写英雄联盟观赛站“高僧预测”的断局文案。",
+    "说话口吻要像见过很多局的大师兄，文字要有古意和压迫感，但必须说人话，必须能让懂比赛的人一眼看懂你在说什么。",
+    "别用翻译腔，别说盘口黑话，别拿空词硬装，更别写成神棍。",
     "每场输出三个字段：headline、line、risk。",
-    "headline 控制在 16 个汉字以内。",
-    "line 控制在 38 个汉字以内，要像高僧留的一句断语。",
-    "risk 控制在 28 个汉字以内。",
-    "严禁出现这些词：装懂、写上墙、梭哈、嘴硬、当空气、玄学、神谕、天命、阵卷、观席、禅断。",
+    "headline 控制在 8 到 16 个汉字，要像判词。",
+    "line 控制在 90 到 140 个汉字，分两句或三句，把为什么看好这一边写清楚。可以文一点，但要具体，要落到节奏、资源、团战次序、边线、收束能力这些真东西上。",
+    "risk 控制在 24 到 48 个汉字，只点最可能打脸的一处变数。",
+    "line 最好分成两句或三句，读起来要像一句正经断语落在纸上，有气口，但不能拿空腔充门面。",
+    "line 里可以有一点门派气，但不能出现‘先看他把前两局握在手里’、‘敢不敢把兵线推深’、‘盘面更顺’这种空腔。",
+    "严禁出现这些词：装懂、写上墙、梭哈、嘴硬、当空气、玄学、神谕、天命、阵卷、观席、禅断、盘口、收米、赔率。",
+    "不要出现用户、本站、官网、模型、AI、数据源这些词。",
+    "把 knowledge 里的队伍门风、选手手法和因子列表揉进断语里，不要原样复述列表。",
     "返回 JSON，格式为 { predictions: { [id]: { headline, line, risk } } }。",
     JSON.stringify(payload, null, 2),
   ].join("\n");

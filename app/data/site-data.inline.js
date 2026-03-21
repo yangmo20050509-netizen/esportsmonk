@@ -1,6 +1,6 @@
 window.__SITE_DATA__ = {
-  "generatedAt": "2026-03-20T17:35:18.966Z",
-  "generatedAtLocal": "2026/3/21 01:35:18",
+  "generatedAt": "2026-03-21T07:32:53.308Z",
+  "generatedAtLocal": "2026/3/21 15:32:53",
   "copy": {
     "title": "电竞高僧 | 英雄联盟观赛站",
     "description": "聚合英雄联盟重点赛事的官方赛程、比分、战队信息与比赛预测。",
@@ -53,38 +53,7 @@ window.__SITE_DATA__ = {
     "aiSource": "fallback"
   },
   "overview": {
-    "liveMatches": [
-      {
-        "id": "13204",
-        "bigGameId": "220",
-        "gameId": "238",
-        "tournamentSlug": "first-stand",
-        "tournamentLabel": "First Stand",
-        "tournamentName": "全球先锋赛2026",
-        "stageName": "小组赛",
-        "roundName": "第五天",
-        "bo": "BO5",
-        "venue": "圣保罗",
-        "matchDate": "2026-03-21 02:00:00",
-        "status": "in_progress",
-        "statusText": "进行中/待确认",
-        "scoreA": 1,
-        "scoreB": 1,
-        "teamA": {
-          "id": "29",
-          "name": "北京JDG",
-          "shortName": "JDG",
-          "logo": "https://img.crawler.qq.com/lolwebvideo/20230921143554/1e5189e914e40bfe18045bccbfc7ef82/0"
-        },
-        "teamB": {
-          "id": "699",
-          "name": "LYON",
-          "shortName": "LYON",
-          "logo": "https://img.crawler.qq.com/lolwebvideo/20260309172113/55b77a400d7356cdb4797f98f64e2ce8/0"
-        },
-        "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_238.js"
-      }
-    ],
+    "liveMatches": [],
     "upcomingMatches": [
       {
         "id": "13205",
@@ -113,6 +82,36 @@ window.__SITE_DATA__ = {
           "name": "G2",
           "shortName": "G2",
           "logo": "https://img.crawler.qq.com/lolwebvideo/20250618120148/0654f8b663a3973eb8debcf929cb919e/0"
+        },
+        "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_238.js"
+      },
+      {
+        "id": "13206",
+        "bigGameId": "220",
+        "gameId": "238",
+        "tournamentSlug": "first-stand",
+        "tournamentLabel": "First Stand",
+        "tournamentName": "全球先锋赛2026",
+        "stageName": "淘汰赛",
+        "roundName": "半决赛",
+        "bo": "BO5",
+        "venue": "圣保罗",
+        "matchDate": "2026-03-22 02:00:00",
+        "status": "upcoming",
+        "statusText": "未开始",
+        "scoreA": 0,
+        "scoreB": 0,
+        "teamA": {
+          "id": "57",
+          "name": "BLG",
+          "shortName": "BLG",
+          "logo": "https://img.crawler.qq.com/lolwebvideo/20250618144525/49342dadcecf162e8ac94fad6eb91540/0"
+        },
+        "teamB": {
+          "id": "29",
+          "name": "北京JDG",
+          "shortName": "JDG",
+          "logo": "https://img.crawler.qq.com/lolwebvideo/20230921143554/1e5189e914e40bfe18045bccbfc7ef82/0"
         },
         "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_238.js"
       }
@@ -205,8 +204,8 @@ window.__SITE_DATA__ = {
       "role": "上路",
       "teamCode": "BLG",
       "portrait": "",
-      "summary": "Bin 当前归属 BLG，这里保留角色、赛程和战队近期赛果。",
-      "note": "看对线压力和敢不敢把兵线推深。",
+      "summary": "Bin 当前归属 BLG，这里看角色、赛程与战队近况，也看他这一路到底把力气使在什么地方。",
+      "note": "边线敢压，敢把刀口伸得很前。看他时别只看对线补刀，要看他敢不敢拿位置换节奏。",
       "tags": [
         "角色归属",
         "战队赛程",
@@ -220,8 +219,8 @@ window.__SITE_DATA__ = {
         },
         {
           "label": "下一场",
-          "value": "等待排表",
-          "note": "当前没有已确认对阵"
+          "value": "BLG vs JDG",
+          "note": "3月22日周日 02:00 / First Stand"
         },
         {
           "label": "最近一场",
@@ -230,9 +229,9 @@ window.__SITE_DATA__ = {
         }
       ],
       "observation": [
-        "看对线压力和敢不敢把兵线推深。",
+        "边线敢压，敢把刀口伸得很前。看他时别只看对线补刀，要看他敢不敢拿位置换节奏。",
         "最近一场 BLG 3:0 G2。",
-        "下一场对阵还没确认。"
+        "下一场已确认对阵 JDG。"
       ],
       "history": [
         {
@@ -273,8 +272,8 @@ window.__SITE_DATA__ = {
         "region": "LPL",
         "stageAward": "第一赛段冠军",
         "rankingLabel": "第一赛段第 1",
-        "summary": "BLG 当前系列赛 12-4，单局 33-15，近五场 胜 胜 胜 胜 胜。",
-        "statement": "第一赛段冠军已经落袋。近况稳定，能把领先盘稳稳收住。下一场对阵还没排定。",
+        "summary": "BLG 当前系列赛 12-4，单局 33-15，近五场 胜 胜 胜 胜 胜。 这队眼下最值钱的一层，是 前中期争先意愿强。",
+        "statement": "第一赛段冠军在手，上中野肯先落子，盘面一旦抢到前手，往往会把地图一寸一寸压出来。这段时间气口足，拿到前手后收束比赛的手法比较整。下一场已确认对阵 JDG。",
         "metrics": [
           {
             "label": "胜率",
@@ -298,6 +297,11 @@ window.__SITE_DATA__ = {
           }
         ],
         "docket": [
+          {
+            "label": "下一场",
+            "value": "BLG vs JDG",
+            "note": "3月22日周日 02:00 / First Stand BO5"
+          },
           {
             "label": "最近一场",
             "value": "BLG 3:0 G2",
@@ -350,48 +354,54 @@ window.__SITE_DATA__ = {
         "region": "LPL",
         "stageAward": "第一赛段亚军",
         "rankingLabel": "第一赛段第 3",
-        "summary": "JDG 当前系列赛 9-8，单局 28-26，近五场 胜 负 负 胜 负。",
-        "statement": "第一赛段亚军已经落袋。波动偏大，前中期的节奏控制还得多看一眼。下一场已确认对阵 LYON。",
+        "summary": "JDG 当前系列赛 10-8，单局 31-27，近五场 胜 胜 负 负 胜。 这队眼下最值钱的一层，是 中后段运营沉着。",
+        "statement": "第一赛段亚军在手，节奏不急，转线和团战次序更讲章法，常在中后段把局面慢慢拧回来。账面站得住，但胜负常在第三波转折里见分晓。下一场已确认对阵 BLG。",
         "metrics": [
           {
             "label": "胜率",
-            "value": 53,
-            "text": "53%"
+            "value": 56,
+            "text": "56%"
           },
           {
             "label": "局差",
-            "value": 58,
-            "text": "+2"
+            "value": 66,
+            "text": "+4"
           },
           {
             "label": "近五",
-            "value": 40,
-            "text": "2/5"
+            "value": 60,
+            "text": "3/5"
           },
           {
             "label": "走势",
-            "value": 56,
-            "text": "1连胜"
+            "value": 66,
+            "text": "2连胜"
           }
         ],
         "docket": [
           {
-            "label": "此刻对局",
-            "value": "JDG vs LYON",
-            "note": "First Stand BO5 / 当前比分 1:1"
+            "label": "下一场",
+            "value": "JDG vs BLG",
+            "note": "3月22日周日 02:00 / First Stand BO5"
           },
           {
             "label": "最近一场",
-            "value": "JDG 3:0 LOUD",
-            "note": "First Stand / 小组赛 / 第四天"
+            "value": "JDG 3:1 LYON",
+            "note": "First Stand / 小组赛 / 第五天"
           },
           {
             "label": "账面",
-            "value": "9-8",
-            "note": "系列胜率 53% / 局差 +2"
+            "value": "10-8",
+            "note": "系列胜率 56% / 局差 +4"
           }
         ],
         "history": [
+          {
+            "opponent": "LYON",
+            "result": "3:1",
+            "outcome": "win",
+            "note": "First Stand / 小组赛 / 第五天"
+          },
           {
             "opponent": "LOUD",
             "result": "3:0",
@@ -409,19 +419,13 @@ window.__SITE_DATA__ = {
             "result": "1:3",
             "outcome": "loss",
             "note": "LPL / 第一赛段淘汰赛 / 决赛"
-          },
-          {
-            "opponent": "WBG",
-            "result": "3:0",
-            "outcome": "win",
-            "note": "LPL / 第一赛段淘汰赛 / 第十一天"
           }
         ],
         "overview": {
-          "seriesRecord": "9-8",
-          "gameRecord": "28-26",
-          "winRate": "53%",
-          "streakLabel": "1连胜"
+          "seriesRecord": "10-8",
+          "gameRecord": "31-27",
+          "winRate": "56%",
+          "streakLabel": "2连胜"
         }
       },
       {
@@ -432,8 +436,8 @@ window.__SITE_DATA__ = {
         "region": "LPL",
         "stageAward": "",
         "rankingLabel": "第一赛段第 2",
-        "summary": "AL 当前系列赛 10-4，单局 27-16，近五场 负 胜 负 胜 胜。",
-        "statement": "近况稳定，能把领先盘稳稳收住。下一场对阵还没排定。",
+        "summary": "AL 当前系列赛 10-4，单局 27-16，近五场 负 胜 负 胜 胜。 这队眼下最值钱的一层，是 开局碰撞频繁。",
+        "statement": "起手硬，碰撞多，肯把比赛拉进高频交锋的路数里。这段时间气口足，拿到前手后收束比赛的手法比较整。下一场对阵还没排定。",
         "metrics": [
           {
             "label": "胜率",
@@ -509,8 +513,8 @@ window.__SITE_DATA__ = {
         "region": "LPL",
         "stageAward": "",
         "rankingLabel": "第一赛段第 4",
-        "summary": "WBG 当前系列赛 8-7，单局 22-22，近五场 负 胜 胜 负 胜。",
-        "statement": "波动偏大，前中期的节奏控制还得多看一眼。下一场对阵还没排定。",
+        "summary": "WBG 当前系列赛 8-7，单局 22-22，近五场 负 胜 胜 负 胜。 这队眼下最值钱的一层，是 中段再布置能力强。",
+        "statement": "能拉长局面找第二落点，胜负常在中段之后才见分晓。走势有起伏，前十五分钟若拿不到主动，后段就容易被人牵着走。下一场对阵还没排定。",
         "metrics": [
           {
             "label": "胜率",
@@ -586,8 +590,8 @@ window.__SITE_DATA__ = {
         "region": "LPL",
         "stageAward": "",
         "rankingLabel": "第一赛段第 5",
-        "summary": "LNG 当前系列赛 7-1，单局 16-5，近五场 负 胜 胜 胜 胜。",
-        "statement": "近况稳定，能把领先盘稳稳收住。下一场对阵还没排定。",
+        "summary": "LNG 当前系列赛 7-1，单局 16-5，近五场 负 胜 胜 胜 胜。 这队眼下最值钱的一层，是 中野联动稳。",
+        "statement": "更重中枢控场，节拍不花，资源取舍偏稳。这段时间气口足，拿到前手后收束比赛的手法比较整。下一场对阵还没排定。",
         "metrics": [
           {
             "label": "胜率",
@@ -663,8 +667,8 @@ window.__SITE_DATA__ = {
         "region": "LPL",
         "stageAward": "",
         "rankingLabel": "第一赛段第 7",
-        "summary": "TES 当前系列赛 6-8，单局 21-22，近五场 负 胜 负 胜 胜。",
-        "statement": "波动偏大，前中期的节奏控制还得多看一眼。下一场对阵还没排定。",
+        "summary": "TES 当前系列赛 6-8，单局 21-22，近五场 负 胜 负 胜 胜。 这队眼下最值钱的一层，是 正面火力高。",
+        "statement": "一旦手热，正面冲阵极凶，能把比赛硬生生抬进高压区。走势有起伏，前十五分钟若拿不到主动，后段就容易被人牵着走。下一场对阵还没排定。",
         "metrics": [
           {
             "label": "胜率",
@@ -743,8 +747,8 @@ window.__SITE_DATA__ = {
         "role": "上路",
         "teamCode": "BLG",
         "portrait": "",
-        "summary": "Bin 当前归属 BLG，这里保留角色、赛程和战队近期赛果。",
-        "note": "看对线压力和敢不敢把兵线推深。",
+        "summary": "Bin 当前归属 BLG，这里看角色、赛程与战队近况，也看他这一路到底把力气使在什么地方。",
+        "note": "边线敢压，敢把刀口伸得很前。看他时别只看对线补刀，要看他敢不敢拿位置换节奏。",
         "tags": [
           "角色归属",
           "战队赛程",
@@ -758,8 +762,8 @@ window.__SITE_DATA__ = {
           },
           {
             "label": "下一场",
-            "value": "等待排表",
-            "note": "当前没有已确认对阵"
+            "value": "BLG vs JDG",
+            "note": "3月22日周日 02:00 / First Stand"
           },
           {
             "label": "最近一场",
@@ -768,9 +772,9 @@ window.__SITE_DATA__ = {
           }
         ],
         "observation": [
-          "看对线压力和敢不敢把兵线推深。",
+          "边线敢压，敢把刀口伸得很前。看他时别只看对线补刀，要看他敢不敢拿位置换节奏。",
           "最近一场 BLG 3:0 G2。",
-          "下一场对阵还没确认。"
+          "下一场已确认对阵 JDG。"
         ],
         "history": [
           {
@@ -805,8 +809,8 @@ window.__SITE_DATA__ = {
         "role": "打野",
         "teamCode": "BLG",
         "portrait": "",
-        "summary": "XUN 当前归属 BLG，这里保留角色、赛程和战队近期赛果。",
-        "note": "看前十五分钟资源规划和抓边效率。",
+        "summary": "XUN 当前归属 BLG，这里看角色、赛程与战队近况，也看他这一路到底把力气使在什么地方。",
+        "note": "更值钱的是起手时机和河道布子。若他能先把资源点踩住，整队的第一口气就会顺很多。",
         "tags": [
           "角色归属",
           "战队赛程",
@@ -820,8 +824,8 @@ window.__SITE_DATA__ = {
           },
           {
             "label": "下一场",
-            "value": "等待排表",
-            "note": "当前没有已确认对阵"
+            "value": "BLG vs JDG",
+            "note": "3月22日周日 02:00 / First Stand"
           },
           {
             "label": "最近一场",
@@ -830,9 +834,9 @@ window.__SITE_DATA__ = {
           }
         ],
         "observation": [
-          "看前十五分钟资源规划和抓边效率。",
+          "更值钱的是起手时机和河道布子。若他能先把资源点踩住，整队的第一口气就会顺很多。",
           "最近一场 BLG 3:0 G2。",
-          "下一场对阵还没确认。"
+          "下一场已确认对阵 JDG。"
         ],
         "history": [
           {
@@ -867,8 +871,8 @@ window.__SITE_DATA__ = {
         "role": "中路",
         "teamCode": "BLG",
         "portrait": "",
-        "summary": "Knight 当前归属 BLG，这里保留角色、赛程和战队近期赛果。",
-        "note": "看中期接团次序和技能落点。",
+        "summary": "Knight 当前归属 BLG，这里看角色、赛程与战队近况，也看他这一路到底把力气使在什么地方。",
+        "note": "胜负常不在华丽镜头，在他中段把线权和支援拆得多干净。看他，就看这层拆解功夫。",
         "tags": [
           "角色归属",
           "战队赛程",
@@ -882,8 +886,8 @@ window.__SITE_DATA__ = {
           },
           {
             "label": "下一场",
-            "value": "等待排表",
-            "note": "当前没有已确认对阵"
+            "value": "BLG vs JDG",
+            "note": "3月22日周日 02:00 / First Stand"
           },
           {
             "label": "最近一场",
@@ -892,9 +896,9 @@ window.__SITE_DATA__ = {
           }
         ],
         "observation": [
-          "看中期接团次序和技能落点。",
+          "胜负常不在华丽镜头，在他中段把线权和支援拆得多干净。看他，就看这层拆解功夫。",
           "最近一场 BLG 3:0 G2。",
-          "下一场对阵还没确认。"
+          "下一场已确认对阵 JDG。"
         ],
         "history": [
           {
@@ -929,8 +933,8 @@ window.__SITE_DATA__ = {
         "role": "下路",
         "teamCode": "BLG",
         "portrait": "",
-        "summary": "Viper 当前归属 BLG，这里保留角色、赛程和战队近期赛果。",
-        "note": "看线权转换和中后段输出稳定度。",
+        "summary": "Viper 当前归属 BLG，这里看角色、赛程与战队近况，也看他这一路到底把力气使在什么地方。",
+        "note": "他真正贵在收官时的手法。团里站得住，伤害就会越打越像账本，一笔一笔都算得清。",
         "tags": [
           "角色归属",
           "战队赛程",
@@ -944,8 +948,8 @@ window.__SITE_DATA__ = {
           },
           {
             "label": "下一场",
-            "value": "等待排表",
-            "note": "当前没有已确认对阵"
+            "value": "BLG vs JDG",
+            "note": "3月22日周日 02:00 / First Stand"
           },
           {
             "label": "最近一场",
@@ -954,9 +958,9 @@ window.__SITE_DATA__ = {
           }
         ],
         "observation": [
-          "看线权转换和中后段输出稳定度。",
+          "他真正贵在收官时的手法。团里站得住，伤害就会越打越像账本，一笔一笔都算得清。",
           "最近一场 BLG 3:0 G2。",
-          "下一场对阵还没确认。"
+          "下一场已确认对阵 JDG。"
         ],
         "history": [
           {
@@ -991,8 +995,8 @@ window.__SITE_DATA__ = {
         "role": "辅助",
         "teamCode": "BLG",
         "portrait": "",
-        "summary": "ON 当前归属 BLG，这里保留角色、赛程和战队近期赛果。",
-        "note": "看先手时机和保后排的判断。",
+        "summary": "ON 当前归属 BLG，这里看角色、赛程与战队近况，也看他这一路到底把力气使在什么地方。",
+        "note": "要看的是开团那一下和回身那一下。先手若准，整队立住；回身若慢，后排就要吃苦。",
         "tags": [
           "角色归属",
           "战队赛程",
@@ -1006,8 +1010,8 @@ window.__SITE_DATA__ = {
           },
           {
             "label": "下一场",
-            "value": "等待排表",
-            "note": "当前没有已确认对阵"
+            "value": "BLG vs JDG",
+            "note": "3月22日周日 02:00 / First Stand"
           },
           {
             "label": "最近一场",
@@ -1016,9 +1020,9 @@ window.__SITE_DATA__ = {
           }
         ],
         "observation": [
-          "看先手时机和保后排的判断。",
+          "要看的是开团那一下和回身那一下。先手若准，整队立住；回身若慢，后排就要吃苦。",
           "最近一场 BLG 3:0 G2。",
-          "下一场对阵还没确认。"
+          "下一场已确认对阵 JDG。"
         ],
         "history": [
           {
@@ -1054,58 +1058,138 @@ window.__SITE_DATA__ = {
       {
         "id": "prediction-BLG",
         "teamId": "BLG",
-        "matchLabel": "BLG 下一场待定",
-        "stageLabel": "等待官源排表",
-        "timeLabel": "暂无已确认时间",
-        "statusText": "待开盘",
-        "confidence": 50,
-        "predictedScore": "--",
-        "verdict": "等待下一场已确认对阵",
+        "matchLabel": "BLG vs JDG",
+        "stageLabel": "First Stand / 淘汰赛",
+        "timeLabel": "3月22日周日 02:00 / BO5",
+        "statusText": "赛前",
+        "confidence": 84,
+        "predictedScore": "3:1",
+        "verdict": "BLG 稍占上风",
+        "favoredTeam": "BLG",
         "teamA": {
           "code": "BLG",
-          "logo": "",
-          "recordText": "系列 12-4"
+          "logo": "https://img.crawler.qq.com/lolwebvideo/20250618144525/49342dadcecf162e8ac94fad6eb91540/0",
+          "recordText": "系列 12-4 / 局差 +18"
         },
         "teamB": {
-          "code": "待定",
-          "logo": "",
-          "recordText": "等待排表"
+          "code": "JDG",
+          "logo": "https://img.crawler.qq.com/lolwebvideo/20230921143554/1e5189e914e40bfe18045bccbfc7ef82/0",
+          "recordText": "系列 10-8 / 局差 +4"
         },
-        "favoredTeam": "BLG",
         "factors": [
-          "当前官源还没有给出下一场已确认对阵。"
+          "赛段战绩 BLG 12-4，JDG 10-8",
+          "近五场 BLG 胜 胜 胜 胜 胜，JDG 胜 胜 负 负 胜",
+          "局差 BLG +18，JDG +4",
+          "交手 BLG 2-2 JDG",
+          "休整 BLG 77h，JDG 24h",
+          "风格对照 BLG 前中期争先意愿强，JDG 中后段运营沉着",
+          "Bin：边线敢压，敢把刀口伸得很前。看他时别只看对线补刀，要看他敢不敢拿位置换节奏。",
+          "XUN：更值钱的是起手时机和河道布子。若他能先把资源点踩住，整队的第一口气就会顺很多。",
+          "BO5 / First Stand / 淘汰赛"
         ],
-        "headline": "等待官源排表",
-        "line": "赛程未落纸前，不妄开口。",
-        "risk": "对阵没定，先不写比分。"
+        "headline": "BLG 可先记一笔",
+        "line": "BLG 这边更像先执子的一方，前中期争先意愿强。若前两波资源先入囊中，它多半会把节奏一段一段往前压，把对手逼进自己不愿走的路数；JDG 若想翻案，得先把第一口气拖住，再逼它在后手里做选择。",
+        "risk": "JDG 若能把开局碰撞拖成久拉久扯的中后段，这句断语就得改口。",
+        "knowledge": {
+          "teamA": "BLG：上中野肯先落子，盘面一旦抢到前手，往往会把地图一寸一寸压出来；长处是前中期争先意愿强、边线施压持续、优势局收束速度整；隐忧是若前两波资源没能先占，阵形会被拖进更吃耐心的后段",
+          "teamB": "JDG：节奏不急，转线和团战次序更讲章法，常在中后段把局面慢慢拧回来；长处是中后段运营沉着、正面团战层次清楚、逆风时不轻易散架；隐忧是若前十五分钟连续掉资源，后段再稳也要先补窟窿",
+          "focusPlayers": "Bin：边线敢压，敢把刀口伸得很前。看他时别只看对线补刀，要看他敢不敢拿位置换节奏。；XUN：更值钱的是起手时机和河道布子。若他能先把资源点踩住，整队的第一口气就会顺很多。；Knight：胜负常不在华丽镜头，在他中段把线权和支援拆得多干净。看他，就看这层拆解功夫。；Viper：他真正贵在收官时的手法。团里站得住，伤害就会越打越像账本，一笔一笔都算得清。；ON：要看的是开团那一下和回身那一下。先手若准，整队立住；回身若慢，后排就要吃苦。"
+        },
+        "resources": {
+          "seriesRecord": [
+            12,
+            4,
+            10,
+            8
+          ],
+          "gameDiff": [
+            18,
+            4
+          ],
+          "recentForm": [
+            "胜 胜 胜 胜 胜",
+            "胜 胜 负 负 胜"
+          ],
+          "headToHead": "交手 BLG 2-2 JDG",
+          "restHours": [
+            77,
+            24
+          ],
+          "bo": "BO5",
+          "style": {
+            "teamA": "BLG：上中野肯先落子，盘面一旦抢到前手，往往会把地图一寸一寸压出来；长处是前中期争先意愿强、边线施压持续、优势局收束速度整；隐忧是若前两波资源没能先占，阵形会被拖进更吃耐心的后段",
+            "teamB": "JDG：节奏不急，转线和团战次序更讲章法，常在中后段把局面慢慢拧回来；长处是中后段运营沉着、正面团战层次清楚、逆风时不轻易散架；隐忧是若前十五分钟连续掉资源，后段再稳也要先补窟窿",
+            "focusPlayers": "Bin：边线敢压，敢把刀口伸得很前。看他时别只看对线补刀，要看他敢不敢拿位置换节奏。；XUN：更值钱的是起手时机和河道布子。若他能先把资源点踩住，整队的第一口气就会顺很多。；Knight：胜负常不在华丽镜头，在他中段把线权和支援拆得多干净。看他，就看这层拆解功夫。；Viper：他真正贵在收官时的手法。团里站得住，伤害就会越打越像账本，一笔一笔都算得清。；ON：要看的是开团那一下和回身那一下。先手若准，整队立住；回身若慢，后排就要吃苦。"
+          }
+        }
       },
       {
         "id": "prediction-JDG",
         "teamId": "JDG",
-        "matchLabel": "JDG 下一场待定",
-        "stageLabel": "等待官源排表",
-        "timeLabel": "暂无已确认时间",
-        "statusText": "待开盘",
-        "confidence": 50,
-        "predictedScore": "--",
-        "verdict": "等待下一场已确认对阵",
+        "matchLabel": "BLG vs JDG",
+        "stageLabel": "First Stand / 淘汰赛",
+        "timeLabel": "3月22日周日 02:00 / BO5",
+        "statusText": "赛前",
+        "confidence": 84,
+        "predictedScore": "3:1",
+        "verdict": "BLG 稍占上风",
+        "favoredTeam": "BLG",
         "teamA": {
-          "code": "JDG",
-          "logo": "",
-          "recordText": "系列 9-8"
+          "code": "BLG",
+          "logo": "https://img.crawler.qq.com/lolwebvideo/20250618144525/49342dadcecf162e8ac94fad6eb91540/0",
+          "recordText": "系列 12-4 / 局差 +18"
         },
         "teamB": {
-          "code": "待定",
-          "logo": "",
-          "recordText": "等待排表"
+          "code": "JDG",
+          "logo": "https://img.crawler.qq.com/lolwebvideo/20230921143554/1e5189e914e40bfe18045bccbfc7ef82/0",
+          "recordText": "系列 10-8 / 局差 +4"
         },
-        "favoredTeam": "JDG",
         "factors": [
-          "当前官源还没有给出下一场已确认对阵。"
+          "赛段战绩 BLG 12-4，JDG 10-8",
+          "近五场 BLG 胜 胜 胜 胜 胜，JDG 胜 胜 负 负 胜",
+          "局差 BLG +18，JDG +4",
+          "交手 BLG 2-2 JDG",
+          "休整 BLG 77h，JDG 24h",
+          "风格对照 BLG 前中期争先意愿强，JDG 中后段运营沉着",
+          "Bin：边线敢压，敢把刀口伸得很前。看他时别只看对线补刀，要看他敢不敢拿位置换节奏。",
+          "XUN：更值钱的是起手时机和河道布子。若他能先把资源点踩住，整队的第一口气就会顺很多。",
+          "BO5 / First Stand / 淘汰赛"
         ],
-        "headline": "等待官源排表",
-        "line": "赛程未落纸前，不妄开口。",
-        "risk": "对阵没定，先不写比分。"
+        "headline": "BLG 可先记一笔",
+        "line": "BLG 这边更像先执子的一方，前中期争先意愿强。若前两波资源先入囊中，它多半会把节奏一段一段往前压，把对手逼进自己不愿走的路数；JDG 若想翻案，得先把第一口气拖住，再逼它在后手里做选择。",
+        "risk": "JDG 若能把开局碰撞拖成久拉久扯的中后段，这句断语就得改口。",
+        "knowledge": {
+          "teamA": "BLG：上中野肯先落子，盘面一旦抢到前手，往往会把地图一寸一寸压出来；长处是前中期争先意愿强、边线施压持续、优势局收束速度整；隐忧是若前两波资源没能先占，阵形会被拖进更吃耐心的后段",
+          "teamB": "JDG：节奏不急，转线和团战次序更讲章法，常在中后段把局面慢慢拧回来；长处是中后段运营沉着、正面团战层次清楚、逆风时不轻易散架；隐忧是若前十五分钟连续掉资源，后段再稳也要先补窟窿",
+          "focusPlayers": "Bin：边线敢压，敢把刀口伸得很前。看他时别只看对线补刀，要看他敢不敢拿位置换节奏。；XUN：更值钱的是起手时机和河道布子。若他能先把资源点踩住，整队的第一口气就会顺很多。；Knight：胜负常不在华丽镜头，在他中段把线权和支援拆得多干净。看他，就看这层拆解功夫。；Viper：他真正贵在收官时的手法。团里站得住，伤害就会越打越像账本，一笔一笔都算得清。；ON：要看的是开团那一下和回身那一下。先手若准，整队立住；回身若慢，后排就要吃苦。"
+        },
+        "resources": {
+          "seriesRecord": [
+            12,
+            4,
+            10,
+            8
+          ],
+          "gameDiff": [
+            18,
+            4
+          ],
+          "recentForm": [
+            "胜 胜 胜 胜 胜",
+            "胜 胜 负 负 胜"
+          ],
+          "headToHead": "交手 BLG 2-2 JDG",
+          "restHours": [
+            77,
+            24
+          ],
+          "bo": "BO5",
+          "style": {
+            "teamA": "BLG：上中野肯先落子，盘面一旦抢到前手，往往会把地图一寸一寸压出来；长处是前中期争先意愿强、边线施压持续、优势局收束速度整；隐忧是若前两波资源没能先占，阵形会被拖进更吃耐心的后段",
+            "teamB": "JDG：节奏不急，转线和团战次序更讲章法，常在中后段把局面慢慢拧回来；长处是中后段运营沉着、正面团战层次清楚、逆风时不轻易散架；隐忧是若前十五分钟连续掉资源，后段再稳也要先补窟窿",
+            "focusPlayers": "Bin：边线敢压，敢把刀口伸得很前。看他时别只看对线补刀，要看他敢不敢拿位置换节奏。；XUN：更值钱的是起手时机和河道布子。若他能先把资源点踩住，整队的第一口气就会顺很多。；Knight：胜负常不在华丽镜头，在他中段把线权和支援拆得多干净。看他，就看这层拆解功夫。；Viper：他真正贵在收官时的手法。团里站得住，伤害就会越打越像账本，一笔一笔都算得清。；ON：要看的是开团那一下和回身那一下。先手若准，整队立住；回身若慢，后排就要吃苦。"
+          }
+        }
       },
       {
         "id": "prediction-AL",

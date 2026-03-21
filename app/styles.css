@@ -1538,6 +1538,17 @@ body::after,
   color: #40372f;
 }
 
+.dynamic-note-copy {
+  display: grid;
+  gap: 10px;
+  min-height: 160px;
+}
+
+.dynamic-note-copy p {
+  margin: 0;
+  line-height: 1.9;
+}
+
 .dynamic-sidecard {
   padding: 20px;
   border: 1px solid rgba(155, 131, 95, 0.12);

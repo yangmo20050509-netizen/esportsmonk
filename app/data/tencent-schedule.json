@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-20T17:35:18.966Z",
-  "generatedAtLocal": "2026/3/21 01:35:18",
+  "generatedAt": "2026-03-21T07:32:53.308Z",
+  "generatedAtLocal": "2026/3/21 15:32:53",
   "focusDefaults": {
     "team": "BLG",
     "player": "Bin",
@@ -2700,9 +2700,9 @@
       "bo": "BO5",
       "venue": "圣保罗",
       "matchDate": "2026-03-21 02:00:00",
-      "status": "in_progress",
-      "statusText": "进行中/待确认",
-      "scoreA": 1,
+      "status": "completed",
+      "statusText": "已结束",
+      "scoreA": 3,
       "scoreB": 1,
       "teamA": {
         "id": "29",
@@ -2765,16 +2765,16 @@
       "scoreA": 0,
       "scoreB": 0,
       "teamA": {
-        "id": "85",
-        "name": "待定",
-        "shortName": "待定",
-        "logo": "https://img.crawler.qq.com/lolwebvideo/20171204150327/6fa86a8e4d50f72b5fb016beb8492153/0"
+        "id": "57",
+        "name": "BLG",
+        "shortName": "BLG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20250618144525/49342dadcecf162e8ac94fad6eb91540/0"
       },
       "teamB": {
-        "id": "85",
-        "name": "待定",
-        "shortName": "待定",
-        "logo": "https://img.crawler.qq.com/lolwebvideo/20171204150327/6fa86a8e4d50f72b5fb016beb8492153/0"
+        "id": "29",
+        "name": "北京JDG",
+        "shortName": "JDG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230921143554/1e5189e914e40bfe18045bccbfc7ef82/0"
       },
       "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_238.js"
     },
