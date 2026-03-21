@@ -1614,24 +1614,27 @@ body::after,
 
 .factor-item {
   display: grid;
-  gap: 6px;
+  gap: 8px;
   align-items: start;
+  padding: 16px 18px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(121, 95, 60, 0.08);
+  background: rgba(255, 252, 247, 0.72);
 }
 
 .factor-item-label {
-  font-size: 0.82rem;
-  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
   color: #8a7452;
-  text-transform: uppercase;
 }
 
 .factor-item-value {
   margin: 0;
   font-family: "Noto Serif SC", "Source Han Serif SC", serif;
-  font-size: 0.98rem;
-  line-height: 1.85;
-  font-weight: 600;
-  color: #2f2923;
+  font-size: 1rem;
+  line-height: 1.9;
+  font-weight: 500;
+  color: #3a3027;
 }
 
 #predictions .section-title {

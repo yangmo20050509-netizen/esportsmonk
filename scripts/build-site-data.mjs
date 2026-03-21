@@ -607,6 +607,33 @@ function buildTeamStatement(teamCode, record, stageAward, nextMatch) {
   return `${awardSentence}${identitySentence}${formSentence}${flawSentence}${riskSentence}${nextSentence}`;
 }
 
+function playerKnifeFocus(player) {
+  const roleMap = {
+    上路: "边线压制、换血胆气与先手身位",
+    打野: "河道起手、资源先后与第一口节拍",
+    中路: "中线线权、转线衔接与团前落位",
+    下路: "伤害收束、团战站位与残局清账",
+    辅助: "开门时机、团前视野与回身补位",
+  };
+  return roleMap[player.role] || "对位细节与关键回合";
+}
+
+function buildPlayerSummary(player, record, nextMatch) {
+  const nextOpponent = nextMatch ? getPerspective(nextMatch, player.teamCode).opponent.shortName : "待定";
+  return `看 ${player.name}，不只看 ${player.role} 对位赢没赢，还看他怎么把 ${playerKnifeFocus(player)} 落成实账。${player.teamCode} 下一场对 ${nextOpponent}，这一刀落得正不正，常比补了多少刀更早决定气口。`;
+}
+
+function buildPlayerTags(player) {
+  const tagMap = {
+    上路: ["边线刀口", "先手胆气", "团前站位"],
+    打野: ["河道起手", "资源先后", "节拍源头"],
+    中路: ["中线线权", "转线衔接", "局心轻重"],
+    下路: ["输出收束", "残局清账", "团战身位"],
+    辅助: ["开门时机", "回身补位", "视野层次"],
+  };
+  return tagMap[player.role] || ["主队关切", "关键回合", "细节落点"];
+}
+
 function buildTeamCards(data, teamMap, records, stageAwards, rankingRows) {
   const rankingMap = new Map(rankingRows.map((row) => [row.teamCode, row]));
 
@@ -644,7 +671,7 @@ function buildTeamCards(data, teamMap, records, stageAwards, rankingRows) {
     });
 
     const strengthLine = TEAM_STYLE_GUIDE[teamCode]?.strengths?.[0]
-      ? `这队眼下最硬的一笔，是 ${TEAM_STYLE_GUIDE[teamCode].strengths[0]}。`
+      ? `眼下最能撑住局面的，是 ${TEAM_STYLE_GUIDE[teamCode].strengths[0]}。`
       : "";
 
     return {
@@ -703,9 +730,9 @@ function buildPlayerCards(records) {
       role: player.role,
       teamCode: player.teamCode,
       portrait: resolvePlayerPortrait(player.id),
-      summary: `${player.name} 当前归属 ${player.teamCode}。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。`,
+      summary: buildPlayerSummary(player, record, nextMatch),
       note: player.watch,
-      tags: ["角色归属", "战队赛程", "近期赛果"],
+      tags: buildPlayerTags(player),
       track,
       observation: [
         player.watch,
@@ -889,9 +916,15 @@ function fallbackPredictionCopy(item) {
   const favoredFlaw = favoredGuide?.flaw || `${item.favoredTeam} 一热起来，脚步就容易压过头`;
   const underdogIdentity = underdogGuide?.identity || `${item.underdogTeam} 更偏后手应对`;
   const underdogRisk = underdogGuide?.risk || `${item.underdogTeam} 若迟迟拿不到主动，后手会越来越重`;
+  const playerLines = FOCUS_PLAYERS.filter(
+    (player) => player.teamCode === item.favoredTeam || player.teamCode === item.underdogTeam,
+  )
+    .slice(0, 3)
+    .map((player) => `${player.name} 这一点，看的不是热闹，是 ${player.watch}`)
+    .join(" ");
   return {
     headline: `老衲先押 ${item.favoredTeam}`,
-    line: `老衲看此局，先不看热闹，只看谁先写棋盘。${item.favoredTeam} 胜在${favoredStrength}，且${favoredIdentity}；前两波资源若先归它手里，河道、边线与团前站位多半都要顺着它的气往下走，这口势一旦成形，后面的收束通常不难看。\n\n可它也不是无病之身，${favoredFlaw}。这种队最怕赢得太顺，手一热，脚步便会伸得过深，原本该稳住的地方反倒成了漏洞。真打到转折处，看的不是谁更响，而是谁先把自己那一下收住。\n\n${item.underdogTeam} 这一边原是${underdogIdentity}。它若想翻案，得先把前十五分钟拖成慢账，再把${item.favoredTeam}逼进补线、回防和二次落位的苦差里；若反被${item.favoredTeam}连着抢住前手，胜负多半不会拖到后段才分晓。`,
+    line: `老衲看此局，先押 ${item.favoredTeam}，不为别的，只因它在赛前这张账面上更容易先把第一口气抢出来。${favoredStrength} 是它眼下最能压住局面的刀口，${favoredIdentity} 又正好对得上这场的起手路数。若前两波资源先归它手里，河道、边线与团前站位都会顺着它的气往下走，后面多半是它来写章法。\n\n可老衲也不替它遮丑，${favoredFlaw}。这种队最怕赢得太顺，手一热，脚步便会压过应有的分寸，原本该稳着收的回合，反倒会因为贪一口气把口子露给对面。真到转折处，比的不是谁喊得响，而是谁还能守住那一下分寸，不把本该赢的局打成对冲。\n\n再往深处看，${item.underdogTeam} 原是${underdogIdentity}，它若想翻案，路只有一条，先把前十五分钟拖慢，再把 ${item.favoredTeam} 逼进补线、回防和二次落位的苦差里，让这口快气自己泄掉。若做不到，比赛多半还没走到长局，就已经要顺着前手分出生死。${playerLines}`,
     risk: `但 ${item.underdogTeam} 若真把比赛拖进久持之局，${underdogRisk}，老衲这句也得改口。`,
   };
 }
@@ -1046,9 +1079,9 @@ async function buildAiPredictionCopy(predictions) {
     "别用翻译腔，别说盘口黑话，别拿空词硬装，更别写成神棍。要像真正懂局的人在落狠话，不像写公告，更不像外国人学中文。",
     "每场输出三个字段：headline、line、risk。",
     "headline 控制在 8 到 16 个汉字，要像判词。",
-    "line 控制在 260 到 420 个汉字，分成三个自然段。第一段写看好谁、凭什么；第二段必须写这边真正的毛病、最可能露缝的地方；第三段必须写另一边怎么翻盘，怎么把局拖回自己的路数。",
+    "line 控制在 360 到 560 个汉字，分成三个自然段。第一段写看好谁、凭什么；第二段必须写这边真正的毛病、最可能露缝的地方；第三段必须写另一边怎么翻盘，怎么把局拖回自己的路数。",
     "risk 控制在 24 到 48 个汉字，只点最可能打脸的一处变数。",
-    "line 要落到节奏、资源、团战次序、边线、收束能力、纪律性、失误点这些真东西上。至少明确写出一处长板、一处毛病、一条翻案路径，还要点到 1 名或 2 名关键选手。",
+    "line 要落到节奏、资源、团战次序、边线、收束能力、纪律性、失误点这些真东西上。至少明确写出一处长板、一处毛病、一条翻案路径，还要点到 2 名关键选手，尽量把文字铺满左侧批注框，不要只写半框。",
     "行文可以拽，可以带一点文言批注气，但不能晦涩。允许你在这些边界里自由发挥句式和节奏，不要写成同一个模板反复套壳。",
     "禁止出现这些空话：‘先看他把前两局握在手里’、‘敢不敢把兵线推深’、‘盘面更顺’、‘稳稳收住’、‘看临场发挥’、‘一切皆有可能’、‘这一路值钱’、‘他真正贵在’。",
     "严禁出现这些词：装懂、写上墙、梭哈、嘴硬、当空气、玄学、神谕、天命、阵卷、观席、禅断、盘口、收米、赔率。",
