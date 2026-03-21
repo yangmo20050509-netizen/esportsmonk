@@ -30,4 +30,4 @@ jobs:
         run: node scripts/prepare-release.mjs
 
       - name: Deploy to EdgeOne Pages
-        run: npx edgeone pages deploy ./release/esportsmonk-online -n esportsmonk-online -t ${{ secrets.EDGEONE_API_TOKEN }}
+        run: npx edgeone pages deploy ./release/esportsmonk-online -n esportsmonk -t ${{ secrets.EDGEONE_API_TOKEN }}
