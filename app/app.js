@@ -12,7 +12,14 @@ const TEAM_THEMES = {
   WBG: { accent: "#b63830", soft: "rgba(182, 56, 48, 0.14)", glow: "rgba(182, 56, 48, 0.18)" },
   LNG: { accent: "#2b5c73", soft: "rgba(43, 92, 115, 0.14)", glow: "rgba(43, 92, 115, 0.18)" },
   TES: { accent: "#c86b24", soft: "rgba(200, 107, 36, 0.14)", glow: "rgba(200, 107, 36, 0.18)" },
+  NIP: { accent: "#6f4bb8", soft: "rgba(111, 75, 184, 0.14)", glow: "rgba(111, 75, 184, 0.18)" },
+  WE: { accent: "#a2272c", soft: "rgba(162, 39, 44, 0.14)", glow: "rgba(162, 39, 44, 0.18)" },
+  GEN: { accent: "#8b7550", soft: "rgba(139, 117, 80, 0.14)", glow: "rgba(139, 117, 80, 0.18)" },
   G2: { accent: "#2c2c2c", soft: "rgba(44, 44, 44, 0.12)", glow: "rgba(44, 44, 44, 0.16)" },
+  BFX: { accent: "#2558c9", soft: "rgba(37, 88, 201, 0.14)", glow: "rgba(37, 88, 201, 0.18)" },
+  LOUD: { accent: "#1f7f53", soft: "rgba(31, 127, 83, 0.14)", glow: "rgba(31, 127, 83, 0.18)" },
+  LYON: { accent: "#8f6b2c", soft: "rgba(143, 107, 44, 0.14)", glow: "rgba(143, 107, 44, 0.18)" },
+  TSW: { accent: "#2a7f9f", soft: "rgba(42, 127, 159, 0.14)", glow: "rgba(42, 127, 159, 0.18)" },
 };
 
 const $ = (selector) => document.querySelector(selector);
@@ -365,14 +372,18 @@ function renderOverview() {
     </div>
   `;
 
-  const spotlight = overview.spotlight;
+  const currentTeam = getCurrentTeamItem();
+  const spotlight =
+    getCurrentPlayerItem() ||
+    state.siteData.players.items.find((item) => item.teamCode === state.currentTeam) ||
+    overview.spotlight;
   $("#spotlight-panel").innerHTML = `
     <div class="panel-head">
       <div>
         <p class="eyebrow">${escapeHtml(copy.sections.overview.spotlightEyebrow)}</p>
         <h3>${escapeHtml(copy.sections.overview.spotlightTitle)}</h3>
       </div>
-      <span class="panel-tag">${escapeHtml(spotlight.teamCode)}</span>
+      <span class="panel-tag">${escapeHtml(currentTeam?.id || spotlight.teamCode)}</span>
     </div>
     <div class="spotlight-grid">
       ${renderPortrait(spotlight, "player-headshot", { label: `${spotlight.name} 定妆照` })}

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-21T10:31:10.733Z",
-  "generatedAtLocal": "2026/3/21 18:31:10",
+  "generatedAt": "2026-03-21T11:41:46.177Z",
+  "generatedAtLocal": "2026/3/21 19:41:46",
   "copy": {
     "title": "电竞高僧 | 英雄联盟观赛站",
     "description": "聚合英雄联盟重点赛事的官方赛程、比分、战队信息与比赛预测。",
@@ -205,7 +205,7 @@
       "teamCode": "BLG",
       "portrait": "",
       "summary": "Bin 当前归属 BLG。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
-      "note": "Bin 最狠的一层，在边线压制和先手胆气。线一旦送到河道外，他就敢继续往前追，把整张边路压成一口喘不过气的窄门；可他也最容易打上头，站位伸得太深时，给对面留的就是整波反手的门缝。",
+      "note": "边线敢压，见口就追，最容易把上路打成单点破局；毛病也在这里，手热时站位会伸过河道，给反手留缝。",
       "tags": [
         "角色归属",
         "战队赛程",
@@ -229,7 +229,7 @@
         }
       ],
       "observation": [
-        "Bin 最狠的一层，在边线压制和先手胆气。线一旦送到河道外，他就敢继续往前追，把整张边路压成一口喘不过气的窄门；可他也最容易打上头，站位伸得太深时，给对面留的就是整波反手的门缝。",
+        "边线敢压，见口就追，最容易把上路打成单点破局；毛病也在这里，手热时站位会伸过河道，给反手留缝。",
         "最近一场 BLG 3:0 G2。",
         "下一场已确认对阵 JDG。"
       ],
@@ -735,6 +735,578 @@
           "winRate": "43%",
           "streakLabel": "1连负"
         }
+      },
+      {
+        "id": "NIP",
+        "name": "深圳NIP",
+        "shortName": "NIP",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152746/c8a8f59fadc0da0bda0c4997e3f62afb/0",
+        "region": "LPL",
+        "stageAward": "",
+        "rankingLabel": "第一赛段第 6",
+        "summary": "NIP 当前系列赛 6-4，单局 16-13，近五场 负 负 胜 胜 胜。这队眼下最硬的一笔，是 上半区碰撞欲望强。",
+        "statement": "老衲看 NIP，像刚换刃的新刀，锋气是有的，章法还在磨。它若先得手，会追着把局面点燃；可一旦先手失准，后面补漏便显得重。账面站得住，可第三波转折里常要再验一次心性，稍一松手便会露缝。可老衲也不替它遮丑，局势若被拖成细账，第二拍常会慢，补位和回线也容易露缝。真要出岔子，多半也是前两波出手没打出血量差，后面容易被迫用站位去还前账。下一场对阵还没排定。",
+        "metrics": [
+          {
+            "label": "胜率",
+            "value": 60,
+            "text": "60%"
+          },
+          {
+            "label": "局差",
+            "value": 62,
+            "text": "+3"
+          },
+          {
+            "label": "近五",
+            "value": 60,
+            "text": "3/5"
+          },
+          {
+            "label": "走势",
+            "value": 30,
+            "text": "2连负"
+          }
+        ],
+        "docket": [
+          {
+            "label": "最近一场",
+            "value": "NIP 1:3 IG",
+            "note": "LPL / 第一赛段淘汰赛 / 第六天"
+          },
+          {
+            "label": "账面",
+            "value": "6-4",
+            "note": "系列胜率 60% / 局差 +3"
+          }
+        ],
+        "history": [
+          {
+            "opponent": "IG",
+            "result": "1:3",
+            "outcome": "loss",
+            "note": "LPL / 第一赛段淘汰赛 / 第六天"
+          },
+          {
+            "opponent": "BLG",
+            "result": "0:3",
+            "outcome": "loss",
+            "note": "LPL / 第一赛段淘汰赛 / 第二天"
+          },
+          {
+            "opponent": "IG",
+            "result": "3:1",
+            "outcome": "win",
+            "note": "LPL / 第一赛段骑士之路 / 第一轮"
+          },
+          {
+            "opponent": "WE",
+            "result": "2:0",
+            "outcome": "win",
+            "note": "LPL / 第一赛段组内赛 / 第四周"
+          }
+        ],
+        "overview": {
+          "seriesRecord": "6-4",
+          "gameRecord": "16-13",
+          "winRate": "60%",
+          "streakLabel": "2连负"
+        }
+      },
+      {
+        "id": "WE",
+        "name": "西安WE",
+        "shortName": "WE",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20230103153050/5c22150153baa973f73adf4909a041ec/0",
+        "region": "LPL",
+        "stageAward": "",
+        "rankingLabel": "第一赛段第 8",
+        "summary": "WE 当前系列赛 5-6，单局 14-17，近五场 负 负 胜 负 负。这队眼下最硬的一笔，是 线权处理整齐。",
+        "statement": "老衲看 WE，底子是正的，线与线之间也衔得住；可它最缺的不是耐心，是临门那一脚的狠。若局势久拖不决，收官处最容易添麻烦。走势还浮，前十五分钟若拿不到主动，后段就容易被人牵着鼻子走。可老衲也不替它遮丑，真要收口时往往少半步狠劲，优势局偶尔会给对面拖回第二条命。真要出岔子，多半也是前中期资源换得太软，后面会被逼着打自己不爱的硬团。下一场对阵还没排定。",
+        "metrics": [
+          {
+            "label": "胜率",
+            "value": 45,
+            "text": "45%"
+          },
+          {
+            "label": "局差",
+            "value": 38,
+            "text": "-3"
+          },
+          {
+            "label": "近五",
+            "value": 20,
+            "text": "1/5"
+          },
+          {
+            "label": "走势",
+            "value": 30,
+            "text": "2连负"
+          }
+        ],
+        "docket": [
+          {
+            "label": "最近一场",
+            "value": "WE 0:3 TES",
+            "note": "LPL / 第一赛段淘汰赛 / 第五天"
+          },
+          {
+            "label": "账面",
+            "value": "5-6",
+            "note": "系列胜率 45% / 局差 -3"
+          }
+        ],
+        "history": [
+          {
+            "opponent": "TES",
+            "result": "0:3",
+            "outcome": "loss",
+            "note": "LPL / 第一赛段淘汰赛 / 第五天"
+          },
+          {
+            "opponent": "AL",
+            "result": "0:3",
+            "outcome": "loss",
+            "note": "LPL / 第一赛段淘汰赛 / 第一天"
+          },
+          {
+            "opponent": "LNG",
+            "result": "3:1",
+            "outcome": "win",
+            "note": "LPL / 第一赛段骑士之路 / 第三轮"
+          },
+          {
+            "opponent": "TES",
+            "result": "2:3",
+            "outcome": "loss",
+            "note": "LPL / 第一赛段骑士之路 / 第一轮"
+          }
+        ],
+        "overview": {
+          "seriesRecord": "5-6",
+          "gameRecord": "14-17",
+          "winRate": "45%",
+          "streakLabel": "2连负"
+        }
+      },
+      {
+        "id": "GEN",
+        "name": "GEN",
+        "shortName": "GEN",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20250618115826/f8c9046000eaa71e3f5743a9165067b8/0",
+        "region": "LCK",
+        "stageAward": "",
+        "rankingLabel": "当前未进榜",
+        "summary": "GEN 当前系列赛 2-0，单局 6-0，近五场 胜 胜。这队眼下最硬的一笔，是 中后段秩序极稳。",
+        "statement": "老衲看 GEN，像把磨透的冷刃，平时不喧哗，真到落刀时极少偏。想翻它的盘，光拼勇不够，得先把它那口稳气拆散。这阵子账面厚，前十五分钟若叫它先得手，后面多半是它执笔。可老衲也不替它遮丑，过于讲秩序时，若被人硬扯进连续乱战，前两拍也会先被打出火花。真要出岔子，多半也是前期两线同时失血，它也得先花时辰把中轴扶正。下一场已确认对阵 G2。",
+        "metrics": [
+          {
+            "label": "胜率",
+            "value": 96,
+            "text": "100%"
+          },
+          {
+            "label": "局差",
+            "value": 74,
+            "text": "+6"
+          },
+          {
+            "label": "近五",
+            "value": 40,
+            "text": "2/5"
+          },
+          {
+            "label": "走势",
+            "value": 66,
+            "text": "2连胜"
+          }
+        ],
+        "docket": [
+          {
+            "label": "下一场",
+            "value": "GEN vs G2",
+            "note": "3月21日周六 21:00 / First Stand BO5"
+          },
+          {
+            "label": "最近一场",
+            "value": "GEN 3:0 LYON",
+            "note": "First Stand / 小组赛 / 第四天"
+          },
+          {
+            "label": "账面",
+            "value": "2-0",
+            "note": "系列胜率 100% / 局差 +6"
+          }
+        ],
+        "history": [
+          {
+            "opponent": "LYON",
+            "result": "3:0",
+            "outcome": "win",
+            "note": "First Stand / 小组赛 / 第四天"
+          },
+          {
+            "opponent": "JDG",
+            "result": "3:0",
+            "outcome": "win",
+            "note": "First Stand / 小组赛 / 第二天"
+          }
+        ],
+        "overview": {
+          "seriesRecord": "2-0",
+          "gameRecord": "6-0",
+          "winRate": "100%",
+          "streakLabel": "2连胜"
+        }
+      },
+      {
+        "id": "G2",
+        "name": "G2",
+        "shortName": "G2",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20250618120148/0654f8b663a3973eb8debcf929cb919e/0",
+        "region": "LEC",
+        "stageAward": "",
+        "rankingLabel": "当前未进榜",
+        "summary": "G2 当前系列赛 2-1，单局 6-3，近五场 胜 负 胜。这队眼下最硬的一笔，是 中段转线多变。",
+        "statement": "老衲看 G2，像会走偏门的棋客，不怕路歪，只怕对手不跟。可若对面硬把桌子摆正，它那些奇手就得先过一遍真功夫。账面站得住，可第三波转折里常要再验一次心性，稍一松手便会露缝。可老衲也不替它遮丑，局势若被人逼成正面账本，它也会露出前排不够厚、硬解不够稳的问题。真要出岔子，多半也是前段换线和试探都没赚到时间，后面会被迫正面接算力题。下一场已确认对阵 GEN。",
+        "metrics": [
+          {
+            "label": "胜率",
+            "value": 67,
+            "text": "67%"
+          },
+          {
+            "label": "局差",
+            "value": 62,
+            "text": "+3"
+          },
+          {
+            "label": "近五",
+            "value": 40,
+            "text": "2/5"
+          },
+          {
+            "label": "走势",
+            "value": 56,
+            "text": "1连胜"
+          }
+        ],
+        "docket": [
+          {
+            "label": "下一场",
+            "value": "G2 vs GEN",
+            "note": "3月21日周六 21:00 / First Stand BO5"
+          },
+          {
+            "label": "最近一场",
+            "value": "G2 3:0 BFX",
+            "note": "First Stand / 小组赛 / 第五天"
+          },
+          {
+            "label": "账面",
+            "value": "2-1",
+            "note": "系列胜率 67% / 局差 +3"
+          }
+        ],
+        "history": [
+          {
+            "opponent": "BFX",
+            "result": "3:0",
+            "outcome": "win",
+            "note": "First Stand / 小组赛 / 第五天"
+          },
+          {
+            "opponent": "BLG",
+            "result": "0:3",
+            "outcome": "loss",
+            "note": "First Stand / 小组赛 / 第三天"
+          },
+          {
+            "opponent": "TSW",
+            "result": "3:0",
+            "outcome": "win",
+            "note": "First Stand / 小组赛 / 第一天"
+          }
+        ],
+        "overview": {
+          "seriesRecord": "2-1",
+          "gameRecord": "6-3",
+          "winRate": "67%",
+          "streakLabel": "1连胜"
+        }
+      },
+      {
+        "id": "BFX",
+        "name": "BFX",
+        "shortName": "BFX",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20260309172157/527e28e49444ec8cccb0e71f01b579b6/0",
+        "region": "LCP",
+        "stageAward": "",
+        "rankingLabel": "当前未进榜",
+        "summary": "BFX 当前系列赛 1-2，单局 5-6，近五场 负 胜 负。这队眼下最硬的一笔，是 前期敢争。",
+        "statement": "老衲看 BFX，锐气不缺，敢把刀先伸出去；可锐气若不能换成实账，后头的布线与回收就会变得很重。走势还浮，前十五分钟若拿不到主动，后段就容易被人牵着鼻子走。可老衲也不替它遮丑，中段布线和回收不够细，若前账没赚到，后面容易自己把门打开。真要出岔子，多半也是先锋和第一条龙都慢半拍，整队会被迫一边补线一边挨揍。下一场对阵还没排定。",
+        "metrics": [
+          {
+            "label": "胜率",
+            "value": 33,
+            "text": "33%"
+          },
+          {
+            "label": "局差",
+            "value": 46,
+            "text": "-1"
+          },
+          {
+            "label": "近五",
+            "value": 20,
+            "text": "1/5"
+          },
+          {
+            "label": "走势",
+            "value": 38,
+            "text": "1连负"
+          }
+        ],
+        "docket": [
+          {
+            "label": "最近一场",
+            "value": "BFX 0:3 G2",
+            "note": "First Stand / 小组赛 / 第五天"
+          },
+          {
+            "label": "账面",
+            "value": "1-2",
+            "note": "系列胜率 33% / 局差 -1"
+          }
+        ],
+        "history": [
+          {
+            "opponent": "G2",
+            "result": "0:3",
+            "outcome": "loss",
+            "note": "First Stand / 小组赛 / 第五天"
+          },
+          {
+            "opponent": "TSW",
+            "result": "3:0",
+            "outcome": "win",
+            "note": "First Stand / 小组赛 / 第三天"
+          },
+          {
+            "opponent": "BLG",
+            "result": "2:3",
+            "outcome": "loss",
+            "note": "First Stand / 小组赛 / 第一天"
+          }
+        ],
+        "overview": {
+          "seriesRecord": "1-2",
+          "gameRecord": "5-6",
+          "winRate": "33%",
+          "streakLabel": "1连负"
+        }
+      },
+      {
+        "id": "LOUD",
+        "name": "LOUD",
+        "shortName": "LOUD",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20260309172138/22e090bfd9239263efb98bb50f8ea60b/0",
+        "region": "CBLOL",
+        "stageAward": "",
+        "rankingLabel": "当前未进榜",
+        "summary": "LOUD 当前系列赛 0-2，单局 2-6，近五场 负 负。这队眼下最硬的一笔，是 野辅愿意抢第一口气。",
+        "statement": "老衲看 LOUD，最怕它先把边翼点着，一旦从侧面撕开，正面的人就很难站稳。可它的病也明白，正面一旦先垮，侧翼再快也是救火。走势还浮，前十五分钟若拿不到主动，后段就容易被人牵着鼻子走。可老衲也不替它遮丑，正面若被人先卡住阵形，前后排衔接就会松，整波团容易一分为二。真要出岔子，多半也是中线守不住，双边再想绕也只是在替正面补洞。下一场对阵还没排定。",
+        "metrics": [
+          {
+            "label": "胜率",
+            "value": 30,
+            "text": "0%"
+          },
+          {
+            "label": "局差",
+            "value": 34,
+            "text": "-4"
+          },
+          {
+            "label": "近五",
+            "value": 20,
+            "text": "0/5"
+          },
+          {
+            "label": "走势",
+            "value": 30,
+            "text": "2连负"
+          }
+        ],
+        "docket": [
+          {
+            "label": "最近一场",
+            "value": "LOUD 0:3 JDG",
+            "note": "First Stand / 小组赛 / 第四天"
+          },
+          {
+            "label": "账面",
+            "value": "0-2",
+            "note": "系列胜率 0% / 局差 -4"
+          }
+        ],
+        "history": [
+          {
+            "opponent": "JDG",
+            "result": "0:3",
+            "outcome": "loss",
+            "note": "First Stand / 小组赛 / 第四天"
+          },
+          {
+            "opponent": "LYON",
+            "result": "2:3",
+            "outcome": "loss",
+            "note": "First Stand / 小组赛 / 第二天"
+          }
+        ],
+        "overview": {
+          "seriesRecord": "0-2",
+          "gameRecord": "2-6",
+          "winRate": "0%",
+          "streakLabel": "2连负"
+        }
+      },
+      {
+        "id": "LYON",
+        "name": "LYON",
+        "shortName": "LYON",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20260309172113/55b77a400d7356cdb4797f98f64e2ce8/0",
+        "region": "LLA",
+        "stageAward": "",
+        "rankingLabel": "当前未进榜",
+        "summary": "LYON 当前系列赛 1-2，单局 4-8，近五场 负 负 胜。这队眼下最硬的一笔，是 上野带头能力强。",
+        "statement": "老衲看 LYON，牌面不薄，真能翻人的点在上野先挑破口；可一旦中线先被人压塌，后头多半要靠选手自己往回救。走势还浮，前十五分钟若拿不到主动，后段就容易被人牵着鼻子走。可老衲也不替它遮丑，中轴若先掉拍，整队会先裂成两截，资源和站位也不再一口气。真要出岔子，多半也是前十五分钟被连续压掉河道与视野，后面只能靠个人手法补局。下一场对阵还没排定。",
+        "metrics": [
+          {
+            "label": "胜率",
+            "value": 33,
+            "text": "33%"
+          },
+          {
+            "label": "局差",
+            "value": 34,
+            "text": "-4"
+          },
+          {
+            "label": "近五",
+            "value": 20,
+            "text": "1/5"
+          },
+          {
+            "label": "走势",
+            "value": 30,
+            "text": "2连负"
+          }
+        ],
+        "docket": [
+          {
+            "label": "最近一场",
+            "value": "LYON 1:3 JDG",
+            "note": "First Stand / 小组赛 / 第五天"
+          },
+          {
+            "label": "账面",
+            "value": "1-2",
+            "note": "系列胜率 33% / 局差 -4"
+          }
+        ],
+        "history": [
+          {
+            "opponent": "JDG",
+            "result": "1:3",
+            "outcome": "loss",
+            "note": "First Stand / 小组赛 / 第五天"
+          },
+          {
+            "opponent": "GEN",
+            "result": "0:3",
+            "outcome": "loss",
+            "note": "First Stand / 小组赛 / 第四天"
+          },
+          {
+            "opponent": "LOUD",
+            "result": "3:2",
+            "outcome": "win",
+            "note": "First Stand / 小组赛 / 第二天"
+          }
+        ],
+        "overview": {
+          "seriesRecord": "1-2",
+          "gameRecord": "4-8",
+          "winRate": "33%",
+          "streakLabel": "2连负"
+        }
+      },
+      {
+        "id": "TSW",
+        "name": "TSW",
+        "shortName": "TSW",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20250928155223/51db1ab979a23e49d55fd2c17cd8cfb4/0",
+        "region": "PCS",
+        "stageAward": "",
+        "rankingLabel": "当前未进榜",
+        "summary": "TSW 当前系列赛 0-2，单局 0-6，近五场 负 负。这队眼下最硬的一笔，是 资源点意图直接。",
+        "statement": "老衲看 TSW，像把直刀，出得快，去得直，砍中时很利索；可直刀也怕被人拨开，一偏就容易露全身。走势还浮，前十五分钟若拿不到主动，后段就容易被人牵着鼻子走。可老衲也不替它遮丑，若连续接不到前两口资源，后面会被对面借兵线和视野反卡节奏。真要出岔子，多半也是中线一旦先亏，双边再想抬手就会先被迫看野区脸色。下一场对阵还没排定。",
+        "metrics": [
+          {
+            "label": "胜率",
+            "value": 30,
+            "text": "0%"
+          },
+          {
+            "label": "局差",
+            "value": 26,
+            "text": "-6"
+          },
+          {
+            "label": "近五",
+            "value": 20,
+            "text": "0/5"
+          },
+          {
+            "label": "走势",
+            "value": 30,
+            "text": "2连负"
+          }
+        ],
+        "docket": [
+          {
+            "label": "最近一场",
+            "value": "TSW 0:3 BFX",
+            "note": "First Stand / 小组赛 / 第三天"
+          },
+          {
+            "label": "账面",
+            "value": "0-2",
+            "note": "系列胜率 0% / 局差 -6"
+          }
+        ],
+        "history": [
+          {
+            "opponent": "BFX",
+            "result": "0:3",
+            "outcome": "loss",
+            "note": "First Stand / 小组赛 / 第三天"
+          },
+          {
+            "opponent": "G2",
+            "result": "0:3",
+            "outcome": "loss",
+            "note": "First Stand / 小组赛 / 第一天"
+          }
+        ],
+        "overview": {
+          "seriesRecord": "0-2",
+          "gameRecord": "0-6",
+          "winRate": "0%",
+          "streakLabel": "2连负"
+        }
       }
     ]
   },
@@ -748,7 +1320,7 @@
         "teamCode": "BLG",
         "portrait": "",
         "summary": "Bin 当前归属 BLG。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
-        "note": "Bin 最狠的一层，在边线压制和先手胆气。线一旦送到河道外，他就敢继续往前追，把整张边路压成一口喘不过气的窄门；可他也最容易打上头，站位伸得太深时，给对面留的就是整波反手的门缝。",
+        "note": "边线敢压，见口就追，最容易把上路打成单点破局；毛病也在这里，手热时站位会伸过河道，给反手留缝。",
         "tags": [
           "角色归属",
           "战队赛程",
@@ -772,7 +1344,7 @@
           }
         ],
         "observation": [
-          "Bin 最狠的一层，在边线压制和先手胆气。线一旦送到河道外，他就敢继续往前追，把整张边路压成一口喘不过气的窄门；可他也最容易打上头，站位伸得太深时，给对面留的就是整波反手的门缝。",
+          "边线敢压，见口就追，最容易把上路打成单点破局；毛病也在这里，手热时站位会伸过河道，给反手留缝。",
           "最近一场 BLG 3:0 G2。",
           "下一场已确认对阵 JDG。"
         ],
@@ -810,7 +1382,7 @@
         "teamCode": "BLG",
         "portrait": "",
         "summary": "XUN 当前归属 BLG。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
-        "note": "XUN 管的是全队第一口气。河道先踩住，先锋先碰到，BLG 的局就会顺着他的起手往前滚；若前两趟碰撞都慢半拍，他就会先被拖进补课，整队的锋口也会跟着钝下去。",
+        "note": "管的是 BLG 第一口气。河道先踩住，先锋先碰到，整队的刀就会一齐往前走；若前两趟慢拍，锋口会先钝。",
         "tags": [
           "角色归属",
           "战队赛程",
@@ -834,7 +1406,7 @@
           }
         ],
         "observation": [
-          "XUN 管的是全队第一口气。河道先踩住，先锋先碰到，BLG 的局就会顺着他的起手往前滚；若前两趟碰撞都慢半拍，他就会先被拖进补课，整队的锋口也会跟着钝下去。",
+          "管的是 BLG 第一口气。河道先踩住，先锋先碰到，整队的刀就会一齐往前走；若前两趟慢拍，锋口会先钝。",
           "最近一场 BLG 3:0 G2。",
           "下一场已确认对阵 JDG。"
         ],
@@ -872,7 +1444,7 @@
         "teamCode": "BLG",
         "portrait": "",
         "summary": "Knight 当前归属 BLG。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
-        "note": "Knight 不靠大开大合吃饭，贵在把线权、转线和团前脚步拆得细。中段若由他把局心拢住，BLG 的攻守就会很整；可一旦被迫长时间守线补线，中枢会先沉，后面的快气也会跟着矮一截。",
+        "note": "强在把线权、转线和团前脚步拆得细。中段若由他把局心拢住，整队章法会很整；若被逼着长时间守线，BLG 的中轴会先沉。",
         "tags": [
           "角色归属",
           "战队赛程",
@@ -896,7 +1468,7 @@
           }
         ],
         "observation": [
-          "Knight 不靠大开大合吃饭，贵在把线权、转线和团前脚步拆得细。中段若由他把局心拢住，BLG 的攻守就会很整；可一旦被迫长时间守线补线，中枢会先沉，后面的快气也会跟着矮一截。",
+          "强在把线权、转线和团前脚步拆得细。中段若由他把局心拢住，整队章法会很整；若被逼着长时间守线，BLG 的中轴会先沉。",
           "最近一场 BLG 3:0 G2。",
           "下一场已确认对阵 JDG。"
         ],
@@ -934,7 +1506,7 @@
         "teamCode": "BLG",
         "portrait": "",
         "summary": "Viper 当前归属 BLG。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
-        "note": "Viper 的功夫全在收束。正面只要给他留出半步，他就能把伤害一层层算满，把残局打成清账；可若前排先断、身位先乱，他再稳也得先替队伍还站位的债。",
+        "note": "收束能力极强，残局给半步就能把伤害算满；可前排若先断，他再稳也得先替全队还站位的债。",
         "tags": [
           "角色归属",
           "战队赛程",
@@ -958,7 +1530,7 @@
           }
         ],
         "observation": [
-          "Viper 的功夫全在收束。正面只要给他留出半步，他就能把伤害一层层算满，把残局打成清账；可若前排先断、身位先乱，他再稳也得先替队伍还站位的债。",
+          "收束能力极强，残局给半步就能把伤害算满；可前排若先断，他再稳也得先替全队还站位的债。",
           "最近一场 BLG 3:0 G2。",
           "下一场已确认对阵 JDG。"
         ],
@@ -996,7 +1568,7 @@
         "teamCode": "BLG",
         "portrait": "",
         "summary": "ON 当前归属 BLG。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
-        "note": "ON 的价值不在热闹，在那一下先手准不准、回身稳不稳。开团若正，整队就能一口压进；可回身若慢，后排会先吃满苦头，整波团也容易从这里塌口。",
+        "note": "价值全在先手准不准、回身稳不稳。开团若正，BLG 能一口压进；回身若慢，后排会先吃满苦头。",
         "tags": [
           "角色归属",
           "战队赛程",
@@ -1020,7 +1592,7 @@
           }
         ],
         "observation": [
-          "ON 的价值不在热闹，在那一下先手准不准、回身稳不稳。开团若正，整队就能一口压进；可回身若慢，后排会先吃满苦头，整波团也容易从这里塌口。",
+          "价值全在先手准不准、回身稳不稳。开团若正，BLG 能一口压进；回身若慢，后排会先吃满苦头。",
           "最近一场 BLG 3:0 G2。",
           "下一场已确认对阵 JDG。"
         ],
@@ -1048,6 +1620,3766 @@
             "result": "3:2",
             "note": "LPL / 第一赛段淘汰赛",
             "outcome": "win"
+          }
+        ]
+      },
+      {
+        "id": "xiaoxu",
+        "name": "Xiaoxu",
+        "role": "上路",
+        "teamCode": "JDG",
+        "portrait": "",
+        "summary": "Xiaoxu 当前归属 JDG。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "偏稳，愿意先把兵线和身位守住，给队伍留第二拍；但若被硬扯进连续乱战，他的节奏会被迫提前交。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "上路",
+            "note": "JDG 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "JDG vs BLG",
+            "note": "3月22日周日 02:00 / First Stand"
+          },
+          {
+            "label": "最近一场",
+            "value": "3:1",
+            "note": "对阵 LYON"
+          }
+        ],
+        "observation": [
+          "偏稳，愿意先把兵线和身位守住，给队伍留第二拍；但若被硬扯进连续乱战，他的节奏会被迫提前交。",
+          "最近一场 JDG 3:1 LYON。",
+          "下一场已确认对阵 BLG。"
+        ],
+        "history": [
+          {
+            "opponent": "LYON",
+            "result": "3:1",
+            "note": "First Stand / 小组赛",
+            "outcome": "win"
+          },
+          {
+            "opponent": "LOUD",
+            "result": "3:0",
+            "note": "First Stand / 小组赛",
+            "outcome": "win"
+          },
+          {
+            "opponent": "GEN",
+            "result": "0:3",
+            "note": "First Stand / 小组赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "BLG",
+            "result": "1:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          }
+        ]
+      },
+      {
+        "id": "junjia",
+        "name": "JunJia",
+        "role": "打野",
+        "teamCode": "JDG",
+        "portrait": "",
+        "summary": "JunJia 当前归属 JDG。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "看点在资源起手和河道顺序。若他先把第一层视野搭稳，JDG 才能把中后段秩序接上；若野区先失血，后头就得先补账。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "打野",
+            "note": "JDG 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "JDG vs BLG",
+            "note": "3月22日周日 02:00 / First Stand"
+          },
+          {
+            "label": "最近一场",
+            "value": "3:1",
+            "note": "对阵 LYON"
+          }
+        ],
+        "observation": [
+          "看点在资源起手和河道顺序。若他先把第一层视野搭稳，JDG 才能把中后段秩序接上；若野区先失血，后头就得先补账。",
+          "最近一场 JDG 3:1 LYON。",
+          "下一场已确认对阵 BLG。"
+        ],
+        "history": [
+          {
+            "opponent": "LYON",
+            "result": "3:1",
+            "note": "First Stand / 小组赛",
+            "outcome": "win"
+          },
+          {
+            "opponent": "LOUD",
+            "result": "3:0",
+            "note": "First Stand / 小组赛",
+            "outcome": "win"
+          },
+          {
+            "opponent": "GEN",
+            "result": "0:3",
+            "note": "First Stand / 小组赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "BLG",
+            "result": "1:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          }
+        ]
+      },
+      {
+        "id": "hongq",
+        "name": "HongQ",
+        "role": "中路",
+        "teamCode": "JDG",
+        "portrait": "",
+        "summary": "HongQ 当前归属 JDG。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "更像运转轴，不抢戏，重在转线衔接和团前站位；若被人压着守中线，JDG 的回合会少很多。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "中路",
+            "note": "JDG 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "JDG vs BLG",
+            "note": "3月22日周日 02:00 / First Stand"
+          },
+          {
+            "label": "最近一场",
+            "value": "3:1",
+            "note": "对阵 LYON"
+          }
+        ],
+        "observation": [
+          "更像运转轴，不抢戏，重在转线衔接和团前站位；若被人压着守中线，JDG 的回合会少很多。",
+          "最近一场 JDG 3:1 LYON。",
+          "下一场已确认对阵 BLG。"
+        ],
+        "history": [
+          {
+            "opponent": "LYON",
+            "result": "3:1",
+            "note": "First Stand / 小组赛",
+            "outcome": "win"
+          },
+          {
+            "opponent": "LOUD",
+            "result": "3:0",
+            "note": "First Stand / 小组赛",
+            "outcome": "win"
+          },
+          {
+            "opponent": "GEN",
+            "result": "0:3",
+            "note": "First Stand / 小组赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "BLG",
+            "result": "1:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          }
+        ]
+      },
+      {
+        "id": "gala",
+        "name": "GALA",
+        "role": "下路",
+        "teamCode": "JDG",
+        "portrait": "",
+        "summary": "GALA 当前归属 JDG。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "打的是正面算力和清账能力。队伍给出正面站位时，他很会把伤害打成实账；可若前排散，输出位也会被迫后撤。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "下路",
+            "note": "JDG 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "JDG vs BLG",
+            "note": "3月22日周日 02:00 / First Stand"
+          },
+          {
+            "label": "最近一场",
+            "value": "3:1",
+            "note": "对阵 LYON"
+          }
+        ],
+        "observation": [
+          "打的是正面算力和清账能力。队伍给出正面站位时，他很会把伤害打成实账；可若前排散，输出位也会被迫后撤。",
+          "最近一场 JDG 3:1 LYON。",
+          "下一场已确认对阵 BLG。"
+        ],
+        "history": [
+          {
+            "opponent": "LYON",
+            "result": "3:1",
+            "note": "First Stand / 小组赛",
+            "outcome": "win"
+          },
+          {
+            "opponent": "LOUD",
+            "result": "3:0",
+            "note": "First Stand / 小组赛",
+            "outcome": "win"
+          },
+          {
+            "opponent": "GEN",
+            "result": "0:3",
+            "note": "First Stand / 小组赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "BLG",
+            "result": "1:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          }
+        ]
+      },
+      {
+        "id": "vampire",
+        "name": "Vampire",
+        "role": "辅助",
+        "teamCode": "JDG",
+        "portrait": "",
+        "summary": "Vampire 当前归属 JDG。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "更重秩序和衔接，擅长把团前站位理顺；可一旦局面被人抬快，第一拍也会显得保守。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "辅助",
+            "note": "JDG 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "JDG vs BLG",
+            "note": "3月22日周日 02:00 / First Stand"
+          },
+          {
+            "label": "最近一场",
+            "value": "3:1",
+            "note": "对阵 LYON"
+          }
+        ],
+        "observation": [
+          "更重秩序和衔接，擅长把团前站位理顺；可一旦局面被人抬快，第一拍也会显得保守。",
+          "最近一场 JDG 3:1 LYON。",
+          "下一场已确认对阵 BLG。"
+        ],
+        "history": [
+          {
+            "opponent": "LYON",
+            "result": "3:1",
+            "note": "First Stand / 小组赛",
+            "outcome": "win"
+          },
+          {
+            "opponent": "LOUD",
+            "result": "3:0",
+            "note": "First Stand / 小组赛",
+            "outcome": "win"
+          },
+          {
+            "opponent": "GEN",
+            "result": "0:3",
+            "note": "First Stand / 小组赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "BLG",
+            "result": "1:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          }
+        ]
+      },
+      {
+        "id": "flandre",
+        "name": "Flandre",
+        "role": "上路",
+        "teamCode": "AL",
+        "portrait": "",
+        "summary": "Flandre 当前归属 AL。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "线和团都够老，擅长替全队把边线与团前位置垫好；但他真要往前顶时，需要队友一起给第二拍。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "上路",
+            "note": "AL 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
+          },
+          {
+            "label": "最近一场",
+            "value": "1:3",
+            "note": "对阵 WBG"
+          }
+        ],
+        "observation": [
+          "线和团都够老，擅长替全队把边线与团前位置垫好；但他真要往前顶时，需要队友一起给第二拍。",
+          "最近一场 AL 1:3 WBG。",
+          "下一场对阵还没确认。"
+        ],
+        "history": [
+          {
+            "opponent": "WBG",
+            "result": "1:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "IG",
+            "result": "3:1",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "win"
+          },
+          {
+            "opponent": "JDG",
+            "result": "2:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "WE",
+            "result": "3:0",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "win"
+          }
+        ]
+      },
+      {
+        "id": "tarzan",
+        "name": "Tarzan",
+        "role": "打野",
+        "teamCode": "AL",
+        "portrait": "",
+        "summary": "Tarzan 当前归属 AL。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "决定 AL 出刀角度的人。若他先把节拍抬起来，AL 的连续碰撞会很凶；若前两波换不到东西，后头反而容易急。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "打野",
+            "note": "AL 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
+          },
+          {
+            "label": "最近一场",
+            "value": "1:3",
+            "note": "对阵 WBG"
+          }
+        ],
+        "observation": [
+          "决定 AL 出刀角度的人。若他先把节拍抬起来，AL 的连续碰撞会很凶；若前两波换不到东西，后头反而容易急。",
+          "最近一场 AL 1:3 WBG。",
+          "下一场对阵还没确认。"
+        ],
+        "history": [
+          {
+            "opponent": "WBG",
+            "result": "1:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "IG",
+            "result": "3:1",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "win"
+          },
+          {
+            "opponent": "JDG",
+            "result": "2:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "WE",
+            "result": "3:0",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "win"
+          }
+        ]
+      },
+      {
+        "id": "shanks",
+        "name": "Shanks",
+        "role": "中路",
+        "teamCode": "AL",
+        "portrait": "",
+        "summary": "Shanks 当前归属 AL。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "中段最敢接刀，线权一旦到手就愿意先把局抬快；可快气上头时，回身补线和补位也会一起松。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "中路",
+            "note": "AL 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
+          },
+          {
+            "label": "最近一场",
+            "value": "1:3",
+            "note": "对阵 WBG"
+          }
+        ],
+        "observation": [
+          "中段最敢接刀，线权一旦到手就愿意先把局抬快；可快气上头时，回身补线和补位也会一起松。",
+          "最近一场 AL 1:3 WBG。",
+          "下一场对阵还没确认。"
+        ],
+        "history": [
+          {
+            "opponent": "WBG",
+            "result": "1:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "IG",
+            "result": "3:1",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "win"
+          },
+          {
+            "opponent": "JDG",
+            "result": "2:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "WE",
+            "result": "3:0",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "win"
+          }
+        ]
+      },
+      {
+        "id": "hope",
+        "name": "Hope",
+        "role": "下路",
+        "teamCode": "AL",
+        "portrait": "",
+        "summary": "Hope 当前归属 AL。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "更像后手收账的人，前排给得住，他会把团里该吃的伤害全吃满；可队形一散，他也很难独自补窟窿。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "下路",
+            "note": "AL 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
+          },
+          {
+            "label": "最近一场",
+            "value": "1:3",
+            "note": "对阵 WBG"
+          }
+        ],
+        "observation": [
+          "更像后手收账的人，前排给得住，他会把团里该吃的伤害全吃满；可队形一散，他也很难独自补窟窿。",
+          "最近一场 AL 1:3 WBG。",
+          "下一场对阵还没确认。"
+        ],
+        "history": [
+          {
+            "opponent": "WBG",
+            "result": "1:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "IG",
+            "result": "3:1",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "win"
+          },
+          {
+            "opponent": "JDG",
+            "result": "2:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "WE",
+            "result": "3:0",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "win"
+          }
+        ]
+      },
+      {
+        "id": "kael",
+        "name": "Kael",
+        "role": "辅助",
+        "teamCode": "AL",
+        "portrait": "",
+        "summary": "Kael 当前归属 AL。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "偏主动，敢开第一手，也敢把视野往前顶；真病在于第一拍若开歪，AL 会整队一起被带偏。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "辅助",
+            "note": "AL 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
+          },
+          {
+            "label": "最近一场",
+            "value": "1:3",
+            "note": "对阵 WBG"
+          }
+        ],
+        "observation": [
+          "偏主动，敢开第一手，也敢把视野往前顶；真病在于第一拍若开歪，AL 会整队一起被带偏。",
+          "最近一场 AL 1:3 WBG。",
+          "下一场对阵还没确认。"
+        ],
+        "history": [
+          {
+            "opponent": "WBG",
+            "result": "1:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "IG",
+            "result": "3:1",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "win"
+          },
+          {
+            "opponent": "JDG",
+            "result": "2:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "WE",
+            "result": "3:0",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "win"
+          }
+        ]
+      },
+      {
+        "id": "zika",
+        "name": "zika",
+        "role": "上路",
+        "teamCode": "WBG",
+        "portrait": "",
+        "summary": "zika 当前归属 WBG。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "强在对线顶压力和团前抢位，能替 WBG 把上半区撑住；若线先亏，他后面那些侧翼空间也会一起缩。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "上路",
+            "note": "WBG 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
+          },
+          {
+            "label": "最近一场",
+            "value": "0:3",
+            "note": "对阵 JDG"
+          }
+        ],
+        "observation": [
+          "强在对线顶压力和团前抢位，能替 WBG 把上半区撑住；若线先亏，他后面那些侧翼空间也会一起缩。",
+          "最近一场 WBG 0:3 JDG。",
+          "下一场对阵还没确认。"
+        ],
+        "history": [
+          {
+            "opponent": "JDG",
+            "result": "0:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "AL",
+            "result": "3:1",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "win"
+          },
+          {
+            "opponent": "TES",
+            "result": "3:2",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "win"
+          },
+          {
+            "opponent": "BLG",
+            "result": "0:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          }
+        ]
+      },
+      {
+        "id": "jiejie",
+        "name": "jiejie",
+        "role": "打野",
+        "teamCode": "WBG",
+        "portrait": "",
+        "summary": "jiejie 当前归属 WBG。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "看的是中段再布置。若他能把第二轮视野和资源顺好，WBG 很会在中段找回局面；若野区先漏，整队腾挪会变补漏。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "打野",
+            "note": "WBG 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
+          },
+          {
+            "label": "最近一场",
+            "value": "0:3",
+            "note": "对阵 JDG"
+          }
+        ],
+        "observation": [
+          "看的是中段再布置。若他能把第二轮视野和资源顺好，WBG 很会在中段找回局面；若野区先漏，整队腾挪会变补漏。",
+          "最近一场 WBG 0:3 JDG。",
+          "下一场对阵还没确认。"
+        ],
+        "history": [
+          {
+            "opponent": "JDG",
+            "result": "0:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "AL",
+            "result": "3:1",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "win"
+          },
+          {
+            "opponent": "TES",
+            "result": "3:2",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "win"
+          },
+          {
+            "opponent": "BLG",
+            "result": "0:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          }
+        ]
+      },
+      {
+        "id": "xiaohu",
+        "name": "Xiaohu",
+        "role": "中路",
+        "teamCode": "WBG",
+        "portrait": "",
+        "summary": "Xiaohu 当前归属 WBG。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "重在控线和第二拍转线，比赛越长越能看出他理局的功夫；可前盘若被人逼着还账，中段调度也会先耗掉。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "中路",
+            "note": "WBG 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
+          },
+          {
+            "label": "最近一场",
+            "value": "0:3",
+            "note": "对阵 JDG"
+          }
+        ],
+        "observation": [
+          "重在控线和第二拍转线，比赛越长越能看出他理局的功夫；可前盘若被人逼着还账，中段调度也会先耗掉。",
+          "最近一场 WBG 0:3 JDG。",
+          "下一场对阵还没确认。"
+        ],
+        "history": [
+          {
+            "opponent": "JDG",
+            "result": "0:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "AL",
+            "result": "3:1",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "win"
+          },
+          {
+            "opponent": "TES",
+            "result": "3:2",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "win"
+          },
+          {
+            "opponent": "BLG",
+            "result": "0:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          }
+        ]
+      },
+      {
+        "id": "elk",
+        "name": "Elk",
+        "role": "下路",
+        "teamCode": "WBG",
+        "portrait": "",
+        "summary": "Elk 当前归属 WBG。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "手上有冲劲，正面会找机会往前补刀口；可若队形不整，他也容易被迫把自己送进乱局。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "下路",
+            "note": "WBG 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
+          },
+          {
+            "label": "最近一场",
+            "value": "0:3",
+            "note": "对阵 JDG"
+          }
+        ],
+        "observation": [
+          "手上有冲劲，正面会找机会往前补刀口；可若队形不整，他也容易被迫把自己送进乱局。",
+          "最近一场 WBG 0:3 JDG。",
+          "下一场对阵还没确认。"
+        ],
+        "history": [
+          {
+            "opponent": "JDG",
+            "result": "0:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "AL",
+            "result": "3:1",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "win"
+          },
+          {
+            "opponent": "TES",
+            "result": "3:2",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "win"
+          },
+          {
+            "opponent": "BLG",
+            "result": "0:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          }
+        ]
+      },
+      {
+        "id": "erha",
+        "name": "Erha",
+        "role": "辅助",
+        "teamCode": "WBG",
+        "portrait": "",
+        "summary": "Erha 当前归属 WBG。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "偏敢动，愿意替队伍先开门；但第一拍若没开到点上，WBG 很容易从这里开始散节奏。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "辅助",
+            "note": "WBG 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
+          },
+          {
+            "label": "最近一场",
+            "value": "0:3",
+            "note": "对阵 JDG"
+          }
+        ],
+        "observation": [
+          "偏敢动，愿意替队伍先开门；但第一拍若没开到点上，WBG 很容易从这里开始散节奏。",
+          "最近一场 WBG 0:3 JDG。",
+          "下一场对阵还没确认。"
+        ],
+        "history": [
+          {
+            "opponent": "JDG",
+            "result": "0:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "AL",
+            "result": "3:1",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "win"
+          },
+          {
+            "opponent": "TES",
+            "result": "3:2",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "win"
+          },
+          {
+            "opponent": "BLG",
+            "result": "0:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          }
+        ]
+      },
+      {
+        "id": "sheer",
+        "name": "sheer",
+        "role": "上路",
+        "teamCode": "LNG",
+        "portrait": "",
+        "summary": "sheer 当前归属 LNG。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "更像稳边点，擅长把线守成可用局；若要他长时间孤身扛高压，LNG 整个边线的伸展会先收。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "上路",
+            "note": "LNG 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
+          },
+          {
+            "label": "最近一场",
+            "value": "1:3",
+            "note": "对阵 WE"
+          }
+        ],
+        "observation": [
+          "更像稳边点，擅长把线守成可用局；若要他长时间孤身扛高压，LNG 整个边线的伸展会先收。",
+          "最近一场 LNG 1:3 WE。",
+          "下一场对阵还没确认。"
+        ],
+        "history": [
+          {
+            "opponent": "WE",
+            "result": "1:3",
+            "note": "LPL / 第一赛段骑士之路",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "TT",
+            "result": "3:0",
+            "note": "LPL / 第一赛段骑士之路",
+            "outcome": "win"
+          },
+          {
+            "opponent": "UP",
+            "result": "2:0",
+            "note": "LPL / 第一赛段组内赛",
+            "outcome": "win"
+          },
+          {
+            "opponent": "LGD",
+            "result": "2:1",
+            "note": "LPL / 第一赛段组内赛",
+            "outcome": "win"
+          }
+        ]
+      },
+      {
+        "id": "croco",
+        "name": "Croco",
+        "role": "打野",
+        "teamCode": "LNG",
+        "portrait": "",
+        "summary": "Croco 当前归属 LNG。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "决定 LNG 能不能把稳字写出来。若他起手不乱，整队资源取舍很清楚；若前期被对面强扯节奏，他也会先忙着补洞。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "打野",
+            "note": "LNG 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
+          },
+          {
+            "label": "最近一场",
+            "value": "1:3",
+            "note": "对阵 WE"
+          }
+        ],
+        "observation": [
+          "决定 LNG 能不能把稳字写出来。若他起手不乱，整队资源取舍很清楚；若前期被对面强扯节奏，他也会先忙着补洞。",
+          "最近一场 LNG 1:3 WE。",
+          "下一场对阵还没确认。"
+        ],
+        "history": [
+          {
+            "opponent": "WE",
+            "result": "1:3",
+            "note": "LPL / 第一赛段骑士之路",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "TT",
+            "result": "3:0",
+            "note": "LPL / 第一赛段骑士之路",
+            "outcome": "win"
+          },
+          {
+            "opponent": "UP",
+            "result": "2:0",
+            "note": "LPL / 第一赛段组内赛",
+            "outcome": "win"
+          },
+          {
+            "opponent": "LGD",
+            "result": "2:1",
+            "note": "LPL / 第一赛段组内赛",
+            "outcome": "win"
+          }
+        ]
+      },
+      {
+        "id": "bulldog",
+        "name": "BullDoG",
+        "role": "中路",
+        "teamCode": "LNG",
+        "portrait": "",
+        "summary": "BullDoG 当前归属 LNG。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "中轴型中单，强在团前脚步和中线控场；可比赛一旦被拉进高频乱战，他的舒展会先被打断。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "中路",
+            "note": "LNG 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
+          },
+          {
+            "label": "最近一场",
+            "value": "1:3",
+            "note": "对阵 WE"
+          }
+        ],
+        "observation": [
+          "中轴型中单，强在团前脚步和中线控场；可比赛一旦被拉进高频乱战，他的舒展会先被打断。",
+          "最近一场 LNG 1:3 WE。",
+          "下一场对阵还没确认。"
+        ],
+        "history": [
+          {
+            "opponent": "WE",
+            "result": "1:3",
+            "note": "LPL / 第一赛段骑士之路",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "TT",
+            "result": "3:0",
+            "note": "LPL / 第一赛段骑士之路",
+            "outcome": "win"
+          },
+          {
+            "opponent": "UP",
+            "result": "2:0",
+            "note": "LPL / 第一赛段组内赛",
+            "outcome": "win"
+          },
+          {
+            "opponent": "LGD",
+            "result": "2:1",
+            "note": "LPL / 第一赛段组内赛",
+            "outcome": "win"
+          }
+        ]
+      },
+      {
+        "id": "one_xn",
+        "name": "1xn",
+        "role": "下路",
+        "teamCode": "LNG",
+        "portrait": "",
+        "summary": "1xn 当前归属 LNG。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "更像稳着吃经济、等中段接团的人。正面保护若够，他的输出不会乱；保护若断，LNG 的后手就会少一层。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "下路",
+            "note": "LNG 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
+          },
+          {
+            "label": "最近一场",
+            "value": "1:3",
+            "note": "对阵 WE"
+          }
+        ],
+        "observation": [
+          "更像稳着吃经济、等中段接团的人。正面保护若够，他的输出不会乱；保护若断，LNG 的后手就会少一层。",
+          "最近一场 LNG 1:3 WE。",
+          "下一场对阵还没确认。"
+        ],
+        "history": [
+          {
+            "opponent": "WE",
+            "result": "1:3",
+            "note": "LPL / 第一赛段骑士之路",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "TT",
+            "result": "3:0",
+            "note": "LPL / 第一赛段骑士之路",
+            "outcome": "win"
+          },
+          {
+            "opponent": "UP",
+            "result": "2:0",
+            "note": "LPL / 第一赛段组内赛",
+            "outcome": "win"
+          },
+          {
+            "opponent": "LGD",
+            "result": "2:1",
+            "note": "LPL / 第一赛段组内赛",
+            "outcome": "win"
+          }
+        ]
+      },
+      {
+        "id": "missing",
+        "name": "Missing",
+        "role": "辅助",
+        "teamCode": "LNG",
+        "portrait": "",
+        "summary": "Missing 当前归属 LNG。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "强在团前秩序和转线搭桥。若他先把站位理好，LNG 会很稳；若被人逼着打第一拍，他也得先交保命作业。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "辅助",
+            "note": "LNG 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
+          },
+          {
+            "label": "最近一场",
+            "value": "1:3",
+            "note": "对阵 WE"
+          }
+        ],
+        "observation": [
+          "强在团前秩序和转线搭桥。若他先把站位理好，LNG 会很稳；若被人逼着打第一拍，他也得先交保命作业。",
+          "最近一场 LNG 1:3 WE。",
+          "下一场对阵还没确认。"
+        ],
+        "history": [
+          {
+            "opponent": "WE",
+            "result": "1:3",
+            "note": "LPL / 第一赛段骑士之路",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "TT",
+            "result": "3:0",
+            "note": "LPL / 第一赛段骑士之路",
+            "outcome": "win"
+          },
+          {
+            "opponent": "UP",
+            "result": "2:0",
+            "note": "LPL / 第一赛段组内赛",
+            "outcome": "win"
+          },
+          {
+            "opponent": "LGD",
+            "result": "2:1",
+            "note": "LPL / 第一赛段组内赛",
+            "outcome": "win"
+          }
+        ]
+      },
+      {
+        "id": "player369",
+        "name": "369",
+        "role": "上路",
+        "teamCode": "TES",
+        "portrait": "",
+        "summary": "369 当前归属 TES。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "正面敢顶，能把团前空间硬撑出来；但若队伍节拍乱，他也容易跟着一起把站位压过头。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "上路",
+            "note": "TES 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
+          },
+          {
+            "label": "最近一场",
+            "value": "2:3",
+            "note": "对阵 WBG"
+          }
+        ],
+        "observation": [
+          "正面敢顶，能把团前空间硬撑出来；但若队伍节拍乱，他也容易跟着一起把站位压过头。",
+          "最近一场 TES 2:3 WBG。",
+          "下一场对阵还没确认。"
+        ],
+        "history": [
+          {
+            "opponent": "WBG",
+            "result": "2:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "WE",
+            "result": "3:0",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "win"
+          },
+          {
+            "opponent": "JDG",
+            "result": "2:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "WE",
+            "result": "3:2",
+            "note": "LPL / 第一赛段骑士之路",
+            "outcome": "win"
+          }
+        ]
+      },
+      {
+        "id": "naiyou",
+        "name": "naiyou",
+        "role": "打野",
+        "teamCode": "TES",
+        "portrait": "",
+        "summary": "naiyou 当前归属 TES。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "一旦起手敢，TES 整队就敢。河道和先锋若先被他碰到，正面火力会抬得很高；若节拍乱，他也容易被迫硬接坏团。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "打野",
+            "note": "TES 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
+          },
+          {
+            "label": "最近一场",
+            "value": "2:3",
+            "note": "对阵 WBG"
+          }
+        ],
+        "observation": [
+          "一旦起手敢，TES 整队就敢。河道和先锋若先被他碰到，正面火力会抬得很高；若节拍乱，他也容易被迫硬接坏团。",
+          "最近一场 TES 2:3 WBG。",
+          "下一场对阵还没确认。"
+        ],
+        "history": [
+          {
+            "opponent": "WBG",
+            "result": "2:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "WE",
+            "result": "3:0",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "win"
+          },
+          {
+            "opponent": "JDG",
+            "result": "2:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "WE",
+            "result": "3:2",
+            "note": "LPL / 第一赛段骑士之路",
+            "outcome": "win"
+          }
+        ]
+      },
+      {
+        "id": "creme",
+        "name": "Creme",
+        "role": "中路",
+        "teamCode": "TES",
+        "portrait": "",
+        "summary": "Creme 当前归属 TES。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "敢把中线和侧翼都抬快，局热起来时很会追刀；可若队形先散，他也容易为了补回合把自己送进乱战。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "中路",
+            "note": "TES 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
+          },
+          {
+            "label": "最近一场",
+            "value": "2:3",
+            "note": "对阵 WBG"
+          }
+        ],
+        "observation": [
+          "敢把中线和侧翼都抬快，局热起来时很会追刀；可若队形先散，他也容易为了补回合把自己送进乱战。",
+          "最近一场 TES 2:3 WBG。",
+          "下一场对阵还没确认。"
+        ],
+        "history": [
+          {
+            "opponent": "WBG",
+            "result": "2:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "WE",
+            "result": "3:0",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "win"
+          },
+          {
+            "opponent": "JDG",
+            "result": "2:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "WE",
+            "result": "3:2",
+            "note": "LPL / 第一赛段骑士之路",
+            "outcome": "win"
+          }
+        ]
+      },
+      {
+        "id": "jackeylove",
+        "name": "JackeyLove",
+        "role": "下路",
+        "teamCode": "TES",
+        "portrait": "",
+        "summary": "JackeyLove 当前归属 TES。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "打的是气势和输出上限。队形一整，他能把团战抬到很高；队形一乱，他也会跟着把刀送到过深的位置。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "下路",
+            "note": "TES 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
+          },
+          {
+            "label": "最近一场",
+            "value": "2:3",
+            "note": "对阵 WBG"
+          }
+        ],
+        "observation": [
+          "打的是气势和输出上限。队形一整，他能把团战抬到很高；队形一乱，他也会跟着把刀送到过深的位置。",
+          "最近一场 TES 2:3 WBG。",
+          "下一场对阵还没确认。"
+        ],
+        "history": [
+          {
+            "opponent": "WBG",
+            "result": "2:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "WE",
+            "result": "3:0",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "win"
+          },
+          {
+            "opponent": "JDG",
+            "result": "2:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "WE",
+            "result": "3:2",
+            "note": "LPL / 第一赛段骑士之路",
+            "outcome": "win"
+          }
+        ]
+      },
+      {
+        "id": "hang",
+        "name": "Hang",
+        "role": "辅助",
+        "teamCode": "TES",
+        "portrait": "",
+        "summary": "Hang 当前归属 TES。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "第一拍若开准，TES 很容易一口压进；可真病也在这，开歪一次，整队会一起露出前后排脱节的口子。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "辅助",
+            "note": "TES 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
+          },
+          {
+            "label": "最近一场",
+            "value": "2:3",
+            "note": "对阵 WBG"
+          }
+        ],
+        "observation": [
+          "第一拍若开准，TES 很容易一口压进；可真病也在这，开歪一次，整队会一起露出前后排脱节的口子。",
+          "最近一场 TES 2:3 WBG。",
+          "下一场对阵还没确认。"
+        ],
+        "history": [
+          {
+            "opponent": "WBG",
+            "result": "2:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "WE",
+            "result": "3:0",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "win"
+          },
+          {
+            "opponent": "JDG",
+            "result": "2:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "WE",
+            "result": "3:2",
+            "note": "LPL / 第一赛段骑士之路",
+            "outcome": "win"
+          }
+        ]
+      },
+      {
+        "id": "hoya",
+        "name": "HOYA",
+        "role": "上路",
+        "teamCode": "NIP",
+        "portrait": "",
+        "summary": "HOYA 当前归属 NIP。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "会主动把边线往前压，帮 NIP 先点着上半区；但手一热，身位也容易给反手留门。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "上路",
+            "note": "NIP 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
+          },
+          {
+            "label": "最近一场",
+            "value": "1:3",
+            "note": "对阵 IG"
+          }
+        ],
+        "observation": [
+          "会主动把边线往前压，帮 NIP 先点着上半区；但手一热，身位也容易给反手留门。",
+          "最近一场 NIP 1:3 IG。",
+          "下一场对阵还没确认。"
+        ],
+        "history": [
+          {
+            "opponent": "IG",
+            "result": "1:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "BLG",
+            "result": "0:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "IG",
+            "result": "3:1",
+            "note": "LPL / 第一赛段骑士之路",
+            "outcome": "win"
+          },
+          {
+            "opponent": "WE",
+            "result": "2:0",
+            "note": "LPL / 第一赛段组内赛",
+            "outcome": "win"
+          }
+        ]
+      },
+      {
+        "id": "guwon",
+        "name": "Guwon",
+        "role": "打野",
+        "teamCode": "NIP",
+        "portrait": "",
+        "summary": "Guwon 当前归属 NIP。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "决定 NIP 第一波能不能打出真血量差。若他先把第一层资源咬住，整队会很敢冲；若没咬住，后面会先忙着补课。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "打野",
+            "note": "NIP 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
+          },
+          {
+            "label": "最近一场",
+            "value": "1:3",
+            "note": "对阵 IG"
+          }
+        ],
+        "observation": [
+          "决定 NIP 第一波能不能打出真血量差。若他先把第一层资源咬住，整队会很敢冲；若没咬住，后面会先忙着补课。",
+          "最近一场 NIP 1:3 IG。",
+          "下一场对阵还没确认。"
+        ],
+        "history": [
+          {
+            "opponent": "IG",
+            "result": "1:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "BLG",
+            "result": "0:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "IG",
+            "result": "3:1",
+            "note": "LPL / 第一赛段骑士之路",
+            "outcome": "win"
+          },
+          {
+            "opponent": "WE",
+            "result": "2:0",
+            "note": "LPL / 第一赛段组内赛",
+            "outcome": "win"
+          }
+        ]
+      },
+      {
+        "id": "care",
+        "name": "Care",
+        "role": "中路",
+        "teamCode": "NIP",
+        "portrait": "",
+        "summary": "Care 当前归属 NIP。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "擅长在中段把局势接上，跟上野一起把第二拍抬起来；可若前期先被压线，他的接刀空间会先变窄。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "中路",
+            "note": "NIP 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
+          },
+          {
+            "label": "最近一场",
+            "value": "1:3",
+            "note": "对阵 IG"
+          }
+        ],
+        "observation": [
+          "擅长在中段把局势接上，跟上野一起把第二拍抬起来；可若前期先被压线，他的接刀空间会先变窄。",
+          "最近一场 NIP 1:3 IG。",
+          "下一场对阵还没确认。"
+        ],
+        "history": [
+          {
+            "opponent": "IG",
+            "result": "1:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "BLG",
+            "result": "0:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "IG",
+            "result": "3:1",
+            "note": "LPL / 第一赛段骑士之路",
+            "outcome": "win"
+          },
+          {
+            "opponent": "WE",
+            "result": "2:0",
+            "note": "LPL / 第一赛段组内赛",
+            "outcome": "win"
+          }
+        ]
+      },
+      {
+        "id": "assum",
+        "name": "Assum",
+        "role": "下路",
+        "teamCode": "NIP",
+        "portrait": "",
+        "summary": "Assum 当前归属 NIP。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "更像跟着全队气势起落的收尾点。正面若给得住，他能把输出补满；若全队先乱，他很难独自兜底。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "下路",
+            "note": "NIP 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
+          },
+          {
+            "label": "最近一场",
+            "value": "1:3",
+            "note": "对阵 IG"
+          }
+        ],
+        "observation": [
+          "更像跟着全队气势起落的收尾点。正面若给得住，他能把输出补满；若全队先乱，他很难独自兜底。",
+          "最近一场 NIP 1:3 IG。",
+          "下一场对阵还没确认。"
+        ],
+        "history": [
+          {
+            "opponent": "IG",
+            "result": "1:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "BLG",
+            "result": "0:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "IG",
+            "result": "3:1",
+            "note": "LPL / 第一赛段骑士之路",
+            "outcome": "win"
+          },
+          {
+            "opponent": "WE",
+            "result": "2:0",
+            "note": "LPL / 第一赛段组内赛",
+            "outcome": "win"
+          }
+        ]
+      },
+      {
+        "id": "zhuo",
+        "name": "Zhuo",
+        "role": "辅助",
+        "teamCode": "NIP",
+        "portrait": "",
+        "summary": "Zhuo 当前归属 NIP。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "敢开门，也敢把视野往前顶，局热时很有存在感；可第一拍若交空，NIP 的队形会先歪。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "辅助",
+            "note": "NIP 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
+          },
+          {
+            "label": "最近一场",
+            "value": "1:3",
+            "note": "对阵 IG"
+          }
+        ],
+        "observation": [
+          "敢开门，也敢把视野往前顶，局热时很有存在感；可第一拍若交空，NIP 的队形会先歪。",
+          "最近一场 NIP 1:3 IG。",
+          "下一场对阵还没确认。"
+        ],
+        "history": [
+          {
+            "opponent": "IG",
+            "result": "1:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "BLG",
+            "result": "0:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "IG",
+            "result": "3:1",
+            "note": "LPL / 第一赛段骑士之路",
+            "outcome": "win"
+          },
+          {
+            "opponent": "WE",
+            "result": "2:0",
+            "note": "LPL / 第一赛段组内赛",
+            "outcome": "win"
+          }
+        ]
+      },
+      {
+        "id": "cube",
+        "name": "Cube",
+        "role": "上路",
+        "teamCode": "WE",
+        "portrait": "",
+        "summary": "Cube 当前归属 WE。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "重在稳线和团前落位，能替 WE 扛住上半区的第一层压力；但若被迫长时间单点顶高压，反手空间会很小。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "上路",
+            "note": "WE 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
+          },
+          {
+            "label": "最近一场",
+            "value": "0:3",
+            "note": "对阵 TES"
+          }
+        ],
+        "observation": [
+          "重在稳线和团前落位，能替 WE 扛住上半区的第一层压力；但若被迫长时间单点顶高压，反手空间会很小。",
+          "最近一场 WE 0:3 TES。",
+          "下一场对阵还没确认。"
+        ],
+        "history": [
+          {
+            "opponent": "TES",
+            "result": "0:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "AL",
+            "result": "0:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "LNG",
+            "result": "3:1",
+            "note": "LPL / 第一赛段骑士之路",
+            "outcome": "win"
+          },
+          {
+            "opponent": "TES",
+            "result": "2:3",
+            "note": "LPL / 第一赛段骑士之路",
+            "outcome": "loss"
+          }
+        ]
+      },
+      {
+        "id": "monki",
+        "name": "Monki",
+        "role": "打野",
+        "teamCode": "WE",
+        "portrait": "",
+        "summary": "Monki 当前归属 WE。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "更像补位型打野，擅长把第一波野区和线权顺起来；可若比赛被抬太快，他先要做的是替队伍补秩序。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "打野",
+            "note": "WE 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
+          },
+          {
+            "label": "最近一场",
+            "value": "0:3",
+            "note": "对阵 TES"
+          }
+        ],
+        "observation": [
+          "更像补位型打野，擅长把第一波野区和线权顺起来；可若比赛被抬太快，他先要做的是替队伍补秩序。",
+          "最近一场 WE 0:3 TES。",
+          "下一场对阵还没确认。"
+        ],
+        "history": [
+          {
+            "opponent": "TES",
+            "result": "0:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "AL",
+            "result": "0:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "LNG",
+            "result": "3:1",
+            "note": "LPL / 第一赛段骑士之路",
+            "outcome": "win"
+          },
+          {
+            "opponent": "TES",
+            "result": "2:3",
+            "note": "LPL / 第一赛段骑士之路",
+            "outcome": "loss"
+          }
+        ]
+      },
+      {
+        "id": "karis",
+        "name": "Karis",
+        "role": "中路",
+        "teamCode": "WE",
+        "portrait": "",
+        "summary": "Karis 当前归属 WE。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "强在中线秩序和中段衔接。若他把中线站稳，WE 的章法就完整；若中线先掉拍，后头收官会更软。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "中路",
+            "note": "WE 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
+          },
+          {
+            "label": "最近一场",
+            "value": "0:3",
+            "note": "对阵 TES"
+          }
+        ],
+        "observation": [
+          "强在中线秩序和中段衔接。若他把中线站稳，WE 的章法就完整；若中线先掉拍，后头收官会更软。",
+          "最近一场 WE 0:3 TES。",
+          "下一场对阵还没确认。"
+        ],
+        "history": [
+          {
+            "opponent": "TES",
+            "result": "0:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "AL",
+            "result": "0:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "LNG",
+            "result": "3:1",
+            "note": "LPL / 第一赛段骑士之路",
+            "outcome": "win"
+          },
+          {
+            "opponent": "TES",
+            "result": "2:3",
+            "note": "LPL / 第一赛段骑士之路",
+            "outcome": "loss"
+          }
+        ]
+      },
+      {
+        "id": "about",
+        "name": "About",
+        "role": "下路",
+        "teamCode": "WE",
+        "portrait": "",
+        "summary": "About 当前归属 WE。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "偏稳着吃线和接团，队伍给出完整阵形时输出很规矩；可若比赛被拖成连续对冲，他很难靠个人去硬抬天花板。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "下路",
+            "note": "WE 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
+          },
+          {
+            "label": "最近一场",
+            "value": "0:3",
+            "note": "对阵 TES"
+          }
+        ],
+        "observation": [
+          "偏稳着吃线和接团，队伍给出完整阵形时输出很规矩；可若比赛被拖成连续对冲，他很难靠个人去硬抬天花板。",
+          "最近一场 WE 0:3 TES。",
+          "下一场对阵还没确认。"
+        ],
+        "history": [
+          {
+            "opponent": "TES",
+            "result": "0:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "AL",
+            "result": "0:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "LNG",
+            "result": "3:1",
+            "note": "LPL / 第一赛段骑士之路",
+            "outcome": "win"
+          },
+          {
+            "opponent": "TES",
+            "result": "2:3",
+            "note": "LPL / 第一赛段骑士之路",
+            "outcome": "loss"
+          }
+        ]
+      },
+      {
+        "id": "yaoyao",
+        "name": "yaoyao",
+        "role": "辅助",
+        "teamCode": "WE",
+        "portrait": "",
+        "summary": "yaoyao 当前归属 WE。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "更看回身和补位，不是乱开的类型。若 WE 能把节拍控住，他会把团前层次理得很顺；若被强提速，也会先忙。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "辅助",
+            "note": "WE 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
+          },
+          {
+            "label": "最近一场",
+            "value": "0:3",
+            "note": "对阵 TES"
+          }
+        ],
+        "observation": [
+          "更看回身和补位，不是乱开的类型。若 WE 能把节拍控住，他会把团前层次理得很顺；若被强提速，也会先忙。",
+          "最近一场 WE 0:3 TES。",
+          "下一场对阵还没确认。"
+        ],
+        "history": [
+          {
+            "opponent": "TES",
+            "result": "0:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "AL",
+            "result": "0:3",
+            "note": "LPL / 第一赛段淘汰赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "LNG",
+            "result": "3:1",
+            "note": "LPL / 第一赛段骑士之路",
+            "outcome": "win"
+          },
+          {
+            "opponent": "TES",
+            "result": "2:3",
+            "note": "LPL / 第一赛段骑士之路",
+            "outcome": "loss"
+          }
+        ]
+      },
+      {
+        "id": "kiin",
+        "name": "Kiin",
+        "role": "上路",
+        "teamCode": "GEN",
+        "portrait": "",
+        "summary": "Kiin 当前归属 GEN。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "边线与团前都极稳，能把该吃的线和该顶的位置都做满；你很少看见他白送回合。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "上路",
+            "note": "GEN 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "GEN vs G2",
+            "note": "3月21日周六 21:00 / First Stand"
+          },
+          {
+            "label": "最近一场",
+            "value": "3:0",
+            "note": "对阵 LYON"
+          }
+        ],
+        "observation": [
+          "边线与团前都极稳，能把该吃的线和该顶的位置都做满；你很少看见他白送回合。",
+          "最近一场 GEN 3:0 LYON。",
+          "下一场已确认对阵 G2。"
+        ],
+        "history": [
+          {
+            "opponent": "LYON",
+            "result": "3:0",
+            "note": "First Stand / 小组赛",
+            "outcome": "win"
+          },
+          {
+            "opponent": "JDG",
+            "result": "3:0",
+            "note": "First Stand / 小组赛",
+            "outcome": "win"
+          }
+        ]
+      },
+      {
+        "id": "canyon",
+        "name": "Canyon",
+        "role": "打野",
+        "teamCode": "GEN",
+        "portrait": "",
+        "summary": "Canyon 当前归属 GEN。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "比赛的中枢转轴。若他先把野区与河道顺住，GEN 的资源表会非常漂亮；若被抢了前两口，整队也得先改章法。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "打野",
+            "note": "GEN 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "GEN vs G2",
+            "note": "3月21日周六 21:00 / First Stand"
+          },
+          {
+            "label": "最近一场",
+            "value": "3:0",
+            "note": "对阵 LYON"
+          }
+        ],
+        "observation": [
+          "比赛的中枢转轴。若他先把野区与河道顺住，GEN 的资源表会非常漂亮；若被抢了前两口，整队也得先改章法。",
+          "最近一场 GEN 3:0 LYON。",
+          "下一场已确认对阵 G2。"
+        ],
+        "history": [
+          {
+            "opponent": "LYON",
+            "result": "3:0",
+            "note": "First Stand / 小组赛",
+            "outcome": "win"
+          },
+          {
+            "opponent": "JDG",
+            "result": "3:0",
+            "note": "First Stand / 小组赛",
+            "outcome": "win"
+          }
+        ]
+      },
+      {
+        "id": "chovy",
+        "name": "Chovy",
+        "role": "中路",
+        "teamCode": "GEN",
+        "portrait": "",
+        "summary": "Chovy 当前归属 GEN。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "中线一旦立住，GEN 的秩序就像钉死。对手若不能先拆他的线和脚步，后面多半都在跟他的局走。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "中路",
+            "note": "GEN 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "GEN vs G2",
+            "note": "3月21日周六 21:00 / First Stand"
+          },
+          {
+            "label": "最近一场",
+            "value": "3:0",
+            "note": "对阵 LYON"
+          }
+        ],
+        "observation": [
+          "中线一旦立住，GEN 的秩序就像钉死。对手若不能先拆他的线和脚步，后面多半都在跟他的局走。",
+          "最近一场 GEN 3:0 LYON。",
+          "下一场已确认对阵 G2。"
+        ],
+        "history": [
+          {
+            "opponent": "LYON",
+            "result": "3:0",
+            "note": "First Stand / 小组赛",
+            "outcome": "win"
+          },
+          {
+            "opponent": "JDG",
+            "result": "3:0",
+            "note": "First Stand / 小组赛",
+            "outcome": "win"
+          }
+        ]
+      },
+      {
+        "id": "ruler",
+        "name": "Ruler",
+        "role": "下路",
+        "teamCode": "GEN",
+        "portrait": "",
+        "summary": "Ruler 当前归属 GEN。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "残局算得极细，阵形完整时最会把输出收成实账；可若前排先散，他也得先交身位去还秩序。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "下路",
+            "note": "GEN 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "GEN vs G2",
+            "note": "3月21日周六 21:00 / First Stand"
+          },
+          {
+            "label": "最近一场",
+            "value": "3:0",
+            "note": "对阵 LYON"
+          }
+        ],
+        "observation": [
+          "残局算得极细，阵形完整时最会把输出收成实账；可若前排先散，他也得先交身位去还秩序。",
+          "最近一场 GEN 3:0 LYON。",
+          "下一场已确认对阵 G2。"
+        ],
+        "history": [
+          {
+            "opponent": "LYON",
+            "result": "3:0",
+            "note": "First Stand / 小组赛",
+            "outcome": "win"
+          },
+          {
+            "opponent": "JDG",
+            "result": "3:0",
+            "note": "First Stand / 小组赛",
+            "outcome": "win"
+          }
+        ]
+      },
+      {
+        "id": "duro",
+        "name": "Duro",
+        "role": "辅助",
+        "teamCode": "GEN",
+        "portrait": "",
+        "summary": "Duro 当前归属 GEN。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "重在把团前站位和视野层次搭稳，不抢戏，但很关键。正是这口稳，才让 GEN 很少白掉回合。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "辅助",
+            "note": "GEN 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "GEN vs G2",
+            "note": "3月21日周六 21:00 / First Stand"
+          },
+          {
+            "label": "最近一场",
+            "value": "3:0",
+            "note": "对阵 LYON"
+          }
+        ],
+        "observation": [
+          "重在把团前站位和视野层次搭稳，不抢戏，但很关键。正是这口稳，才让 GEN 很少白掉回合。",
+          "最近一场 GEN 3:0 LYON。",
+          "下一场已确认对阵 G2。"
+        ],
+        "history": [
+          {
+            "opponent": "LYON",
+            "result": "3:0",
+            "note": "First Stand / 小组赛",
+            "outcome": "win"
+          },
+          {
+            "opponent": "JDG",
+            "result": "3:0",
+            "note": "First Stand / 小组赛",
+            "outcome": "win"
+          }
+        ]
+      },
+      {
+        "id": "brokenblade",
+        "name": "BrokenBlade",
+        "role": "上路",
+        "teamCode": "G2",
+        "portrait": "",
+        "summary": "BrokenBlade 当前归属 G2。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "敢走边线高压，也敢接奇形怪状的对位。若他先把边线带出岔口，G2 的换位和奇手就更好落。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "上路",
+            "note": "G2 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "G2 vs GEN",
+            "note": "3月21日周六 21:00 / First Stand"
+          },
+          {
+            "label": "最近一场",
+            "value": "3:0",
+            "note": "对阵 BFX"
+          }
+        ],
+        "observation": [
+          "敢走边线高压，也敢接奇形怪状的对位。若他先把边线带出岔口，G2 的换位和奇手就更好落。",
+          "最近一场 G2 3:0 BFX。",
+          "下一场已确认对阵 GEN。"
+        ],
+        "history": [
+          {
+            "opponent": "BFX",
+            "result": "3:0",
+            "note": "First Stand / 小组赛",
+            "outcome": "win"
+          },
+          {
+            "opponent": "BLG",
+            "result": "0:3",
+            "note": "First Stand / 小组赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "TSW",
+            "result": "3:0",
+            "note": "First Stand / 小组赛",
+            "outcome": "win"
+          }
+        ]
+      },
+      {
+        "id": "skewmond",
+        "name": "SkewMond",
+        "role": "打野",
+        "teamCode": "G2",
+        "portrait": "",
+        "summary": "SkewMond 当前归属 G2。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "喜欢把比赛带出熟路，前两波路径很会做文章；可若被人看穿节拍，G2 的花活会先少一层。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "打野",
+            "note": "G2 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "G2 vs GEN",
+            "note": "3月21日周六 21:00 / First Stand"
+          },
+          {
+            "label": "最近一场",
+            "value": "3:0",
+            "note": "对阵 BFX"
+          }
+        ],
+        "observation": [
+          "喜欢把比赛带出熟路，前两波路径很会做文章；可若被人看穿节拍，G2 的花活会先少一层。",
+          "最近一场 G2 3:0 BFX。",
+          "下一场已确认对阵 GEN。"
+        ],
+        "history": [
+          {
+            "opponent": "BFX",
+            "result": "3:0",
+            "note": "First Stand / 小组赛",
+            "outcome": "win"
+          },
+          {
+            "opponent": "BLG",
+            "result": "0:3",
+            "note": "First Stand / 小组赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "TSW",
+            "result": "3:0",
+            "note": "First Stand / 小组赛",
+            "outcome": "win"
+          }
+        ]
+      },
+      {
+        "id": "caps",
+        "name": "Caps",
+        "role": "中路",
+        "teamCode": "G2",
+        "portrait": "",
+        "summary": "Caps 当前归属 G2。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "中段最会拆局的人，转线、换位和团前拉扯都敢玩；可若比赛被逼成正面算力题，他也得先补稳字。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "中路",
+            "note": "G2 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "G2 vs GEN",
+            "note": "3月21日周六 21:00 / First Stand"
+          },
+          {
+            "label": "最近一场",
+            "value": "3:0",
+            "note": "对阵 BFX"
+          }
+        ],
+        "observation": [
+          "中段最会拆局的人，转线、换位和团前拉扯都敢玩；可若比赛被逼成正面算力题，他也得先补稳字。",
+          "最近一场 G2 3:0 BFX。",
+          "下一场已确认对阵 GEN。"
+        ],
+        "history": [
+          {
+            "opponent": "BFX",
+            "result": "3:0",
+            "note": "First Stand / 小组赛",
+            "outcome": "win"
+          },
+          {
+            "opponent": "BLG",
+            "result": "0:3",
+            "note": "First Stand / 小组赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "TSW",
+            "result": "3:0",
+            "note": "First Stand / 小组赛",
+            "outcome": "win"
+          }
+        ]
+      },
+      {
+        "id": "hans_sama",
+        "name": "Hans Sama",
+        "role": "下路",
+        "teamCode": "G2",
+        "portrait": "",
+        "summary": "Hans Sama 当前归属 G2。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "重在团里持续输出和跟队友连段。队友给出奇手时，他很会顺势补刀；可前排若先塌，站位也会先被掐。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "下路",
+            "note": "G2 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "G2 vs GEN",
+            "note": "3月21日周六 21:00 / First Stand"
+          },
+          {
+            "label": "最近一场",
+            "value": "3:0",
+            "note": "对阵 BFX"
+          }
+        ],
+        "observation": [
+          "重在团里持续输出和跟队友连段。队友给出奇手时，他很会顺势补刀；可前排若先塌，站位也会先被掐。",
+          "最近一场 G2 3:0 BFX。",
+          "下一场已确认对阵 GEN。"
+        ],
+        "history": [
+          {
+            "opponent": "BFX",
+            "result": "3:0",
+            "note": "First Stand / 小组赛",
+            "outcome": "win"
+          },
+          {
+            "opponent": "BLG",
+            "result": "0:3",
+            "note": "First Stand / 小组赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "TSW",
+            "result": "3:0",
+            "note": "First Stand / 小组赛",
+            "outcome": "win"
+          }
+        ]
+      },
+      {
+        "id": "labrov",
+        "name": "Labrov",
+        "role": "辅助",
+        "teamCode": "G2",
+        "portrait": "",
+        "summary": "Labrov 当前归属 G2。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "敢先动，也敢陪着做非常规转线。若第一拍做成，G2 的局很怪也很难防；可空一拍，后头会被逼回正面。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "辅助",
+            "note": "G2 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "G2 vs GEN",
+            "note": "3月21日周六 21:00 / First Stand"
+          },
+          {
+            "label": "最近一场",
+            "value": "3:0",
+            "note": "对阵 BFX"
+          }
+        ],
+        "observation": [
+          "敢先动，也敢陪着做非常规转线。若第一拍做成，G2 的局很怪也很难防；可空一拍，后头会被逼回正面。",
+          "最近一场 G2 3:0 BFX。",
+          "下一场已确认对阵 GEN。"
+        ],
+        "history": [
+          {
+            "opponent": "BFX",
+            "result": "3:0",
+            "note": "First Stand / 小组赛",
+            "outcome": "win"
+          },
+          {
+            "opponent": "BLG",
+            "result": "0:3",
+            "note": "First Stand / 小组赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "TSW",
+            "result": "3:0",
+            "note": "First Stand / 小组赛",
+            "outcome": "win"
+          }
+        ]
+      },
+      {
+        "id": "clear",
+        "name": "Clear",
+        "role": "上路",
+        "teamCode": "BFX",
+        "portrait": "",
+        "summary": "Clear 当前归属 BFX。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "会替队伍先把上半区顶出去，线一顺就敢继续往前压；可局势若不顺，边线很快会从优势点变成补漏点。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "上路",
+            "note": "BFX 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
+          },
+          {
+            "label": "最近一场",
+            "value": "0:3",
+            "note": "对阵 G2"
+          }
+        ],
+        "observation": [
+          "会替队伍先把上半区顶出去，线一顺就敢继续往前压；可局势若不顺，边线很快会从优势点变成补漏点。",
+          "最近一场 BFX 0:3 G2。",
+          "下一场对阵还没确认。"
+        ],
+        "history": [
+          {
+            "opponent": "G2",
+            "result": "0:3",
+            "note": "First Stand / 小组赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "TSW",
+            "result": "3:0",
+            "note": "First Stand / 小组赛",
+            "outcome": "win"
+          },
+          {
+            "opponent": "BLG",
+            "result": "2:3",
+            "note": "First Stand / 小组赛",
+            "outcome": "loss"
+          }
+        ]
+      },
+      {
+        "id": "raptor",
+        "name": "Raptor",
+        "role": "打野",
+        "teamCode": "BFX",
+        "portrait": "",
+        "summary": "Raptor 当前归属 BFX。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "敢碰第一波，比赛快不快看他先手。若他在河道先拿住脚步，BFX 会很凶；若没拿住，后头就得一边补线一边挨打。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "打野",
+            "note": "BFX 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
+          },
+          {
+            "label": "最近一场",
+            "value": "0:3",
+            "note": "对阵 G2"
+          }
+        ],
+        "observation": [
+          "敢碰第一波，比赛快不快看他先手。若他在河道先拿住脚步，BFX 会很凶；若没拿住，后头就得一边补线一边挨打。",
+          "最近一场 BFX 0:3 G2。",
+          "下一场对阵还没确认。"
+        ],
+        "history": [
+          {
+            "opponent": "G2",
+            "result": "0:3",
+            "note": "First Stand / 小组赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "TSW",
+            "result": "3:0",
+            "note": "First Stand / 小组赛",
+            "outcome": "win"
+          },
+          {
+            "opponent": "BLG",
+            "result": "2:3",
+            "note": "First Stand / 小组赛",
+            "outcome": "loss"
+          }
+        ]
+      },
+      {
+        "id": "vicla",
+        "name": "VicLa",
+        "role": "中路",
+        "teamCode": "BFX",
+        "portrait": "",
+        "summary": "VicLa 当前归属 BFX。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "中路线一旦舒服，敢把局直接抬快；可如果中线先被按住，整队那些连续碰撞也会先失准。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "中路",
+            "note": "BFX 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
+          },
+          {
+            "label": "最近一场",
+            "value": "0:3",
+            "note": "对阵 G2"
+          }
+        ],
+        "observation": [
+          "中路线一旦舒服，敢把局直接抬快；可如果中线先被按住，整队那些连续碰撞也会先失准。",
+          "最近一场 BFX 0:3 G2。",
+          "下一场对阵还没确认。"
+        ],
+        "history": [
+          {
+            "opponent": "G2",
+            "result": "0:3",
+            "note": "First Stand / 小组赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "TSW",
+            "result": "3:0",
+            "note": "First Stand / 小组赛",
+            "outcome": "win"
+          },
+          {
+            "opponent": "BLG",
+            "result": "2:3",
+            "note": "First Stand / 小组赛",
+            "outcome": "loss"
+          }
+        ]
+      },
+      {
+        "id": "diable",
+        "name": "Diable",
+        "role": "下路",
+        "teamCode": "BFX",
+        "portrait": "",
+        "summary": "Diable 当前归属 BFX。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "偏进攻，正面会找机会往前补伤害；可阵形一乱，自己也容易跟着被卷进坏团。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "下路",
+            "note": "BFX 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
+          },
+          {
+            "label": "最近一场",
+            "value": "0:3",
+            "note": "对阵 G2"
+          }
+        ],
+        "observation": [
+          "偏进攻，正面会找机会往前补伤害；可阵形一乱，自己也容易跟着被卷进坏团。",
+          "最近一场 BFX 0:3 G2。",
+          "下一场对阵还没确认。"
+        ],
+        "history": [
+          {
+            "opponent": "G2",
+            "result": "0:3",
+            "note": "First Stand / 小组赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "TSW",
+            "result": "3:0",
+            "note": "First Stand / 小组赛",
+            "outcome": "win"
+          },
+          {
+            "opponent": "BLG",
+            "result": "2:3",
+            "note": "First Stand / 小组赛",
+            "outcome": "loss"
+          }
+        ]
+      },
+      {
+        "id": "kellin",
+        "name": "Kellin",
+        "role": "辅助",
+        "teamCode": "BFX",
+        "portrait": "",
+        "summary": "Kellin 当前归属 BFX。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "愿意替队伍先开门，前期视野也敢做深；若第一拍没开到点上，整队节奏会从这里掉半拍。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "辅助",
+            "note": "BFX 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
+          },
+          {
+            "label": "最近一场",
+            "value": "0:3",
+            "note": "对阵 G2"
+          }
+        ],
+        "observation": [
+          "愿意替队伍先开门，前期视野也敢做深；若第一拍没开到点上，整队节奏会从这里掉半拍。",
+          "最近一场 BFX 0:3 G2。",
+          "下一场对阵还没确认。"
+        ],
+        "history": [
+          {
+            "opponent": "G2",
+            "result": "0:3",
+            "note": "First Stand / 小组赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "TSW",
+            "result": "3:0",
+            "note": "First Stand / 小组赛",
+            "outcome": "win"
+          },
+          {
+            "opponent": "BLG",
+            "result": "2:3",
+            "note": "First Stand / 小组赛",
+            "outcome": "loss"
+          }
+        ]
+      },
+      {
+        "id": "xyno",
+        "name": "xyno",
+        "role": "上路",
+        "teamCode": "LOUD",
+        "portrait": "",
+        "summary": "xyno 当前归属 LOUD。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "能替队伍从边路找第二个进场角度，打得开时很烦；可正面若先塌，侧翼也很难再发力。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "上路",
+            "note": "LOUD 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
+          },
+          {
+            "label": "最近一场",
+            "value": "0:3",
+            "note": "对阵 JDG"
+          }
+        ],
+        "observation": [
+          "能替队伍从边路找第二个进场角度，打得开时很烦；可正面若先塌，侧翼也很难再发力。",
+          "最近一场 LOUD 0:3 JDG。",
+          "下一场对阵还没确认。"
+        ],
+        "history": [
+          {
+            "opponent": "JDG",
+            "result": "0:3",
+            "note": "First Stand / 小组赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "LYON",
+            "result": "2:3",
+            "note": "First Stand / 小组赛",
+            "outcome": "loss"
+          }
+        ]
+      },
+      {
+        "id": "youngjae",
+        "name": "YoungJae",
+        "role": "打野",
+        "teamCode": "LOUD",
+        "portrait": "",
+        "summary": "YoungJae 当前归属 LOUD。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "是 LOUD 第一口气的来源。若他把第一波节拍抬起来，边翼包夹会很快；若野区先亏，整队就只能补正面。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "打野",
+            "note": "LOUD 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
+          },
+          {
+            "label": "最近一场",
+            "value": "0:3",
+            "note": "对阵 JDG"
+          }
+        ],
+        "observation": [
+          "是 LOUD 第一口气的来源。若他把第一波节拍抬起来，边翼包夹会很快；若野区先亏，整队就只能补正面。",
+          "最近一场 LOUD 0:3 JDG。",
+          "下一场对阵还没确认。"
+        ],
+        "history": [
+          {
+            "opponent": "JDG",
+            "result": "0:3",
+            "note": "First Stand / 小组赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "LYON",
+            "result": "2:3",
+            "note": "First Stand / 小组赛",
+            "outcome": "loss"
+          }
+        ]
+      },
+      {
+        "id": "envy",
+        "name": "Envy",
+        "role": "中路",
+        "teamCode": "LOUD",
+        "portrait": "",
+        "summary": "Envy 当前归属 LOUD。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "更像承上启下的中线。若中线站得住，LOUD 才能把包夹和反包夹做成；若中线先塌，双边就会像散兵。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "中路",
+            "note": "LOUD 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
+          },
+          {
+            "label": "最近一场",
+            "value": "0:3",
+            "note": "对阵 JDG"
+          }
+        ],
+        "observation": [
+          "更像承上启下的中线。若中线站得住，LOUD 才能把包夹和反包夹做成；若中线先塌，双边就会像散兵。",
+          "最近一场 LOUD 0:3 JDG。",
+          "下一场对阵还没确认。"
+        ],
+        "history": [
+          {
+            "opponent": "JDG",
+            "result": "0:3",
+            "note": "First Stand / 小组赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "LYON",
+            "result": "2:3",
+            "note": "First Stand / 小组赛",
+            "outcome": "loss"
+          }
+        ]
+      },
+      {
+        "id": "bull",
+        "name": "Bull",
+        "role": "下路",
+        "teamCode": "LOUD",
+        "portrait": "",
+        "summary": "Bull 当前归属 LOUD。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "团里敢跟第二拍，阵形一整时能把伤害灌满；但前排若先散，他很难再把残局拉回正轨。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "下路",
+            "note": "LOUD 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
+          },
+          {
+            "label": "最近一场",
+            "value": "0:3",
+            "note": "对阵 JDG"
+          }
+        ],
+        "observation": [
+          "团里敢跟第二拍，阵形一整时能把伤害灌满；但前排若先散，他很难再把残局拉回正轨。",
+          "最近一场 LOUD 0:3 JDG。",
+          "下一场对阵还没确认。"
+        ],
+        "history": [
+          {
+            "opponent": "JDG",
+            "result": "0:3",
+            "note": "First Stand / 小组赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "LYON",
+            "result": "2:3",
+            "note": "First Stand / 小组赛",
+            "outcome": "loss"
+          }
+        ]
+      },
+      {
+        "id": "redbert",
+        "name": "RedBert",
+        "role": "辅助",
+        "teamCode": "LOUD",
+        "portrait": "",
+        "summary": "RedBert 当前归属 LOUD。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "敢动，愿意陪打野把第一口气顶出去。若他先开对了门，LOUD 的夹击就会很快；若开空，正面会先掉秩序。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "辅助",
+            "note": "LOUD 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
+          },
+          {
+            "label": "最近一场",
+            "value": "0:3",
+            "note": "对阵 JDG"
+          }
+        ],
+        "observation": [
+          "敢动，愿意陪打野把第一口气顶出去。若他先开对了门，LOUD 的夹击就会很快；若开空，正面会先掉秩序。",
+          "最近一场 LOUD 0:3 JDG。",
+          "下一场对阵还没确认。"
+        ],
+        "history": [
+          {
+            "opponent": "JDG",
+            "result": "0:3",
+            "note": "First Stand / 小组赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "LYON",
+            "result": "2:3",
+            "note": "First Stand / 小组赛",
+            "outcome": "loss"
+          }
+        ]
+      },
+      {
+        "id": "dhokla",
+        "name": "Dhokla",
+        "role": "上路",
+        "teamCode": "LYON",
+        "portrait": "",
+        "summary": "Dhokla 当前归属 LYON。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "能替队伍把上半区先扛起来，也敢从边线找主动；但若中线先掉拍，他这点主动也很难久留。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "上路",
+            "note": "LYON 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
+          },
+          {
+            "label": "最近一场",
+            "value": "1:3",
+            "note": "对阵 JDG"
+          }
+        ],
+        "observation": [
+          "能替队伍把上半区先扛起来，也敢从边线找主动；但若中线先掉拍，他这点主动也很难久留。",
+          "最近一场 LYON 1:3 JDG。",
+          "下一场对阵还没确认。"
+        ],
+        "history": [
+          {
+            "opponent": "JDG",
+            "result": "1:3",
+            "note": "First Stand / 小组赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "GEN",
+            "result": "0:3",
+            "note": "First Stand / 小组赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "LOUD",
+            "result": "3:2",
+            "note": "First Stand / 小组赛",
+            "outcome": "win"
+          }
+        ]
+      },
+      {
+        "id": "inspired",
+        "name": "Inspired",
+        "role": "打野",
+        "teamCode": "LYON",
+        "portrait": "",
+        "summary": "Inspired 当前归属 LYON。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "是 LYON 第一层翻盘感的来源。若他先把资源点咬住，整队就敢继续往前找角度；若第一层没拿住，后头全靠个人硬撑。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "打野",
+            "note": "LYON 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
+          },
+          {
+            "label": "最近一场",
+            "value": "1:3",
+            "note": "对阵 JDG"
+          }
+        ],
+        "observation": [
+          "是 LYON 第一层翻盘感的来源。若他先把资源点咬住，整队就敢继续往前找角度；若第一层没拿住，后头全靠个人硬撑。",
+          "最近一场 LYON 1:3 JDG。",
+          "下一场对阵还没确认。"
+        ],
+        "history": [
+          {
+            "opponent": "JDG",
+            "result": "1:3",
+            "note": "First Stand / 小组赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "GEN",
+            "result": "0:3",
+            "note": "First Stand / 小组赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "LOUD",
+            "result": "3:2",
+            "note": "First Stand / 小组赛",
+            "outcome": "win"
+          }
+        ]
+      },
+      {
+        "id": "saint",
+        "name": "Saint",
+        "role": "中路",
+        "teamCode": "LYON",
+        "portrait": "",
+        "summary": "Saint 当前归属 LYON。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "看的是中线站得住站不住。若他能稳住中枢，双边才有得打；若中线先漏，整队会先裂成两截。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "中路",
+            "note": "LYON 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
+          },
+          {
+            "label": "最近一场",
+            "value": "1:3",
+            "note": "对阵 JDG"
+          }
+        ],
+        "observation": [
+          "看的是中线站得住站不住。若他能稳住中枢，双边才有得打；若中线先漏，整队会先裂成两截。",
+          "最近一场 LYON 1:3 JDG。",
+          "下一场对阵还没确认。"
+        ],
+        "history": [
+          {
+            "opponent": "JDG",
+            "result": "1:3",
+            "note": "First Stand / 小组赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "GEN",
+            "result": "0:3",
+            "note": "First Stand / 小组赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "LOUD",
+            "result": "3:2",
+            "note": "First Stand / 小组赛",
+            "outcome": "win"
+          }
+        ]
+      },
+      {
+        "id": "berserker",
+        "name": "Berserker",
+        "role": "下路",
+        "teamCode": "LYON",
+        "portrait": "",
+        "summary": "Berserker 当前归属 LYON。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "团战伤害够厚，阵形整时很会把输出铺满；可前排若先被拆，很多账都得他自己扛。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "下路",
+            "note": "LYON 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
+          },
+          {
+            "label": "最近一场",
+            "value": "1:3",
+            "note": "对阵 JDG"
+          }
+        ],
+        "observation": [
+          "团战伤害够厚，阵形整时很会把输出铺满；可前排若先被拆，很多账都得他自己扛。",
+          "最近一场 LYON 1:3 JDG。",
+          "下一场对阵还没确认。"
+        ],
+        "history": [
+          {
+            "opponent": "JDG",
+            "result": "1:3",
+            "note": "First Stand / 小组赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "GEN",
+            "result": "0:3",
+            "note": "First Stand / 小组赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "LOUD",
+            "result": "3:2",
+            "note": "First Stand / 小组赛",
+            "outcome": "win"
+          }
+        ]
+      },
+      {
+        "id": "isles",
+        "name": "Isles",
+        "role": "辅助",
+        "teamCode": "LYON",
+        "portrait": "",
+        "summary": "Isles 当前归属 LYON。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "擅长跟打野一起找第一层开门位，若视野与站位先做稳，LYON 正面会硬很多；若被人先断节拍，回身会忙。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "辅助",
+            "note": "LYON 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
+          },
+          {
+            "label": "最近一场",
+            "value": "1:3",
+            "note": "对阵 JDG"
+          }
+        ],
+        "observation": [
+          "擅长跟打野一起找第一层开门位，若视野与站位先做稳，LYON 正面会硬很多；若被人先断节拍，回身会忙。",
+          "最近一场 LYON 1:3 JDG。",
+          "下一场对阵还没确认。"
+        ],
+        "history": [
+          {
+            "opponent": "JDG",
+            "result": "1:3",
+            "note": "First Stand / 小组赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "GEN",
+            "result": "0:3",
+            "note": "First Stand / 小组赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "LOUD",
+            "result": "3:2",
+            "note": "First Stand / 小组赛",
+            "outcome": "win"
+          }
+        ]
+      },
+      {
+        "id": "pun",
+        "name": "Pun",
+        "role": "上路",
+        "teamCode": "TSW",
+        "portrait": "",
+        "summary": "Pun 当前归属 TSW。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "边线处理直接，敢替队伍把上路线先抬出去；但若中线先出问题，他这层主动会先失效。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "上路",
+            "note": "TSW 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
+          },
+          {
+            "label": "最近一场",
+            "value": "0:3",
+            "note": "对阵 BFX"
+          }
+        ],
+        "observation": [
+          "边线处理直接，敢替队伍把上路线先抬出去；但若中线先出问题，他这层主动会先失效。",
+          "最近一场 TSW 0:3 BFX。",
+          "下一场对阵还没确认。"
+        ],
+        "history": [
+          {
+            "opponent": "BFX",
+            "result": "0:3",
+            "note": "First Stand / 小组赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "G2",
+            "result": "0:3",
+            "note": "First Stand / 小组赛",
+            "outcome": "loss"
+          }
+        ]
+      },
+      {
+        "id": "hizto",
+        "name": "Hizto",
+        "role": "打野",
+        "teamCode": "TSW",
+        "portrait": "",
+        "summary": "Hizto 当前归属 TSW。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "比赛快不快就看他肯不肯先接第一口资源。若他先把先锋和河道踩住，TSW 很敢跟；若没踩住，后头会被人借线反卡。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "打野",
+            "note": "TSW 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
+          },
+          {
+            "label": "最近一场",
+            "value": "0:3",
+            "note": "对阵 BFX"
+          }
+        ],
+        "observation": [
+          "比赛快不快就看他肯不肯先接第一口资源。若他先把先锋和河道踩住，TSW 很敢跟；若没踩住，后头会被人借线反卡。",
+          "最近一场 TSW 0:3 BFX。",
+          "下一场对阵还没确认。"
+        ],
+        "history": [
+          {
+            "opponent": "BFX",
+            "result": "0:3",
+            "note": "First Stand / 小组赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "G2",
+            "result": "0:3",
+            "note": "First Stand / 小组赛",
+            "outcome": "loss"
+          }
+        ]
+      },
+      {
+        "id": "dire",
+        "name": "Dire",
+        "role": "中路",
+        "teamCode": "TSW",
+        "portrait": "",
+        "summary": "Dire 当前归属 TSW。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "更偏稳中求进，中线若守得住，双边的直刀就能落下去；若守不住，整队会先失去抬节奏的轴。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "中路",
+            "note": "TSW 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
+          },
+          {
+            "label": "最近一场",
+            "value": "0:3",
+            "note": "对阵 BFX"
+          }
+        ],
+        "observation": [
+          "更偏稳中求进，中线若守得住，双边的直刀就能落下去；若守不住，整队会先失去抬节奏的轴。",
+          "最近一场 TSW 0:3 BFX。",
+          "下一场对阵还没确认。"
+        ],
+        "history": [
+          {
+            "opponent": "BFX",
+            "result": "0:3",
+            "note": "First Stand / 小组赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "G2",
+            "result": "0:3",
+            "note": "First Stand / 小组赛",
+            "outcome": "loss"
+          }
+        ]
+      },
+      {
+        "id": "eddie",
+        "name": "Eddie",
+        "role": "下路",
+        "teamCode": "TSW",
+        "portrait": "",
+        "summary": "Eddie 当前归属 TSW。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "打的是正面连续输出，前排若能替他撑住半步，他会把团战伤害补得很满；若前排散，后头就难算。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "下路",
+            "note": "TSW 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
+          },
+          {
+            "label": "最近一场",
+            "value": "0:3",
+            "note": "对阵 BFX"
+          }
+        ],
+        "observation": [
+          "打的是正面连续输出，前排若能替他撑住半步，他会把团战伤害补得很满；若前排散，后头就难算。",
+          "最近一场 TSW 0:3 BFX。",
+          "下一场对阵还没确认。"
+        ],
+        "history": [
+          {
+            "opponent": "BFX",
+            "result": "0:3",
+            "note": "First Stand / 小组赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "G2",
+            "result": "0:3",
+            "note": "First Stand / 小组赛",
+            "outcome": "loss"
+          }
+        ]
+      },
+      {
+        "id": "bie",
+        "name": "Bie",
+        "role": "辅助",
+        "teamCode": "TSW",
+        "portrait": "",
+        "summary": "Bie 当前归属 TSW。这里不看热闹，只看他把刀落在何处，也看他最容易把口子露在何处。",
+        "note": "偏直给，先手和团前视野都很直接。若第一拍开到了，TSW 会很像一把直刀；若开偏，自己也会先露全身。",
+        "tags": [
+          "角色归属",
+          "战队赛程",
+          "近期赛果"
+        ],
+        "track": [
+          {
+            "label": "角色",
+            "value": "辅助",
+            "note": "TSW 当前关注位"
+          },
+          {
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
+          },
+          {
+            "label": "最近一场",
+            "value": "0:3",
+            "note": "对阵 BFX"
+          }
+        ],
+        "observation": [
+          "偏直给，先手和团前视野都很直接。若第一拍开到了，TSW 会很像一把直刀；若开偏，自己也会先露全身。",
+          "最近一场 TSW 0:3 BFX。",
+          "下一场对阵还没确认。"
+        ],
+        "history": [
+          {
+            "opponent": "BFX",
+            "result": "0:3",
+            "note": "First Stand / 小组赛",
+            "outcome": "loss"
+          },
+          {
+            "opponent": "G2",
+            "result": "0:3",
+            "note": "First Stand / 小组赛",
+            "outcome": "loss"
           }
         ]
       }
@@ -1103,11 +5435,11 @@
           },
           {
             "label": "刀口 / Bin",
-            "value": "Bin 最狠的一层，在边线压制和先手胆气。线一旦送到河道外，他就敢继续往前追，把整张边路压成一口喘不过气的窄门；可他也最容易打上头，站位伸得太深时，给对面留的就是整波反手的门缝。"
+            "value": "边线敢压，见口就追，最容易把上路打成单点破局；毛病也在这里，手热时站位会伸过河道，给反手留缝。"
           },
           {
             "label": "刀口 / XUN",
-            "value": "XUN 管的是全队第一口气。河道先踩住，先锋先碰到，BLG 的局就会顺着他的起手往前滚；若前两趟碰撞都慢半拍，他就会先被拖进补课，整队的锋口也会跟着钝下去。"
+            "value": "管的是 BLG 第一口气。河道先踩住，先锋先碰到，整队的刀就会一齐往前走；若前两趟慢拍，锋口会先钝。"
           },
           {
             "label": "局制",
@@ -1120,7 +5452,7 @@
         "knowledge": {
           "teamA": "BLG：门风是上中野肯先落子，盘面一旦抢到前手，常把河道、边线与团前站位一并压出来；长板是前中期争先意愿强、资源逼抢凶、一旦拿到主动便很会把局面压窄；明病是热起来时脚步会压得过深，纪律偶尔松一口，给人反咬的缝；翻船点是若前中期连续失手，后段容易把本该稳住的局面再打成对冲",
           "teamB": "JDG：门风是节奏不急，转线和团战次序更讲章法，常在中后段把局面慢慢拧回来；长板是中后段运营沉着、正面团战层次清楚、逆风时不轻易散架；明病是前段若让出主动，整队会先替自己补课，刀就出得慢半拍；翻船点是若前十五分钟连续掉资源，后段再稳也要先补窟窿",
-          "focusPlayers": "Bin：Bin 最狠的一层，在边线压制和先手胆气。线一旦送到河道外，他就敢继续往前追，把整张边路压成一口喘不过气的窄门；可他也最容易打上头，站位伸得太深时，给对面留的就是整波反手的门缝。；XUN：XUN 管的是全队第一口气。河道先踩住，先锋先碰到，BLG 的局就会顺着他的起手往前滚；若前两趟碰撞都慢半拍，他就会先被拖进补课，整队的锋口也会跟着钝下去。；Knight：Knight 不靠大开大合吃饭，贵在把线权、转线和团前脚步拆得细。中段若由他把局心拢住，BLG 的攻守就会很整；可一旦被迫长时间守线补线，中枢会先沉，后面的快气也会跟着矮一截。；Viper：Viper 的功夫全在收束。正面只要给他留出半步，他就能把伤害一层层算满，把残局打成清账；可若前排先断、身位先乱，他再稳也得先替队伍还站位的债。；ON：ON 的价值不在热闹，在那一下先手准不准、回身稳不稳。开团若正，整队就能一口压进；可回身若慢，后排会先吃满苦头，整波团也容易从这里塌口。"
+          "focusPlayers": "Bin：边线敢压，见口就追，最容易把上路打成单点破局；毛病也在这里，手热时站位会伸过河道，给反手留缝。；XUN：管的是 BLG 第一口气。河道先踩住，先锋先碰到，整队的刀就会一齐往前走；若前两趟慢拍，锋口会先钝。；Knight：强在把线权、转线和团前脚步拆得细。中段若由他把局心拢住，整队章法会很整；若被逼着长时间守线，BLG 的中轴会先沉。；Viper：收束能力极强，残局给半步就能把伤害算满；可前排若先断，他再稳也得先替全队还站位的债。；ON：价值全在先手准不准、回身稳不稳。开团若正，BLG 能一口压进；回身若慢，后排会先吃满苦头。；Xiaoxu：偏稳，愿意先把兵线和身位守住，给队伍留第二拍；但若被硬扯进连续乱战，他的节奏会被迫提前交。；JunJia：看点在资源起手和河道顺序。若他先把第一层视野搭稳，JDG 才能把中后段秩序接上；若野区先失血，后头就得先补账。；HongQ：更像运转轴，不抢戏，重在转线衔接和团前站位；若被人压着守中线，JDG 的回合会少很多。；GALA：打的是正面算力和清账能力。队伍给出正面站位时，他很会把伤害打成实账；可若前排散，输出位也会被迫后撤。；Vampire：更重秩序和衔接，擅长把团前站位理顺；可一旦局面被人抬快，第一拍也会显得保守。"
         },
         "resources": {
           "seriesRecord": [
@@ -1146,7 +5478,7 @@
           "style": {
             "teamA": "BLG：门风是上中野肯先落子，盘面一旦抢到前手，常把河道、边线与团前站位一并压出来；长板是前中期争先意愿强、资源逼抢凶、一旦拿到主动便很会把局面压窄；明病是热起来时脚步会压得过深，纪律偶尔松一口，给人反咬的缝；翻船点是若前中期连续失手，后段容易把本该稳住的局面再打成对冲",
             "teamB": "JDG：门风是节奏不急，转线和团战次序更讲章法，常在中后段把局面慢慢拧回来；长板是中后段运营沉着、正面团战层次清楚、逆风时不轻易散架；明病是前段若让出主动，整队会先替自己补课，刀就出得慢半拍；翻船点是若前十五分钟连续掉资源，后段再稳也要先补窟窿",
-            "focusPlayers": "Bin：Bin 最狠的一层，在边线压制和先手胆气。线一旦送到河道外，他就敢继续往前追，把整张边路压成一口喘不过气的窄门；可他也最容易打上头，站位伸得太深时，给对面留的就是整波反手的门缝。；XUN：XUN 管的是全队第一口气。河道先踩住，先锋先碰到，BLG 的局就会顺着他的起手往前滚；若前两趟碰撞都慢半拍，他就会先被拖进补课，整队的锋口也会跟着钝下去。；Knight：Knight 不靠大开大合吃饭，贵在把线权、转线和团前脚步拆得细。中段若由他把局心拢住，BLG 的攻守就会很整；可一旦被迫长时间守线补线，中枢会先沉，后面的快气也会跟着矮一截。；Viper：Viper 的功夫全在收束。正面只要给他留出半步，他就能把伤害一层层算满，把残局打成清账；可若前排先断、身位先乱，他再稳也得先替队伍还站位的债。；ON：ON 的价值不在热闹，在那一下先手准不准、回身稳不稳。开团若正，整队就能一口压进；可回身若慢，后排会先吃满苦头，整波团也容易从这里塌口。"
+            "focusPlayers": "Bin：边线敢压，见口就追，最容易把上路打成单点破局；毛病也在这里，手热时站位会伸过河道，给反手留缝。；XUN：管的是 BLG 第一口气。河道先踩住，先锋先碰到，整队的刀就会一齐往前走；若前两趟慢拍，锋口会先钝。；Knight：强在把线权、转线和团前脚步拆得细。中段若由他把局心拢住，整队章法会很整；若被逼着长时间守线，BLG 的中轴会先沉。；Viper：收束能力极强，残局给半步就能把伤害算满；可前排若先断，他再稳也得先替全队还站位的债。；ON：价值全在先手准不准、回身稳不稳。开团若正，BLG 能一口压进；回身若慢，后排会先吃满苦头。；Xiaoxu：偏稳，愿意先把兵线和身位守住，给队伍留第二拍；但若被硬扯进连续乱战，他的节奏会被迫提前交。；JunJia：看点在资源起手和河道顺序。若他先把第一层视野搭稳，JDG 才能把中后段秩序接上；若野区先失血，后头就得先补账。；HongQ：更像运转轴，不抢戏，重在转线衔接和团前站位；若被人压着守中线，JDG 的回合会少很多。；GALA：打的是正面算力和清账能力。队伍给出正面站位时，他很会把伤害打成实账；可若前排散，输出位也会被迫后撤。；Vampire：更重秩序和衔接，擅长把团前站位理顺；可一旦局面被人抬快，第一拍也会显得保守。"
           }
         }
       },
@@ -1198,11 +5530,11 @@
           },
           {
             "label": "刀口 / Bin",
-            "value": "Bin 最狠的一层，在边线压制和先手胆气。线一旦送到河道外，他就敢继续往前追，把整张边路压成一口喘不过气的窄门；可他也最容易打上头，站位伸得太深时，给对面留的就是整波反手的门缝。"
+            "value": "边线敢压，见口就追，最容易把上路打成单点破局；毛病也在这里，手热时站位会伸过河道，给反手留缝。"
           },
           {
             "label": "刀口 / XUN",
-            "value": "XUN 管的是全队第一口气。河道先踩住，先锋先碰到，BLG 的局就会顺着他的起手往前滚；若前两趟碰撞都慢半拍，他就会先被拖进补课，整队的锋口也会跟着钝下去。"
+            "value": "管的是 BLG 第一口气。河道先踩住，先锋先碰到，整队的刀就会一齐往前走；若前两趟慢拍，锋口会先钝。"
           },
           {
             "label": "局制",
@@ -1215,7 +5547,7 @@
         "knowledge": {
           "teamA": "BLG：门风是上中野肯先落子，盘面一旦抢到前手，常把河道、边线与团前站位一并压出来；长板是前中期争先意愿强、资源逼抢凶、一旦拿到主动便很会把局面压窄；明病是热起来时脚步会压得过深，纪律偶尔松一口，给人反咬的缝；翻船点是若前中期连续失手，后段容易把本该稳住的局面再打成对冲",
           "teamB": "JDG：门风是节奏不急，转线和团战次序更讲章法，常在中后段把局面慢慢拧回来；长板是中后段运营沉着、正面团战层次清楚、逆风时不轻易散架；明病是前段若让出主动，整队会先替自己补课，刀就出得慢半拍；翻船点是若前十五分钟连续掉资源，后段再稳也要先补窟窿",
-          "focusPlayers": "Bin：Bin 最狠的一层，在边线压制和先手胆气。线一旦送到河道外，他就敢继续往前追，把整张边路压成一口喘不过气的窄门；可他也最容易打上头，站位伸得太深时，给对面留的就是整波反手的门缝。；XUN：XUN 管的是全队第一口气。河道先踩住，先锋先碰到，BLG 的局就会顺着他的起手往前滚；若前两趟碰撞都慢半拍，他就会先被拖进补课，整队的锋口也会跟着钝下去。；Knight：Knight 不靠大开大合吃饭，贵在把线权、转线和团前脚步拆得细。中段若由他把局心拢住，BLG 的攻守就会很整；可一旦被迫长时间守线补线，中枢会先沉，后面的快气也会跟着矮一截。；Viper：Viper 的功夫全在收束。正面只要给他留出半步，他就能把伤害一层层算满，把残局打成清账；可若前排先断、身位先乱，他再稳也得先替队伍还站位的债。；ON：ON 的价值不在热闹，在那一下先手准不准、回身稳不稳。开团若正，整队就能一口压进；可回身若慢，后排会先吃满苦头，整波团也容易从这里塌口。"
+          "focusPlayers": "Bin：边线敢压，见口就追，最容易把上路打成单点破局；毛病也在这里，手热时站位会伸过河道，给反手留缝。；XUN：管的是 BLG 第一口气。河道先踩住，先锋先碰到，整队的刀就会一齐往前走；若前两趟慢拍，锋口会先钝。；Knight：强在把线权、转线和团前脚步拆得细。中段若由他把局心拢住，整队章法会很整；若被逼着长时间守线，BLG 的中轴会先沉。；Viper：收束能力极强，残局给半步就能把伤害算满；可前排若先断，他再稳也得先替全队还站位的债。；ON：价值全在先手准不准、回身稳不稳。开团若正，BLG 能一口压进；回身若慢，后排会先吃满苦头。；Xiaoxu：偏稳，愿意先把兵线和身位守住，给队伍留第二拍；但若被硬扯进连续乱战，他的节奏会被迫提前交。；JunJia：看点在资源起手和河道顺序。若他先把第一层视野搭稳，JDG 才能把中后段秩序接上；若野区先失血，后头就得先补账。；HongQ：更像运转轴，不抢戏，重在转线衔接和团前站位；若被人压着守中线，JDG 的回合会少很多。；GALA：打的是正面算力和清账能力。队伍给出正面站位时，他很会把伤害打成实账；可若前排散，输出位也会被迫后撤。；Vampire：更重秩序和衔接，擅长把团前站位理顺；可一旦局面被人抬快，第一拍也会显得保守。"
         },
         "resources": {
           "seriesRecord": [
@@ -1241,7 +5573,7 @@
           "style": {
             "teamA": "BLG：门风是上中野肯先落子，盘面一旦抢到前手，常把河道、边线与团前站位一并压出来；长板是前中期争先意愿强、资源逼抢凶、一旦拿到主动便很会把局面压窄；明病是热起来时脚步会压得过深，纪律偶尔松一口，给人反咬的缝；翻船点是若前中期连续失手，后段容易把本该稳住的局面再打成对冲",
             "teamB": "JDG：门风是节奏不急，转线和团战次序更讲章法，常在中后段把局面慢慢拧回来；长板是中后段运营沉着、正面团战层次清楚、逆风时不轻易散架；明病是前段若让出主动，整队会先替自己补课，刀就出得慢半拍；翻船点是若前十五分钟连续掉资源，后段再稳也要先补窟窿",
-            "focusPlayers": "Bin：Bin 最狠的一层，在边线压制和先手胆气。线一旦送到河道外，他就敢继续往前追，把整张边路压成一口喘不过气的窄门；可他也最容易打上头，站位伸得太深时，给对面留的就是整波反手的门缝。；XUN：XUN 管的是全队第一口气。河道先踩住，先锋先碰到，BLG 的局就会顺着他的起手往前滚；若前两趟碰撞都慢半拍，他就会先被拖进补课，整队的锋口也会跟着钝下去。；Knight：Knight 不靠大开大合吃饭，贵在把线权、转线和团前脚步拆得细。中段若由他把局心拢住，BLG 的攻守就会很整；可一旦被迫长时间守线补线，中枢会先沉，后面的快气也会跟着矮一截。；Viper：Viper 的功夫全在收束。正面只要给他留出半步，他就能把伤害一层层算满，把残局打成清账；可若前排先断、身位先乱，他再稳也得先替队伍还站位的债。；ON：ON 的价值不在热闹，在那一下先手准不准、回身稳不稳。开团若正，整队就能一口压进；可回身若慢，后排会先吃满苦头，整波团也容易从这里塌口。"
+            "focusPlayers": "Bin：边线敢压，见口就追，最容易把上路打成单点破局；毛病也在这里，手热时站位会伸过河道，给反手留缝。；XUN：管的是 BLG 第一口气。河道先踩住，先锋先碰到，整队的刀就会一齐往前走；若前两趟慢拍，锋口会先钝。；Knight：强在把线权、转线和团前脚步拆得细。中段若由他把局心拢住，整队章法会很整；若被逼着长时间守线，BLG 的中轴会先沉。；Viper：收束能力极强，残局给半步就能把伤害算满；可前排若先断，他再稳也得先替全队还站位的债。；ON：价值全在先手准不准、回身稳不稳。开团若正，BLG 能一口压进；回身若慢，后排会先吃满苦头。；Xiaoxu：偏稳，愿意先把兵线和身位守住，给队伍留第二拍；但若被硬扯进连续乱战，他的节奏会被迫提前交。；JunJia：看点在资源起手和河道顺序。若他先把第一层视野搭稳，JDG 才能把中后段秩序接上；若野区先失血，后头就得先补账。；HongQ：更像运转轴，不抢戏，重在转线衔接和团前站位；若被人压着守中线，JDG 的回合会少很多。；GALA：打的是正面算力和清账能力。队伍给出正面站位时，他很会把伤害打成实账；可若前排散，输出位也会被迫后撤。；Vampire：更重秩序和衔接，擅长把团前站位理顺；可一旦局面被人抬快，第一拍也会显得保守。"
           }
         }
       },
@@ -1350,6 +5682,364 @@
           "recordText": "等待排表"
         },
         "favoredTeam": "TES",
+        "factors": [
+          "当前官源还没有给出下一场已确认对阵。"
+        ],
+        "headline": "等待官源排表",
+        "line": "赛程未落纸前，不妄开口。",
+        "risk": "对阵没定，先不写比分。"
+      },
+      {
+        "id": "prediction-NIP",
+        "teamId": "NIP",
+        "matchLabel": "NIP 下一场待定",
+        "stageLabel": "等待官源排表",
+        "timeLabel": "暂无已确认时间",
+        "statusText": "待开盘",
+        "confidence": 50,
+        "predictedScore": "--",
+        "verdict": "等待下一场已确认对阵",
+        "teamA": {
+          "code": "NIP",
+          "logo": "",
+          "recordText": "系列 6-4"
+        },
+        "teamB": {
+          "code": "待定",
+          "logo": "",
+          "recordText": "等待排表"
+        },
+        "favoredTeam": "NIP",
+        "factors": [
+          "当前官源还没有给出下一场已确认对阵。"
+        ],
+        "headline": "等待官源排表",
+        "line": "赛程未落纸前，不妄开口。",
+        "risk": "对阵没定，先不写比分。"
+      },
+      {
+        "id": "prediction-WE",
+        "teamId": "WE",
+        "matchLabel": "WE 下一场待定",
+        "stageLabel": "等待官源排表",
+        "timeLabel": "暂无已确认时间",
+        "statusText": "待开盘",
+        "confidence": 50,
+        "predictedScore": "--",
+        "verdict": "等待下一场已确认对阵",
+        "teamA": {
+          "code": "WE",
+          "logo": "",
+          "recordText": "系列 5-6"
+        },
+        "teamB": {
+          "code": "待定",
+          "logo": "",
+          "recordText": "等待排表"
+        },
+        "favoredTeam": "WE",
+        "factors": [
+          "当前官源还没有给出下一场已确认对阵。"
+        ],
+        "headline": "等待官源排表",
+        "line": "赛程未落纸前，不妄开口。",
+        "risk": "对阵没定，先不写比分。"
+      },
+      {
+        "id": "prediction-GEN",
+        "teamId": "GEN",
+        "matchLabel": "GEN vs G2",
+        "stageLabel": "First Stand / 淘汰赛",
+        "timeLabel": "3月21日周六 21:00 / BO5",
+        "statusText": "赛前",
+        "confidence": 75,
+        "predictedScore": "3:1",
+        "verdict": "GEN 稍占上风",
+        "favoredTeam": "GEN",
+        "teamA": {
+          "code": "GEN",
+          "logo": "https://img.crawler.qq.com/lolwebvideo/20250618115826/f8c9046000eaa71e3f5743a9165067b8/0",
+          "recordText": "系列 2-0 / 局差 +6"
+        },
+        "teamB": {
+          "code": "G2",
+          "logo": "https://img.crawler.qq.com/lolwebvideo/20250618120148/0654f8b663a3973eb8debcf929cb919e/0",
+          "recordText": "系列 2-1 / 局差 +3"
+        },
+        "factors": [
+          {
+            "label": "账面",
+            "value": "GEN 2-0，G2 2-1"
+          },
+          {
+            "label": "近势",
+            "value": "GEN 胜 胜，G2 胜 负 胜"
+          },
+          {
+            "label": "局口",
+            "value": "GEN +6，G2 +3"
+          },
+          {
+            "label": "旧账",
+            "value": "当前赛程内无已确认交手"
+          },
+          {
+            "label": "歇脚",
+            "value": "GEN 48h，G2 24h"
+          },
+          {
+            "label": "门风",
+            "value": "GEN 中后段秩序极稳，G2 中段转线多变"
+          },
+          {
+            "label": "刀口 / Kiin",
+            "value": "边线与团前都极稳，能把该吃的线和该顶的位置都做满；你很少看见他白送回合。"
+          },
+          {
+            "label": "刀口 / Canyon",
+            "value": "比赛的中枢转轴。若他先把野区与河道顺住，GEN 的资源表会非常漂亮；若被抢了前两口，整队也得先改章法。"
+          },
+          {
+            "label": "局制",
+            "value": "BO5 / First Stand / 淘汰赛"
+          }
+        ],
+        "headline": "老衲先押 GEN",
+        "line": "老衲看此局，先不看热闹，只看谁先写棋盘。GEN 胜在中后段秩序极稳，且中野把局面捏得极稳，兵线、河道与团前站位是一整套章法，极少白送回合；前两波资源若先归它手里，河道、边线与团前站位多半都要顺着它的气往下走，这口势一旦成形，后面的收束通常不难看。\n\n可它也不是无病之身，过于讲秩序时，若被人硬扯进连续乱战，前两拍也会先被打出火花。这种队最怕赢得太顺，手一热，脚步便会伸得过深，原本该稳住的地方反倒成了漏洞。真打到转折处，看的不是谁更响，而是谁先把自己那一下收住。\n\nG2 这一边原是脑子活，转线快，常用非常规换位和节奏岔口把人带出熟路。它若想翻案，得先把前十五分钟拖成慢账，再把GEN逼进补线、回防和二次落位的苦差里；若反被GEN连着抢住前手，胜负多半不会拖到后段才分晓。",
+        "risk": "但 G2 若真把比赛拖进久持之局，若前段换线和试探都没赚到时间，后面会被迫正面接算力题，老衲这句也得改口。",
+        "knowledge": {
+          "teamA": "GEN：门风是中野把局面捏得极稳，兵线、河道与团前站位是一整套章法，极少白送回合；长板是中后段秩序极稳、资源控制细、优势局收口能力强；明病是过于讲秩序时，若被人硬扯进连续乱战，前两拍也会先被打出火花；翻船点是若前期两线同时失血，它也得先花时辰把中轴扶正",
+          "teamB": "G2：门风是脑子活，转线快，常用非常规换位和节奏岔口把人带出熟路；长板是中段转线多变、敢做非常规落子、临场找角度能力强；明病是局势若被人逼成正面账本，它也会露出前排不够厚、硬解不够稳的问题；翻船点是若前段换线和试探都没赚到时间，后面会被迫正面接算力题",
+          "focusPlayers": "Kiin：边线与团前都极稳，能把该吃的线和该顶的位置都做满；你很少看见他白送回合。；Canyon：比赛的中枢转轴。若他先把野区与河道顺住，GEN 的资源表会非常漂亮；若被抢了前两口，整队也得先改章法。；Chovy：中线一旦立住，GEN 的秩序就像钉死。对手若不能先拆他的线和脚步，后面多半都在跟他的局走。；Ruler：残局算得极细，阵形完整时最会把输出收成实账；可若前排先散，他也得先交身位去还秩序。；Duro：重在把团前站位和视野层次搭稳，不抢戏，但很关键。正是这口稳，才让 GEN 很少白掉回合。；BrokenBlade：敢走边线高压，也敢接奇形怪状的对位。若他先把边线带出岔口，G2 的换位和奇手就更好落。；SkewMond：喜欢把比赛带出熟路，前两波路径很会做文章；可若被人看穿节拍，G2 的花活会先少一层。；Caps：中段最会拆局的人，转线、换位和团前拉扯都敢玩；可若比赛被逼成正面算力题，他也得先补稳字。；Hans Sama：重在团里持续输出和跟队友连段。队友给出奇手时，他很会顺势补刀；可前排若先塌，站位也会先被掐。；Labrov：敢先动，也敢陪着做非常规转线。若第一拍做成，G2 的局很怪也很难防；可空一拍，后头会被逼回正面。"
+        },
+        "resources": {
+          "seriesRecord": [
+            2,
+            0,
+            2,
+            1
+          ],
+          "gameDiff": [
+            6,
+            3
+          ],
+          "recentForm": [
+            "胜 胜",
+            "胜 负 胜"
+          ],
+          "headToHead": "当前赛程内无已确认交手",
+          "restHours": [
+            48,
+            24
+          ],
+          "bo": "BO5",
+          "style": {
+            "teamA": "GEN：门风是中野把局面捏得极稳，兵线、河道与团前站位是一整套章法，极少白送回合；长板是中后段秩序极稳、资源控制细、优势局收口能力强；明病是过于讲秩序时，若被人硬扯进连续乱战，前两拍也会先被打出火花；翻船点是若前期两线同时失血，它也得先花时辰把中轴扶正",
+            "teamB": "G2：门风是脑子活，转线快，常用非常规换位和节奏岔口把人带出熟路；长板是中段转线多变、敢做非常规落子、临场找角度能力强；明病是局势若被人逼成正面账本，它也会露出前排不够厚、硬解不够稳的问题；翻船点是若前段换线和试探都没赚到时间，后面会被迫正面接算力题",
+            "focusPlayers": "Kiin：边线与团前都极稳，能把该吃的线和该顶的位置都做满；你很少看见他白送回合。；Canyon：比赛的中枢转轴。若他先把野区与河道顺住，GEN 的资源表会非常漂亮；若被抢了前两口，整队也得先改章法。；Chovy：中线一旦立住，GEN 的秩序就像钉死。对手若不能先拆他的线和脚步，后面多半都在跟他的局走。；Ruler：残局算得极细，阵形完整时最会把输出收成实账；可若前排先散，他也得先交身位去还秩序。；Duro：重在把团前站位和视野层次搭稳，不抢戏，但很关键。正是这口稳，才让 GEN 很少白掉回合。；BrokenBlade：敢走边线高压，也敢接奇形怪状的对位。若他先把边线带出岔口，G2 的换位和奇手就更好落。；SkewMond：喜欢把比赛带出熟路，前两波路径很会做文章；可若被人看穿节拍，G2 的花活会先少一层。；Caps：中段最会拆局的人，转线、换位和团前拉扯都敢玩；可若比赛被逼成正面算力题，他也得先补稳字。；Hans Sama：重在团里持续输出和跟队友连段。队友给出奇手时，他很会顺势补刀；可前排若先塌，站位也会先被掐。；Labrov：敢先动，也敢陪着做非常规转线。若第一拍做成，G2 的局很怪也很难防；可空一拍，后头会被逼回正面。"
+          }
+        }
+      },
+      {
+        "id": "prediction-G2",
+        "teamId": "G2",
+        "matchLabel": "GEN vs G2",
+        "stageLabel": "First Stand / 淘汰赛",
+        "timeLabel": "3月21日周六 21:00 / BO5",
+        "statusText": "赛前",
+        "confidence": 75,
+        "predictedScore": "3:1",
+        "verdict": "GEN 稍占上风",
+        "favoredTeam": "GEN",
+        "teamA": {
+          "code": "GEN",
+          "logo": "https://img.crawler.qq.com/lolwebvideo/20250618115826/f8c9046000eaa71e3f5743a9165067b8/0",
+          "recordText": "系列 2-0 / 局差 +6"
+        },
+        "teamB": {
+          "code": "G2",
+          "logo": "https://img.crawler.qq.com/lolwebvideo/20250618120148/0654f8b663a3973eb8debcf929cb919e/0",
+          "recordText": "系列 2-1 / 局差 +3"
+        },
+        "factors": [
+          {
+            "label": "账面",
+            "value": "GEN 2-0，G2 2-1"
+          },
+          {
+            "label": "近势",
+            "value": "GEN 胜 胜，G2 胜 负 胜"
+          },
+          {
+            "label": "局口",
+            "value": "GEN +6，G2 +3"
+          },
+          {
+            "label": "旧账",
+            "value": "当前赛程内无已确认交手"
+          },
+          {
+            "label": "歇脚",
+            "value": "GEN 48h，G2 24h"
+          },
+          {
+            "label": "门风",
+            "value": "GEN 中后段秩序极稳，G2 中段转线多变"
+          },
+          {
+            "label": "刀口 / Kiin",
+            "value": "边线与团前都极稳，能把该吃的线和该顶的位置都做满；你很少看见他白送回合。"
+          },
+          {
+            "label": "刀口 / Canyon",
+            "value": "比赛的中枢转轴。若他先把野区与河道顺住，GEN 的资源表会非常漂亮；若被抢了前两口，整队也得先改章法。"
+          },
+          {
+            "label": "局制",
+            "value": "BO5 / First Stand / 淘汰赛"
+          }
+        ],
+        "headline": "老衲先押 GEN",
+        "line": "老衲看此局，先不看热闹，只看谁先写棋盘。GEN 胜在中后段秩序极稳，且中野把局面捏得极稳，兵线、河道与团前站位是一整套章法，极少白送回合；前两波资源若先归它手里，河道、边线与团前站位多半都要顺着它的气往下走，这口势一旦成形，后面的收束通常不难看。\n\n可它也不是无病之身，过于讲秩序时，若被人硬扯进连续乱战，前两拍也会先被打出火花。这种队最怕赢得太顺，手一热，脚步便会伸得过深，原本该稳住的地方反倒成了漏洞。真打到转折处，看的不是谁更响，而是谁先把自己那一下收住。\n\nG2 这一边原是脑子活，转线快，常用非常规换位和节奏岔口把人带出熟路。它若想翻案，得先把前十五分钟拖成慢账，再把GEN逼进补线、回防和二次落位的苦差里；若反被GEN连着抢住前手，胜负多半不会拖到后段才分晓。",
+        "risk": "但 G2 若真把比赛拖进久持之局，若前段换线和试探都没赚到时间，后面会被迫正面接算力题，老衲这句也得改口。",
+        "knowledge": {
+          "teamA": "GEN：门风是中野把局面捏得极稳，兵线、河道与团前站位是一整套章法，极少白送回合；长板是中后段秩序极稳、资源控制细、优势局收口能力强；明病是过于讲秩序时，若被人硬扯进连续乱战，前两拍也会先被打出火花；翻船点是若前期两线同时失血，它也得先花时辰把中轴扶正",
+          "teamB": "G2：门风是脑子活，转线快，常用非常规换位和节奏岔口把人带出熟路；长板是中段转线多变、敢做非常规落子、临场找角度能力强；明病是局势若被人逼成正面账本，它也会露出前排不够厚、硬解不够稳的问题；翻船点是若前段换线和试探都没赚到时间，后面会被迫正面接算力题",
+          "focusPlayers": "Kiin：边线与团前都极稳，能把该吃的线和该顶的位置都做满；你很少看见他白送回合。；Canyon：比赛的中枢转轴。若他先把野区与河道顺住，GEN 的资源表会非常漂亮；若被抢了前两口，整队也得先改章法。；Chovy：中线一旦立住，GEN 的秩序就像钉死。对手若不能先拆他的线和脚步，后面多半都在跟他的局走。；Ruler：残局算得极细，阵形完整时最会把输出收成实账；可若前排先散，他也得先交身位去还秩序。；Duro：重在把团前站位和视野层次搭稳，不抢戏，但很关键。正是这口稳，才让 GEN 很少白掉回合。；BrokenBlade：敢走边线高压，也敢接奇形怪状的对位。若他先把边线带出岔口，G2 的换位和奇手就更好落。；SkewMond：喜欢把比赛带出熟路，前两波路径很会做文章；可若被人看穿节拍，G2 的花活会先少一层。；Caps：中段最会拆局的人，转线、换位和团前拉扯都敢玩；可若比赛被逼成正面算力题，他也得先补稳字。；Hans Sama：重在团里持续输出和跟队友连段。队友给出奇手时，他很会顺势补刀；可前排若先塌，站位也会先被掐。；Labrov：敢先动，也敢陪着做非常规转线。若第一拍做成，G2 的局很怪也很难防；可空一拍，后头会被逼回正面。"
+        },
+        "resources": {
+          "seriesRecord": [
+            2,
+            0,
+            2,
+            1
+          ],
+          "gameDiff": [
+            6,
+            3
+          ],
+          "recentForm": [
+            "胜 胜",
+            "胜 负 胜"
+          ],
+          "headToHead": "当前赛程内无已确认交手",
+          "restHours": [
+            48,
+            24
+          ],
+          "bo": "BO5",
+          "style": {
+            "teamA": "GEN：门风是中野把局面捏得极稳，兵线、河道与团前站位是一整套章法，极少白送回合；长板是中后段秩序极稳、资源控制细、优势局收口能力强；明病是过于讲秩序时，若被人硬扯进连续乱战，前两拍也会先被打出火花；翻船点是若前期两线同时失血，它也得先花时辰把中轴扶正",
+            "teamB": "G2：门风是脑子活，转线快，常用非常规换位和节奏岔口把人带出熟路；长板是中段转线多变、敢做非常规落子、临场找角度能力强；明病是局势若被人逼成正面账本，它也会露出前排不够厚、硬解不够稳的问题；翻船点是若前段换线和试探都没赚到时间，后面会被迫正面接算力题",
+            "focusPlayers": "Kiin：边线与团前都极稳，能把该吃的线和该顶的位置都做满；你很少看见他白送回合。；Canyon：比赛的中枢转轴。若他先把野区与河道顺住，GEN 的资源表会非常漂亮；若被抢了前两口，整队也得先改章法。；Chovy：中线一旦立住，GEN 的秩序就像钉死。对手若不能先拆他的线和脚步，后面多半都在跟他的局走。；Ruler：残局算得极细，阵形完整时最会把输出收成实账；可若前排先散，他也得先交身位去还秩序。；Duro：重在把团前站位和视野层次搭稳，不抢戏，但很关键。正是这口稳，才让 GEN 很少白掉回合。；BrokenBlade：敢走边线高压，也敢接奇形怪状的对位。若他先把边线带出岔口，G2 的换位和奇手就更好落。；SkewMond：喜欢把比赛带出熟路，前两波路径很会做文章；可若被人看穿节拍，G2 的花活会先少一层。；Caps：中段最会拆局的人，转线、换位和团前拉扯都敢玩；可若比赛被逼成正面算力题，他也得先补稳字。；Hans Sama：重在团里持续输出和跟队友连段。队友给出奇手时，他很会顺势补刀；可前排若先塌，站位也会先被掐。；Labrov：敢先动，也敢陪着做非常规转线。若第一拍做成，G2 的局很怪也很难防；可空一拍，后头会被逼回正面。"
+          }
+        }
+      },
+      {
+        "id": "prediction-BFX",
+        "teamId": "BFX",
+        "matchLabel": "BFX 下一场待定",
+        "stageLabel": "等待官源排表",
+        "timeLabel": "暂无已确认时间",
+        "statusText": "待开盘",
+        "confidence": 50,
+        "predictedScore": "--",
+        "verdict": "等待下一场已确认对阵",
+        "teamA": {
+          "code": "BFX",
+          "logo": "",
+          "recordText": "系列 1-2"
+        },
+        "teamB": {
+          "code": "待定",
+          "logo": "",
+          "recordText": "等待排表"
+        },
+        "favoredTeam": "BFX",
+        "factors": [
+          "当前官源还没有给出下一场已确认对阵。"
+        ],
+        "headline": "等待官源排表",
+        "line": "赛程未落纸前，不妄开口。",
+        "risk": "对阵没定，先不写比分。"
+      },
+      {
+        "id": "prediction-LOUD",
+        "teamId": "LOUD",
+        "matchLabel": "LOUD 下一场待定",
+        "stageLabel": "等待官源排表",
+        "timeLabel": "暂无已确认时间",
+        "statusText": "待开盘",
+        "confidence": 50,
+        "predictedScore": "--",
+        "verdict": "等待下一场已确认对阵",
+        "teamA": {
+          "code": "LOUD",
+          "logo": "",
+          "recordText": "系列 0-2"
+        },
+        "teamB": {
+          "code": "待定",
+          "logo": "",
+          "recordText": "等待排表"
+        },
+        "favoredTeam": "LOUD",
+        "factors": [
+          "当前官源还没有给出下一场已确认对阵。"
+        ],
+        "headline": "等待官源排表",
+        "line": "赛程未落纸前，不妄开口。",
+        "risk": "对阵没定，先不写比分。"
+      },
+      {
+        "id": "prediction-LYON",
+        "teamId": "LYON",
+        "matchLabel": "LYON 下一场待定",
+        "stageLabel": "等待官源排表",
+        "timeLabel": "暂无已确认时间",
+        "statusText": "待开盘",
+        "confidence": 50,
+        "predictedScore": "--",
+        "verdict": "等待下一场已确认对阵",
+        "teamA": {
+          "code": "LYON",
+          "logo": "",
+          "recordText": "系列 1-2"
+        },
+        "teamB": {
+          "code": "待定",
+          "logo": "",
+          "recordText": "等待排表"
+        },
+        "favoredTeam": "LYON",
+        "factors": [
+          "当前官源还没有给出下一场已确认对阵。"
+        ],
+        "headline": "等待官源排表",
+        "line": "赛程未落纸前，不妄开口。",
+        "risk": "对阵没定，先不写比分。"
+      },
+      {
+        "id": "prediction-TSW",
+        "teamId": "TSW",
+        "matchLabel": "TSW 下一场待定",
+        "stageLabel": "等待官源排表",
+        "timeLabel": "暂无已确认时间",
+        "statusText": "待开盘",
+        "confidence": 50,
+        "predictedScore": "--",
+        "verdict": "等待下一场已确认对阵",
+        "teamA": {
+          "code": "TSW",
+          "logo": "",
+          "recordText": "系列 0-2"
+        },
+        "teamB": {
+          "code": "待定",
+          "logo": "",
+          "recordText": "等待排表"
+        },
+        "favoredTeam": "TSW",
         "factors": [
           "当前官源还没有给出下一场已确认对阵。"
         ],
