@@ -12,6 +12,7 @@ const __dirname = path.dirname(__filename);
 const projectRoot = path.resolve(__dirname, "..");
 const scheduleScript = path.join(projectRoot, "scripts", "build-self-use-data.mjs");
 const schedulePath = path.join(projectRoot, "app", "data", "tencent-schedule.json");
+const tencentPlayerProfilesPath = path.join(projectRoot, "app", "data", "tencent-player-profiles.json");
 const outputPath = path.join(projectRoot, "app", "data", "site-data.json");
 const inlineOutputPath = path.join(projectRoot, "app", "data", "site-data.inline.js");
 const playerAssetDir = path.join(projectRoot, "app", "assets", "players");
@@ -247,6 +248,59 @@ function resolvePlayerPortrait(playerId) {
     }
   }
   return "";
+}
+
+async function loadTencentPlayerProfiles() {
+  try {
+    const raw = await readFile(tencentPlayerProfilesPath, "utf8");
+    const parsed = JSON.parse(raw);
+    return parsed?.players || {};
+  } catch {
+    return {};
+  }
+}
+
+function compactPercent(value) {
+  const num = Number(value);
+  if (!Number.isFinite(num)) return "";
+  return `${Math.round(num * 100)}%`;
+}
+
+function compactNumber(value, digits = 1) {
+  const num = Number(value);
+  if (!Number.isFinite(num)) return "";
+  return digits === 0 ? `${Math.round(num)}` : `${num.toFixed(digits)}`;
+}
+
+function buildPlayerDataStats(profile) {
+  if (!profile?.stats) return [];
+  const stats = [];
+  if (Number.isFinite(Number(profile.stats.kda))) stats.push(`KDA ${compactNumber(profile.stats.kda, 2)}`);
+  if (Number.isFinite(Number(profile.stats.damagePerMinute))) stats.push(`分均伤害 ${compactNumber(profile.stats.damagePerMinute, 0)}`);
+  if (Number.isFinite(Number(profile.stats.killParticipantPercent))) {
+    stats.push(`参团 ${compactPercent(profile.stats.killParticipantPercent)}`);
+  }
+  if (Number.isFinite(Number(profile.stats.creepScorePerGame)) && profile.role !== "辅助") {
+    stats.push(`场均补刀 ${compactNumber(profile.stats.creepScorePerGame, 0)}`);
+  }
+  if (Number.isFinite(Number(profile.stats.wardPlacedPerGame)) && profile.role === "辅助") {
+    stats.push(`场均插眼 ${compactNumber(profile.stats.wardPlacedPerGame, 0)}`);
+  }
+  return stats.slice(0, 3);
+}
+
+function buildPlayerHeroLine(profile) {
+  const hero = profile?.favoriteHeroes?.[0];
+  if (!hero) return "";
+  const rate = Number.isFinite(Number(hero.winRate)) ? `${Math.round(Number(hero.winRate) * 100)}%` : "";
+  const games = Number.isFinite(Number(hero.games)) ? `${hero.games} 局` : "";
+  return [hero.heroCnName || hero.heroName, games, rate].filter(Boolean).join(" / ");
+}
+
+function buildPlayerRecentFormLine(profile) {
+  const recent = profile?.recentMatches?.[0];
+  if (!recent) return "";
+  return `${recent.teamName} 对 ${recent.fightTeamName} / ${recent.heroName} / ${recent.kill}-${recent.death}-${recent.assist}`;
 }
 
 const FALLBACK_COPY = {
@@ -618,12 +672,18 @@ function playerKnifeFocus(player) {
   return roleMap[player.role] || "对位细节与关键回合";
 }
 
-function buildPlayerSummary(player, record, nextMatch) {
+function buildPlayerSummary(player, record, nextMatch, profile) {
   const nextOpponent = nextMatch ? getPerspective(nextMatch, player.teamCode).opponent.shortName : "待定";
-  return `看 ${player.name}，不只看 ${player.role} 对位赢没赢，还看他怎么把 ${playerKnifeFocus(player)} 落成实账。${player.teamCode} 下一场对 ${nextOpponent}，这一刀落得正不正，常比补了多少刀更早决定气口。`;
+  const dataStats = buildPlayerDataStats(profile);
+  const heroLine = buildPlayerHeroLine(profile);
+  const recentLine = buildPlayerRecentFormLine(profile);
+  const statsText = dataStats.length ? `账面上 ${dataStats.join("，")}。` : "";
+  const heroText = heroLine ? `近用得最多的是 ${heroLine}。` : "";
+  const recentText = recentLine ? `最近一局是 ${recentLine}。` : "";
+  return `看 ${player.name}，先看他怎么把 ${playerKnifeFocus(player)} 落成实账。${statsText}${heroText}${recentText}${player.teamCode} 下一场对 ${nextOpponent}，这一路刀口若先咬住，整队气口往往会跟着偏过去。`;
 }
 
-function buildPlayerTags(player) {
+function buildPlayerTags(player, profile) {
   const tagMap = {
     上路: ["边线刀口", "先手胆气", "团前站位"],
     打野: ["河道起手", "资源先后", "节拍源头"],
@@ -631,7 +691,9 @@ function buildPlayerTags(player) {
     下路: ["输出收束", "残局清账", "团战身位"],
     辅助: ["开门时机", "回身补位", "视野层次"],
   };
-  return tagMap[player.role] || ["主队关切", "关键回合", "细节落点"];
+  const base = tagMap[player.role] || ["主队关切", "关键回合", "细节落点"];
+  const stats = buildPlayerDataStats(profile);
+  return [...base, ...stats].slice(0, 4);
 }
 
 function buildTeamCards(data, teamMap, records, stageAwards, rankingRows) {
@@ -705,9 +767,10 @@ function buildTeamCards(data, teamMap, records, stageAwards, rankingRows) {
   });
 }
 
-function buildPlayerCards(records) {
+function buildPlayerCards(records, playerProfiles) {
   return FOCUS_PLAYERS.map((player) => {
     const record = records[player.teamCode];
+    const profile = playerProfiles[player.id] || null;
     const nextMatch = record.liveMatch || record.nextKnownMatch || record.nextMatch;
     const latestMatch = record.latestMatch ? getPerspective(record.latestMatch, player.teamCode) : null;
     const track = [
@@ -730,19 +793,23 @@ function buildPlayerCards(records) {
       role: player.role,
       teamCode: player.teamCode,
       portrait: resolvePlayerPortrait(player.id),
-      summary: buildPlayerSummary(player, record, nextMatch),
-      note: player.watch,
-      tags: buildPlayerTags(player),
+      summary: buildPlayerSummary(player, record, nextMatch, profile),
+      note: buildPlayerHeroLine(profile) ? `${player.watch} 常用英雄看 ${buildPlayerHeroLine(profile)}。` : player.watch,
+      tags: buildPlayerTags(player, profile),
+      profileStats: buildPlayerDataStats(profile),
+      favoriteHeroes: (profile?.favoriteHeroes || []).slice(0, 3),
       track,
       observation: [
         player.watch,
+        buildPlayerHeroLine(profile) ? `常用英雄：${buildPlayerHeroLine(profile)}。` : "",
+        buildPlayerRecentFormLine(profile) ? `最近一局：${buildPlayerRecentFormLine(profile)}。` : "",
         latestMatch
           ? `最近一场 ${player.teamCode} ${latestMatch.scoreFor}:${latestMatch.scoreAgainst} ${latestMatch.opponent.shortName}。`
           : "最近一场还没有确认结果。",
         record.nextKnownMatch
           ? `下一场已确认对阵 ${getPerspective(record.nextKnownMatch, player.teamCode).opponent.shortName}。`
           : "下一场对阵还没确认。",
-      ],
+      ].filter(Boolean),
       history: record.completed.slice(0, 4).map((match) => {
         const perspective = getPerspective(match, player.teamCode);
         return {
@@ -845,17 +912,22 @@ function buildPredictedScore(match, favoredTeam, confidence) {
   return isFavoredA ? "2:1" : "1:2";
 }
 
-function buildPredictionFactors(match, recordA, recordB, headToHead, restA, restB) {
+function buildPredictionFactors(match, recordA, recordB, headToHead, restA, restB, playerProfiles) {
   const styleA = TEAM_STYLE_GUIDE[match.teamA.shortName];
   const styleB = TEAM_STYLE_GUIDE[match.teamB.shortName];
   const focusNotes = FOCUS_PLAYERS.filter(
     (player) => player.teamCode === match.teamA.shortName || player.teamCode === match.teamB.shortName,
   )
     .slice(0, 2)
-    .map((player) => ({
-      label: `刀口 / ${player.name}`,
-      value: player.watch,
-    }));
+    .map((player) => {
+      const profile = playerProfiles[player.id];
+      const statLine = buildPlayerDataStats(profile).join("，");
+      const heroLine = buildPlayerHeroLine(profile);
+      return {
+        label: `刀口 / ${player.name}`,
+        value: [player.watch, statLine, heroLine ? `常用 ${heroLine}` : ""].filter(Boolean).join(" "),
+      };
+    });
   return [
     {
       label: "账面",
@@ -891,12 +963,17 @@ function buildPredictionFactors(match, recordA, recordB, headToHead, restA, rest
   ].filter(Boolean);
 }
 
-function buildPredictionKnowledge(match) {
+function buildPredictionKnowledge(match, playerProfiles) {
   const teamAGuide = TEAM_STYLE_GUIDE[match.teamA.shortName];
   const teamBGuide = TEAM_STYLE_GUIDE[match.teamB.shortName];
   const focusPlayers = FOCUS_PLAYERS.filter(
     (player) => player.teamCode === match.teamA.shortName || player.teamCode === match.teamB.shortName,
-  ).map((player) => `${player.name}：${player.watch}`);
+  ).map((player) => {
+    const profile = playerProfiles[player.id];
+    const stats = buildPlayerDataStats(profile).join("，");
+    const heroLine = buildPlayerHeroLine(profile);
+    return `${player.name}：${player.watch}${stats ? ` 账面 ${stats}。` : ""}${heroLine ? ` 常用 ${heroLine}。` : ""}`;
+  });
   return {
     teamA: teamAGuide
       ? `${match.teamA.shortName}：门风是${teamAGuide.identity}；长板是${teamAGuide.strengths.join("、")}；明病是${teamAGuide.flaw}；翻船点是${teamAGuide.risk}`
@@ -929,7 +1006,7 @@ function fallbackPredictionCopy(item) {
   };
 }
 
-function buildTeamPredictions(data, records) {
+function buildTeamPredictions(data, records, playerProfiles) {
   return FOCUS_TEAM_IDS.map((teamId) => {
     const record = records[teamId];
     const match = record?.nextKnownMatch || null;
@@ -970,7 +1047,7 @@ function buildTeamPredictions(data, records) {
       favoredTeam,
       underdogTeam: favoredTeam === match.teamA.shortName ? match.teamB.shortName : match.teamA.shortName,
     });
-    const knowledge = buildPredictionKnowledge(match);
+    const knowledge = buildPredictionKnowledge(match, playerProfiles);
 
     return {
       id: `prediction-${teamId}`,
@@ -993,7 +1070,7 @@ function buildTeamPredictions(data, records) {
         logo: match.teamB.logo,
         recordText: `系列 ${recordB.wins}-${recordB.losses} / 局差 ${signed(recordB.gameDiff)}`,
       },
-      factors: buildPredictionFactors(match, recordA, recordB, headToHead, restA, restB),
+      factors: buildPredictionFactors(match, recordA, recordB, headToHead, restA, restB, playerProfiles),
       headline: fallback.headline,
       line: fallback.line,
       risk: fallback.risk,
@@ -1118,14 +1195,15 @@ async function main() {
   });
 
   const data = JSON.parse(await readFile(schedulePath, "utf8"));
+  const playerProfiles = await loadTencentPlayerProfiles();
   const teamMap = teamNameLookup(data);
   const rankingRows = buildRankingRows(data, teamMap);
   const stageAwards = buildStageAwards(data);
   const records = buildAllTeamRecords(data);
   const teamCards = buildTeamCards(data, teamMap, records, stageAwards, rankingRows);
-  const playerCards = buildPlayerCards(records);
+  const playerCards = buildPlayerCards(records, playerProfiles);
   const overview = buildOverview(data, teamMap, rankingRows, playerCards);
-  const predictions = buildTeamPredictions(data, records);
+  const predictions = buildTeamPredictions(data, records, playerProfiles);
 
   let siteData = {
     generatedAt: data.generatedAt,
@@ -1133,9 +1211,13 @@ async function main() {
     copy: {
       ...FALLBACK_COPY,
       nav: NAV_LABELS,
-      aiSource: "fallback",
-    },
-    overview,
+        aiSource: "fallback",
+      },
+      scrapedProfiles: {
+        generatedAt: Number(data.generatedAt || 0),
+        count: Object.keys(playerProfiles).length,
+      },
+      overview,
     teams: {
       defaultTeam: data.focusDefaults?.team || "BLG",
       items: teamCards,

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-21T14:44:19.380Z",
-  "generatedAtLocal": "2026/3/21 22:44:19",
+  "generatedAt": "2026-03-21T16:51:04.069Z",
+  "generatedAtLocal": "2026/3/22 00:51:04",
   "focusDefaults": {
     "team": "BLG",
     "player": "Bin",
@@ -61,11 +61,6 @@
     }
   ],
   "teams": [
-    {
-      "shortName": "待定",
-      "name": "待定",
-      "logo": "https://img.crawler.qq.com/lolwebvideo/20171204150327/6fa86a8e4d50f72b5fb016beb8492153/0"
-    },
     {
       "shortName": "AL",
       "name": "AL",
@@ -135,6 +130,11 @@
       "shortName": "OMG",
       "name": "OMG",
       "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152756/56c5bb71d14d13ec280908542ac8e1a9/0"
+    },
+    {
+      "shortName": "TBD",
+      "name": "待定",
+      "logo": "https://img.crawler.qq.com/lolwebvideo/20171204150327/6fa86a8e4d50f72b5fb016beb8492153/0"
     },
     {
       "shortName": "TES",
@@ -2730,10 +2730,10 @@
       "bo": "BO5",
       "venue": "圣保罗",
       "matchDate": "2026-03-21 21:00:00",
-      "status": "in_progress",
-      "statusText": "进行中/待确认",
+      "status": "completed",
+      "statusText": "已结束",
       "scoreA": 0,
-      "scoreB": 1,
+      "scoreB": 3,
       "teamA": {
         "id": "137",
         "name": "GEN",
@@ -2760,9 +2760,9 @@
       "bo": "BO5",
       "venue": "圣保罗",
       "matchDate": "2026-03-22 02:00:00",
-      "status": "upcoming",
-      "statusText": "未开始",
-      "scoreA": 0,
+      "status": "in_progress",
+      "statusText": "进行中/待确认",
+      "scoreA": 1,
       "scoreB": 0,
       "teamA": {
         "id": "57",
@@ -2795,15 +2795,15 @@
       "scoreA": 0,
       "scoreB": 0,
       "teamA": {
-        "id": "85",
-        "name": "待定",
-        "shortName": "待定",
-        "logo": "https://img.crawler.qq.com/lolwebvideo/20171204150327/6fa86a8e4d50f72b5fb016beb8492153/0"
+        "id": "117",
+        "name": "G2",
+        "shortName": "G2",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20250618120148/0654f8b663a3973eb8debcf929cb919e/0"
       },
       "teamB": {
         "id": "85",
         "name": "待定",
-        "shortName": "待定",
+        "shortName": "TBD",
         "logo": "https://img.crawler.qq.com/lolwebvideo/20171204150327/6fa86a8e4d50f72b5fb016beb8492153/0"
       },
       "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_238.js"

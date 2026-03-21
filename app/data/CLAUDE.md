@@ -17,3 +17,5 @@
 
 2026-03-21 20:12 重新生成官网 JSON 与 inline 数据，更新长段高僧见解和选手摘要。
 2026-03-21 22:46 重新生成官网 JSON 与 inline 数据，写入 JDG/G2 定妆照路径并验证页面可读取。
+
+2026-03-22 00:43 新增 tencent-player-profiles.json，并重建 site-data 与 inline 数据写入 69 人抓取画像。
