@@ -21,3 +21,4 @@
 2026-03-22 00:43 新增 tencent-player-profiles.json，并重建 site-data 与 inline 数据写入 69 人抓取画像。
 
 [2026-03-22 01:51] 重建站点数据，选手英雄池改为多英雄展示。
+2026-03-22 02:36 重建 site-data、inline 数据与 match-analysis-library，加入知识库元信息。

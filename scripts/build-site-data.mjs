@@ -15,11 +15,15 @@ const schedulePath = path.join(projectRoot, "app", "data", "tencent-schedule.jso
 const tencentPlayerProfilesPath = path.join(projectRoot, "app", "data", "tencent-player-profiles.json");
 const outputPath = path.join(projectRoot, "app", "data", "site-data.json");
 const inlineOutputPath = path.join(projectRoot, "app", "data", "site-data.inline.js");
+const analysisLibraryPath = path.join(projectRoot, "app", "data", "match-analysis-library.json");
 const playerAssetDir = path.join(projectRoot, "app", "assets", "players");
 const PLAYER_PORTRAIT_EXTENSIONS = [".png", ".webp", ".jpg", ".jpeg", ".avif"];
 
 const GEMINI_MODEL = process.env.GEMINI_MODEL || "gemini-3-flash-preview";
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY || "";
+const ANALYSIS_SOURCE_LIMIT = 10;
+const ANALYSIS_SOURCE_ROOT = "https://lolesports.com";
+const ANALYSIS_DISCOVERY_URL = "https://lolesports.com/en-US/news";
 
 const NAV_LABELS = {
   overview: "首页",
@@ -332,6 +336,276 @@ function buildPlayerRecentFormLine(profile) {
   const recent = profile?.recentMatches?.[0];
   if (!recent) return "";
   return `${recent.teamName} 对 ${recent.fightTeamName} / ${recent.heroName} / ${recent.kill}-${recent.death}-${recent.assist}`;
+}
+
+function average(values) {
+  const nums = values.map(Number).filter((value) => Number.isFinite(value));
+  if (!nums.length) return 0;
+  return nums.reduce((sum, value) => sum + value, 0) / nums.length;
+}
+
+function getTeamPlayerProfiles(teamCode, playerProfiles) {
+  return Object.values(playerProfiles).filter((profile) => profile?.teamCode === teamCode);
+}
+
+function buildTeamHeroProfile(teamCode, playerProfiles) {
+  const profiles = getTeamPlayerProfiles(teamCode, playerProfiles);
+  if (!profiles.length) {
+    return {
+      heroDepth: 0,
+      recentFlex: 0,
+      comfortWinRate: 0,
+      avgKda: 0,
+      avgParticipation: 0,
+      summary: `${teamCode} 暂无可用选手池资料`,
+    };
+  }
+
+  const heroDepth = average(
+    profiles.map((profile) => buildPlayerHeroPool(profile).length),
+  );
+  const recentFlex = average(
+    profiles.map((profile) => {
+      const uniqueHeroes = new Set(
+        (profile?.recentMatches || [])
+          .map((match) => String(match?.heroName || "").trim())
+          .filter(Boolean),
+      );
+      return uniqueHeroes.size;
+    }),
+  );
+  const comfortWinRate = average(
+    profiles.flatMap((profile) =>
+      buildPlayerHeroPool(profile)
+        .map((hero) => Number(hero.winRate))
+        .filter((value) => Number.isFinite(value)),
+    ),
+  );
+  const avgKda = average(profiles.map((profile) => Number(profile?.stats?.kda)));
+  const avgParticipation = average(
+    profiles.map((profile) => Number(profile?.stats?.killParticipantPercent)),
+  );
+
+  return {
+    heroDepth,
+    recentFlex,
+    comfortWinRate,
+    avgKda,
+    avgParticipation,
+    summary: `${teamCode} 池深 ${heroDepth.toFixed(1)}，近战术切牌 ${recentFlex.toFixed(1)}，舒适池胜率 ${Math.round(
+      comfortWinRate * 100,
+    )}%`,
+  };
+}
+
+function computeHeroProfileEdge(teamA, teamB, playerProfiles) {
+  const profileA = buildTeamHeroProfile(teamA, playerProfiles);
+  const profileB = buildTeamHeroProfile(teamB, playerProfiles);
+  const edge =
+    (profileA.heroDepth - profileB.heroDepth) * 2.4 +
+    (profileA.recentFlex - profileB.recentFlex) * 1.8 +
+    (profileA.comfortWinRate - profileB.comfortWinRate) * 12 +
+    (profileA.avgKda - profileB.avgKda) * 1.1 +
+    (profileA.avgParticipation - profileB.avgParticipation) * 2.4;
+
+  return {
+    edge,
+    profileA,
+    profileB,
+  };
+}
+
+function decodeHtmlEntities(value) {
+  return String(value || "")
+    .replace(/&amp;/g, "&")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&nbsp;/g, " ")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">");
+}
+
+function stripHtml(value) {
+  return decodeHtmlEntities(
+    String(value || "")
+      .replace(/<script[\s\S]*?<\/script>/gi, " ")
+      .replace(/<style[\s\S]*?<\/style>/gi, " ")
+      .replace(/<noscript[\s\S]*?<\/noscript>/gi, " ")
+      .replace(/<svg[\s\S]*?<\/svg>/gi, " ")
+      .replace(/<[^>]+>/g, " ")
+      .replace(/\s+/g, " "),
+  ).trim();
+}
+
+function extractMetaContent(html, key) {
+  const pattern = new RegExp(`<meta[^>]+(?:name|property)=["']${key}["'][^>]+content=["']([^"']+)["']`, "i");
+  return decodeHtmlEntities(html.match(pattern)?.[1] || "");
+}
+
+function resolveAnalysisUrl(href) {
+  if (!href) return "";
+  if (href.startsWith("http://") || href.startsWith("https://")) return href;
+  if (href.startsWith("/")) return `${ANALYSIS_SOURCE_ROOT}${href}`;
+  return `${ANALYSIS_SOURCE_ROOT}/${href}`;
+}
+
+async function discoverAnalysisUrls() {
+  const urls = new Set([
+    "https://lolesports.com/news/fst-2026-primer",
+    "https://lolesports.com/en-US/news/fst-2026-primer",
+  ]);
+
+  try {
+    const response = await fetch(ANALYSIS_DISCOVERY_URL, { headers: { "User-Agent": "esports-monk/1.0" } });
+    if (!response.ok) return [...urls];
+    const html = await response.text();
+    for (const match of html.matchAll(/href="([^"]*\/news\/[^"#?]+)"/g)) {
+      const url = resolveAnalysisUrl(match[1]);
+      if (url) urls.add(url);
+      if (urls.size >= ANALYSIS_SOURCE_LIMIT + 4) break;
+    }
+  } catch {}
+
+  return [...urls].slice(0, ANALYSIS_SOURCE_LIMIT + 2);
+}
+
+function buildEntityAliases(teamMap, playerProfiles) {
+  const aliases = {};
+  for (const [teamCode, team] of teamMap.entries()) {
+    const rawTerms = [team?.name, team?.shortName].filter(Boolean).map((term) => String(term).trim());
+    const terms = rawTerms.filter((term) => {
+      if (/^[a-z]{1,2}$/i.test(term)) return false;
+      if (/^[a-z]{1,2}$/i.test(teamCode) && term === team?.shortName) return false;
+      return true;
+    });
+    if (!/^[a-z]{1,2}$/i.test(teamCode)) {
+      terms.unshift(teamCode);
+    }
+    aliases[teamCode] = [...new Set(terms)];
+  }
+  for (const profile of Object.values(playerProfiles)) {
+    if (!profile?.displayName || !profile?.teamCode) continue;
+    const terms = [profile.displayName, profile.realName].filter(Boolean).filter((term) => term.length >= 3);
+    if (terms.length) aliases[profile.displayName] = terms;
+  }
+  return aliases;
+}
+
+function countMentions(text, terms) {
+  const haystack = String(text || "").toLowerCase();
+  return terms
+    .filter(Boolean)
+    .map((term) => String(term).trim().toLowerCase())
+    .filter(Boolean)
+    .reduce((sum, term) => {
+      if (term.length <= 4 && /^[a-z0-9.+-]+$/i.test(term)) {
+        const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+        const regex = new RegExp(`(^|[^a-z0-9])${escaped}([^a-z0-9]|$)`, "i");
+        return sum + (regex.test(haystack) ? 1 : 0);
+      }
+      return sum + (haystack.includes(term) ? 1 : 0);
+      }, 0);
+}
+
+function dedupeAnalysisDocs(docs) {
+  const seen = new Set();
+  const unique = [];
+  for (const doc of docs) {
+    const mentionKeys = Object.keys(doc.mentions || {}).sort().join(",");
+    const key = `${doc.title}|${mentionKeys}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    unique.push(doc);
+  }
+  return unique;
+}
+
+async function fetchAnalysisLibrary(teamMap, playerProfiles) {
+  const aliases = buildEntityAliases(teamMap, playerProfiles);
+  const urls = await discoverAnalysisUrls();
+  const docs = [];
+
+  for (const url of urls) {
+    try {
+      const response = await fetch(url, { headers: { "User-Agent": "esports-monk/1.0" } });
+      if (!response.ok) continue;
+      const html = await response.text();
+      const title =
+        extractMetaContent(html, "og:title") ||
+        html.match(/<title>(.*?)<\/title>/i)?.[1]?.replace(/^LoL Esports\s*\|\s*/i, "").trim() ||
+        url.split("/").pop() ||
+        "";
+      const description = extractMetaContent(html, "description") || extractMetaContent(html, "og:description");
+      const bodyText = stripHtml(html);
+      const excerpt = bodyText.slice(0, 2200);
+      const mentionMap = Object.fromEntries(
+        Object.entries(aliases)
+          .map(([key, terms]) => [key, countMentions(`${title} ${description} ${excerpt}`, terms)])
+          .filter(([, score]) => score > 0),
+      );
+
+      if (!Object.keys(mentionMap).length && !/first stand|lpl|jdg|blg|gen|g2/i.test(`${title} ${description} ${excerpt}`)) {
+        continue;
+      }
+
+      docs.push({
+        id: `analysis-${docs.length + 1}`,
+        url,
+        title,
+        description,
+        excerpt,
+        mentions: mentionMap,
+      });
+    } catch {}
+  }
+
+  const cleanedDocs = dedupeAnalysisDocs(docs);
+
+  const library = {
+    generatedAt: Date.now(),
+    source: "lolesports-news",
+    count: cleanedDocs.length,
+    items: cleanedDocs,
+  };
+
+  await writeFile(analysisLibraryPath, `${JSON.stringify(library, null, 2)}\n`, "utf8");
+  return library;
+}
+
+function pickRelevantAnalysis(match, playerProfiles, analysisLibrary) {
+  if (!analysisLibrary?.items?.length) return [];
+  const tournamentLabel = `${match.tournamentLabel} ${match.stageName}`.toLowerCase();
+  const playerNames = Object.values(playerProfiles)
+    .filter((profile) => profile?.teamCode === match.teamA.shortName || profile?.teamCode === match.teamB.shortName)
+    .map((profile) => profile.displayName);
+
+  const queryTerms = [
+    match.teamA.shortName,
+    match.teamB.shortName,
+    match.tournamentLabel,
+      match.stageName,
+      ...playerNames,
+    ];
+  const tournamentTerms = /first stand|fst/i.test(tournamentLabel)
+    ? ["first stand", "fst"]
+    : /lpl/i.test(tournamentLabel)
+      ? ["lpl", "split", "playoffs"]
+      : [];
+
+  return analysisLibrary.items
+    .map((doc) => {
+      const docText = `${doc.title} ${doc.description} ${doc.excerpt}`;
+      const mentionScore =
+        (doc.mentions?.[match.teamA.shortName] || 0) * 3 +
+        (doc.mentions?.[match.teamB.shortName] || 0) * 3 +
+        countMentions(docText, queryTerms) +
+        countMentions(docText, tournamentTerms);
+      return { ...doc, score: mentionScore };
+    })
+    .filter((doc) => doc.score > 1)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 3)
+    .map(({ score, ...doc }) => doc);
 }
 
 const FALLBACK_COPY = {
@@ -893,14 +1167,15 @@ function buildOverview(data, teamMap, rankingRows, players) {
   };
 }
 
-function computeConfidence(recordA, recordB, headToHead, restDiffHours, bo) {
+function computeConfidence(recordA, recordB, headToHead, restDiffHours, bo, profileEdge = 0) {
   const winRateEdge = recordA.winRate - recordB.winRate;
   const diffEdge = recordA.gameDiff - recordB.gameDiff;
   const recentEdge = recordA.recentWins - recordB.recentWins;
   const h2hEdge = headToHead.edge * 6;
   const restEdge = clamp(restDiffHours / 12, -2, 2) * 2.5;
   const boEdge = bo === "BO5" ? 2 : 0;
-  const raw = 55 + winRateEdge * 0.32 + diffEdge * 0.9 + recentEdge * 3.8 + h2hEdge + restEdge + boEdge;
+  const heroEdge = clamp(profileEdge, -6, 6);
+  const raw = 55 + winRateEdge * 0.32 + diffEdge * 0.9 + recentEdge * 3.8 + h2hEdge + restEdge + boEdge + heroEdge;
   return clamp(Math.round(raw), 42, 84);
 }
 
@@ -944,9 +1219,10 @@ function buildPredictedScore(match, favoredTeam, confidence) {
   return isFavoredA ? "2:1" : "1:2";
 }
 
-function buildPredictionFactors(match, recordA, recordB, headToHead, restA, restB, playerProfiles) {
+function buildPredictionFactors(match, recordA, recordB, headToHead, restA, restB, playerProfiles, analysisDocs) {
   const styleA = TEAM_STYLE_GUIDE[match.teamA.shortName];
   const styleB = TEAM_STYLE_GUIDE[match.teamB.shortName];
+  const heroEdge = computeHeroProfileEdge(match.teamA.shortName, match.teamB.shortName, playerProfiles);
   const focusNotes = FOCUS_PLAYERS.filter(
     (player) => player.teamCode === match.teamA.shortName || player.teamCode === match.teamB.shortName,
   )
@@ -981,10 +1257,20 @@ function buildPredictionFactors(match, recordA, recordB, headToHead, restA, rest
       label: "歇脚",
       value: `${match.teamA.shortName} ${restA}h，${match.teamB.shortName} ${restB}h`,
     },
+    {
+      label: "英雄池",
+      value: `${heroEdge.profileA.summary}；${heroEdge.profileB.summary}`,
+    },
     styleA && styleB
       ? {
           label: "门风",
           value: `${match.teamA.shortName} ${styleA.strengths[0]}，${match.teamB.shortName} ${styleB.strengths[0]}`,
+        }
+      : null,
+    analysisDocs?.length
+      ? {
+          label: "近闻",
+          value: analysisDocs.map((doc) => doc.title).join("；"),
         }
       : null,
     ...focusNotes,
@@ -995,9 +1281,10 @@ function buildPredictionFactors(match, recordA, recordB, headToHead, restA, rest
   ].filter(Boolean);
 }
 
-function buildPredictionKnowledge(match, playerProfiles) {
+function buildPredictionKnowledge(match, playerProfiles, analysisDocs) {
   const teamAGuide = TEAM_STYLE_GUIDE[match.teamA.shortName];
   const teamBGuide = TEAM_STYLE_GUIDE[match.teamB.shortName];
+  const heroEdge = computeHeroProfileEdge(match.teamA.shortName, match.teamB.shortName, playerProfiles);
   const focusPlayers = FOCUS_PLAYERS.filter(
     (player) => player.teamCode === match.teamA.shortName || player.teamCode === match.teamB.shortName,
   ).map((player) => {
@@ -1014,6 +1301,10 @@ function buildPredictionKnowledge(match, playerProfiles) {
       ? `${match.teamB.shortName}：门风是${teamBGuide.identity}；长板是${teamBGuide.strengths.join("、")}；明病是${teamBGuide.flaw}；翻船点是${teamBGuide.risk}`
       : `${match.teamB.shortName}：当前没有补充风格注释。`,
     focusPlayers: focusPlayers.length ? focusPlayers.join("；") : "当前没有接入该场重点选手的手法注释。",
+    heroPool: `${match.teamA.shortName}：${heroEdge.profileA.summary}；${match.teamB.shortName}：${heroEdge.profileB.summary}`,
+    recentAnalysis: analysisDocs?.length
+      ? analysisDocs.map((doc) => `${doc.title}：${(doc.description || doc.excerpt).slice(0, 140)}`).join("；")
+      : "当前没有抓到最近赛事解读。",
   };
 }
 
@@ -1038,7 +1329,7 @@ function fallbackPredictionCopy(item) {
   };
 }
 
-function buildTeamPredictions(data, records, playerProfiles) {
+function buildTeamPredictions(data, records, playerProfiles, analysisLibrary) {
   return FOCUS_TEAM_IDS.map((teamId) => {
     const record = records[teamId];
     const match = record?.nextKnownMatch || null;
@@ -1068,18 +1359,20 @@ function buildTeamPredictions(data, records, playerProfiles) {
     const headToHead = findHeadToHead(data, match.teamA.shortName, match.teamB.shortName);
     const restA = getRestHours(recordA, match.matchDate);
     const restB = getRestHours(recordB, match.matchDate);
-    const confidenceA = computeConfidence(recordA, recordB, headToHead, restA - restB, match.bo);
+    const heroProfileEdge = computeHeroProfileEdge(match.teamA.shortName, match.teamB.shortName, playerProfiles);
+    const confidenceA = computeConfidence(recordA, recordB, headToHead, restA - restB, match.bo, heroProfileEdge.edge);
     const favoredTeam = confidenceA >= 56 ? match.teamA.shortName : match.teamB.shortName;
     const confidence =
       favoredTeam === match.teamA.shortName
         ? confidenceA
         : clamp(100 - confidenceA, 42, 84);
     const predictedScore = buildPredictedScore(match, favoredTeam, confidence);
+    const analysisDocs = pickRelevantAnalysis(match, playerProfiles, analysisLibrary);
     const fallback = fallbackPredictionCopy({
       favoredTeam,
       underdogTeam: favoredTeam === match.teamA.shortName ? match.teamB.shortName : match.teamA.shortName,
     });
-    const knowledge = buildPredictionKnowledge(match, playerProfiles);
+    const knowledge = buildPredictionKnowledge(match, playerProfiles, analysisDocs);
 
     return {
       id: `prediction-${teamId}`,
@@ -1102,17 +1395,19 @@ function buildTeamPredictions(data, records, playerProfiles) {
         logo: match.teamB.logo,
         recordText: `系列 ${recordB.wins}-${recordB.losses} / 局差 ${signed(recordB.gameDiff)}`,
       },
-      factors: buildPredictionFactors(match, recordA, recordB, headToHead, restA, restB, playerProfiles),
+      factors: buildPredictionFactors(match, recordA, recordB, headToHead, restA, restB, playerProfiles, analysisDocs),
       headline: fallback.headline,
       line: fallback.line,
       risk: fallback.risk,
       knowledge,
+      analysisDocs,
       resources: {
         seriesRecord: [recordA.wins, recordA.losses, recordB.wins, recordB.losses],
         gameDiff: [recordA.gameDiff, recordB.gameDiff],
         recentForm: [recordA.recentText, recordB.recentText],
         headToHead: headToHead.text,
         restHours: [restA, restB],
+        heroProfiles: [heroProfileEdge.profileA, heroProfileEdge.profileB],
         bo: match.bo,
         style: knowledge,
       },
@@ -1196,6 +1491,7 @@ async function buildAiPredictionCopy(predictions) {
     "严禁出现这些词：装懂、写上墙、梭哈、嘴硬、当空气、玄学、神谕、天命、阵卷、观席、禅断、盘口、收米、赔率。",
     "不要出现用户、本站、官网、模型、AI、数据源这些词。",
     "把 knowledge 里的队伍门风、选手手法、短板和因子列表揉进断语里，不要原样复述列表。一定要写出队伍特点，像‘先手凶’、‘转线稳’、‘纪律松’、‘容易上头’这种能落地的话。",
+    "把 knowledge.recentAnalysis 里的近闻当作外部赛后批注，只能拿来丰富理解，不能编造成确定事实。若近闻和账面冲突，以账面和因子为主。",
     "返回 JSON，格式为 { predictions: { [id]: { headline, line, risk } } }。",
     JSON.stringify(payload, null, 2),
   ].join("\n");
@@ -1229,13 +1525,14 @@ async function main() {
   const data = JSON.parse(await readFile(schedulePath, "utf8"));
   const playerProfiles = await loadTencentPlayerProfiles();
   const teamMap = teamNameLookup(data);
+  const analysisLibrary = await fetchAnalysisLibrary(teamMap, playerProfiles);
   const rankingRows = buildRankingRows(data, teamMap);
   const stageAwards = buildStageAwards(data);
   const records = buildAllTeamRecords(data);
   const teamCards = buildTeamCards(data, teamMap, records, stageAwards, rankingRows);
   const playerCards = buildPlayerCards(records, playerProfiles);
   const overview = buildOverview(data, teamMap, rankingRows, playerCards);
-  const predictions = buildTeamPredictions(data, records, playerProfiles);
+  const predictions = buildTeamPredictions(data, records, playerProfiles, analysisLibrary);
 
   let siteData = {
     generatedAt: data.generatedAt,
@@ -1243,13 +1540,18 @@ async function main() {
     copy: {
       ...FALLBACK_COPY,
       nav: NAV_LABELS,
-        aiSource: "fallback",
-      },
-      scrapedProfiles: {
-        generatedAt: Number(data.generatedAt || 0),
-        count: Object.keys(playerProfiles).length,
-      },
-      overview,
+      aiSource: "fallback",
+    },
+    scrapedProfiles: {
+      generatedAt: Number(data.generatedAt || 0),
+      count: Object.keys(playerProfiles).length,
+    },
+    analysisLibrary: {
+      generatedAt: Number(analysisLibrary?.generatedAt || Date.now()),
+      count: Number(analysisLibrary?.count || 0),
+      source: analysisLibrary?.source || "none",
+    },
+    overview,
     teams: {
       defaultTeam: data.focusDefaults?.team || "BLG",
       items: teamCards,

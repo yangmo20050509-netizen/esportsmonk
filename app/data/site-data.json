@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-21T17:48:47.518Z",
-  "generatedAtLocal": "2026/3/22 01:48:47",
+  "generatedAt": "2026-03-21T18:34:12.817Z",
+  "generatedAtLocal": "2026/3/22 02:34:12",
   "copy": {
     "title": "电竞高僧 | 英雄联盟观赛站",
     "description": "聚合英雄联盟重点赛事的官方赛程、比分、战队信息与比赛预测。",
@@ -56,6 +56,11 @@
     "generatedAt": null,
     "count": 69
   },
+  "analysisLibrary": {
+    "generatedAt": 1774118063197,
+    "count": 11,
+    "source": "lolesports-news"
+  },
   "overview": {
     "liveMatches": [
       {
@@ -72,7 +77,7 @@
         "matchDate": "2026-03-22 02:00:00",
         "status": "in_progress",
         "statusText": "进行中/待确认",
-        "scoreA": 2,
+        "scoreA": 3,
         "scoreB": 0,
         "teamA": {
           "id": "57",
@@ -89,7 +94,38 @@
         "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_238.js"
       }
     ],
-    "upcomingMatches": [],
+    "upcomingMatches": [
+      {
+        "id": "13207",
+        "bigGameId": "220",
+        "gameId": "238",
+        "tournamentSlug": "first-stand",
+        "tournamentLabel": "First Stand",
+        "tournamentName": "全球先锋赛2026",
+        "stageName": "淘汰赛",
+        "roundName": "决赛",
+        "bo": "BO5",
+        "venue": "圣保罗",
+        "matchDate": "2026-03-22 21:00:00",
+        "status": "upcoming",
+        "statusText": "未开始",
+        "scoreA": 0,
+        "scoreB": 0,
+        "teamA": {
+          "id": "117",
+          "name": "G2",
+          "shortName": "G2",
+          "logo": "https://img.crawler.qq.com/lolwebvideo/20250618120148/0654f8b663a3973eb8debcf929cb919e/0"
+        },
+        "teamB": {
+          "id": "57",
+          "name": "BLG",
+          "shortName": "BLG",
+          "logo": "https://img.crawler.qq.com/lolwebvideo/20250618144525/49342dadcecf162e8ac94fad6eb91540/0"
+        },
+        "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_238.js"
+      }
+    ],
     "ranking": [
       {
         "rank": 1,
@@ -247,7 +283,7 @@
         "常用英雄：赛恩 / 1 局 / 100% ｜ 纳尔 / 1 局 / 100%。",
         "最近一局：BLG 对 JDG / 赛恩 / 4-0-5。",
         "最近一场 BLG 3:0 G2。",
-        "下一场对阵还没确认。"
+        "下一场已确认对阵 G2。"
       ],
       "history": [
         {
@@ -316,7 +352,7 @@
           {
             "label": "此刻对局",
             "value": "BLG vs JDG",
-            "note": "First Stand BO5 / 当前比分 2:0"
+            "note": "First Stand BO5 / 当前比分 3:0"
           },
           {
             "label": "最近一场",
@@ -398,7 +434,7 @@
           {
             "label": "此刻对局",
             "value": "JDG vs BLG",
-            "note": "First Stand BO5 / 当前比分 0:2"
+            "note": "First Stand BO5 / 当前比分 0:3"
           },
           {
             "label": "最近一场",
@@ -986,7 +1022,7 @@
         "stageAward": "",
         "rankingLabel": "当前未进榜",
         "summary": "G2 当前系列赛 3-1，单局 9-3，近五场 胜 胜 负 胜。眼下最能撑住局面的，是 中段转线多变。",
-        "statement": "老衲看 G2，像会走偏门的棋客，不怕路歪，只怕对手不跟。可若对面硬把桌子摆正，它那些奇手就得先过一遍真功夫。这阵子账面厚，前十五分钟若叫它先得手，后面多半是它执笔。可老衲也不替它遮丑，局势若被人逼成正面账本，它也会露出前排不够厚、硬解不够稳的问题。真要出岔子，多半也是前段换线和试探都没赚到时间，后面会被迫正面接算力题。下一场已确认对阵 TBD。",
+        "statement": "老衲看 G2，像会走偏门的棋客，不怕路歪，只怕对手不跟。可若对面硬把桌子摆正，它那些奇手就得先过一遍真功夫。这阵子账面厚，前十五分钟若叫它先得手，后面多半是它执笔。可老衲也不替它遮丑，局势若被人逼成正面账本，它也会露出前排不够厚、硬解不够稳的问题。真要出岔子，多半也是前段换线和试探都没赚到时间，后面会被迫正面接算力题。下一场已确认对阵 BLG。",
         "metrics": [
           {
             "label": "胜率",
@@ -1012,7 +1048,7 @@
         "docket": [
           {
             "label": "下一场",
-            "value": "G2 vs TBD",
+            "value": "G2 vs BLG",
             "note": "3月22日周日 21:00 / First Stand BO5"
           },
           {
@@ -1411,7 +1447,7 @@
           "常用英雄：赛恩 / 1 局 / 100% ｜ 纳尔 / 1 局 / 100%。",
           "最近一局：BLG 对 JDG / 赛恩 / 4-0-5。",
           "最近一场 BLG 3:0 G2。",
-          "下一场对阵还没确认。"
+          "下一场已确认对阵 G2。"
         ],
         "history": [
           {
@@ -1515,7 +1551,7 @@
           "常用英雄：魔腾 / 1 局 / 100% ｜ 波比 / 1 局 / 100%。",
           "最近一局：BLG 对 JDG / 波比 / 1-0-12。",
           "最近一场 BLG 3:0 G2。",
-          "下一场对阵还没确认。"
+          "下一场已确认对阵 G2。"
         ],
         "history": [
           {
@@ -1619,7 +1655,7 @@
           "常用英雄：奥莉安娜 / 1 局 / 100% ｜ 梅尔 / 1 局 / 100%。",
           "最近一局：BLG 对 JDG / 梅尔 / 7-1-5。",
           "最近一场 BLG 3:0 G2。",
-          "下一场对阵还没确认。"
+          "下一场已确认对阵 G2。"
         ],
         "history": [
           {
@@ -1723,7 +1759,7 @@
           "常用英雄：芸阿娜 / 1 局 / 100% ｜ 库奇 / 1 局 / 100%。",
           "最近一局：BLG 对 JDG / 芸阿娜 / 3-1-5。",
           "最近一场 BLG 3:0 G2。",
-          "下一场对阵还没确认。"
+          "下一场已确认对阵 G2。"
         ],
         "history": [
           {
@@ -1827,7 +1863,7 @@
           "常用英雄：巴德 / 1 局 / 100% ｜ 妮蔻 / 1 局 / 100%。",
           "最近一局：BLG 对 JDG / 妮蔻 / 0-5-9。",
           "最近一场 BLG 3:0 G2。",
-          "下一场对阵还没确认。"
+          "下一场已确认对阵 G2。"
         ],
         "history": [
           {
@@ -6496,7 +6532,7 @@
         "role": "上路",
         "teamCode": "G2",
         "portrait": "./assets/players/brokenblade.jpg",
-        "summary": "看 BrokenBlade，先看他怎么把 边线压制、换血胆气与先手身位 落成实账。账面上 KDA 4.75，分均伤害 666，参团 54%。近用得最多的是 赛恩 / 1 局 / 100% ｜ 慎 / 1 局 / 100% ｜ 奎桑提 / 1 局 / 100%。最近一局是 G2 对 GEN / 慎 / 3-0-8。G2 下一场对 TBD，这一路刀口若先咬住，整队气口往往会跟着偏过去。",
+        "summary": "看 BrokenBlade，先看他怎么把 边线压制、换血胆气与先手身位 落成实账。账面上 KDA 4.75，分均伤害 666，参团 54%。近用得最多的是 赛恩 / 1 局 / 100% ｜ 慎 / 1 局 / 100% ｜ 奎桑提 / 1 局 / 100%。最近一局是 G2 对 GEN / 慎 / 3-0-8。G2 下一场对 BLG，这一路刀口若先咬住，整队气口往往会跟着偏过去。",
         "note": "敢走边线高压，也敢接奇形怪状的对位。若他先把边线带出岔口，G2 的换位和奇手就更好落。 常用英雄看 赛恩 / 1 局 / 100% ｜ 慎 / 1 局 / 100% ｜ 奎桑提 / 1 局 / 100%。",
         "tags": [
           "边线刀口",
@@ -6567,7 +6603,7 @@
           },
           {
             "label": "下一场",
-            "value": "G2 vs TBD",
+            "value": "G2 vs BLG",
             "note": "3月22日周日 21:00 / First Stand"
           },
           {
@@ -6581,7 +6617,7 @@
           "常用英雄：赛恩 / 1 局 / 100% ｜ 慎 / 1 局 / 100% ｜ 奎桑提 / 1 局 / 100%。",
           "最近一局：G2 对 GEN / 慎 / 3-0-8。",
           "最近一场 G2 3:0 GEN。",
-          "下一场对阵还没确认。"
+          "下一场已确认对阵 BLG。"
         ],
         "history": [
           {
@@ -6616,7 +6652,7 @@
         "role": "打野",
         "teamCode": "G2",
         "portrait": "./assets/players/skewmond.jpg",
-        "summary": "看 SkewMond，先看他怎么把 河道起手、资源先后与第一口节拍 落成实账。账面上 KDA 5.17，分均伤害 560，参团 71%。近用得最多的是 嘉文四世 / 1 局 / 100% ｜ 潘森 / 1 局 / 100% ｜ 亚恒 / 1 局 / 100%。最近一局是 G2 对 GEN / 嘉文四世 / 5-0-10。G2 下一场对 TBD，这一路刀口若先咬住，整队气口往往会跟着偏过去。",
+        "summary": "看 SkewMond，先看他怎么把 河道起手、资源先后与第一口节拍 落成实账。账面上 KDA 5.17，分均伤害 560，参团 71%。近用得最多的是 嘉文四世 / 1 局 / 100% ｜ 潘森 / 1 局 / 100% ｜ 亚恒 / 1 局 / 100%。最近一局是 G2 对 GEN / 嘉文四世 / 5-0-10。G2 下一场对 BLG，这一路刀口若先咬住，整队气口往往会跟着偏过去。",
         "note": "喜欢把比赛带出熟路，前两波路径很会做文章；可若被人看穿节拍，G2 的花活会先少一层。 常用英雄看 嘉文四世 / 1 局 / 100% ｜ 潘森 / 1 局 / 100% ｜ 亚恒 / 1 局 / 100%。",
         "tags": [
           "河道起手",
@@ -6687,7 +6723,7 @@
           },
           {
             "label": "下一场",
-            "value": "G2 vs TBD",
+            "value": "G2 vs BLG",
             "note": "3月22日周日 21:00 / First Stand"
           },
           {
@@ -6701,7 +6737,7 @@
           "常用英雄：嘉文四世 / 1 局 / 100% ｜ 潘森 / 1 局 / 100% ｜ 亚恒 / 1 局 / 100%。",
           "最近一局：G2 对 GEN / 嘉文四世 / 5-0-10。",
           "最近一场 G2 3:0 GEN。",
-          "下一场对阵还没确认。"
+          "下一场已确认对阵 BLG。"
         ],
         "history": [
           {
@@ -6736,7 +6772,7 @@
         "role": "中路",
         "teamCode": "G2",
         "portrait": "./assets/players/caps.png",
-        "summary": "看 Caps，先看他怎么把 中线线权、转线衔接与团前落位 落成实账。账面上 KDA 3.85，分均伤害 790，参团 62%。近用得最多的是 阿卡丽 / 1 局 / 100% ｜ 维克托 / 1 局 / 100% ｜ 阿萝拉 / 1 局 / 100%。最近一局是 G2 对 GEN / 阿卡丽 / 5-0-3。G2 下一场对 TBD，这一路刀口若先咬住，整队气口往往会跟着偏过去。",
+        "summary": "看 Caps，先看他怎么把 中线线权、转线衔接与团前落位 落成实账。账面上 KDA 3.85，分均伤害 790，参团 62%。近用得最多的是 阿卡丽 / 1 局 / 100% ｜ 维克托 / 1 局 / 100% ｜ 阿萝拉 / 1 局 / 100%。最近一局是 G2 对 GEN / 阿卡丽 / 5-0-3。G2 下一场对 BLG，这一路刀口若先咬住，整队气口往往会跟着偏过去。",
         "note": "中段最会拆局的人，转线、换位和团前拉扯都敢玩；可若比赛被逼成正面算力题，他也得先补稳字。 常用英雄看 阿卡丽 / 1 局 / 100% ｜ 维克托 / 1 局 / 100% ｜ 阿萝拉 / 1 局 / 100%。",
         "tags": [
           "中线线权",
@@ -6807,7 +6843,7 @@
           },
           {
             "label": "下一场",
-            "value": "G2 vs TBD",
+            "value": "G2 vs BLG",
             "note": "3月22日周日 21:00 / First Stand"
           },
           {
@@ -6821,7 +6857,7 @@
           "常用英雄：阿卡丽 / 1 局 / 100% ｜ 维克托 / 1 局 / 100% ｜ 阿萝拉 / 1 局 / 100%。",
           "最近一局：G2 对 GEN / 阿卡丽 / 5-0-3。",
           "最近一场 G2 3:0 GEN。",
-          "下一场对阵还没确认。"
+          "下一场已确认对阵 BLG。"
         ],
         "history": [
           {
@@ -6856,7 +6892,7 @@
         "role": "下路",
         "teamCode": "G2",
         "portrait": "./assets/players/hans_sama.png",
-        "summary": "看 Hans Sama，先看他怎么把 伤害收束、团战站位与残局清账 落成实账。账面上 KDA 4.48，分均伤害 780，参团 62%。近用得最多的是 厄运小姐 / 1 局 / 100% ｜ 克格莫 / 1 局 / 100% ｜ 韦鲁斯 / 1 局 / 100%。最近一局是 G2 对 GEN / 克格莫 / 3-2-2。G2 下一场对 TBD，这一路刀口若先咬住，整队气口往往会跟着偏过去。",
+        "summary": "看 Hans Sama，先看他怎么把 伤害收束、团战站位与残局清账 落成实账。账面上 KDA 4.48，分均伤害 780，参团 62%。近用得最多的是 厄运小姐 / 1 局 / 100% ｜ 克格莫 / 1 局 / 100% ｜ 韦鲁斯 / 1 局 / 100%。最近一局是 G2 对 GEN / 克格莫 / 3-2-2。G2 下一场对 BLG，这一路刀口若先咬住，整队气口往往会跟着偏过去。",
         "note": "重在团里持续输出和跟队友连段。队友给出奇手时，他很会顺势补刀；可前排若先塌，站位也会先被掐。 常用英雄看 厄运小姐 / 1 局 / 100% ｜ 克格莫 / 1 局 / 100% ｜ 韦鲁斯 / 1 局 / 100%。",
         "tags": [
           "输出收束",
@@ -6927,7 +6963,7 @@
           },
           {
             "label": "下一场",
-            "value": "G2 vs TBD",
+            "value": "G2 vs BLG",
             "note": "3月22日周日 21:00 / First Stand"
           },
           {
@@ -6941,7 +6977,7 @@
           "常用英雄：厄运小姐 / 1 局 / 100% ｜ 克格莫 / 1 局 / 100% ｜ 韦鲁斯 / 1 局 / 100%。",
           "最近一局：G2 对 GEN / 克格莫 / 3-2-2。",
           "最近一场 G2 3:0 GEN。",
-          "下一场对阵还没确认。"
+          "下一场已确认对阵 BLG。"
         ],
         "history": [
           {
@@ -6976,7 +7012,7 @@
         "role": "辅助",
         "teamCode": "G2",
         "portrait": "./assets/players/labrov.jpg",
-        "summary": "看 Labrov，先看他怎么把 开门时机、团前视野与回身补位 落成实账。账面上 KDA 4.53，分均伤害 230，参团 77%。近用得最多的是 布隆 / 1 局 / 100% ｜ 诺提勒斯 / 1 局 / 100% ｜ 璐璐 / 1 局 / 100%。最近一局是 G2 对 GEN / 璐璐 / 0-1-11。G2 下一场对 TBD，这一路刀口若先咬住，整队气口往往会跟着偏过去。",
+        "summary": "看 Labrov，先看他怎么把 开门时机、团前视野与回身补位 落成实账。账面上 KDA 4.53，分均伤害 230，参团 77%。近用得最多的是 布隆 / 1 局 / 100% ｜ 诺提勒斯 / 1 局 / 100% ｜ 璐璐 / 1 局 / 100%。最近一局是 G2 对 GEN / 璐璐 / 0-1-11。G2 下一场对 BLG，这一路刀口若先咬住，整队气口往往会跟着偏过去。",
         "note": "敢先动，也敢陪着做非常规转线。若第一拍做成，G2 的局很怪也很难防；可空一拍，后头会被逼回正面。 常用英雄看 布隆 / 1 局 / 100% ｜ 诺提勒斯 / 1 局 / 100% ｜ 璐璐 / 1 局 / 100%。",
         "tags": [
           "开门时机",
@@ -7047,7 +7083,7 @@
           },
           {
             "label": "下一场",
-            "value": "G2 vs TBD",
+            "value": "G2 vs BLG",
             "note": "3月22日周日 21:00 / First Stand"
           },
           {
@@ -7061,7 +7097,7 @@
           "常用英雄：布隆 / 1 局 / 100% ｜ 诺提勒斯 / 1 局 / 100% ｜ 璐璐 / 1 局 / 100%。",
           "最近一局：G2 对 GEN / 璐璐 / 0-1-11。",
           "最近一场 G2 3:0 GEN。",
-          "下一场对阵还没确认。"
+          "下一场已确认对阵 BLG。"
         ],
         "history": [
           {
@@ -9317,30 +9353,162 @@
       {
         "id": "prediction-BLG",
         "teamId": "BLG",
-        "matchLabel": "BLG 下一场待定",
-        "stageLabel": "等待官源排表",
-        "timeLabel": "暂无已确认时间",
-        "statusText": "待开盘",
-        "confidence": 50,
-        "predictedScore": "--",
-        "verdict": "等待下一场已确认对阵",
+        "matchLabel": "G2 vs BLG",
+        "stageLabel": "First Stand / 淘汰赛",
+        "timeLabel": "3月22日周日 21:00 / BO5",
+        "statusText": "赛前",
+        "confidence": 58,
+        "predictedScore": "2:3",
+        "verdict": "BLG 稍占上风",
+        "favoredTeam": "BLG",
         "teamA": {
-          "code": "BLG",
-          "logo": "",
-          "recordText": "系列 12-4"
+          "code": "G2",
+          "logo": "https://img.crawler.qq.com/lolwebvideo/20250618120148/0654f8b663a3973eb8debcf929cb919e/0",
+          "recordText": "系列 3-1 / 局差 +6"
         },
         "teamB": {
-          "code": "待定",
-          "logo": "",
-          "recordText": "等待排表"
+          "code": "BLG",
+          "logo": "https://img.crawler.qq.com/lolwebvideo/20250618144525/49342dadcecf162e8ac94fad6eb91540/0",
+          "recordText": "系列 12-4 / 局差 +18"
         },
-        "favoredTeam": "BLG",
         "factors": [
-          "当前官源还没有给出下一场已确认对阵。"
+          {
+            "label": "账面",
+            "value": "G2 3-1，BLG 12-4"
+          },
+          {
+            "label": "近势",
+            "value": "G2 胜 胜 负 胜，BLG 胜 胜 胜 胜 胜"
+          },
+          {
+            "label": "局口",
+            "value": "G2 +6，BLG +18"
+          },
+          {
+            "label": "旧账",
+            "value": "交手 G2 0-1 BLG"
+          },
+          {
+            "label": "歇脚",
+            "value": "G2 24h，BLG 96h"
+          },
+          {
+            "label": "英雄池",
+            "value": "G2 池深 3.0，近战术切牌 3.0，舒适池胜率 100%；BLG 池深 2.0，近战术切牌 2.0，舒适池胜率 100%"
+          },
+          {
+            "label": "门风",
+            "value": "G2 中段转线多变，BLG 前中期争先意愿强"
+          },
+          {
+            "label": "近闻",
+            "value": "fst-2026-primer；2026-lcs-lock-in-playoffs-and-finals-primer；season-start-2026-lol-esports"
+          },
+          {
+            "label": "刀口 / Bin",
+            "value": "边线敢压，见口就追，最容易把上路打成单点破局；毛病也在这里，手热时站位会伸过河道，给反手留缝。 KDA 4.24，分均伤害 735，参团 48% 常用 赛恩 / 1 局 / 100% ｜ 纳尔 / 1 局 / 100%"
+          },
+          {
+            "label": "刀口 / XUN",
+            "value": "管的是 BLG 第一口气。河道先踩住，先锋先碰到，整队的刀就会一齐往前走；若前两趟慢拍，锋口会先钝。 KDA 6.53，分均伤害 485，参团 67% 常用 魔腾 / 1 局 / 100% ｜ 波比 / 1 局 / 100%"
+          },
+          {
+            "label": "局制",
+            "value": "BO5 / First Stand / 淘汰赛"
+          }
         ],
-        "headline": "等待官源排表",
-        "line": "赛程未落纸前，不妄开口。",
-        "risk": "对阵没定，先不写比分。"
+        "headline": "老衲先押 BLG",
+        "line": "老衲看此局，先押 BLG，不为别的，只因它在赛前这张账面上更容易先把第一口气抢出来。前中期争先意愿强 是它眼下最能压住局面的刀口，上中野肯先落子，盘面一旦抢到前手，常把河道、边线与团前站位一并压出来 又正好对得上这场的起手路数。若前两波资源先归它手里，河道、边线与团前站位都会顺着它的气往下走，后面多半是它来写章法。\n\n可老衲也不替它遮丑，热起来时脚步会压得过深，纪律偶尔松一口，给人反咬的缝。这种队最怕赢得太顺，手一热，脚步便会压过应有的分寸，原本该稳着收的回合，反倒会因为贪一口气把口子露给对面。真到转折处，比的不是谁喊得响，而是谁还能守住那一下分寸，不把本该赢的局打成对冲。\n\n再往深处看，G2 原是脑子活，转线快，常用非常规换位和节奏岔口把人带出熟路，它若想翻案，路只有一条，先把前十五分钟拖慢，再把 BLG 逼进补线、回防和二次落位的苦差里，让这口快气自己泄掉。若做不到，比赛多半还没走到长局，就已经要顺着前手分出生死。Bin 这一点，看的不是热闹，是 边线敢压，见口就追，最容易把上路打成单点破局；毛病也在这里，手热时站位会伸过河道，给反手留缝。 XUN 这一点，看的不是热闹，是 管的是 BLG 第一口气。河道先踩住，先锋先碰到，整队的刀就会一齐往前走；若前两趟慢拍，锋口会先钝。 Knight 这一点，看的不是热闹，是 强在把线权、转线和团前脚步拆得细。中段若由他把局心拢住，整队章法会很整；若被逼着长时间守线，BLG 的中轴会先沉。",
+        "risk": "但 G2 若真把比赛拖进久持之局，若前段换线和试探都没赚到时间，后面会被迫正面接算力题，老衲这句也得改口。",
+        "knowledge": {
+          "teamA": "G2：门风是脑子活，转线快，常用非常规换位和节奏岔口把人带出熟路；长板是中段转线多变、敢做非常规落子、临场找角度能力强；明病是局势若被人逼成正面账本，它也会露出前排不够厚、硬解不够稳的问题；翻船点是若前段换线和试探都没赚到时间，后面会被迫正面接算力题",
+          "teamB": "BLG：门风是上中野肯先落子，盘面一旦抢到前手，常把河道、边线与团前站位一并压出来；长板是前中期争先意愿强、资源逼抢凶、一旦拿到主动便很会把局面压窄；明病是热起来时脚步会压得过深，纪律偶尔松一口，给人反咬的缝；翻船点是若前中期连续失手，后段容易把本该稳住的局面再打成对冲",
+          "focusPlayers": "Bin：边线敢压，见口就追，最容易把上路打成单点破局；毛病也在这里，手热时站位会伸过河道，给反手留缝。 账面 KDA 4.24，分均伤害 735，参团 48%。 常用 赛恩 / 1 局 / 100% ｜ 纳尔 / 1 局 / 100%。；XUN：管的是 BLG 第一口气。河道先踩住，先锋先碰到，整队的刀就会一齐往前走；若前两趟慢拍，锋口会先钝。 账面 KDA 6.53，分均伤害 485，参团 67%。 常用 魔腾 / 1 局 / 100% ｜ 波比 / 1 局 / 100%。；Knight：强在把线权、转线和团前脚步拆得细。中段若由他把局心拢住，整队章法会很整；若被逼着长时间守线，BLG 的中轴会先沉。 账面 KDA 6.39，分均伤害 674，参团 62%。 常用 奥莉安娜 / 1 局 / 100% ｜ 梅尔 / 1 局 / 100%。；Viper：收束能力极强，残局给半步就能把伤害算满；可前排若先断，他再稳也得先替全队还站位的债。 账面 KDA 6.61，分均伤害 944，参团 64%。 常用 芸阿娜 / 1 局 / 100% ｜ 库奇 / 1 局 / 100%。；ON：价值全在先手准不准、回身稳不稳。开团若正，BLG 能一口压进；回身若慢，后排会先吃满苦头。 账面 KDA 5.07，分均伤害 310，参团 74%。 常用 巴德 / 1 局 / 100% ｜ 妮蔻 / 1 局 / 100%。；BrokenBlade：敢走边线高压，也敢接奇形怪状的对位。若他先把边线带出岔口，G2 的换位和奇手就更好落。 账面 KDA 4.75，分均伤害 666，参团 54%。 常用 赛恩 / 1 局 / 100% ｜ 慎 / 1 局 / 100% ｜ 奎桑提 / 1 局 / 100%。；SkewMond：喜欢把比赛带出熟路，前两波路径很会做文章；可若被人看穿节拍，G2 的花活会先少一层。 账面 KDA 5.17，分均伤害 560，参团 71%。 常用 嘉文四世 / 1 局 / 100% ｜ 潘森 / 1 局 / 100% ｜ 亚恒 / 1 局 / 100%。；Caps：中段最会拆局的人，转线、换位和团前拉扯都敢玩；可若比赛被逼成正面算力题，他也得先补稳字。 账面 KDA 3.85，分均伤害 790，参团 62%。 常用 阿卡丽 / 1 局 / 100% ｜ 维克托 / 1 局 / 100% ｜ 阿萝拉 / 1 局 / 100%。；Hans Sama：重在团里持续输出和跟队友连段。队友给出奇手时，他很会顺势补刀；可前排若先塌，站位也会先被掐。 账面 KDA 4.48，分均伤害 780，参团 62%。 常用 厄运小姐 / 1 局 / 100% ｜ 克格莫 / 1 局 / 100% ｜ 韦鲁斯 / 1 局 / 100%。；Labrov：敢先动，也敢陪着做非常规转线。若第一拍做成，G2 的局很怪也很难防；可空一拍，后头会被逼回正面。 账面 KDA 4.53，分均伤害 230，参团 77%。 常用 布隆 / 1 局 / 100% ｜ 诺提勒斯 / 1 局 / 100% ｜ 璐璐 / 1 局 / 100%。",
+          "heroPool": "G2：G2 池深 3.0，近战术切牌 3.0，舒适池胜率 100%；BLG：BLG 池深 2.0，近战术切牌 2.0，舒适池胜率 100%",
+          "recentAnalysis": "fst-2026-primer：© 2026 Riot Games. All Rights Reserved. Privacy Notice Terms of Service Accessibility Cookie Preferences What is the First Stand Tournament?；2026-lcs-lock-in-playoffs-and-finals-primer：© 2026 Riot Games. All Rights Reserved. Privacy Notice Terms of Service Accessibility Cookie Preferences LoL Esports | Only one team will em；season-start-2026-lol-esports：© 2026 Riot Games. All Rights Reserved. Privacy Notice Terms of Service Accessibility Cookie Preferences The 2026 League of Legends Esports "
+        },
+        "analysisDocs": [
+          {
+            "id": "analysis-1",
+            "url": "https://lolesports.com/news/fst-2026-primer",
+            "title": "fst-2026-primer",
+            "description": "",
+            "excerpt": "© 2026 Riot Games. All Rights Reserved. Privacy Notice Terms of Service Accessibility Cookie Preferences What is the First Stand Tournament? The First Stand Tournament kicks off the annual LoL Esports season, bringing together teams from each region for early-season competition. Designed to spark regional rivalries and showcase innovative strategies, First Stand sets the tone for the year ahead in LoL Esports. Teams battle not only for the First Stand trophy, but also for advantageous seeding for their region at the Mid-Season Invitational. The rulebook for the 2026 First Stand Tournament can be found here . LEAD THE CHARGE It’s a fresh season. The battlefield is unmapped, the meta untested, and it’s gonna take grit to reach that glorious dream in the distance. FST isn’t the time for caution. This is your moment for decisive action, wild ideas, and gutsy plays. When your path is blocked, forge a new one. When they count you out, prove them wrong. Fail fearlessly, then get up and keep going. Because there’s no retreat here: only forward. When and Where is FST happening? The First Stand Tournament will take place from March 16-22 at the Riot Games Arena in São Paulo, Brazil. Group Stage (March 16-20): 6 am PDT / 10 am BRT / 10 pm KST Knockout Stage (March 21): 6 am PDT / 10 am BRT / 10 pm KST Knockout Stage - Finals (March 22): 6 am PDT / 10 am BRT / 10 pm KST Which teams are competing? These teams secured their ticket to FST 2026: CHINA - LPL Qualifies March 4 Qualifies March 7 KOREA - LCK Gen.G (GEN) BNK FearX (BFX) EUROPE - LEC G2 Esports (G2) NORTH AMERICA - LCS LYON (LYON) APAC - LCP Team Secret Whales (TSW) BRAZIL - CBLOL LOUD (LOUD) Join us for the FST Draw Show following the conclusion of the LPL Finals on March 7 !  What’s the format? First Stand consists of two stages: the Group Stage and the Knockout Stage . Every match will be a best-of-five, ensuring deeper adaptation, more high-stakes moments, and an early-season showcase of regional identity and individual brilliance. FST Finals Day - Runeterra Fan Fest (March 22) We’re bringing Demacia to São Paulo! The Runeterra Fan Fest will be an immersive community experience, taking place at the Visual Farm Gy",
+            "mentions": {
+              "BFX": 1,
+              "G2": 1,
+              "GEN": 1,
+              "LOUD": 1,
+              "LYON": 1,
+              "TSW": 1
+            }
+          },
+          {
+            "id": "analysis-5",
+            "url": "https://lolesports.com/news/2026-lcs-lock-in-playoffs-and-finals-primer",
+            "title": "2026-lcs-lock-in-playoffs-and-finals-primer",
+            "description": "",
+            "excerpt": "© 2026 Riot Games. All Rights Reserved. Privacy Notice Terms of Service Accessibility Cookie Preferences LoL Esports | Only one team will emerge with the first title of the season and the honor of representing North America at the First Stand Tournament (FST) in São Paulo this March. With a two-week superweek gauntlet ahead, every match matters, every draft is under the microscope, and momentum could define the year to come. Playoff tickets are on sale now , and with everything on the line, you won’t want to miss a moment. Join us in-person at the Riot Games Arena in Los Angeles, or watch live at LoLEsports.com !  Who’s In? 6 teams have secured their spots and are one step closer to the Lock-In trophy: FlyQuest (FLY) Cloud9 Kia (C9) Sentinels (SEN) Disguised (DSG) Team Liquid Alienware (TLAW) LYON (LYON) Each brings a different identity, a different path to victory, and the same goal: start 2026 on top. Don’t Forget Your Fantasy Squad Think you’ve got the playoff meta figured out? Now’s the time to check in on your picks. Head to lcsofficial.gg to track your fantasy roster and see how your predictions stack up. Finals Day Tailgate: March 1 Before the trophy is lifted, the Finals celebration starts early! Join us from 11 am-1pm PT March 1 for the LCS Finals Tailgate featuring a Demacia Joustin’ Booth, Demacia-Themed Refreshments, meet-and-greet booths, and more! Team Booths C9: For Demacia! Rally with Cloud9 Kia at the LCS Lock-In Finals for legendary battles and exclusive C9 Kia freebies, found only at Riot Games Arena! DIG: Stop by the Dignitas booth during the LCS Fan Fest! We're bringing back the ever-popular Baron Throw, where the more Smites you land, the better the prizes. Get exclusive free Dignitas swag, meet some of your favorite players, and get a look at our newest merch. Joining the fun are Dignitas partners ROOT who make some of the best coffee on the market and power our League team with Zero-In! Whether you're a die-hard supporter or this is your first event, there's plenty to do, see, and grab at the Dignitas booth! FLY: Celebrate the LCS Split 1 Finals with FlyQuest! Stop by our booth to enjoy Ferg’s coffee and matcha, shop our latest 2026 REGEN",
+            "mentions": {
+              "LYON": 1
+            }
+          },
+          {
+            "id": "analysis-8",
+            "url": "https://lolesports.com/news/season-start-2026-lol-esports",
+            "title": "season-start-2026-lol-esports",
+            "description": "",
+            "excerpt": "© 2026 Riot Games. All Rights Reserved. Privacy Notice Terms of Service Accessibility Cookie Preferences The 2026 League of Legends Esports season has arrived, and the excitement is already building. After an unforgettable 2025 marked by dramatic storylines, major format shifts, and T1 cementing their legacy with a historic third consecutive World Championship, the stage is set for an even bigger year. With fresh updates shaping the meta and a full calendar of high-stakes competition, here’s everything to look forward to as the 2026 season gets underway. Regional Start Dates Make sure to tune in to your favorite region as competition kicks off beginning this month! LCK – January 14 LPL – January 14 LCP – January 16 LEC – January 17 CBLOL – January 17 LCS – January 24 First Stand Returns There’s no better way to kick off the year than with the first global tournament of the season: First Stand. From March 16–22, FST heads to São Paulo, Brazil, live from the Riot Games Arena, the beating heart of CBLOL. Brazil has long been home to some of the world’s most passionate fans, and we couldn't be more excited to bring an international event back since 2017. The 2026 edition brings together eight teams, representing the global strength of League of Legends Esports: LCK – 2 teams LPL – 2 teams LEC – 1 team LCS – 1 team CBLOL – 1 team LCP – 1 team Every match will be a best-of-five, ensuring deeper adaptation, more high-stakes moments, and an early-season showcase of regional identity and individual brilliance. With Fearless Draft shaping the future of how teams adapt across a series, expect creativity, tension, and more opportunities for emerging strategies to take center stage. Every match matters, as FST placement will have a direct impact on MSI seeding, including a Play-In Stage bye for the winning region. Tickets for FST will go on sale via Eventim at 1 pm BRT/8 am PST January 20. MSI 2026 Heads to Daejeon, South Korea Following First Stand, the competition heats up as the Mid-Season Invitational arrives in Daejeon, South Korea, marking the first time MSI has landed in this dynamic and tech-forward city. MSI has long been a proving ground for the best teams of sprin",
+            "mentions": {}
+          }
+        ],
+        "resources": {
+          "seriesRecord": [
+            3,
+            1,
+            12,
+            4
+          ],
+          "gameDiff": [
+            6,
+            18
+          ],
+          "recentForm": [
+            "胜 胜 负 胜",
+            "胜 胜 胜 胜 胜"
+          ],
+          "headToHead": "交手 G2 0-1 BLG",
+          "restHours": [
+            24,
+            96
+          ],
+          "heroProfiles": [
+            {
+              "heroDepth": 3,
+              "recentFlex": 3,
+              "comfortWinRate": 1,
+              "avgKda": 4.556,
+              "avgParticipation": 0.652,
+              "summary": "G2 池深 3.0，近战术切牌 3.0，舒适池胜率 100%"
+            },
+            {
+              "heroDepth": 2,
+              "recentFlex": 2,
+              "comfortWinRate": 1,
+              "avgKda": 5.768,
+              "avgParticipation": 0.6300000000000001,
+              "summary": "BLG 池深 2.0，近战术切牌 2.0，舒适池胜率 100%"
+            }
+          ],
+          "bo": "BO5",
+          "style": {
+            "teamA": "G2：门风是脑子活，转线快，常用非常规换位和节奏岔口把人带出熟路；长板是中段转线多变、敢做非常规落子、临场找角度能力强；明病是局势若被人逼成正面账本，它也会露出前排不够厚、硬解不够稳的问题；翻船点是若前段换线和试探都没赚到时间，后面会被迫正面接算力题",
+            "teamB": "BLG：门风是上中野肯先落子，盘面一旦抢到前手，常把河道、边线与团前站位一并压出来；长板是前中期争先意愿强、资源逼抢凶、一旦拿到主动便很会把局面压窄；明病是热起来时脚步会压得过深，纪律偶尔松一口，给人反咬的缝；翻船点是若前中期连续失手，后段容易把本该稳住的局面再打成对冲",
+            "focusPlayers": "Bin：边线敢压，见口就追，最容易把上路打成单点破局；毛病也在这里，手热时站位会伸过河道，给反手留缝。 账面 KDA 4.24，分均伤害 735，参团 48%。 常用 赛恩 / 1 局 / 100% ｜ 纳尔 / 1 局 / 100%。；XUN：管的是 BLG 第一口气。河道先踩住，先锋先碰到，整队的刀就会一齐往前走；若前两趟慢拍，锋口会先钝。 账面 KDA 6.53，分均伤害 485，参团 67%。 常用 魔腾 / 1 局 / 100% ｜ 波比 / 1 局 / 100%。；Knight：强在把线权、转线和团前脚步拆得细。中段若由他把局心拢住，整队章法会很整；若被逼着长时间守线，BLG 的中轴会先沉。 账面 KDA 6.39，分均伤害 674，参团 62%。 常用 奥莉安娜 / 1 局 / 100% ｜ 梅尔 / 1 局 / 100%。；Viper：收束能力极强，残局给半步就能把伤害算满；可前排若先断，他再稳也得先替全队还站位的债。 账面 KDA 6.61，分均伤害 944，参团 64%。 常用 芸阿娜 / 1 局 / 100% ｜ 库奇 / 1 局 / 100%。；ON：价值全在先手准不准、回身稳不稳。开团若正，BLG 能一口压进；回身若慢，后排会先吃满苦头。 账面 KDA 5.07，分均伤害 310，参团 74%。 常用 巴德 / 1 局 / 100% ｜ 妮蔻 / 1 局 / 100%。；BrokenBlade：敢走边线高压，也敢接奇形怪状的对位。若他先把边线带出岔口，G2 的换位和奇手就更好落。 账面 KDA 4.75，分均伤害 666，参团 54%。 常用 赛恩 / 1 局 / 100% ｜ 慎 / 1 局 / 100% ｜ 奎桑提 / 1 局 / 100%。；SkewMond：喜欢把比赛带出熟路，前两波路径很会做文章；可若被人看穿节拍，G2 的花活会先少一层。 账面 KDA 5.17，分均伤害 560，参团 71%。 常用 嘉文四世 / 1 局 / 100% ｜ 潘森 / 1 局 / 100% ｜ 亚恒 / 1 局 / 100%。；Caps：中段最会拆局的人，转线、换位和团前拉扯都敢玩；可若比赛被逼成正面算力题，他也得先补稳字。 账面 KDA 3.85，分均伤害 790，参团 62%。 常用 阿卡丽 / 1 局 / 100% ｜ 维克托 / 1 局 / 100% ｜ 阿萝拉 / 1 局 / 100%。；Hans Sama：重在团里持续输出和跟队友连段。队友给出奇手时，他很会顺势补刀；可前排若先塌，站位也会先被掐。 账面 KDA 4.48，分均伤害 780，参团 62%。 常用 厄运小姐 / 1 局 / 100% ｜ 克格莫 / 1 局 / 100% ｜ 韦鲁斯 / 1 局 / 100%。；Labrov：敢先动，也敢陪着做非常规转线。若第一拍做成，G2 的局很怪也很难防；可空一拍，后头会被逼回正面。 账面 KDA 4.53，分均伤害 230，参团 77%。 常用 布隆 / 1 局 / 100% ｜ 诺提勒斯 / 1 局 / 100% ｜ 璐璐 / 1 局 / 100%。",
+            "heroPool": "G2：G2 池深 3.0，近战术切牌 3.0，舒适池胜率 100%；BLG：BLG 池深 2.0，近战术切牌 2.0，舒适池胜率 100%",
+            "recentAnalysis": "fst-2026-primer：© 2026 Riot Games. All Rights Reserved. Privacy Notice Terms of Service Accessibility Cookie Preferences What is the First Stand Tournament?；2026-lcs-lock-in-playoffs-and-finals-primer：© 2026 Riot Games. All Rights Reserved. Privacy Notice Terms of Service Accessibility Cookie Preferences LoL Esports | Only one team will em；season-start-2026-lol-esports：© 2026 Riot Games. All Rights Reserved. Privacy Notice Terms of Service Accessibility Cookie Preferences The 2026 League of Legends Esports "
+          }
+        }
       },
       {
         "id": "prediction-JDG",
@@ -9569,30 +9737,162 @@
       {
         "id": "prediction-G2",
         "teamId": "G2",
-        "matchLabel": "G2 下一场待定",
-        "stageLabel": "等待官源排表",
-        "timeLabel": "暂无已确认时间",
-        "statusText": "待开盘",
-        "confidence": 50,
-        "predictedScore": "--",
-        "verdict": "等待下一场已确认对阵",
+        "matchLabel": "G2 vs BLG",
+        "stageLabel": "First Stand / 淘汰赛",
+        "timeLabel": "3月22日周日 21:00 / BO5",
+        "statusText": "赛前",
+        "confidence": 58,
+        "predictedScore": "2:3",
+        "verdict": "BLG 稍占上风",
+        "favoredTeam": "BLG",
         "teamA": {
           "code": "G2",
-          "logo": "",
-          "recordText": "系列 3-1"
+          "logo": "https://img.crawler.qq.com/lolwebvideo/20250618120148/0654f8b663a3973eb8debcf929cb919e/0",
+          "recordText": "系列 3-1 / 局差 +6"
         },
         "teamB": {
-          "code": "待定",
-          "logo": "",
-          "recordText": "等待排表"
+          "code": "BLG",
+          "logo": "https://img.crawler.qq.com/lolwebvideo/20250618144525/49342dadcecf162e8ac94fad6eb91540/0",
+          "recordText": "系列 12-4 / 局差 +18"
         },
-        "favoredTeam": "G2",
         "factors": [
-          "当前官源还没有给出下一场已确认对阵。"
+          {
+            "label": "账面",
+            "value": "G2 3-1，BLG 12-4"
+          },
+          {
+            "label": "近势",
+            "value": "G2 胜 胜 负 胜，BLG 胜 胜 胜 胜 胜"
+          },
+          {
+            "label": "局口",
+            "value": "G2 +6，BLG +18"
+          },
+          {
+            "label": "旧账",
+            "value": "交手 G2 0-1 BLG"
+          },
+          {
+            "label": "歇脚",
+            "value": "G2 24h，BLG 96h"
+          },
+          {
+            "label": "英雄池",
+            "value": "G2 池深 3.0，近战术切牌 3.0，舒适池胜率 100%；BLG 池深 2.0，近战术切牌 2.0，舒适池胜率 100%"
+          },
+          {
+            "label": "门风",
+            "value": "G2 中段转线多变，BLG 前中期争先意愿强"
+          },
+          {
+            "label": "近闻",
+            "value": "fst-2026-primer；2026-lcs-lock-in-playoffs-and-finals-primer；season-start-2026-lol-esports"
+          },
+          {
+            "label": "刀口 / Bin",
+            "value": "边线敢压，见口就追，最容易把上路打成单点破局；毛病也在这里，手热时站位会伸过河道，给反手留缝。 KDA 4.24，分均伤害 735，参团 48% 常用 赛恩 / 1 局 / 100% ｜ 纳尔 / 1 局 / 100%"
+          },
+          {
+            "label": "刀口 / XUN",
+            "value": "管的是 BLG 第一口气。河道先踩住，先锋先碰到，整队的刀就会一齐往前走；若前两趟慢拍，锋口会先钝。 KDA 6.53，分均伤害 485，参团 67% 常用 魔腾 / 1 局 / 100% ｜ 波比 / 1 局 / 100%"
+          },
+          {
+            "label": "局制",
+            "value": "BO5 / First Stand / 淘汰赛"
+          }
         ],
-        "headline": "等待官源排表",
-        "line": "赛程未落纸前，不妄开口。",
-        "risk": "对阵没定，先不写比分。"
+        "headline": "老衲先押 BLG",
+        "line": "老衲看此局，先押 BLG，不为别的，只因它在赛前这张账面上更容易先把第一口气抢出来。前中期争先意愿强 是它眼下最能压住局面的刀口，上中野肯先落子，盘面一旦抢到前手，常把河道、边线与团前站位一并压出来 又正好对得上这场的起手路数。若前两波资源先归它手里，河道、边线与团前站位都会顺着它的气往下走，后面多半是它来写章法。\n\n可老衲也不替它遮丑，热起来时脚步会压得过深，纪律偶尔松一口，给人反咬的缝。这种队最怕赢得太顺，手一热，脚步便会压过应有的分寸，原本该稳着收的回合，反倒会因为贪一口气把口子露给对面。真到转折处，比的不是谁喊得响，而是谁还能守住那一下分寸，不把本该赢的局打成对冲。\n\n再往深处看，G2 原是脑子活，转线快，常用非常规换位和节奏岔口把人带出熟路，它若想翻案，路只有一条，先把前十五分钟拖慢，再把 BLG 逼进补线、回防和二次落位的苦差里，让这口快气自己泄掉。若做不到，比赛多半还没走到长局，就已经要顺着前手分出生死。Bin 这一点，看的不是热闹，是 边线敢压，见口就追，最容易把上路打成单点破局；毛病也在这里，手热时站位会伸过河道，给反手留缝。 XUN 这一点，看的不是热闹，是 管的是 BLG 第一口气。河道先踩住，先锋先碰到，整队的刀就会一齐往前走；若前两趟慢拍，锋口会先钝。 Knight 这一点，看的不是热闹，是 强在把线权、转线和团前脚步拆得细。中段若由他把局心拢住，整队章法会很整；若被逼着长时间守线，BLG 的中轴会先沉。",
+        "risk": "但 G2 若真把比赛拖进久持之局，若前段换线和试探都没赚到时间，后面会被迫正面接算力题，老衲这句也得改口。",
+        "knowledge": {
+          "teamA": "G2：门风是脑子活，转线快，常用非常规换位和节奏岔口把人带出熟路；长板是中段转线多变、敢做非常规落子、临场找角度能力强；明病是局势若被人逼成正面账本，它也会露出前排不够厚、硬解不够稳的问题；翻船点是若前段换线和试探都没赚到时间，后面会被迫正面接算力题",
+          "teamB": "BLG：门风是上中野肯先落子，盘面一旦抢到前手，常把河道、边线与团前站位一并压出来；长板是前中期争先意愿强、资源逼抢凶、一旦拿到主动便很会把局面压窄；明病是热起来时脚步会压得过深，纪律偶尔松一口，给人反咬的缝；翻船点是若前中期连续失手，后段容易把本该稳住的局面再打成对冲",
+          "focusPlayers": "Bin：边线敢压，见口就追，最容易把上路打成单点破局；毛病也在这里，手热时站位会伸过河道，给反手留缝。 账面 KDA 4.24，分均伤害 735，参团 48%。 常用 赛恩 / 1 局 / 100% ｜ 纳尔 / 1 局 / 100%。；XUN：管的是 BLG 第一口气。河道先踩住，先锋先碰到，整队的刀就会一齐往前走；若前两趟慢拍，锋口会先钝。 账面 KDA 6.53，分均伤害 485，参团 67%。 常用 魔腾 / 1 局 / 100% ｜ 波比 / 1 局 / 100%。；Knight：强在把线权、转线和团前脚步拆得细。中段若由他把局心拢住，整队章法会很整；若被逼着长时间守线，BLG 的中轴会先沉。 账面 KDA 6.39，分均伤害 674，参团 62%。 常用 奥莉安娜 / 1 局 / 100% ｜ 梅尔 / 1 局 / 100%。；Viper：收束能力极强，残局给半步就能把伤害算满；可前排若先断，他再稳也得先替全队还站位的债。 账面 KDA 6.61，分均伤害 944，参团 64%。 常用 芸阿娜 / 1 局 / 100% ｜ 库奇 / 1 局 / 100%。；ON：价值全在先手准不准、回身稳不稳。开团若正，BLG 能一口压进；回身若慢，后排会先吃满苦头。 账面 KDA 5.07，分均伤害 310，参团 74%。 常用 巴德 / 1 局 / 100% ｜ 妮蔻 / 1 局 / 100%。；BrokenBlade：敢走边线高压，也敢接奇形怪状的对位。若他先把边线带出岔口，G2 的换位和奇手就更好落。 账面 KDA 4.75，分均伤害 666，参团 54%。 常用 赛恩 / 1 局 / 100% ｜ 慎 / 1 局 / 100% ｜ 奎桑提 / 1 局 / 100%。；SkewMond：喜欢把比赛带出熟路，前两波路径很会做文章；可若被人看穿节拍，G2 的花活会先少一层。 账面 KDA 5.17，分均伤害 560，参团 71%。 常用 嘉文四世 / 1 局 / 100% ｜ 潘森 / 1 局 / 100% ｜ 亚恒 / 1 局 / 100%。；Caps：中段最会拆局的人，转线、换位和团前拉扯都敢玩；可若比赛被逼成正面算力题，他也得先补稳字。 账面 KDA 3.85，分均伤害 790，参团 62%。 常用 阿卡丽 / 1 局 / 100% ｜ 维克托 / 1 局 / 100% ｜ 阿萝拉 / 1 局 / 100%。；Hans Sama：重在团里持续输出和跟队友连段。队友给出奇手时，他很会顺势补刀；可前排若先塌，站位也会先被掐。 账面 KDA 4.48，分均伤害 780，参团 62%。 常用 厄运小姐 / 1 局 / 100% ｜ 克格莫 / 1 局 / 100% ｜ 韦鲁斯 / 1 局 / 100%。；Labrov：敢先动，也敢陪着做非常规转线。若第一拍做成，G2 的局很怪也很难防；可空一拍，后头会被逼回正面。 账面 KDA 4.53，分均伤害 230，参团 77%。 常用 布隆 / 1 局 / 100% ｜ 诺提勒斯 / 1 局 / 100% ｜ 璐璐 / 1 局 / 100%。",
+          "heroPool": "G2：G2 池深 3.0，近战术切牌 3.0，舒适池胜率 100%；BLG：BLG 池深 2.0，近战术切牌 2.0，舒适池胜率 100%",
+          "recentAnalysis": "fst-2026-primer：© 2026 Riot Games. All Rights Reserved. Privacy Notice Terms of Service Accessibility Cookie Preferences What is the First Stand Tournament?；2026-lcs-lock-in-playoffs-and-finals-primer：© 2026 Riot Games. All Rights Reserved. Privacy Notice Terms of Service Accessibility Cookie Preferences LoL Esports | Only one team will em；season-start-2026-lol-esports：© 2026 Riot Games. All Rights Reserved. Privacy Notice Terms of Service Accessibility Cookie Preferences The 2026 League of Legends Esports "
+        },
+        "analysisDocs": [
+          {
+            "id": "analysis-1",
+            "url": "https://lolesports.com/news/fst-2026-primer",
+            "title": "fst-2026-primer",
+            "description": "",
+            "excerpt": "© 2026 Riot Games. All Rights Reserved. Privacy Notice Terms of Service Accessibility Cookie Preferences What is the First Stand Tournament? The First Stand Tournament kicks off the annual LoL Esports season, bringing together teams from each region for early-season competition. Designed to spark regional rivalries and showcase innovative strategies, First Stand sets the tone for the year ahead in LoL Esports. Teams battle not only for the First Stand trophy, but also for advantageous seeding for their region at the Mid-Season Invitational. The rulebook for the 2026 First Stand Tournament can be found here . LEAD THE CHARGE It’s a fresh season. The battlefield is unmapped, the meta untested, and it’s gonna take grit to reach that glorious dream in the distance. FST isn’t the time for caution. This is your moment for decisive action, wild ideas, and gutsy plays. When your path is blocked, forge a new one. When they count you out, prove them wrong. Fail fearlessly, then get up and keep going. Because there’s no retreat here: only forward. When and Where is FST happening? The First Stand Tournament will take place from March 16-22 at the Riot Games Arena in São Paulo, Brazil. Group Stage (March 16-20): 6 am PDT / 10 am BRT / 10 pm KST Knockout Stage (March 21): 6 am PDT / 10 am BRT / 10 pm KST Knockout Stage - Finals (March 22): 6 am PDT / 10 am BRT / 10 pm KST Which teams are competing? These teams secured their ticket to FST 2026: CHINA - LPL Qualifies March 4 Qualifies March 7 KOREA - LCK Gen.G (GEN) BNK FearX (BFX) EUROPE - LEC G2 Esports (G2) NORTH AMERICA - LCS LYON (LYON) APAC - LCP Team Secret Whales (TSW) BRAZIL - CBLOL LOUD (LOUD) Join us for the FST Draw Show following the conclusion of the LPL Finals on March 7 !  What’s the format? First Stand consists of two stages: the Group Stage and the Knockout Stage . Every match will be a best-of-five, ensuring deeper adaptation, more high-stakes moments, and an early-season showcase of regional identity and individual brilliance. FST Finals Day - Runeterra Fan Fest (March 22) We’re bringing Demacia to São Paulo! The Runeterra Fan Fest will be an immersive community experience, taking place at the Visual Farm Gy",
+            "mentions": {
+              "BFX": 1,
+              "G2": 1,
+              "GEN": 1,
+              "LOUD": 1,
+              "LYON": 1,
+              "TSW": 1
+            }
+          },
+          {
+            "id": "analysis-5",
+            "url": "https://lolesports.com/news/2026-lcs-lock-in-playoffs-and-finals-primer",
+            "title": "2026-lcs-lock-in-playoffs-and-finals-primer",
+            "description": "",
+            "excerpt": "© 2026 Riot Games. All Rights Reserved. Privacy Notice Terms of Service Accessibility Cookie Preferences LoL Esports | Only one team will emerge with the first title of the season and the honor of representing North America at the First Stand Tournament (FST) in São Paulo this March. With a two-week superweek gauntlet ahead, every match matters, every draft is under the microscope, and momentum could define the year to come. Playoff tickets are on sale now , and with everything on the line, you won’t want to miss a moment. Join us in-person at the Riot Games Arena in Los Angeles, or watch live at LoLEsports.com !  Who’s In? 6 teams have secured their spots and are one step closer to the Lock-In trophy: FlyQuest (FLY) Cloud9 Kia (C9) Sentinels (SEN) Disguised (DSG) Team Liquid Alienware (TLAW) LYON (LYON) Each brings a different identity, a different path to victory, and the same goal: start 2026 on top. Don’t Forget Your Fantasy Squad Think you’ve got the playoff meta figured out? Now’s the time to check in on your picks. Head to lcsofficial.gg to track your fantasy roster and see how your predictions stack up. Finals Day Tailgate: March 1 Before the trophy is lifted, the Finals celebration starts early! Join us from 11 am-1pm PT March 1 for the LCS Finals Tailgate featuring a Demacia Joustin’ Booth, Demacia-Themed Refreshments, meet-and-greet booths, and more! Team Booths C9: For Demacia! Rally with Cloud9 Kia at the LCS Lock-In Finals for legendary battles and exclusive C9 Kia freebies, found only at Riot Games Arena! DIG: Stop by the Dignitas booth during the LCS Fan Fest! We're bringing back the ever-popular Baron Throw, where the more Smites you land, the better the prizes. Get exclusive free Dignitas swag, meet some of your favorite players, and get a look at our newest merch. Joining the fun are Dignitas partners ROOT who make some of the best coffee on the market and power our League team with Zero-In! Whether you're a die-hard supporter or this is your first event, there's plenty to do, see, and grab at the Dignitas booth! FLY: Celebrate the LCS Split 1 Finals with FlyQuest! Stop by our booth to enjoy Ferg’s coffee and matcha, shop our latest 2026 REGEN",
+            "mentions": {
+              "LYON": 1
+            }
+          },
+          {
+            "id": "analysis-8",
+            "url": "https://lolesports.com/news/season-start-2026-lol-esports",
+            "title": "season-start-2026-lol-esports",
+            "description": "",
+            "excerpt": "© 2026 Riot Games. All Rights Reserved. Privacy Notice Terms of Service Accessibility Cookie Preferences The 2026 League of Legends Esports season has arrived, and the excitement is already building. After an unforgettable 2025 marked by dramatic storylines, major format shifts, and T1 cementing their legacy with a historic third consecutive World Championship, the stage is set for an even bigger year. With fresh updates shaping the meta and a full calendar of high-stakes competition, here’s everything to look forward to as the 2026 season gets underway. Regional Start Dates Make sure to tune in to your favorite region as competition kicks off beginning this month! LCK – January 14 LPL – January 14 LCP – January 16 LEC – January 17 CBLOL – January 17 LCS – January 24 First Stand Returns There’s no better way to kick off the year than with the first global tournament of the season: First Stand. From March 16–22, FST heads to São Paulo, Brazil, live from the Riot Games Arena, the beating heart of CBLOL. Brazil has long been home to some of the world’s most passionate fans, and we couldn't be more excited to bring an international event back since 2017. The 2026 edition brings together eight teams, representing the global strength of League of Legends Esports: LCK – 2 teams LPL – 2 teams LEC – 1 team LCS – 1 team CBLOL – 1 team LCP – 1 team Every match will be a best-of-five, ensuring deeper adaptation, more high-stakes moments, and an early-season showcase of regional identity and individual brilliance. With Fearless Draft shaping the future of how teams adapt across a series, expect creativity, tension, and more opportunities for emerging strategies to take center stage. Every match matters, as FST placement will have a direct impact on MSI seeding, including a Play-In Stage bye for the winning region. Tickets for FST will go on sale via Eventim at 1 pm BRT/8 am PST January 20. MSI 2026 Heads to Daejeon, South Korea Following First Stand, the competition heats up as the Mid-Season Invitational arrives in Daejeon, South Korea, marking the first time MSI has landed in this dynamic and tech-forward city. MSI has long been a proving ground for the best teams of sprin",
+            "mentions": {}
+          }
+        ],
+        "resources": {
+          "seriesRecord": [
+            3,
+            1,
+            12,
+            4
+          ],
+          "gameDiff": [
+            6,
+            18
+          ],
+          "recentForm": [
+            "胜 胜 负 胜",
+            "胜 胜 胜 胜 胜"
+          ],
+          "headToHead": "交手 G2 0-1 BLG",
+          "restHours": [
+            24,
+            96
+          ],
+          "heroProfiles": [
+            {
+              "heroDepth": 3,
+              "recentFlex": 3,
+              "comfortWinRate": 1,
+              "avgKda": 4.556,
+              "avgParticipation": 0.652,
+              "summary": "G2 池深 3.0，近战术切牌 3.0，舒适池胜率 100%"
+            },
+            {
+              "heroDepth": 2,
+              "recentFlex": 2,
+              "comfortWinRate": 1,
+              "avgKda": 5.768,
+              "avgParticipation": 0.6300000000000001,
+              "summary": "BLG 池深 2.0，近战术切牌 2.0，舒适池胜率 100%"
+            }
+          ],
+          "bo": "BO5",
+          "style": {
+            "teamA": "G2：门风是脑子活，转线快，常用非常规换位和节奏岔口把人带出熟路；长板是中段转线多变、敢做非常规落子、临场找角度能力强；明病是局势若被人逼成正面账本，它也会露出前排不够厚、硬解不够稳的问题；翻船点是若前段换线和试探都没赚到时间，后面会被迫正面接算力题",
+            "teamB": "BLG：门风是上中野肯先落子，盘面一旦抢到前手，常把河道、边线与团前站位一并压出来；长板是前中期争先意愿强、资源逼抢凶、一旦拿到主动便很会把局面压窄；明病是热起来时脚步会压得过深，纪律偶尔松一口，给人反咬的缝；翻船点是若前中期连续失手，后段容易把本该稳住的局面再打成对冲",
+            "focusPlayers": "Bin：边线敢压，见口就追，最容易把上路打成单点破局；毛病也在这里，手热时站位会伸过河道，给反手留缝。 账面 KDA 4.24，分均伤害 735，参团 48%。 常用 赛恩 / 1 局 / 100% ｜ 纳尔 / 1 局 / 100%。；XUN：管的是 BLG 第一口气。河道先踩住，先锋先碰到，整队的刀就会一齐往前走；若前两趟慢拍，锋口会先钝。 账面 KDA 6.53，分均伤害 485，参团 67%。 常用 魔腾 / 1 局 / 100% ｜ 波比 / 1 局 / 100%。；Knight：强在把线权、转线和团前脚步拆得细。中段若由他把局心拢住，整队章法会很整；若被逼着长时间守线，BLG 的中轴会先沉。 账面 KDA 6.39，分均伤害 674，参团 62%。 常用 奥莉安娜 / 1 局 / 100% ｜ 梅尔 / 1 局 / 100%。；Viper：收束能力极强，残局给半步就能把伤害算满；可前排若先断，他再稳也得先替全队还站位的债。 账面 KDA 6.61，分均伤害 944，参团 64%。 常用 芸阿娜 / 1 局 / 100% ｜ 库奇 / 1 局 / 100%。；ON：价值全在先手准不准、回身稳不稳。开团若正，BLG 能一口压进；回身若慢，后排会先吃满苦头。 账面 KDA 5.07，分均伤害 310，参团 74%。 常用 巴德 / 1 局 / 100% ｜ 妮蔻 / 1 局 / 100%。；BrokenBlade：敢走边线高压，也敢接奇形怪状的对位。若他先把边线带出岔口，G2 的换位和奇手就更好落。 账面 KDA 4.75，分均伤害 666，参团 54%。 常用 赛恩 / 1 局 / 100% ｜ 慎 / 1 局 / 100% ｜ 奎桑提 / 1 局 / 100%。；SkewMond：喜欢把比赛带出熟路，前两波路径很会做文章；可若被人看穿节拍，G2 的花活会先少一层。 账面 KDA 5.17，分均伤害 560，参团 71%。 常用 嘉文四世 / 1 局 / 100% ｜ 潘森 / 1 局 / 100% ｜ 亚恒 / 1 局 / 100%。；Caps：中段最会拆局的人，转线、换位和团前拉扯都敢玩；可若比赛被逼成正面算力题，他也得先补稳字。 账面 KDA 3.85，分均伤害 790，参团 62%。 常用 阿卡丽 / 1 局 / 100% ｜ 维克托 / 1 局 / 100% ｜ 阿萝拉 / 1 局 / 100%。；Hans Sama：重在团里持续输出和跟队友连段。队友给出奇手时，他很会顺势补刀；可前排若先塌，站位也会先被掐。 账面 KDA 4.48，分均伤害 780，参团 62%。 常用 厄运小姐 / 1 局 / 100% ｜ 克格莫 / 1 局 / 100% ｜ 韦鲁斯 / 1 局 / 100%。；Labrov：敢先动，也敢陪着做非常规转线。若第一拍做成，G2 的局很怪也很难防；可空一拍，后头会被逼回正面。 账面 KDA 4.53，分均伤害 230，参团 77%。 常用 布隆 / 1 局 / 100% ｜ 诺提勒斯 / 1 局 / 100% ｜ 璐璐 / 1 局 / 100%。",
+            "heroPool": "G2：G2 池深 3.0，近战术切牌 3.0，舒适池胜率 100%；BLG：BLG 池深 2.0，近战术切牌 2.0，舒适池胜率 100%",
+            "recentAnalysis": "fst-2026-primer：© 2026 Riot Games. All Rights Reserved. Privacy Notice Terms of Service Accessibility Cookie Preferences What is the First Stand Tournament?；2026-lcs-lock-in-playoffs-and-finals-primer：© 2026 Riot Games. All Rights Reserved. Privacy Notice Terms of Service Accessibility Cookie Preferences LoL Esports | Only one team will em；season-start-2026-lol-esports：© 2026 Riot Games. All Rights Reserved. Privacy Notice Terms of Service Accessibility Cookie Preferences The 2026 League of Legends Esports "
+          }
+        }
       },
       {
         "id": "prediction-BFX",

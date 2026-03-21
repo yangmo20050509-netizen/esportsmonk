@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-21T17:48:47.518Z",
-  "generatedAtLocal": "2026/3/22 01:48:47",
+  "generatedAt": "2026-03-21T18:34:12.817Z",
+  "generatedAtLocal": "2026/3/22 02:34:12",
   "focusDefaults": {
     "team": "BLG",
     "player": "Bin",
@@ -130,11 +130,6 @@
       "shortName": "OMG",
       "name": "OMG",
       "logo": "https://img.crawler.qq.com/lolwebvideo/20230103152756/56c5bb71d14d13ec280908542ac8e1a9/0"
-    },
-    {
-      "shortName": "TBD",
-      "name": "待定",
-      "logo": "https://img.crawler.qq.com/lolwebvideo/20171204150327/6fa86a8e4d50f72b5fb016beb8492153/0"
     },
     {
       "shortName": "TES",
@@ -2762,7 +2757,7 @@
       "matchDate": "2026-03-22 02:00:00",
       "status": "in_progress",
       "statusText": "进行中/待确认",
-      "scoreA": 2,
+      "scoreA": 3,
       "scoreB": 0,
       "teamA": {
         "id": "57",
@@ -2801,10 +2796,10 @@
         "logo": "https://img.crawler.qq.com/lolwebvideo/20250618120148/0654f8b663a3973eb8debcf929cb919e/0"
       },
       "teamB": {
-        "id": "85",
-        "name": "待定",
-        "shortName": "TBD",
-        "logo": "https://img.crawler.qq.com/lolwebvideo/20171204150327/6fa86a8e4d50f72b5fb016beb8492153/0"
+        "id": "57",
+        "name": "BLG",
+        "shortName": "BLG",
+        "logo": "https://img.crawler.qq.com/lolwebvideo/20250618144525/49342dadcecf162e8ac94fad6eb91540/0"
       },
       "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_238.js"
     }
