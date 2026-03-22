@@ -16,6 +16,7 @@ const tencentPlayerProfilesPath = path.join(projectRoot, "app", "data", "tencent
 const outputPath = path.join(projectRoot, "app", "data", "site-data.json");
 const inlineOutputPath = path.join(projectRoot, "app", "data", "site-data.inline.js");
 const analysisLibraryPath = path.join(projectRoot, "app", "data", "match-analysis-library.json");
+const sapphireKnowledgePath = path.join(projectRoot, "知识库", "蓝宝石结构化知识库.json");
 const playerAssetDir = path.join(projectRoot, "app", "assets", "players");
 const PLAYER_PORTRAIT_EXTENSIONS = [".png", ".webp", ".jpg", ".jpeg", ".avif"];
 
@@ -261,6 +262,74 @@ async function loadTencentPlayerProfiles() {
     return parsed?.players || {};
   } catch {
     return {};
+  }
+}
+
+async function loadSapphireKnowledge(playerProfiles) {
+  try {
+    const raw = await readFile(sapphireKnowledgePath, "utf8");
+    const parsed = JSON.parse(raw);
+    const players = Object.fromEntries(
+      Object.entries(parsed.players || {}).map(([playerId, item]) => {
+        const profile = playerProfiles[playerId];
+        const profileHeroes = buildPlayerHeroPool(profile)
+          .map((hero) => hero.heroCnName || hero.heroName)
+          .filter(Boolean)
+          .slice(0, 4);
+        return [
+          playerId,
+          {
+            ...item,
+            id: playerId,
+            name: profile?.displayName || item.name || playerId,
+            teamCode: profile?.teamCode || item.teamCode || "",
+            role: profile?.role || item.role || "",
+            heroPool: [...new Set([...(item.heroSignals || []), ...profileHeroes])].slice(0, 5),
+          },
+        ];
+      }),
+    );
+
+    const teams = Object.fromEntries(
+      Object.entries(parsed.teams || {}).map(([teamCode, item]) => {
+        const roster = Object.entries(playerProfiles)
+          .filter(([, profile]) => profile?.teamCode === teamCode)
+          .map(([playerId, profile]) => ({
+            id: playerId,
+            name: profile.displayName,
+            role: profile.role,
+            heroPool: buildPlayerHeroPool(profile)
+              .map((hero) => hero.heroCnName || hero.heroName)
+              .filter(Boolean)
+              .slice(0, 3),
+          }));
+
+        return [
+          teamCode,
+          {
+            ...item,
+            featuredPlayers: (item.featuredPlayers || []).map((playerId) => players[playerId]).filter(Boolean),
+            roster,
+          },
+        ];
+      }),
+    );
+
+    return {
+      generatedAt: parsed.generatedAt || new Date().toISOString(),
+      sourceLabel: parsed.sourceLabel || "manual",
+      sources: parsed.sources || [],
+      teams,
+      players,
+    };
+  } catch {
+    return {
+      generatedAt: new Date().toISOString(),
+      sourceLabel: "missing",
+      sources: [],
+      teams: {},
+      players: {},
+    };
   }
 }
 
@@ -1537,46 +1606,71 @@ function buildPredictionFactorsAt(match, recordA, recordB, headToHead, restA, re
   ].filter(Boolean);
 }
 
-function buildPredictionKnowledge(match, playerProfiles, analysisDocs, teamDossiers = {}) {
+function buildPredictionKnowledge(match, playerProfiles, analysisDocs, teamDossiers = {}, sapphireKnowledge = {}) {
   const teamAGuide = TEAM_STYLE_GUIDE[match.teamA.shortName];
   const teamBGuide = TEAM_STYLE_GUIDE[match.teamB.shortName];
+  const sapphireTeamA = sapphireKnowledge?.teams?.[match.teamA.shortName];
+  const sapphireTeamB = sapphireKnowledge?.teams?.[match.teamB.shortName];
   const heroEdge = computeHeroProfileEdge(match.teamA.shortName, match.teamB.shortName, playerProfiles);
   const focusPlayers = FOCUS_PLAYERS.filter(
     (player) => player.teamCode === match.teamA.shortName || player.teamCode === match.teamB.shortName,
   ).map((player) => {
     const profile = playerProfiles[player.id];
+    const sapphirePlayer = sapphireKnowledge?.players?.[player.id];
     const stats = buildPlayerDataStats(profile).join("，");
-    const heroLine = buildPlayerHeroLine(profile);
-    return `${player.name}：${player.watch}${stats ? ` 账面 ${stats}。` : ""}${heroLine ? ` 常用 ${heroLine}。` : ""}`;
+    const heroLine = [...new Set([...(sapphirePlayer?.heroPool || []), ...buildPlayerHeroPool(profile).map((hero) => hero.heroCnName || hero.heroName).filter(Boolean)])]
+      .slice(0, 4)
+      .join("、");
+    const style = sapphirePlayer?.style || player.watch;
+    const weakness = sapphirePlayer?.weakness ? `毛病在${sapphirePlayer.weakness}。` : "";
+    return `${player.name}：${style}${weakness}${stats ? ` 账面 ${stats}。` : ""}${heroLine ? ` 英雄多见 ${heroLine}。` : ""}`;
   });
   return {
-    teamA: teamDossiers[match.teamA.shortName] ||
+    teamA: `${teamDossiers[match.teamA.shortName] ||
       (teamAGuide
       ? `${match.teamA.shortName}：门风是${teamAGuide.identity}；长板是${teamAGuide.strengths.join("、")}；明病是${teamAGuide.flaw}；翻船点是${teamAGuide.risk}`
-      : `${match.teamA.shortName}：当前没有补充风格注释。`),
-    teamB: teamDossiers[match.teamB.shortName] ||
+      : `${match.teamA.shortName}：当前没有补充风格注释。`)}${
+      sapphireTeamA
+        ? ` 另记一笔：赢法多落在${sapphireTeamA.winCondition}；塌法常见于${sapphireTeamA.failurePattern}`
+        : ""
+    }`,
+    teamB: `${teamDossiers[match.teamB.shortName] ||
       (teamBGuide
       ? `${match.teamB.shortName}：门风是${teamBGuide.identity}；长板是${teamBGuide.strengths.join("、")}；明病是${teamBGuide.flaw}；翻船点是${teamBGuide.risk}`
-      : `${match.teamB.shortName}：当前没有补充风格注释。`),
+      : `${match.teamB.shortName}：当前没有补充风格注释。`)}${
+      sapphireTeamB
+        ? ` 另记一笔：赢法多落在${sapphireTeamB.winCondition}；塌法常见于${sapphireTeamB.failurePattern}`
+        : ""
+    }`,
     focusPlayers: focusPlayers.length ? focusPlayers.join("；") : "当前没有接入该场重点选手的手法注释。",
     heroPool: `${match.teamA.shortName}：${heroEdge.profileA.summary}；${match.teamB.shortName}：${heroEdge.profileB.summary}`,
     recentAnalysis: analysisDocs?.length
       ? analysisDocs.map((doc) => `${doc.title}：${(doc.description || doc.excerpt).slice(0, 140)}`).join("；")
       : "当前没有抓到最近赛事解读。",
+    sapphireSources:
+      sapphireTeamA || sapphireTeamB
+        ? [...new Set([...(sapphireTeamA?.featuredPlayers || []).map((player) => `${player.name}主看${player.style}`), ...(sapphireTeamB?.featuredPlayers || []).map((player) => `${player.name}主看${player.style}`)])]
+            .slice(0, 6)
+            .join("；")
+        : "当前没有额外视频批注。",
   };
 }
 
-function buildTeamDossiers(records, playerProfiles, analysisLibrary) {
+function buildTeamDossiers(records, playerProfiles, analysisLibrary, sapphireKnowledge = {}) {
   const dossiers = {};
   for (const teamCode of FOCUS_TEAM_IDS) {
     const guide = TEAM_STYLE_GUIDE[teamCode];
     const record = records[teamCode];
+    const sapphireTeam = sapphireKnowledge?.teams?.[teamCode];
     const playerLines = FOCUS_PLAYERS.filter((player) => player.teamCode === teamCode)
       .slice(0, 2)
       .map((player) => {
+        const sapphirePlayer = sapphireKnowledge?.players?.[player.id];
         const profile = playerProfiles[player.id];
-        const heroLine = buildPlayerHeroLine(profile);
-        return `${player.name}主看${player.watch}${heroLine ? `，常用 ${heroLine}` : ""}`;
+        const heroLine = [...new Set([...(sapphirePlayer?.heroPool || []), ...buildPlayerHeroPool(profile).map((hero) => hero.heroCnName || hero.heroName).filter(Boolean)])]
+          .slice(0, 4)
+          .join("、");
+        return `${player.name}主看${sapphirePlayer?.style || player.watch}${sapphirePlayer?.weakness ? `，病处在${sapphirePlayer.weakness}` : ""}${heroLine ? `，常用 ${heroLine}` : ""}`;
       });
     const docs = (analysisLibrary?.items || [])
       .filter((doc) => (doc.mentions?.[teamCode] || 0) > 0)
@@ -1587,6 +1681,9 @@ function buildTeamDossiers(records, playerProfiles, analysisLibrary) {
       guide ? `${teamCode} 的门风是${guide.identity}。` : "",
       guide?.strengths?.length ? `长板落在${guide.strengths.join("、")}。` : "",
       guide?.flaw ? `明病在于${guide.flaw}。` : "",
+      sapphireTeam?.style ? `按蓝宝石旧稿，这队常走${sapphireTeam.style}` : "",
+      sapphireTeam?.winCondition ? `要赢多半靠${sapphireTeam.winCondition}。` : "",
+      sapphireTeam?.failurePattern ? `真塌起来常见于${sapphireTeam.failurePattern}。` : "",
       record ? `当前账面 ${record.wins}-${record.losses}，近五 ${record.recentText}，局差 ${signed(record.gameDiff)}。` : "",
       playerLines.length ? `人头上主看${playerLines.join("；")}。` : "",
       docs.length ? `近闻可参 ${docs.join("；")}。` : "",
@@ -1670,7 +1767,7 @@ function buildHistoricalPredictionHistory(data, teamId, playerProfiles) {
   });
 }
 
-function buildTeamPredictions(data, records, playerProfiles, analysisLibrary, teamDossiers) {
+function buildTeamPredictions(data, records, playerProfiles, analysisLibrary, teamDossiers, sapphireKnowledge = {}) {
   return FOCUS_TEAM_IDS.map((teamId) => {
     const record = records[teamId];
     const match = record?.nextKnownMatch || null;
@@ -1715,7 +1812,7 @@ function buildTeamPredictions(data, records, playerProfiles, analysisLibrary, te
       favoredTeam,
       underdogTeam: favoredTeam === match.teamA.shortName ? match.teamB.shortName : match.teamA.shortName,
     });
-    const knowledge = buildPredictionKnowledge(match, playerProfiles, analysisDocs, teamDossiers);
+    const knowledge = buildPredictionKnowledge(match, playerProfiles, analysisDocs, teamDossiers, sapphireKnowledge);
 
     return {
       id: `prediction-${teamId}`,
@@ -1836,6 +1933,7 @@ async function buildAiPredictionCopy(predictions) {
     "不要出现用户、本站、官网、模型、AI、数据源这些词。",
     "把 knowledge 里的队伍门风、选手手法、短板和因子列表揉进断语里，不要原样复述列表。一定要写出队伍特点，像‘先手凶’、‘转线稳’、‘纪律松’、‘容易上头’这种能落地的话。",
     "把 knowledge.recentAnalysis 里的近闻当作外部赛后批注，只能拿来丰富理解，不能编造成确定事实。若近闻和账面冲突，以账面和因子为主。",
+    "把 knowledge.sapphireSources 里的旧稿批注当作风格底稿，优先借它写出队伍脾气、选手刀口和老毛病，但别把原话机械复述。",
     "返回 JSON，格式为 { predictions: { [id]: { headline, line, risk } } }。",
     JSON.stringify(payload, null, 2),
   ].join("\n");
@@ -1868,12 +1966,13 @@ async function main() {
 
   const data = JSON.parse(await readFile(schedulePath, "utf8"));
   const playerProfiles = await loadTencentPlayerProfiles();
+  const sapphireKnowledge = await loadSapphireKnowledge(playerProfiles);
   const teamMap = teamNameLookup(data);
   const analysisLibrary = await fetchAnalysisLibrary(teamMap, playerProfiles);
   const rankingRows = buildRankingRows(data, teamMap);
   const stageAwards = buildStageAwards(data);
   const records = buildAllTeamRecords(data);
-  const teamDossiers = buildTeamDossiers(records, playerProfiles, analysisLibrary);
+  const teamDossiers = buildTeamDossiers(records, playerProfiles, analysisLibrary, sapphireKnowledge);
   const teamCards = buildTeamCards(data, teamMap, records, stageAwards, rankingRows);
   const playerCards = buildPlayerCards(records, playerProfiles);
   const overview = buildOverview(data, teamMap, rankingRows, playerCards);
@@ -1883,6 +1982,7 @@ async function main() {
     playerProfiles,
     analysisLibrary,
     teamDossiers,
+    sapphireKnowledge,
   );
 
   let siteData = {
@@ -1901,6 +2001,13 @@ async function main() {
       generatedAt: Number(analysisLibrary?.generatedAt || Date.now()),
       count: Number(analysisLibrary?.count || 0),
       source: analysisLibrary?.source || "none",
+    },
+    sapphireKnowledge: {
+      generatedAt: sapphireKnowledge.generatedAt,
+      sourceLabel: sapphireKnowledge.sourceLabel,
+      sourceCount: Number(sapphireKnowledge.sources?.length || 0),
+      teamCount: Number(Object.keys(sapphireKnowledge.teams || {}).length),
+      playerCount: Number(Object.keys(sapphireKnowledge.players || {}).length),
     },
     overview,
     teams: {

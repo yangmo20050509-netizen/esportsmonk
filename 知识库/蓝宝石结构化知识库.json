@@ -1,0 +1,196 @@
+{
+  "generatedAt": "2026-03-22T17:10:00+08:00",
+  "sourceLabel": "分析师蓝宝石视频整理",
+  "sources": [
+    {
+      "id": "sapphire-fst-overview",
+      "title": "Bin和Chovy谁才是真的不一样了？万字分析，一期视频带你看懂先锋赛形势！",
+      "path": "知识库/Bin和Chovy谁才是真的不一样了？万字分析，一期视频带你看懂先锋赛形势！.txt",
+      "focusTeams": ["BLG", "BFX", "JDG", "GEN", "G2", "TSW", "LOUD", "LYON"],
+      "focusPlayers": ["bin", "chovy", "canyon", "knight", "viper", "on", "caps", "gala"],
+      "heroMentions": ["亚索", "卡牌", "维克托"],
+      "distilledFindings": [
+        "G2 的真命门在下半区与中路节奏，不在表面换线噱头。",
+        "BLG 对 BFX 的理论上风来自单人线硬度和上中野先手，不来自慢运营。",
+        "Gen.G 的压制力来自三线都硬与中野秩序，不只是一两名选手的个人秀。",
+        "JDG 若想顶住 Gen.G，关键在于把比赛拖慢，让 Gala 接到完整正面团。"
+      ]
+    },
+    {
+      "id": "sapphire-blg-bfx-review",
+      "title": "Daeny的阳谋到底有多厉害？深度复盘BLG战胜BFX，终结LPL对LCK的连败！",
+      "path": "知识库/Daeny的阳谋到底有多厉害？深度复盘BLG战胜BFX，终结LPL对LCK的连败！.txt",
+      "focusTeams": ["BLG", "BFX"],
+      "focusPlayers": ["bin", "knight", "viper", "on", "clear", "kellin"],
+      "heroMentions": ["兰博", "泽丽", "奎桑提", "露露", "轮子妈", "杰斯", "凯南", "纳尔", "波比", "洛", "青钢影"],
+      "distilledFindings": [
+        "BLG 打 BFX 真正赚的是辅助位与单人线差，而不是纯拼后期。",
+        "BLG 最常见的病是耐心不足，赢面在手时会自己把局打成续命题。",
+        "BFX 上半区资源倾斜明显，强处在前段碰撞，短处在中段回收和细布线。"
+      ]
+    },
+    {
+      "id": "sapphire-g2-bfx-review",
+      "title": "LCK二号种子怎么就回家了？解析G2零封BFX背后的原因！",
+      "path": "知识库/LCK二号种子怎么就回家了？解析G2零封BFX背后的原因！.txt",
+      "focusTeams": ["G2", "BFX", "BLG"],
+      "focusPlayers": ["caps", "brokenblade", "hans_sama", "labrov", "clear", "vicla", "diable"],
+      "heroMentions": ["波比", "安妮", "奥莉安娜", "娜美", "卡莎", "洛", "韦鲁斯", "杰斯", "赛恩", "兰博", "牛头", "佐伊", "梦魇"],
+      "distilledFindings": [
+        "G2 强在把比赛带出熟路，最怕被逼回正面算力题。",
+        "Caps 是 G2 的真中轴，给到能做事的中单，整队就会活。",
+        "BFX 被 G2 处理掉的关键在于 BP 被牵着走，前段没赚够，后段又被迫接自己不喜欢的账。"
+      ]
+    }
+  ],
+  "teams": {
+    "BLG": {
+      "style": "上中野肯先落子，单人线压住时会把河道、边线与团前位置一并推出来。",
+      "winCondition": "前两波先手和上半区主动先到手，再把资源往 Viper 与 ON 身上倾，比赛会顺着 BLG 的刀口往前走。",
+      "failurePattern": "优势局一热就容易松纪律，明明该收的回合，会因为多伸半步把口子露给对面。",
+      "analystTake": "蓝宝石对 BLG 的判断一直很直，上限靠上中野和单人线硬度，问题也出在上头后的纪律掉线。",
+      "featuredPlayers": ["bin", "xun", "knight", "viper", "on"]
+    },
+    "BFX": {
+      "style": "前段争先意图重，上半区敢硬碰，愿意把第一口资源打成高频换血。",
+      "winCondition": "上野先把节奏点着，中路顺着前两波资源把比赛推进连续碰撞。",
+      "failurePattern": "中段布线与回收不够细，前账若没赚厚，后面很容易自己把门打开。",
+      "analystTake": "三份稿子都没把 BFX 当弱队写，真正问题在前段强、长盘细节薄。",
+      "featuredPlayers": ["clear", "raptor", "vicla", "diable", "kellin"]
+    },
+    "JDG": {
+      "style": "更靠中后段秩序和正面团次序，愿意先把比赛拖稳，再一段一段还账。",
+      "winCondition": "顶住前十五分钟，等 Gala 和正面接团点位成型，再慢慢把局面翻回来。",
+      "failurePattern": "前段若连掉资源和线权，后面再稳也要先花时间补窟窿。",
+      "analystTake": "蓝宝石判断 JDG 打 Gen.G 的关键不在嘴硬，在 Gala 状态和能不能把比赛拖慢。",
+      "featuredPlayers": ["xiaoxu", "junjia", "hongq", "gala", "vampire"]
+    },
+    "GEN": {
+      "style": "中野捏得住中轴，三线很少漏血，资源和团前位置是成套章法。",
+      "winCondition": "Chovy 和 Canyon 把中野秩序站稳，Ruler 只要接到完整正面团，比赛多半会被慢慢绞死。",
+      "failurePattern": "若前两波被强行打乱，节奏被拖进连续乱战，它也会先松半拍。",
+      "analystTake": "蓝宝石把 2026 的 Gen.G 定成最稳的硬队，压制力来自三线都硬，不只是某一名选手。",
+      "featuredPlayers": ["kiin", "canyon", "chovy", "ruler", "duro"]
+    },
+    "G2": {
+      "style": "换线、转线、非常规落子都快，擅长把对手拖出熟路。",
+      "winCondition": "Caps 拿到能做事的中单，BrokenBlade 能从边线开口，下半区能顺着节奏补刀，G2 就会把局势做歪。",
+      "failurePattern": "一旦被人逼回正面算力题，下路线权拿不到，花招会先失灵。",
+      "analystTake": "蓝宝石写 G2 的核心很明确，真中轴是 Caps，下半区顺时最强，换线只是表相。",
+      "featuredPlayers": ["brokenblade", "skewmond", "caps", "hans_sama", "labrov"]
+    },
+    "TSW": {
+      "style": "中野是轴，打法直接，喜欢把第一口资源和正面接战连成一串。",
+      "winCondition": "中野先把节奏抬高，比赛进到直接硬接的路数里。",
+      "failurePattern": "换了辅助后稳定度一般，遇到强转线和反复骗拍时会显出迟疑。",
+      "analystTake": "蓝宝石把 TSW 看成中野驱动的直刀队，能不能打满，看的是第一口资源抢不抢得到。",
+      "featuredPlayers": ["pun", "hizto", "dire", "eddie", "bie"]
+    },
+    "LOUD": {
+      "style": "野辅先带头，侧翼包夹快，愿意把比赛往分侧和包边带。",
+      "winCondition": "YoungJae 和 RedBert 先把侧翼节奏点着，双C顺着队友开的门补伤害。",
+      "failurePattern": "正面一旦先垮，边翼再快也只是在救火。",
+      "analystTake": "蓝宝石没把 LOUD 写成花活队，签运差，但咬人靠的是野辅起手和边翼速度。",
+      "featuredPlayers": ["xyno", "youngjae", "envy", "bull", "redbert"]
+    },
+    "LYON": {
+      "style": "更像上野先带头、双C后续接账的队，打顺时敢反咬。",
+      "winCondition": "上野先把前段空间撕开，Berserker 在中后段把伤害接满。",
+      "failurePattern": "中路若先站不住，阵型会先裂成两段。",
+      "analystTake": "蓝宝石给 LYON 的定位是敢咬强队的硬下狗，不靠花活，靠的是上野和反手血性。",
+      "featuredPlayers": ["dhokla", "inspired", "saint", "berserker", "isles"]
+    }
+  },
+  "players": {
+    "bin": {
+      "style": "边线敢压，愿意把对位打成单点破口，英雄拿到线权后会继续把地图压深。",
+      "weakness": "手热时站位会压过河道，容易给对面回身抓边的窗口。",
+      "heroSignals": ["赛恩", "纳尔", "杰斯", "兰博"],
+      "sourceRefs": ["sapphire-fst-overview", "sapphire-blg-bfx-review"]
+    },
+    "xun": {
+      "style": "BLG 第一口气很多时候起在他脚下，河道和第一层资源若由他先踩住，整队就会提速。",
+      "weakness": "前两波若空掉，BLG 会先从他这里掉半拍。",
+      "heroSignals": [],
+      "sourceRefs": ["sapphire-fst-overview"]
+    },
+    "knight": {
+      "style": "对线硬，能把中路线权和第二拍转线一并拽走，是 BLG 中轴发力点。",
+      "weakness": "若被长期按在线上守线，BLG 的中轴会先变沉。",
+      "heroSignals": [],
+      "sourceRefs": ["sapphire-fst-overview", "sapphire-blg-bfx-review"]
+    },
+    "viper": {
+      "style": "资源若倾到手里，最会把正面伤害收成实账，残局清账能力很硬。",
+      "weakness": "前排若先断，他也得先替队形还债。",
+      "heroSignals": ["泽丽", "轮子妈"],
+      "sourceRefs": ["sapphire-fst-overview", "sapphire-blg-bfx-review"]
+    },
+    "on": {
+      "style": "英雄池杂，第一拍开门和回身保护都能写字，辅助位差很容易从他这点打出来。",
+      "weakness": "第一拍一歪，BLG 后排会立刻吃苦头。",
+      "heroSignals": ["露露", "洛", "青钢影"],
+      "sourceRefs": ["sapphire-blg-bfx-review"]
+    },
+    "gala": {
+      "style": "正面接团和收束账面能力强，JDG 真要翻强队，多半得靠他把团战清完。",
+      "weakness": "状态起伏会直接改掉 JDG 的上限。",
+      "heroSignals": [],
+      "sourceRefs": ["sapphire-fst-overview"]
+    },
+    "canyon": {
+      "style": "河道和野区秩序感极强，今年状态被蓝宝石单拎出来夸过一轮。",
+      "weakness": "若连续被人掐掉第一层资源，也得先忙着补账。",
+      "heroSignals": [],
+      "sourceRefs": ["sapphire-fst-overview"]
+    },
+    "chovy": {
+      "style": "中线一旦站稳，对手后面很多拍子都得跟着他走，比赛会被他写成中轴秩序题。",
+      "weakness": "被连续强扰前两波时，也得先改章法。",
+      "heroSignals": [],
+      "sourceRefs": ["sapphire-fst-overview"]
+    },
+    "caps": {
+      "style": "G2 真中轴，拿到能做事的中单就敢把局搅歪，越到绝境越敢接刀。",
+      "weakness": "被逼回纯正面算力题时，花活空间会变窄。",
+      "heroSignals": ["维克托", "安妮", "奥莉安娜", "沙皇", "佐伊"],
+      "sourceRefs": ["sapphire-fst-overview", "sapphire-g2-bfx-review"]
+    },
+    "brokenblade": {
+      "style": "敢接怪对位，也敢拿反手 counter 把边线做出口子。",
+      "weakness": "边线强压一旦失败，G2 会先从他这边露口。",
+      "heroSignals": ["亚索", "波比"],
+      "sourceRefs": ["sapphire-fst-overview", "sapphire-g2-bfx-review"]
+    },
+    "hans_sama": {
+      "style": "下半区一顺就能把伤害跟满，G2 主打下半区时他的存在感会明显上去。",
+      "weakness": "下路线权若先塌，G2 很多套招都落不下来。",
+      "heroSignals": ["娜美"],
+      "sourceRefs": ["sapphire-fst-overview", "sapphire-g2-bfx-review"]
+    },
+    "labrov": {
+      "style": "敢先动，也敢陪着转线做非常规第一拍。",
+      "weakness": "第一拍若做空，G2 很快会被逼回正面。",
+      "heroSignals": ["泰坦", "牛头"],
+      "sourceRefs": ["sapphire-g2-bfx-review"]
+    },
+    "clear": {
+      "style": "上半区硬碰能力强，BFX 很多前段锋口都压在他的对位上。",
+      "weakness": "前账没赚够时，中后段布线会出缝。",
+      "heroSignals": ["兰博", "杰斯"],
+      "sourceRefs": ["sapphire-blg-bfx-review", "sapphire-g2-bfx-review"]
+    },
+    "vicla": {
+      "style": "线一舒服就敢把中段节奏抬快，BFX 连续碰撞很多拍子都从他这里起。",
+      "weakness": "中线被压时，整队连环碰撞会先失准。",
+      "heroSignals": ["韦鲁斯"],
+      "sourceRefs": ["sapphire-g2-bfx-review"]
+    },
+    "kellin": {
+      "style": "肯先开门，也肯把视野做深，BFX 的第一拍很多时候是他在掀。",
+      "weakness": "第一拍一空，BFX 会掉半拍。",
+      "heroSignals": ["洛"],
+      "sourceRefs": ["sapphire-blg-bfx-review"]
+    }
+  }
+}
