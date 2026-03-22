@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-21T18:34:12.817Z",
-  "generatedAtLocal": "2026/3/22 02:34:12",
+  "generatedAt": "2026-03-22T06:11:00.879Z",
+  "generatedAtLocal": "2026/3/22 14:11:00",
   "focusDefaults": {
     "team": "BLG",
     "player": "Bin",
@@ -2755,8 +2755,8 @@
       "bo": "BO5",
       "venue": "圣保罗",
       "matchDate": "2026-03-22 02:00:00",
-      "status": "in_progress",
-      "statusText": "进行中/待确认",
+      "status": "completed",
+      "statusText": "已结束",
       "scoreA": 3,
       "scoreB": 0,
       "teamA": {

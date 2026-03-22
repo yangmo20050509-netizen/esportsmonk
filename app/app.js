@@ -137,6 +137,74 @@ function renderParagraphBlock(text, className = "") {
     .join("");
 }
 
+function renderPredictionHistory(history = []) {
+  if (!Array.isArray(history) || !history.length) {
+    return "";
+  }
+
+  return `
+    <section class="prediction-history">
+      <div class="prediction-history-title">往期断局</div>
+      <div class="prediction-history-list">
+        ${history
+          .map((item) => {
+            const hitClass = item.hitExact
+              ? "is-exact"
+              : item.hitWinner
+                ? "is-hit"
+                : "is-miss";
+            const hitLabel = item.hitExact
+              ? "比分押中"
+              : item.hitWinner
+                ? "胜负押中"
+                : "断局失手";
+            const factorLine = Array.isArray(item.factors)
+              ? item.factors
+                  .slice(0, 3)
+                  .map((factor) => factor?.value || factor?.label || "")
+                  .filter(Boolean)
+                  .join(" · ")
+              : "";
+
+            return `
+              <article class="prediction-history-item">
+                <div class="prediction-history-head">
+                  <div>
+                    <p class="prediction-history-stage">${escapeHtml(item.stageLabel || "往期对局")}</p>
+                    <h5>${escapeHtml(item.matchLabel || "--")}</h5>
+                  </div>
+                  <span class="prediction-history-hit ${hitClass}">${escapeHtml(hitLabel)}</span>
+                </div>
+                <div class="prediction-history-meta">
+                  <span>${escapeHtml(item.timeLabel || "--")}</span>
+                  <span>${escapeHtml(item.verdict || "--")}</span>
+                  <span>高僧置信 ${escapeHtml(`${item.confidence || 0}%`)}</span>
+                </div>
+                <div class="prediction-history-scoreline">
+                  <div>
+                    <span class="prediction-history-score-label">赛前断</span>
+                    <strong>${escapeHtml(item.predictedScore || "--")}</strong>
+                  </div>
+                  <div>
+                    <span class="prediction-history-score-label">实战局</span>
+                    <strong>${escapeHtml(item.actualScore || "--")}</strong>
+                  </div>
+                </div>
+                <p class="prediction-history-headline">${escapeHtml(item.headline || "")}</p>
+                ${
+                  factorLine
+                    ? `<p class="prediction-history-factors">${escapeHtml(factorLine)}</p>`
+                    : ""
+                }
+              </article>
+            `;
+          })
+          .join("")}
+      </div>
+    </section>
+  `;
+}
+
 function renderMatchCard(match) {
   const scoreText = match.status === "upcoming" ? "VS" : `${match.scoreA}:${match.scoreB}`;
   const statusLabel =
@@ -755,6 +823,90 @@ function renderPredictions() {
         <span class="risk-pill">${escapeHtml(currentPrediction.headline)}</span>
         <span class="subdued">${escapeHtml(currentPrediction.risk)}</span>
       </div>
+    </article>
+  `;
+}
+
+function renderPredictions() {
+  const copy = state.siteData.copy.sections.predictions;
+  const currentPrediction =
+    state.siteData.predictions.items.find((item) => item.teamId === state.currentTeam) ||
+    state.siteData.predictions.items[0] ||
+    null;
+
+  $("#predictions-header").innerHTML = `
+    <div>
+      <p class="eyebrow">${escapeHtml(copy.eyebrow)}</p>
+      <h3>${escapeHtml(copy.title)}</h3>
+    </div>
+    <p class="subdued section-note">${escapeHtml(copy.note)}</p>
+  `;
+
+  if (!currentPrediction) {
+    $("#prediction-list").innerHTML = renderEmptyCard("暂无高僧预测可看。");
+    return;
+  }
+
+  $("#prediction-list").innerHTML = `
+    <article class="prediction-card prediction-card--single">
+      <div class="prediction-head">
+        <div>
+          <p class="eyebrow">${escapeHtml(currentPrediction.stageLabel)}</p>
+          <h4>${escapeHtml(currentPrediction.matchLabel)}</h4>
+        </div>
+        <div class="prediction-score">
+          <span class="confidence-pill">${escapeHtml(currentPrediction.statusText)} / ${escapeHtml(currentPrediction.confidence)}%</span>
+          <span class="upset-pill">${escapeHtml(currentPrediction.predictedScore)}</span>
+        </div>
+      </div>
+      <div class="scoreboard">
+        <div class="team-side">
+          ${renderBadge({ code: currentPrediction.teamA.code, logo: currentPrediction.teamA.logo })}
+          <div>
+            <div class="team-name">${escapeHtml(currentPrediction.teamA.code)}</div>
+            <div class="team-sub">${escapeHtml(currentPrediction.teamA.recordText || currentPrediction.timeLabel)}</div>
+          </div>
+        </div>
+        <div class="score">${escapeHtml(currentPrediction.predictedScore)}</div>
+        <div class="team-side right">
+          <div>
+            <div class="team-name">${escapeHtml(currentPrediction.teamB.code)}</div>
+            <div class="team-sub">${escapeHtml(currentPrediction.teamB.recordText || currentPrediction.verdict)}</div>
+          </div>
+          ${renderBadge({ code: currentPrediction.teamB.code, logo: currentPrediction.teamB.logo })}
+        </div>
+      </div>
+      <div class="prediction-meta">
+        <span>${escapeHtml(currentPrediction.timeLabel)}</span>
+        <span>${escapeHtml(currentPrediction.verdict)}</span>
+      </div>
+      <div class="confidence-track">
+        <div class="confidence-fill" style="width: ${currentPrediction.confidence}%"></div>
+      </div>
+      <div class="prediction-insight">
+        <div class="dynamic-note">
+          <span class="dynamic-note-label">高僧见解</span>
+          <div class="dynamic-note-copy">${renderParagraphBlock(currentPrediction.line)}</div>
+        </div>
+        <div class="factor-list">
+          <div class="factor-title">入算因子</div>
+          ${currentPrediction.factors
+            .map(
+              (factor) => `
+                <div class="factor-item">
+                  <span class="factor-item-label">${escapeHtml(factor.label || "因子")}</span>
+                  <p class="factor-item-value">${escapeHtml(factor.value || factor)}</p>
+                </div>
+              `,
+            )
+            .join("")}
+        </div>
+      </div>
+      <div class="risk-line">
+        <span class="risk-pill">${escapeHtml(currentPrediction.headline)}</span>
+        <span class="subdued">${escapeHtml(currentPrediction.risk)}</span>
+      </div>
+      ${renderPredictionHistory(currentPrediction.history)}
     </article>
   `;
 }

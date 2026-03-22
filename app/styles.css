@@ -1659,6 +1659,121 @@ body::after,
   color: #3a3027;
 }
 
+.prediction-history {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(121, 95, 60, 0.08);
+}
+
+.prediction-history-title {
+  margin-bottom: 12px;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.prediction-history-list {
+  display: grid;
+  gap: 12px;
+}
+
+.prediction-history-item {
+  display: grid;
+  gap: 10px;
+  padding: 16px 18px;
+  border-radius: 20px;
+  border: 1px solid rgba(121, 95, 60, 0.08);
+  background: rgba(255, 252, 247, 0.76);
+}
+
+.prediction-history-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: start;
+}
+
+.prediction-history-head h5 {
+  margin: 4px 0 0;
+  font-size: 1.02rem;
+  font-family: "Noto Serif SC", "Source Han Serif SC", serif;
+}
+
+.prediction-history-stage,
+.prediction-history-score-label {
+  margin: 0;
+  font-size: 0.76rem;
+  letter-spacing: 0.06em;
+  color: #8a7452;
+}
+
+.prediction-history-hit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 76px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  background: rgba(192, 168, 117, 0.14);
+  color: #7d6540;
+}
+
+.prediction-history-hit.is-exact {
+  background: rgba(92, 132, 84, 0.16);
+  color: #45633d;
+}
+
+.prediction-history-hit.is-hit {
+  background: rgba(117, 146, 90, 0.14);
+  color: #5e7044;
+}
+
+.prediction-history-hit.is-miss {
+  background: rgba(168, 111, 85, 0.14);
+  color: #8b5946;
+}
+
+.prediction-history-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  font-size: 0.88rem;
+  color: #7d6a53;
+}
+
+.prediction-history-scoreline {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.prediction-history-scoreline > div {
+  display: grid;
+  gap: 4px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  background: rgba(250, 246, 239, 0.92);
+}
+
+.prediction-history-scoreline strong {
+  font-size: 1.15rem;
+  font-family: "Noto Serif SC", "Source Han Serif SC", serif;
+}
+
+.prediction-history-headline,
+.prediction-history-factors {
+  margin: 0;
+  line-height: 1.8;
+  color: #40372f;
+}
+
+.prediction-history-factors {
+  font-size: 0.92rem;
+  color: #7d6a53;
+}
+
 #predictions .section-title {
   margin-bottom: 16px;
 }
@@ -1676,7 +1791,9 @@ body::after,
 
   .dynamic-grid,
   .dynamic-metrics,
-  .prediction-insight {
+  .prediction-insight,
+  .prediction-history-scoreline,
+  .prediction-history-head {
     grid-template-columns: 1fr;
   }
 

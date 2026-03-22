@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-21T18:34:12.817Z",
-  "generatedAtLocal": "2026/3/22 02:34:12",
+  "generatedAt": "2026-03-22T06:11:00.879Z",
+  "generatedAtLocal": "2026/3/22 14:11:00",
   "copy": {
     "title": "电竞高僧 | 英雄联盟观赛站",
     "description": "聚合英雄联盟重点赛事的官方赛程、比分、战队信息与比赛预测。",
@@ -57,43 +57,12 @@
     "count": 69
   },
   "analysisLibrary": {
-    "generatedAt": 1774118063197,
+    "generatedAt": 1774159874809,
     "count": 11,
     "source": "lolesports-news"
   },
   "overview": {
-    "liveMatches": [
-      {
-        "id": "13206",
-        "bigGameId": "220",
-        "gameId": "238",
-        "tournamentSlug": "first-stand",
-        "tournamentLabel": "First Stand",
-        "tournamentName": "全球先锋赛2026",
-        "stageName": "淘汰赛",
-        "roundName": "半决赛",
-        "bo": "BO5",
-        "venue": "圣保罗",
-        "matchDate": "2026-03-22 02:00:00",
-        "status": "in_progress",
-        "statusText": "进行中/待确认",
-        "scoreA": 3,
-        "scoreB": 0,
-        "teamA": {
-          "id": "57",
-          "name": "BLG",
-          "shortName": "BLG",
-          "logo": "https://img.crawler.qq.com/lolwebvideo/20250618144525/49342dadcecf162e8ac94fad6eb91540/0"
-        },
-        "teamB": {
-          "id": "29",
-          "name": "北京JDG",
-          "shortName": "JDG",
-          "logo": "https://img.crawler.qq.com/lolwebvideo/20230921143554/1e5189e914e40bfe18045bccbfc7ef82/0"
-        },
-        "sourceUrl": "https://lpl.qq.com/web201612/data/LOL_MATCH2_MATCH_HOMEPAGE_BMATCH_LIST_238.js"
-      }
-    ],
+    "liveMatches": [],
     "upcomingMatches": [
       {
         "id": "13207",
@@ -214,7 +183,7 @@
       "role": "上路",
       "teamCode": "BLG",
       "portrait": "./assets/players/bin.jpg",
-      "summary": "看 Bin，先看他怎么把 边线压制、换血胆气与先手身位 落成实账。账面上 KDA 4.24，分均伤害 735，参团 48%。近用得最多的是 赛恩 / 1 局 / 100% ｜ 纳尔 / 1 局 / 100%。最近一局是 BLG 对 JDG / 赛恩 / 4-0-5。BLG 下一场对 JDG，这一路刀口若先咬住，整队气口往往会跟着偏过去。",
+      "summary": "看 Bin，先看他怎么把 边线压制、换血胆气与先手身位 落成实账。账面上 KDA 4.24，分均伤害 735，参团 48%。近用得最多的是 赛恩 / 1 局 / 100% ｜ 纳尔 / 1 局 / 100%。最近一局是 BLG 对 JDG / 赛恩 / 4-0-5。BLG 下一场对 G2，这一路刀口若先咬住，整队气口往往会跟着偏过去。",
       "note": "边线敢压，见口就追，最容易把上路打成单点破局；毛病也在这里，手热时站位会伸过河道，给反手留缝。 常用英雄看 赛恩 / 1 局 / 100% ｜ 纳尔 / 1 局 / 100%。",
       "tags": [
         "边线刀口",
@@ -268,24 +237,30 @@
           "note": "BLG 当前关注位"
         },
         {
-          "label": "此刻对局",
-          "value": "BLG vs JDG",
-          "note": "3月22日周日 02:00 / First Stand"
+          "label": "下一场",
+          "value": "BLG vs G2",
+          "note": "3月22日周日 21:00 / First Stand"
         },
         {
           "label": "最近一场",
           "value": "3:0",
-          "note": "对阵 G2"
+          "note": "对阵 JDG"
         }
       ],
       "observation": [
         "边线敢压，见口就追，最容易把上路打成单点破局；毛病也在这里，手热时站位会伸过河道，给反手留缝。",
         "常用英雄：赛恩 / 1 局 / 100% ｜ 纳尔 / 1 局 / 100%。",
         "最近一局：BLG 对 JDG / 赛恩 / 4-0-5。",
-        "最近一场 BLG 3:0 G2。",
+        "最近一场 BLG 3:0 JDG。",
         "下一场已确认对阵 G2。"
       ],
       "history": [
+        {
+          "opponent": "JDG",
+          "result": "3:0",
+          "note": "First Stand / 淘汰赛",
+          "outcome": "win"
+        },
         {
           "opponent": "G2",
           "result": "3:0",
@@ -303,12 +278,6 @@
           "result": "3:1",
           "note": "LPL / 第一赛段淘汰赛",
           "outcome": "win"
-        },
-        {
-          "opponent": "JDG",
-          "result": "3:2",
-          "note": "LPL / 第一赛段淘汰赛",
-          "outcome": "win"
         }
       ]
     }
@@ -324,18 +293,18 @@
         "region": "LPL",
         "stageAward": "第一赛段冠军",
         "rankingLabel": "第一赛段第 1",
-        "summary": "BLG 当前系列赛 12-4，单局 33-15，近五场 胜 胜 胜 胜 胜。眼下最能撑住局面的，是 前中期争先意愿强。",
-        "statement": "第一赛段冠军在手。老衲看 BLG，像一柄先出鞘的快刀，见口就劈，见缝就进。它最可怕之处不在一波团有多响，而在前两手若叫它先写，后面半盘都得顺着它的气走。这阵子账面厚，前十五分钟若叫它先得手，后面多半是它执笔。可老衲也不替它遮丑，热起来时脚步会压得过深，纪律偶尔松一口，给人反咬的缝。真要出岔子，多半也是前中期连续失手，后段容易把本该稳住的局面再打成对冲。下一场已确认对阵 JDG。",
+        "summary": "BLG 当前系列赛 13-4，单局 36-15，近五场 胜 胜 胜 胜 胜。眼下最能撑住局面的，是 前中期争先意愿强。",
+        "statement": "第一赛段冠军在手。老衲看 BLG，像一柄先出鞘的快刀，见口就劈，见缝就进。它最可怕之处不在一波团有多响，而在前两手若叫它先写，后面半盘都得顺着它的气走。这阵子账面厚，前十五分钟若叫它先得手，后面多半是它执笔。可老衲也不替它遮丑，热起来时脚步会压得过深，纪律偶尔松一口，给人反咬的缝。真要出岔子，多半也是前中期连续失手，后段容易把本该稳住的局面再打成对冲。下一场已确认对阵 G2。",
         "metrics": [
           {
             "label": "胜率",
-            "value": 75,
-            "text": "75%"
+            "value": 76,
+            "text": "76%"
           },
           {
             "label": "局差",
             "value": 98,
-            "text": "+18"
+            "text": "+21"
           },
           {
             "label": "近五",
@@ -350,22 +319,28 @@
         ],
         "docket": [
           {
-            "label": "此刻对局",
-            "value": "BLG vs JDG",
-            "note": "First Stand BO5 / 当前比分 3:0"
+            "label": "下一场",
+            "value": "BLG vs G2",
+            "note": "3月22日周日 21:00 / First Stand BO5"
           },
           {
             "label": "最近一场",
-            "value": "BLG 3:0 G2",
-            "note": "First Stand / 小组赛 / 第三天"
+            "value": "BLG 3:0 JDG",
+            "note": "First Stand / 淘汰赛 / 半决赛"
           },
           {
             "label": "账面",
-            "value": "12-4",
-            "note": "系列胜率 75% / 局差 +18"
+            "value": "13-4",
+            "note": "系列胜率 76% / 局差 +21"
           }
         ],
         "history": [
+          {
+            "opponent": "JDG",
+            "result": "3:0",
+            "outcome": "win",
+            "note": "First Stand / 淘汰赛 / 半决赛"
+          },
           {
             "opponent": "G2",
             "result": "3:0",
@@ -383,18 +358,12 @@
             "result": "3:1",
             "outcome": "win",
             "note": "LPL / 第一赛段淘汰赛 / 决赛"
-          },
-          {
-            "opponent": "JDG",
-            "result": "3:2",
-            "outcome": "win",
-            "note": "LPL / 第一赛段淘汰赛 / 第九天"
           }
         ],
         "overview": {
-          "seriesRecord": "12-4",
-          "gameRecord": "33-15",
-          "winRate": "75%",
+          "seriesRecord": "13-4",
+          "gameRecord": "36-15",
+          "winRate": "76%",
           "streakLabel": "5连胜"
         }
       },
@@ -406,48 +375,49 @@
         "region": "LPL",
         "stageAward": "第一赛段亚军",
         "rankingLabel": "第一赛段第 3",
-        "summary": "JDG 当前系列赛 10-8，单局 31-27，近五场 胜 胜 负 负 胜。眼下最能撑住局面的，是 中后段运营沉着。",
-        "statement": "第一赛段亚军在手。老衲看 JDG，像把老尺，不轻易失手，量出来的东西也整齐。可这把尺终究是后手器物，前账若欠得太厚，后面再稳也得先花时辰补漏。账面站得住，可第三波转折里常要再验一次心性，稍一松手便会露缝。可老衲也不替它遮丑，前段若让出主动，整队会先替自己补课，刀就出得慢半拍。真要出岔子，多半也是前十五分钟连续掉资源，后段再稳也要先补窟窿。下一场已确认对阵 BLG。",
+        "summary": "JDG 当前系列赛 10-9，单局 31-30，近五场 负 胜 胜 负 负。眼下最能撑住局面的，是 中后段运营沉着。",
+        "statement": "第一赛段亚军在手。老衲看 JDG，像把老尺，不轻易失手，量出来的东西也整齐。可这把尺终究是后手器物，前账若欠得太厚，后面再稳也得先花时辰补漏。走势还浮，前十五分钟若拿不到主动，后段就容易被人牵着鼻子走。可老衲也不替它遮丑，前段若让出主动，整队会先替自己补课，刀就出得慢半拍。真要出岔子，多半也是前十五分钟连续掉资源，后段再稳也要先补窟窿。下一场对阵还没排定。",
         "metrics": [
           {
             "label": "胜率",
-            "value": 56,
-            "text": "56%"
+            "value": 53,
+            "text": "53%"
           },
           {
             "label": "局差",
-            "value": 66,
-            "text": "+4"
+            "value": 54,
+            "text": "+1"
           },
           {
             "label": "近五",
-            "value": 60,
-            "text": "3/5"
+            "value": 40,
+            "text": "2/5"
           },
           {
             "label": "走势",
-            "value": 66,
-            "text": "2连胜"
+            "value": 38,
+            "text": "1连负"
           }
         ],
         "docket": [
           {
-            "label": "此刻对局",
-            "value": "JDG vs BLG",
-            "note": "First Stand BO5 / 当前比分 0:3"
-          },
-          {
             "label": "最近一场",
-            "value": "JDG 3:1 LYON",
-            "note": "First Stand / 小组赛 / 第五天"
+            "value": "JDG 0:3 BLG",
+            "note": "First Stand / 淘汰赛 / 半决赛"
           },
           {
             "label": "账面",
-            "value": "10-8",
-            "note": "系列胜率 56% / 局差 +4"
+            "value": "10-9",
+            "note": "系列胜率 53% / 局差 +1"
           }
         ],
         "history": [
+          {
+            "opponent": "BLG",
+            "result": "0:3",
+            "outcome": "loss",
+            "note": "First Stand / 淘汰赛 / 半决赛"
+          },
           {
             "opponent": "LYON",
             "result": "3:1",
@@ -465,19 +435,13 @@
             "result": "0:3",
             "outcome": "loss",
             "note": "First Stand / 小组赛 / 第二天"
-          },
-          {
-            "opponent": "BLG",
-            "result": "1:3",
-            "outcome": "loss",
-            "note": "LPL / 第一赛段淘汰赛 / 决赛"
           }
         ],
         "overview": {
-          "seriesRecord": "10-8",
-          "gameRecord": "31-27",
-          "winRate": "56%",
-          "streakLabel": "2连胜"
+          "seriesRecord": "10-9",
+          "gameRecord": "31-30",
+          "winRate": "53%",
+          "streakLabel": "1连负"
         }
       },
       {
@@ -1378,7 +1342,7 @@
         "role": "上路",
         "teamCode": "BLG",
         "portrait": "./assets/players/bin.jpg",
-        "summary": "看 Bin，先看他怎么把 边线压制、换血胆气与先手身位 落成实账。账面上 KDA 4.24，分均伤害 735，参团 48%。近用得最多的是 赛恩 / 1 局 / 100% ｜ 纳尔 / 1 局 / 100%。最近一局是 BLG 对 JDG / 赛恩 / 4-0-5。BLG 下一场对 JDG，这一路刀口若先咬住，整队气口往往会跟着偏过去。",
+        "summary": "看 Bin，先看他怎么把 边线压制、换血胆气与先手身位 落成实账。账面上 KDA 4.24，分均伤害 735，参团 48%。近用得最多的是 赛恩 / 1 局 / 100% ｜ 纳尔 / 1 局 / 100%。最近一局是 BLG 对 JDG / 赛恩 / 4-0-5。BLG 下一场对 G2，这一路刀口若先咬住，整队气口往往会跟着偏过去。",
         "note": "边线敢压，见口就追，最容易把上路打成单点破局；毛病也在这里，手热时站位会伸过河道，给反手留缝。 常用英雄看 赛恩 / 1 局 / 100% ｜ 纳尔 / 1 局 / 100%。",
         "tags": [
           "边线刀口",
@@ -1432,24 +1396,30 @@
             "note": "BLG 当前关注位"
           },
           {
-            "label": "此刻对局",
-            "value": "BLG vs JDG",
-            "note": "3月22日周日 02:00 / First Stand"
+            "label": "下一场",
+            "value": "BLG vs G2",
+            "note": "3月22日周日 21:00 / First Stand"
           },
           {
             "label": "最近一场",
             "value": "3:0",
-            "note": "对阵 G2"
+            "note": "对阵 JDG"
           }
         ],
         "observation": [
           "边线敢压，见口就追，最容易把上路打成单点破局；毛病也在这里，手热时站位会伸过河道，给反手留缝。",
           "常用英雄：赛恩 / 1 局 / 100% ｜ 纳尔 / 1 局 / 100%。",
           "最近一局：BLG 对 JDG / 赛恩 / 4-0-5。",
-          "最近一场 BLG 3:0 G2。",
+          "最近一场 BLG 3:0 JDG。",
           "下一场已确认对阵 G2。"
         ],
         "history": [
+          {
+            "opponent": "JDG",
+            "result": "3:0",
+            "note": "First Stand / 淘汰赛",
+            "outcome": "win"
+          },
           {
             "opponent": "G2",
             "result": "3:0",
@@ -1467,12 +1437,6 @@
             "result": "3:1",
             "note": "LPL / 第一赛段淘汰赛",
             "outcome": "win"
-          },
-          {
-            "opponent": "JDG",
-            "result": "3:2",
-            "note": "LPL / 第一赛段淘汰赛",
-            "outcome": "win"
           }
         ]
       },
@@ -1482,7 +1446,7 @@
         "role": "打野",
         "teamCode": "BLG",
         "portrait": "./assets/players/xun.jpg",
-        "summary": "看 XUN，先看他怎么把 河道起手、资源先后与第一口节拍 落成实账。账面上 KDA 6.53，分均伤害 485，参团 67%。近用得最多的是 魔腾 / 1 局 / 100% ｜ 波比 / 1 局 / 100%。最近一局是 BLG 对 JDG / 波比 / 1-0-12。BLG 下一场对 JDG，这一路刀口若先咬住，整队气口往往会跟着偏过去。",
+        "summary": "看 XUN，先看他怎么把 河道起手、资源先后与第一口节拍 落成实账。账面上 KDA 6.53，分均伤害 485，参团 67%。近用得最多的是 魔腾 / 1 局 / 100% ｜ 波比 / 1 局 / 100%。最近一局是 BLG 对 JDG / 波比 / 1-0-12。BLG 下一场对 G2，这一路刀口若先咬住，整队气口往往会跟着偏过去。",
         "note": "管的是 BLG 第一口气。河道先踩住，先锋先碰到，整队的刀就会一齐往前走；若前两趟慢拍，锋口会先钝。 常用英雄看 魔腾 / 1 局 / 100% ｜ 波比 / 1 局 / 100%。",
         "tags": [
           "河道起手",
@@ -1536,24 +1500,30 @@
             "note": "BLG 当前关注位"
           },
           {
-            "label": "此刻对局",
-            "value": "BLG vs JDG",
-            "note": "3月22日周日 02:00 / First Stand"
+            "label": "下一场",
+            "value": "BLG vs G2",
+            "note": "3月22日周日 21:00 / First Stand"
           },
           {
             "label": "最近一场",
             "value": "3:0",
-            "note": "对阵 G2"
+            "note": "对阵 JDG"
           }
         ],
         "observation": [
           "管的是 BLG 第一口气。河道先踩住，先锋先碰到，整队的刀就会一齐往前走；若前两趟慢拍，锋口会先钝。",
           "常用英雄：魔腾 / 1 局 / 100% ｜ 波比 / 1 局 / 100%。",
           "最近一局：BLG 对 JDG / 波比 / 1-0-12。",
-          "最近一场 BLG 3:0 G2。",
+          "最近一场 BLG 3:0 JDG。",
           "下一场已确认对阵 G2。"
         ],
         "history": [
+          {
+            "opponent": "JDG",
+            "result": "3:0",
+            "note": "First Stand / 淘汰赛",
+            "outcome": "win"
+          },
           {
             "opponent": "G2",
             "result": "3:0",
@@ -1571,12 +1541,6 @@
             "result": "3:1",
             "note": "LPL / 第一赛段淘汰赛",
             "outcome": "win"
-          },
-          {
-            "opponent": "JDG",
-            "result": "3:2",
-            "note": "LPL / 第一赛段淘汰赛",
-            "outcome": "win"
           }
         ]
       },
@@ -1586,7 +1550,7 @@
         "role": "中路",
         "teamCode": "BLG",
         "portrait": "./assets/players/knight.jpg",
-        "summary": "看 Knight，先看他怎么把 中线线权、转线衔接与团前落位 落成实账。账面上 KDA 6.39，分均伤害 674，参团 62%。近用得最多的是 奥莉安娜 / 1 局 / 100% ｜ 梅尔 / 1 局 / 100%。最近一局是 BLG 对 JDG / 梅尔 / 7-1-5。BLG 下一场对 JDG，这一路刀口若先咬住，整队气口往往会跟着偏过去。",
+        "summary": "看 Knight，先看他怎么把 中线线权、转线衔接与团前落位 落成实账。账面上 KDA 6.39，分均伤害 674，参团 62%。近用得最多的是 奥莉安娜 / 1 局 / 100% ｜ 梅尔 / 1 局 / 100%。最近一局是 BLG 对 JDG / 梅尔 / 7-1-5。BLG 下一场对 G2，这一路刀口若先咬住，整队气口往往会跟着偏过去。",
         "note": "强在把线权、转线和团前脚步拆得细。中段若由他把局心拢住，整队章法会很整；若被逼着长时间守线，BLG 的中轴会先沉。 常用英雄看 奥莉安娜 / 1 局 / 100% ｜ 梅尔 / 1 局 / 100%。",
         "tags": [
           "中线线权",
@@ -1640,24 +1604,30 @@
             "note": "BLG 当前关注位"
           },
           {
-            "label": "此刻对局",
-            "value": "BLG vs JDG",
-            "note": "3月22日周日 02:00 / First Stand"
+            "label": "下一场",
+            "value": "BLG vs G2",
+            "note": "3月22日周日 21:00 / First Stand"
           },
           {
             "label": "最近一场",
             "value": "3:0",
-            "note": "对阵 G2"
+            "note": "对阵 JDG"
           }
         ],
         "observation": [
           "强在把线权、转线和团前脚步拆得细。中段若由他把局心拢住，整队章法会很整；若被逼着长时间守线，BLG 的中轴会先沉。",
           "常用英雄：奥莉安娜 / 1 局 / 100% ｜ 梅尔 / 1 局 / 100%。",
           "最近一局：BLG 对 JDG / 梅尔 / 7-1-5。",
-          "最近一场 BLG 3:0 G2。",
+          "最近一场 BLG 3:0 JDG。",
           "下一场已确认对阵 G2。"
         ],
         "history": [
+          {
+            "opponent": "JDG",
+            "result": "3:0",
+            "note": "First Stand / 淘汰赛",
+            "outcome": "win"
+          },
           {
             "opponent": "G2",
             "result": "3:0",
@@ -1675,12 +1645,6 @@
             "result": "3:1",
             "note": "LPL / 第一赛段淘汰赛",
             "outcome": "win"
-          },
-          {
-            "opponent": "JDG",
-            "result": "3:2",
-            "note": "LPL / 第一赛段淘汰赛",
-            "outcome": "win"
           }
         ]
       },
@@ -1690,7 +1654,7 @@
         "role": "下路",
         "teamCode": "BLG",
         "portrait": "./assets/players/viper.jpg",
-        "summary": "看 Viper，先看他怎么把 伤害收束、团战站位与残局清账 落成实账。账面上 KDA 6.61，分均伤害 944，参团 64%。近用得最多的是 芸阿娜 / 1 局 / 100% ｜ 库奇 / 1 局 / 100%。最近一局是 BLG 对 JDG / 芸阿娜 / 3-1-5。BLG 下一场对 JDG，这一路刀口若先咬住，整队气口往往会跟着偏过去。",
+        "summary": "看 Viper，先看他怎么把 伤害收束、团战站位与残局清账 落成实账。账面上 KDA 6.61，分均伤害 944，参团 64%。近用得最多的是 芸阿娜 / 1 局 / 100% ｜ 库奇 / 1 局 / 100%。最近一局是 BLG 对 JDG / 芸阿娜 / 3-1-5。BLG 下一场对 G2，这一路刀口若先咬住，整队气口往往会跟着偏过去。",
         "note": "收束能力极强，残局给半步就能把伤害算满；可前排若先断，他再稳也得先替全队还站位的债。 常用英雄看 芸阿娜 / 1 局 / 100% ｜ 库奇 / 1 局 / 100%。",
         "tags": [
           "输出收束",
@@ -1744,24 +1708,30 @@
             "note": "BLG 当前关注位"
           },
           {
-            "label": "此刻对局",
-            "value": "BLG vs JDG",
-            "note": "3月22日周日 02:00 / First Stand"
+            "label": "下一场",
+            "value": "BLG vs G2",
+            "note": "3月22日周日 21:00 / First Stand"
           },
           {
             "label": "最近一场",
             "value": "3:0",
-            "note": "对阵 G2"
+            "note": "对阵 JDG"
           }
         ],
         "observation": [
           "收束能力极强，残局给半步就能把伤害算满；可前排若先断，他再稳也得先替全队还站位的债。",
           "常用英雄：芸阿娜 / 1 局 / 100% ｜ 库奇 / 1 局 / 100%。",
           "最近一局：BLG 对 JDG / 芸阿娜 / 3-1-5。",
-          "最近一场 BLG 3:0 G2。",
+          "最近一场 BLG 3:0 JDG。",
           "下一场已确认对阵 G2。"
         ],
         "history": [
+          {
+            "opponent": "JDG",
+            "result": "3:0",
+            "note": "First Stand / 淘汰赛",
+            "outcome": "win"
+          },
           {
             "opponent": "G2",
             "result": "3:0",
@@ -1779,12 +1749,6 @@
             "result": "3:1",
             "note": "LPL / 第一赛段淘汰赛",
             "outcome": "win"
-          },
-          {
-            "opponent": "JDG",
-            "result": "3:2",
-            "note": "LPL / 第一赛段淘汰赛",
-            "outcome": "win"
           }
         ]
       },
@@ -1794,7 +1758,7 @@
         "role": "辅助",
         "teamCode": "BLG",
         "portrait": "./assets/players/on.jpg",
-        "summary": "看 ON，先看他怎么把 开门时机、团前视野与回身补位 落成实账。账面上 KDA 5.07，分均伤害 310，参团 74%。近用得最多的是 巴德 / 1 局 / 100% ｜ 妮蔻 / 1 局 / 100%。最近一局是 BLG 对 JDG / 妮蔻 / 0-5-9。BLG 下一场对 JDG，这一路刀口若先咬住，整队气口往往会跟着偏过去。",
+        "summary": "看 ON，先看他怎么把 开门时机、团前视野与回身补位 落成实账。账面上 KDA 5.07，分均伤害 310，参团 74%。近用得最多的是 巴德 / 1 局 / 100% ｜ 妮蔻 / 1 局 / 100%。最近一局是 BLG 对 JDG / 妮蔻 / 0-5-9。BLG 下一场对 G2，这一路刀口若先咬住，整队气口往往会跟着偏过去。",
         "note": "价值全在先手准不准、回身稳不稳。开团若正，BLG 能一口压进；回身若慢，后排会先吃满苦头。 常用英雄看 巴德 / 1 局 / 100% ｜ 妮蔻 / 1 局 / 100%。",
         "tags": [
           "开门时机",
@@ -1848,24 +1812,30 @@
             "note": "BLG 当前关注位"
           },
           {
-            "label": "此刻对局",
-            "value": "BLG vs JDG",
-            "note": "3月22日周日 02:00 / First Stand"
+            "label": "下一场",
+            "value": "BLG vs G2",
+            "note": "3月22日周日 21:00 / First Stand"
           },
           {
             "label": "最近一场",
             "value": "3:0",
-            "note": "对阵 G2"
+            "note": "对阵 JDG"
           }
         ],
         "observation": [
           "价值全在先手准不准、回身稳不稳。开团若正，BLG 能一口压进；回身若慢，后排会先吃满苦头。",
           "常用英雄：巴德 / 1 局 / 100% ｜ 妮蔻 / 1 局 / 100%。",
           "最近一局：BLG 对 JDG / 妮蔻 / 0-5-9。",
-          "最近一场 BLG 3:0 G2。",
+          "最近一场 BLG 3:0 JDG。",
           "下一场已确认对阵 G2。"
         ],
         "history": [
+          {
+            "opponent": "JDG",
+            "result": "3:0",
+            "note": "First Stand / 淘汰赛",
+            "outcome": "win"
+          },
           {
             "opponent": "G2",
             "result": "3:0",
@@ -1883,12 +1853,6 @@
             "result": "3:1",
             "note": "LPL / 第一赛段淘汰赛",
             "outcome": "win"
-          },
-          {
-            "opponent": "JDG",
-            "result": "3:2",
-            "note": "LPL / 第一赛段淘汰赛",
-            "outcome": "win"
           }
         ]
       },
@@ -1898,7 +1862,7 @@
         "role": "上路",
         "teamCode": "JDG",
         "portrait": "./assets/players/xiaoxu.jpg",
-        "summary": "看 Xiaoxu，先看他怎么把 边线压制、换血胆气与先手身位 落成实账。账面上 KDA 2.18，分均伤害 580，参团 53%。近用得最多的是 雷克顿 / 1 局 / 0% ｜ 安蓓萨 / 1 局 / 0%。最近一局是 JDG 对 BLG / 雷克顿 / 1-5-1。JDG 下一场对 BLG，这一路刀口若先咬住，整队气口往往会跟着偏过去。",
+        "summary": "看 Xiaoxu，先看他怎么把 边线压制、换血胆气与先手身位 落成实账。账面上 KDA 2.18，分均伤害 580，参团 53%。近用得最多的是 雷克顿 / 1 局 / 0% ｜ 安蓓萨 / 1 局 / 0%。最近一局是 JDG 对 BLG / 雷克顿 / 1-5-1。JDG 下一场对 待定，这一路刀口若先咬住，整队气口往往会跟着偏过去。",
         "note": "偏稳，愿意先把兵线和身位守住，给队伍留第二拍；但若被硬扯进连续乱战，他的节奏会被迫提前交。 常用英雄看 雷克顿 / 1 局 / 0% ｜ 安蓓萨 / 1 局 / 0%。",
         "tags": [
           "边线刀口",
@@ -1952,24 +1916,30 @@
             "note": "JDG 当前关注位"
           },
           {
-            "label": "此刻对局",
-            "value": "JDG vs BLG",
-            "note": "3月22日周日 02:00 / First Stand"
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
           },
           {
             "label": "最近一场",
-            "value": "3:1",
-            "note": "对阵 LYON"
+            "value": "0:3",
+            "note": "对阵 BLG"
           }
         ],
         "observation": [
           "偏稳，愿意先把兵线和身位守住，给队伍留第二拍；但若被硬扯进连续乱战，他的节奏会被迫提前交。",
           "常用英雄：雷克顿 / 1 局 / 0% ｜ 安蓓萨 / 1 局 / 0%。",
           "最近一局：JDG 对 BLG / 雷克顿 / 1-5-1。",
-          "最近一场 JDG 3:1 LYON。",
+          "最近一场 JDG 0:3 BLG。",
           "下一场对阵还没确认。"
         ],
         "history": [
+          {
+            "opponent": "BLG",
+            "result": "0:3",
+            "note": "First Stand / 淘汰赛",
+            "outcome": "loss"
+          },
           {
             "opponent": "LYON",
             "result": "3:1",
@@ -1987,12 +1957,6 @@
             "result": "0:3",
             "note": "First Stand / 小组赛",
             "outcome": "loss"
-          },
-          {
-            "opponent": "BLG",
-            "result": "1:3",
-            "note": "LPL / 第一赛段淘汰赛",
-            "outcome": "loss"
           }
         ]
       },
@@ -2002,7 +1966,7 @@
         "role": "打野",
         "teamCode": "JDG",
         "portrait": "./assets/players/junjia.jpg",
-        "summary": "看 JunJia，先看他怎么把 河道起手、资源先后与第一口节拍 落成实账。账面上 KDA 3.06，分均伤害 377，参团 70%。近用得最多的是 嘉文四世 / 1 局 / 0% ｜ 蔚 / 1 局 / 0%。最近一局是 JDG 对 BLG / 蔚 / 1-5-3。JDG 下一场对 BLG，这一路刀口若先咬住，整队气口往往会跟着偏过去。",
+        "summary": "看 JunJia，先看他怎么把 河道起手、资源先后与第一口节拍 落成实账。账面上 KDA 3.06，分均伤害 377，参团 70%。近用得最多的是 嘉文四世 / 1 局 / 0% ｜ 蔚 / 1 局 / 0%。最近一局是 JDG 对 BLG / 蔚 / 1-5-3。JDG 下一场对 待定，这一路刀口若先咬住，整队气口往往会跟着偏过去。",
         "note": "看点在资源起手和河道顺序。若他先把第一层视野搭稳，JDG 才能把中后段秩序接上；若野区先失血，后头就得先补账。 常用英雄看 嘉文四世 / 1 局 / 0% ｜ 蔚 / 1 局 / 0%。",
         "tags": [
           "河道起手",
@@ -2056,24 +2020,30 @@
             "note": "JDG 当前关注位"
           },
           {
-            "label": "此刻对局",
-            "value": "JDG vs BLG",
-            "note": "3月22日周日 02:00 / First Stand"
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
           },
           {
             "label": "最近一场",
-            "value": "3:1",
-            "note": "对阵 LYON"
+            "value": "0:3",
+            "note": "对阵 BLG"
           }
         ],
         "observation": [
           "看点在资源起手和河道顺序。若他先把第一层视野搭稳，JDG 才能把中后段秩序接上；若野区先失血，后头就得先补账。",
           "常用英雄：嘉文四世 / 1 局 / 0% ｜ 蔚 / 1 局 / 0%。",
           "最近一局：JDG 对 BLG / 蔚 / 1-5-3。",
-          "最近一场 JDG 3:1 LYON。",
+          "最近一场 JDG 0:3 BLG。",
           "下一场对阵还没确认。"
         ],
         "history": [
+          {
+            "opponent": "BLG",
+            "result": "0:3",
+            "note": "First Stand / 淘汰赛",
+            "outcome": "loss"
+          },
           {
             "opponent": "LYON",
             "result": "3:1",
@@ -2091,12 +2061,6 @@
             "result": "0:3",
             "note": "First Stand / 小组赛",
             "outcome": "loss"
-          },
-          {
-            "opponent": "BLG",
-            "result": "1:3",
-            "note": "LPL / 第一赛段淘汰赛",
-            "outcome": "loss"
           }
         ]
       },
@@ -2106,7 +2070,7 @@
         "role": "中路",
         "teamCode": "JDG",
         "portrait": "./assets/players/hongq.jpg",
-        "summary": "看 HongQ，先看他怎么把 中线线权、转线衔接与团前落位 落成实账。账面上 KDA 4.05，分均伤害 675，参团 60%。近用得最多的是 阿狸 / 1 局 / 0% ｜ 维克托 / 1 局 / 0%。最近一局是 JDG 对 BLG / 阿狸 / 3-3-1。JDG 下一场对 BLG，这一路刀口若先咬住，整队气口往往会跟着偏过去。",
+        "summary": "看 HongQ，先看他怎么把 中线线权、转线衔接与团前落位 落成实账。账面上 KDA 4.05，分均伤害 675，参团 60%。近用得最多的是 阿狸 / 1 局 / 0% ｜ 维克托 / 1 局 / 0%。最近一局是 JDG 对 BLG / 阿狸 / 3-3-1。JDG 下一场对 待定，这一路刀口若先咬住，整队气口往往会跟着偏过去。",
         "note": "更像运转轴，不抢戏，重在转线衔接和团前站位；若被人压着守中线，JDG 的回合会少很多。 常用英雄看 阿狸 / 1 局 / 0% ｜ 维克托 / 1 局 / 0%。",
         "tags": [
           "中线线权",
@@ -2160,24 +2124,30 @@
             "note": "JDG 当前关注位"
           },
           {
-            "label": "此刻对局",
-            "value": "JDG vs BLG",
-            "note": "3月22日周日 02:00 / First Stand"
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
           },
           {
             "label": "最近一场",
-            "value": "3:1",
-            "note": "对阵 LYON"
+            "value": "0:3",
+            "note": "对阵 BLG"
           }
         ],
         "observation": [
           "更像运转轴，不抢戏，重在转线衔接和团前站位；若被人压着守中线，JDG 的回合会少很多。",
           "常用英雄：阿狸 / 1 局 / 0% ｜ 维克托 / 1 局 / 0%。",
           "最近一局：JDG 对 BLG / 阿狸 / 3-3-1。",
-          "最近一场 JDG 3:1 LYON。",
+          "最近一场 JDG 0:3 BLG。",
           "下一场对阵还没确认。"
         ],
         "history": [
+          {
+            "opponent": "BLG",
+            "result": "0:3",
+            "note": "First Stand / 淘汰赛",
+            "outcome": "loss"
+          },
           {
             "opponent": "LYON",
             "result": "3:1",
@@ -2195,12 +2165,6 @@
             "result": "0:3",
             "note": "First Stand / 小组赛",
             "outcome": "loss"
-          },
-          {
-            "opponent": "BLG",
-            "result": "1:3",
-            "note": "LPL / 第一赛段淘汰赛",
-            "outcome": "loss"
           }
         ]
       },
@@ -2210,7 +2174,7 @@
         "role": "下路",
         "teamCode": "JDG",
         "portrait": "./assets/players/gala.jpg",
-        "summary": "看 GALA，先看他怎么把 伤害收束、团战站位与残局清账 落成实账。账面上 KDA 5.65，分均伤害 738，参团 71%。近用得最多的是 凯特琳 / 1 局 / 0% ｜ 韦鲁斯 / 1 局 / 0%。最近一局是 JDG 对 BLG / 凯特琳 / 2-2-2。JDG 下一场对 BLG，这一路刀口若先咬住，整队气口往往会跟着偏过去。",
+        "summary": "看 GALA，先看他怎么把 伤害收束、团战站位与残局清账 落成实账。账面上 KDA 5.65，分均伤害 738，参团 71%。近用得最多的是 凯特琳 / 1 局 / 0% ｜ 韦鲁斯 / 1 局 / 0%。最近一局是 JDG 对 BLG / 凯特琳 / 2-2-2。JDG 下一场对 待定，这一路刀口若先咬住，整队气口往往会跟着偏过去。",
         "note": "打的是正面算力和清账能力。队伍给出正面站位时，他很会把伤害打成实账；可若前排散，输出位也会被迫后撤。 常用英雄看 凯特琳 / 1 局 / 0% ｜ 韦鲁斯 / 1 局 / 0%。",
         "tags": [
           "输出收束",
@@ -2264,24 +2228,30 @@
             "note": "JDG 当前关注位"
           },
           {
-            "label": "此刻对局",
-            "value": "JDG vs BLG",
-            "note": "3月22日周日 02:00 / First Stand"
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
           },
           {
             "label": "最近一场",
-            "value": "3:1",
-            "note": "对阵 LYON"
+            "value": "0:3",
+            "note": "对阵 BLG"
           }
         ],
         "observation": [
           "打的是正面算力和清账能力。队伍给出正面站位时，他很会把伤害打成实账；可若前排散，输出位也会被迫后撤。",
           "常用英雄：凯特琳 / 1 局 / 0% ｜ 韦鲁斯 / 1 局 / 0%。",
           "最近一局：JDG 对 BLG / 凯特琳 / 2-2-2。",
-          "最近一场 JDG 3:1 LYON。",
+          "最近一场 JDG 0:3 BLG。",
           "下一场对阵还没确认。"
         ],
         "history": [
+          {
+            "opponent": "BLG",
+            "result": "0:3",
+            "note": "First Stand / 淘汰赛",
+            "outcome": "loss"
+          },
           {
             "opponent": "LYON",
             "result": "3:1",
@@ -2299,12 +2269,6 @@
             "result": "0:3",
             "note": "First Stand / 小组赛",
             "outcome": "loss"
-          },
-          {
-            "opponent": "BLG",
-            "result": "1:3",
-            "note": "LPL / 第一赛段淘汰赛",
-            "outcome": "loss"
           }
         ]
       },
@@ -2314,7 +2278,7 @@
         "role": "辅助",
         "teamCode": "JDG",
         "portrait": "./assets/players/vampire.jpg",
-        "summary": "看 Vampire，先看他怎么把 开门时机、团前视野与回身补位 落成实账。账面上 KDA 5.20，分均伤害 205，参团 77%。近用得最多的是 阿利斯塔 / 1 局 / 0% ｜ 拉克丝 / 1 局 / 0%。最近一局是 JDG 对 BLG / 阿利斯塔 / 0-3-9。JDG 下一场对 BLG，这一路刀口若先咬住，整队气口往往会跟着偏过去。",
+        "summary": "看 Vampire，先看他怎么把 开门时机、团前视野与回身补位 落成实账。账面上 KDA 5.20，分均伤害 205，参团 77%。近用得最多的是 阿利斯塔 / 1 局 / 0% ｜ 拉克丝 / 1 局 / 0%。最近一局是 JDG 对 BLG / 阿利斯塔 / 0-3-9。JDG 下一场对 待定，这一路刀口若先咬住，整队气口往往会跟着偏过去。",
         "note": "更重秩序和衔接，擅长把团前站位理顺；可一旦局面被人抬快，第一拍也会显得保守。 常用英雄看 阿利斯塔 / 1 局 / 0% ｜ 拉克丝 / 1 局 / 0%。",
         "tags": [
           "开门时机",
@@ -2368,24 +2332,30 @@
             "note": "JDG 当前关注位"
           },
           {
-            "label": "此刻对局",
-            "value": "JDG vs BLG",
-            "note": "3月22日周日 02:00 / First Stand"
+            "label": "下一场",
+            "value": "等待排表",
+            "note": "当前没有已确认对阵"
           },
           {
             "label": "最近一场",
-            "value": "3:1",
-            "note": "对阵 LYON"
+            "value": "0:3",
+            "note": "对阵 BLG"
           }
         ],
         "observation": [
           "更重秩序和衔接，擅长把团前站位理顺；可一旦局面被人抬快，第一拍也会显得保守。",
           "常用英雄：阿利斯塔 / 1 局 / 0% ｜ 拉克丝 / 1 局 / 0%。",
           "最近一局：JDG 对 BLG / 阿利斯塔 / 0-3-9。",
-          "最近一场 JDG 3:1 LYON。",
+          "最近一场 JDG 0:3 BLG。",
           "下一场对阵还没确认。"
         ],
         "history": [
+          {
+            "opponent": "BLG",
+            "result": "0:3",
+            "note": "First Stand / 淘汰赛",
+            "outcome": "loss"
+          },
           {
             "opponent": "LYON",
             "result": "3:1",
@@ -2402,12 +2372,6 @@
             "opponent": "GEN",
             "result": "0:3",
             "note": "First Stand / 小组赛",
-            "outcome": "loss"
-          },
-          {
-            "opponent": "BLG",
-            "result": "1:3",
-            "note": "LPL / 第一赛段淘汰赛",
             "outcome": "loss"
           }
         ]
@@ -9369,12 +9333,12 @@
         "teamB": {
           "code": "BLG",
           "logo": "https://img.crawler.qq.com/lolwebvideo/20250618144525/49342dadcecf162e8ac94fad6eb91540/0",
-          "recordText": "系列 12-4 / 局差 +18"
+          "recordText": "系列 13-4 / 局差 +21"
         },
         "factors": [
           {
             "label": "账面",
-            "value": "G2 3-1，BLG 12-4"
+            "value": "G2 3-1，BLG 13-4"
           },
           {
             "label": "近势",
@@ -9382,7 +9346,7 @@
           },
           {
             "label": "局口",
-            "value": "G2 +6，BLG +18"
+            "value": "G2 +6，BLG +21"
           },
           {
             "label": "旧账",
@@ -9390,7 +9354,7 @@
           },
           {
             "label": "歇脚",
-            "value": "G2 24h，BLG 96h"
+            "value": "G2 24h，BLG 19h"
           },
           {
             "label": "英雄池",
@@ -9421,8 +9385,8 @@
         "line": "老衲看此局，先押 BLG，不为别的，只因它在赛前这张账面上更容易先把第一口气抢出来。前中期争先意愿强 是它眼下最能压住局面的刀口，上中野肯先落子，盘面一旦抢到前手，常把河道、边线与团前站位一并压出来 又正好对得上这场的起手路数。若前两波资源先归它手里，河道、边线与团前站位都会顺着它的气往下走，后面多半是它来写章法。\n\n可老衲也不替它遮丑，热起来时脚步会压得过深，纪律偶尔松一口，给人反咬的缝。这种队最怕赢得太顺，手一热，脚步便会压过应有的分寸，原本该稳着收的回合，反倒会因为贪一口气把口子露给对面。真到转折处，比的不是谁喊得响，而是谁还能守住那一下分寸，不把本该赢的局打成对冲。\n\n再往深处看，G2 原是脑子活，转线快，常用非常规换位和节奏岔口把人带出熟路，它若想翻案，路只有一条，先把前十五分钟拖慢，再把 BLG 逼进补线、回防和二次落位的苦差里，让这口快气自己泄掉。若做不到，比赛多半还没走到长局，就已经要顺着前手分出生死。Bin 这一点，看的不是热闹，是 边线敢压，见口就追，最容易把上路打成单点破局；毛病也在这里，手热时站位会伸过河道，给反手留缝。 XUN 这一点，看的不是热闹，是 管的是 BLG 第一口气。河道先踩住，先锋先碰到，整队的刀就会一齐往前走；若前两趟慢拍，锋口会先钝。 Knight 这一点，看的不是热闹，是 强在把线权、转线和团前脚步拆得细。中段若由他把局心拢住，整队章法会很整；若被逼着长时间守线，BLG 的中轴会先沉。",
         "risk": "但 G2 若真把比赛拖进久持之局，若前段换线和试探都没赚到时间，后面会被迫正面接算力题，老衲这句也得改口。",
         "knowledge": {
-          "teamA": "G2：门风是脑子活，转线快，常用非常规换位和节奏岔口把人带出熟路；长板是中段转线多变、敢做非常规落子、临场找角度能力强；明病是局势若被人逼成正面账本，它也会露出前排不够厚、硬解不够稳的问题；翻船点是若前段换线和试探都没赚到时间，后面会被迫正面接算力题",
-          "teamB": "BLG：门风是上中野肯先落子，盘面一旦抢到前手，常把河道、边线与团前站位一并压出来；长板是前中期争先意愿强、资源逼抢凶、一旦拿到主动便很会把局面压窄；明病是热起来时脚步会压得过深，纪律偶尔松一口，给人反咬的缝；翻船点是若前中期连续失手，后段容易把本该稳住的局面再打成对冲",
+          "teamA": "G2 的门风是脑子活，转线快，常用非常规换位和节奏岔口把人带出熟路。长板落在中段转线多变、敢做非常规落子、临场找角度能力强。明病在于局势若被人逼成正面账本，它也会露出前排不够厚、硬解不够稳的问题。当前账面 3-1，近五 胜 胜 负 胜，局差 +6。人头上主看BrokenBlade主看敢走边线高压，也敢接奇形怪状的对位。若他先把边线带出岔口，G2 的换位和奇手就更好落。，常用 赛恩 / 1 局 / 100% ｜ 慎 / 1 局 / 100% ｜ 奎桑提 / 1 局 / 100%；SkewMond主看喜欢把比赛带出熟路，前两波路径很会做文章；可若被人看穿节拍，G2 的花活会先少一层。，常用 嘉文四世 / 1 局 / 100% ｜ 潘森 / 1 局 / 100% ｜ 亚恒 / 1 局 / 100%。近闻可参 fst-2026-primer。",
+          "teamB": "BLG 的门风是上中野肯先落子，盘面一旦抢到前手，常把河道、边线与团前站位一并压出来。长板落在前中期争先意愿强、资源逼抢凶、一旦拿到主动便很会把局面压窄。明病在于热起来时脚步会压得过深，纪律偶尔松一口，给人反咬的缝。当前账面 13-4，近五 胜 胜 胜 胜 胜，局差 +21。人头上主看Bin主看边线敢压，见口就追，最容易把上路打成单点破局；毛病也在这里，手热时站位会伸过河道，给反手留缝。，常用 赛恩 / 1 局 / 100% ｜ 纳尔 / 1 局 / 100%；XUN主看管的是 BLG 第一口气。河道先踩住，先锋先碰到，整队的刀就会一齐往前走；若前两趟慢拍，锋口会先钝。，常用 魔腾 / 1 局 / 100% ｜ 波比 / 1 局 / 100%。",
           "focusPlayers": "Bin：边线敢压，见口就追，最容易把上路打成单点破局；毛病也在这里，手热时站位会伸过河道，给反手留缝。 账面 KDA 4.24，分均伤害 735，参团 48%。 常用 赛恩 / 1 局 / 100% ｜ 纳尔 / 1 局 / 100%。；XUN：管的是 BLG 第一口气。河道先踩住，先锋先碰到，整队的刀就会一齐往前走；若前两趟慢拍，锋口会先钝。 账面 KDA 6.53，分均伤害 485，参团 67%。 常用 魔腾 / 1 局 / 100% ｜ 波比 / 1 局 / 100%。；Knight：强在把线权、转线和团前脚步拆得细。中段若由他把局心拢住，整队章法会很整；若被逼着长时间守线，BLG 的中轴会先沉。 账面 KDA 6.39，分均伤害 674，参团 62%。 常用 奥莉安娜 / 1 局 / 100% ｜ 梅尔 / 1 局 / 100%。；Viper：收束能力极强，残局给半步就能把伤害算满；可前排若先断，他再稳也得先替全队还站位的债。 账面 KDA 6.61，分均伤害 944，参团 64%。 常用 芸阿娜 / 1 局 / 100% ｜ 库奇 / 1 局 / 100%。；ON：价值全在先手准不准、回身稳不稳。开团若正，BLG 能一口压进；回身若慢，后排会先吃满苦头。 账面 KDA 5.07，分均伤害 310，参团 74%。 常用 巴德 / 1 局 / 100% ｜ 妮蔻 / 1 局 / 100%。；BrokenBlade：敢走边线高压，也敢接奇形怪状的对位。若他先把边线带出岔口，G2 的换位和奇手就更好落。 账面 KDA 4.75，分均伤害 666，参团 54%。 常用 赛恩 / 1 局 / 100% ｜ 慎 / 1 局 / 100% ｜ 奎桑提 / 1 局 / 100%。；SkewMond：喜欢把比赛带出熟路，前两波路径很会做文章；可若被人看穿节拍，G2 的花活会先少一层。 账面 KDA 5.17，分均伤害 560，参团 71%。 常用 嘉文四世 / 1 局 / 100% ｜ 潘森 / 1 局 / 100% ｜ 亚恒 / 1 局 / 100%。；Caps：中段最会拆局的人，转线、换位和团前拉扯都敢玩；可若比赛被逼成正面算力题，他也得先补稳字。 账面 KDA 3.85，分均伤害 790，参团 62%。 常用 阿卡丽 / 1 局 / 100% ｜ 维克托 / 1 局 / 100% ｜ 阿萝拉 / 1 局 / 100%。；Hans Sama：重在团里持续输出和跟队友连段。队友给出奇手时，他很会顺势补刀；可前排若先塌，站位也会先被掐。 账面 KDA 4.48，分均伤害 780，参团 62%。 常用 厄运小姐 / 1 局 / 100% ｜ 克格莫 / 1 局 / 100% ｜ 韦鲁斯 / 1 局 / 100%。；Labrov：敢先动，也敢陪着做非常规转线。若第一拍做成，G2 的局很怪也很难防；可空一拍，后头会被逼回正面。 账面 KDA 4.53，分均伤害 230，参团 77%。 常用 布隆 / 1 局 / 100% ｜ 诺提勒斯 / 1 局 / 100% ｜ 璐璐 / 1 局 / 100%。",
           "heroPool": "G2：G2 池深 3.0，近战术切牌 3.0，舒适池胜率 100%；BLG：BLG 池深 2.0，近战术切牌 2.0，舒适池胜率 100%",
           "recentAnalysis": "fst-2026-primer：© 2026 Riot Games. All Rights Reserved. Privacy Notice Terms of Service Accessibility Cookie Preferences What is the First Stand Tournament?；2026-lcs-lock-in-playoffs-and-finals-primer：© 2026 Riot Games. All Rights Reserved. Privacy Notice Terms of Service Accessibility Cookie Preferences LoL Esports | Only one team will em；season-start-2026-lol-esports：© 2026 Riot Games. All Rights Reserved. Privacy Notice Terms of Service Accessibility Cookie Preferences The 2026 League of Legends Esports "
@@ -9462,16 +9426,170 @@
             "mentions": {}
           }
         ],
+        "history": [
+          {
+            "id": "history-BLG-2026-03-22 02:00:00",
+            "matchLabel": "BLG vs JDG",
+            "stageLabel": "First Stand / 淘汰赛",
+            "timeLabel": "3月22日周日 02:00 / BO5",
+            "predictedScore": "3:1",
+            "actualScore": "3:0",
+            "favoredTeam": "BLG",
+            "actualWinner": "BLG",
+            "confidence": 84,
+            "headline": "老衲先押 BLG",
+            "risk": "但 JDG 若真把比赛拖进久持之局，若前十五分钟连续掉资源，后段再稳也要先补窟窿，老衲这句也得改口。",
+            "verdict": "胜负押中",
+            "hitWinner": true,
+            "hitExact": false,
+            "factors": [
+              {
+                "label": "账面",
+                "value": "BLG 12-4，JDG 10-8"
+              },
+              {
+                "label": "近势",
+                "value": "BLG 胜 胜 胜 胜 胜，JDG 胜 胜 负 负 胜"
+              },
+              {
+                "label": "局口",
+                "value": "BLG +18，JDG +4"
+              },
+              {
+                "label": "旧账",
+                "value": "赛前旧账 BLG 2-2 JDG"
+              },
+              {
+                "label": "歇脚",
+                "value": "BLG 77h，JDG 24h"
+              }
+            ]
+          },
+          {
+            "id": "history-BLG-2026-03-18 21:00:00",
+            "matchLabel": "BLG vs G2",
+            "stageLabel": "First Stand / 小组赛",
+            "timeLabel": "3月18日周三 21:00 / BO5",
+            "predictedScore": "3:1",
+            "actualScore": "3:0",
+            "favoredTeam": "BLG",
+            "actualWinner": "BLG",
+            "confidence": 75,
+            "headline": "老衲先押 BLG",
+            "risk": "但 G2 若真把比赛拖进久持之局，若前段换线和试探都没赚到时间，后面会被迫正面接算力题，老衲这句也得改口。",
+            "verdict": "胜负押中",
+            "hitWinner": true,
+            "hitExact": false,
+            "factors": [
+              {
+                "label": "账面",
+                "value": "BLG 11-4，G2 1-0"
+              },
+              {
+                "label": "近势",
+                "value": "BLG 胜 胜 胜 胜 胜，G2 胜"
+              },
+              {
+                "label": "局口",
+                "value": "BLG +15，G2 +3"
+              },
+              {
+                "label": "旧账",
+                "value": "赛前无已完结交手"
+              },
+              {
+                "label": "歇脚",
+                "value": "BLG 48h，G2 43h"
+              }
+            ]
+          },
+          {
+            "id": "history-BLG-2026-03-16 21:00:00",
+            "matchLabel": "BLG vs BFX",
+            "stageLabel": "First Stand / 小组赛",
+            "timeLabel": "3月16日周一 21:00 / BO5",
+            "predictedScore": "3:1",
+            "actualScore": "3:2",
+            "favoredTeam": "BLG",
+            "actualWinner": "BLG",
+            "confidence": 84,
+            "headline": "老衲先押 BLG",
+            "risk": "但 BFX 若真把比赛拖进久持之局，若先锋和第一条龙都慢半拍，整队会被迫一边补线一边挨揍，老衲这句也得改口。",
+            "verdict": "胜负押中",
+            "hitWinner": true,
+            "hitExact": false,
+            "factors": [
+              {
+                "label": "账面",
+                "value": "BLG 10-4，BFX 0-0"
+              },
+              {
+                "label": "近势",
+                "value": "BLG 胜 胜 胜 胜 负，BFX 暂无"
+              },
+              {
+                "label": "局口",
+                "value": "BLG +14，BFX 0"
+              },
+              {
+                "label": "旧账",
+                "value": "赛前无已完结交手"
+              },
+              {
+                "label": "歇脚",
+                "value": "BLG 196h，BFX 0h"
+              }
+            ]
+          },
+          {
+            "id": "history-BLG-2026-03-08 17:00:00",
+            "matchLabel": "BLG vs JDG",
+            "stageLabel": "LPL / 第一赛段淘汰赛",
+            "timeLabel": "3月8日周日 17:00 / BO5",
+            "predictedScore": "3:1",
+            "actualScore": "3:1",
+            "favoredTeam": "BLG",
+            "actualWinner": "BLG",
+            "confidence": 71,
+            "headline": "老衲先押 BLG",
+            "risk": "但 JDG 若真把比赛拖进久持之局，若前十五分钟连续掉资源，后段再稳也要先补窟窿，老衲这句也得改口。",
+            "verdict": "胜负押中",
+            "hitWinner": true,
+            "hitExact": true,
+            "factors": [
+              {
+                "label": "账面",
+                "value": "BLG 9-4，JDG 8-6"
+              },
+              {
+                "label": "近势",
+                "value": "BLG 胜 胜 胜 负 胜，JDG 胜 负 胜 胜 负"
+              },
+              {
+                "label": "局口",
+                "value": "BLG +12，JDG +4"
+              },
+              {
+                "label": "旧账",
+                "value": "赛前旧账 BLG 1-2 JDG"
+              },
+              {
+                "label": "歇脚",
+                "value": "BLG 96h，JDG 24h"
+              }
+            ]
+          }
+        ],
         "resources": {
           "seriesRecord": [
             3,
             1,
-            12,
+            13,
             4
           ],
           "gameDiff": [
             6,
-            18
+            21
           ],
           "recentForm": [
             "胜 胜 负 胜",
@@ -9480,7 +9598,7 @@
           "headToHead": "交手 G2 0-1 BLG",
           "restHours": [
             24,
-            96
+            19
           ],
           "heroProfiles": [
             {
@@ -9502,8 +9620,8 @@
           ],
           "bo": "BO5",
           "style": {
-            "teamA": "G2：门风是脑子活，转线快，常用非常规换位和节奏岔口把人带出熟路；长板是中段转线多变、敢做非常规落子、临场找角度能力强；明病是局势若被人逼成正面账本，它也会露出前排不够厚、硬解不够稳的问题；翻船点是若前段换线和试探都没赚到时间，后面会被迫正面接算力题",
-            "teamB": "BLG：门风是上中野肯先落子，盘面一旦抢到前手，常把河道、边线与团前站位一并压出来；长板是前中期争先意愿强、资源逼抢凶、一旦拿到主动便很会把局面压窄；明病是热起来时脚步会压得过深，纪律偶尔松一口，给人反咬的缝；翻船点是若前中期连续失手，后段容易把本该稳住的局面再打成对冲",
+            "teamA": "G2 的门风是脑子活，转线快，常用非常规换位和节奏岔口把人带出熟路。长板落在中段转线多变、敢做非常规落子、临场找角度能力强。明病在于局势若被人逼成正面账本，它也会露出前排不够厚、硬解不够稳的问题。当前账面 3-1，近五 胜 胜 负 胜，局差 +6。人头上主看BrokenBlade主看敢走边线高压，也敢接奇形怪状的对位。若他先把边线带出岔口，G2 的换位和奇手就更好落。，常用 赛恩 / 1 局 / 100% ｜ 慎 / 1 局 / 100% ｜ 奎桑提 / 1 局 / 100%；SkewMond主看喜欢把比赛带出熟路，前两波路径很会做文章；可若被人看穿节拍，G2 的花活会先少一层。，常用 嘉文四世 / 1 局 / 100% ｜ 潘森 / 1 局 / 100% ｜ 亚恒 / 1 局 / 100%。近闻可参 fst-2026-primer。",
+            "teamB": "BLG 的门风是上中野肯先落子，盘面一旦抢到前手，常把河道、边线与团前站位一并压出来。长板落在前中期争先意愿强、资源逼抢凶、一旦拿到主动便很会把局面压窄。明病在于热起来时脚步会压得过深，纪律偶尔松一口，给人反咬的缝。当前账面 13-4，近五 胜 胜 胜 胜 胜，局差 +21。人头上主看Bin主看边线敢压，见口就追，最容易把上路打成单点破局；毛病也在这里，手热时站位会伸过河道，给反手留缝。，常用 赛恩 / 1 局 / 100% ｜ 纳尔 / 1 局 / 100%；XUN主看管的是 BLG 第一口气。河道先踩住，先锋先碰到，整队的刀就会一齐往前走；若前两趟慢拍，锋口会先钝。，常用 魔腾 / 1 局 / 100% ｜ 波比 / 1 局 / 100%。",
             "focusPlayers": "Bin：边线敢压，见口就追，最容易把上路打成单点破局；毛病也在这里，手热时站位会伸过河道，给反手留缝。 账面 KDA 4.24，分均伤害 735，参团 48%。 常用 赛恩 / 1 局 / 100% ｜ 纳尔 / 1 局 / 100%。；XUN：管的是 BLG 第一口气。河道先踩住，先锋先碰到，整队的刀就会一齐往前走；若前两趟慢拍，锋口会先钝。 账面 KDA 6.53，分均伤害 485，参团 67%。 常用 魔腾 / 1 局 / 100% ｜ 波比 / 1 局 / 100%。；Knight：强在把线权、转线和团前脚步拆得细。中段若由他把局心拢住，整队章法会很整；若被逼着长时间守线，BLG 的中轴会先沉。 账面 KDA 6.39，分均伤害 674，参团 62%。 常用 奥莉安娜 / 1 局 / 100% ｜ 梅尔 / 1 局 / 100%。；Viper：收束能力极强，残局给半步就能把伤害算满；可前排若先断，他再稳也得先替全队还站位的债。 账面 KDA 6.61，分均伤害 944，参团 64%。 常用 芸阿娜 / 1 局 / 100% ｜ 库奇 / 1 局 / 100%。；ON：价值全在先手准不准、回身稳不稳。开团若正，BLG 能一口压进；回身若慢，后排会先吃满苦头。 账面 KDA 5.07，分均伤害 310，参团 74%。 常用 巴德 / 1 局 / 100% ｜ 妮蔻 / 1 局 / 100%。；BrokenBlade：敢走边线高压，也敢接奇形怪状的对位。若他先把边线带出岔口，G2 的换位和奇手就更好落。 账面 KDA 4.75，分均伤害 666，参团 54%。 常用 赛恩 / 1 局 / 100% ｜ 慎 / 1 局 / 100% ｜ 奎桑提 / 1 局 / 100%。；SkewMond：喜欢把比赛带出熟路，前两波路径很会做文章；可若被人看穿节拍，G2 的花活会先少一层。 账面 KDA 5.17，分均伤害 560，参团 71%。 常用 嘉文四世 / 1 局 / 100% ｜ 潘森 / 1 局 / 100% ｜ 亚恒 / 1 局 / 100%。；Caps：中段最会拆局的人，转线、换位和团前拉扯都敢玩；可若比赛被逼成正面算力题，他也得先补稳字。 账面 KDA 3.85，分均伤害 790，参团 62%。 常用 阿卡丽 / 1 局 / 100% ｜ 维克托 / 1 局 / 100% ｜ 阿萝拉 / 1 局 / 100%。；Hans Sama：重在团里持续输出和跟队友连段。队友给出奇手时，他很会顺势补刀；可前排若先塌，站位也会先被掐。 账面 KDA 4.48，分均伤害 780，参团 62%。 常用 厄运小姐 / 1 局 / 100% ｜ 克格莫 / 1 局 / 100% ｜ 韦鲁斯 / 1 局 / 100%。；Labrov：敢先动，也敢陪着做非常规转线。若第一拍做成，G2 的局很怪也很难防；可空一拍，后头会被逼回正面。 账面 KDA 4.53，分均伤害 230，参团 77%。 常用 布隆 / 1 局 / 100% ｜ 诺提勒斯 / 1 局 / 100% ｜ 璐璐 / 1 局 / 100%。",
             "heroPool": "G2：G2 池深 3.0，近战术切牌 3.0，舒适池胜率 100%；BLG：BLG 池深 2.0，近战术切牌 2.0，舒适池胜率 100%",
             "recentAnalysis": "fst-2026-primer：© 2026 Riot Games. All Rights Reserved. Privacy Notice Terms of Service Accessibility Cookie Preferences What is the First Stand Tournament?；2026-lcs-lock-in-playoffs-and-finals-primer：© 2026 Riot Games. All Rights Reserved. Privacy Notice Terms of Service Accessibility Cookie Preferences LoL Esports | Only one team will em；season-start-2026-lol-esports：© 2026 Riot Games. All Rights Reserved. Privacy Notice Terms of Service Accessibility Cookie Preferences The 2026 League of Legends Esports "
@@ -9523,7 +9641,7 @@
         "teamA": {
           "code": "JDG",
           "logo": "",
-          "recordText": "系列 10-8"
+          "recordText": "系列 10-9"
         },
         "teamB": {
           "code": "待定",
@@ -9536,7 +9654,161 @@
         ],
         "headline": "等待官源排表",
         "line": "赛程未落纸前，不妄开口。",
-        "risk": "对阵没定，先不写比分。"
+        "risk": "对阵没定，先不写比分。",
+        "history": [
+          {
+            "id": "history-JDG-2026-03-22 02:00:00",
+            "matchLabel": "BLG vs JDG",
+            "stageLabel": "First Stand / 淘汰赛",
+            "timeLabel": "3月22日周日 02:00 / BO5",
+            "predictedScore": "3:1",
+            "actualScore": "3:0",
+            "favoredTeam": "BLG",
+            "actualWinner": "BLG",
+            "confidence": 84,
+            "headline": "老衲先押 BLG",
+            "risk": "但 JDG 若真把比赛拖进久持之局，若前十五分钟连续掉资源，后段再稳也要先补窟窿，老衲这句也得改口。",
+            "verdict": "胜负押中",
+            "hitWinner": true,
+            "hitExact": false,
+            "factors": [
+              {
+                "label": "账面",
+                "value": "BLG 12-4，JDG 10-8"
+              },
+              {
+                "label": "近势",
+                "value": "BLG 胜 胜 胜 胜 胜，JDG 胜 胜 负 负 胜"
+              },
+              {
+                "label": "局口",
+                "value": "BLG +18，JDG +4"
+              },
+              {
+                "label": "旧账",
+                "value": "赛前旧账 BLG 2-2 JDG"
+              },
+              {
+                "label": "歇脚",
+                "value": "BLG 77h，JDG 24h"
+              }
+            ]
+          },
+          {
+            "id": "history-JDG-2026-03-21 02:00:00",
+            "matchLabel": "JDG vs LYON",
+            "stageLabel": "First Stand / 小组赛",
+            "timeLabel": "3月21日周六 02:00 / BO5",
+            "predictedScore": "3:2",
+            "actualScore": "3:1",
+            "favoredTeam": "JDG",
+            "actualWinner": "JDG",
+            "confidence": 64,
+            "headline": "老衲先押 JDG",
+            "risk": "但 LYON 若真把比赛拖进久持之局，若前十五分钟被连续压掉河道与视野，后面只能靠个人手法补局，老衲这句也得改口。",
+            "verdict": "胜负押中",
+            "hitWinner": true,
+            "hitExact": false,
+            "factors": [
+              {
+                "label": "账面",
+                "value": "JDG 9-8，LYON 1-1"
+              },
+              {
+                "label": "近势",
+                "value": "JDG 胜 负 负 胜 负，LYON 负 胜"
+              },
+              {
+                "label": "局口",
+                "value": "JDG +2，LYON -2"
+              },
+              {
+                "label": "旧账",
+                "value": "赛前无已完结交手"
+              },
+              {
+                "label": "歇脚",
+                "value": "JDG 24h，LYON 29h"
+              }
+            ]
+          },
+          {
+            "id": "history-JDG-2026-03-20 02:00:00",
+            "matchLabel": "JDG vs LOUD",
+            "stageLabel": "First Stand / 小组赛",
+            "timeLabel": "3月20日周五 02:00 / BO5",
+            "predictedScore": "3:1",
+            "actualScore": "3:0",
+            "favoredTeam": "JDG",
+            "actualWinner": "JDG",
+            "confidence": 82,
+            "headline": "老衲先押 JDG",
+            "risk": "但 LOUD 若真把比赛拖进久持之局，若中线守不住，双边再想绕也只是在替正面补洞，老衲这句也得改口。",
+            "verdict": "胜负押中",
+            "hitWinner": true,
+            "hitExact": false,
+            "factors": [
+              {
+                "label": "账面",
+                "value": "JDG 8-8，LOUD 0-1"
+              },
+              {
+                "label": "近势",
+                "value": "JDG 负 负 胜 负 胜，LOUD 负"
+              },
+              {
+                "label": "局口",
+                "value": "JDG -1，LOUD -1"
+              },
+              {
+                "label": "旧账",
+                "value": "赛前无已完结交手"
+              },
+              {
+                "label": "歇脚",
+                "value": "JDG 53h，LOUD 48h"
+              }
+            ]
+          },
+          {
+            "id": "history-JDG-2026-03-17 21:00:00",
+            "matchLabel": "GEN vs JDG",
+            "stageLabel": "First Stand / 小组赛",
+            "timeLabel": "3月17日周二 21:00 / BO5",
+            "predictedScore": "2:3",
+            "actualScore": "3:0",
+            "favoredTeam": "JDG",
+            "actualWinner": "GEN",
+            "confidence": 58,
+            "headline": "老衲先押 JDG",
+            "risk": "但 GEN 若真把比赛拖进久持之局，若前期两线同时失血，它也得先花时辰把中轴扶正，老衲这句也得改口。",
+            "verdict": "断局失手",
+            "hitWinner": false,
+            "hitExact": false,
+            "factors": [
+              {
+                "label": "账面",
+                "value": "GEN 0-0，JDG 8-7"
+              },
+              {
+                "label": "近势",
+                "value": "GEN 暂无，JDG 负 胜 负 胜 胜"
+              },
+              {
+                "label": "局口",
+                "value": "GEN 0，JDG +2"
+              },
+              {
+                "label": "旧账",
+                "value": "赛前无已完结交手"
+              },
+              {
+                "label": "歇脚",
+                "value": "GEN 0h，JDG 220h"
+              }
+            ]
+          }
+        ]
       },
       {
         "id": "prediction-AL",
@@ -9564,7 +9836,161 @@
         ],
         "headline": "等待官源排表",
         "line": "赛程未落纸前，不妄开口。",
-        "risk": "对阵没定，先不写比分。"
+        "risk": "对阵没定，先不写比分。",
+        "history": [
+          {
+            "id": "history-AL-2026-03-05 17:00:00",
+            "matchLabel": "WBG vs AL",
+            "stageLabel": "LPL / 第一赛段淘汰赛",
+            "timeLabel": "3月5日周四 17:00 / BO5",
+            "predictedScore": "2:3",
+            "actualScore": "3:1",
+            "favoredTeam": "AL",
+            "actualWinner": "WBG",
+            "confidence": 58,
+            "headline": "老衲先押 AL",
+            "risk": "但 WBG 若真把比赛拖进久持之局，若线上连着失血，后续想腾挪就会被兵线和视野一起锁住，老衲这句也得改口。",
+            "verdict": "断局失手",
+            "hitWinner": false,
+            "hitExact": false,
+            "factors": [
+              {
+                "label": "账面",
+                "value": "WBG 7-6，AL 10-3"
+              },
+              {
+                "label": "近势",
+                "value": "WBG 胜 负 胜 胜 负，AL 胜 负 胜 胜 胜"
+              },
+              {
+                "label": "局口",
+                "value": "WBG +1，AL +13"
+              },
+              {
+                "label": "旧账",
+                "value": "赛前旧账 WBG 0-2 AL"
+              },
+              {
+                "label": "歇脚",
+                "value": "WBG 72h，AL 48h"
+              }
+            ]
+          },
+          {
+            "id": "history-AL-2026-03-03 17:00:00",
+            "matchLabel": "IG vs AL",
+            "stageLabel": "LPL / 第一赛段淘汰赛",
+            "timeLabel": "3月3日周二 17:00 / BO5",
+            "predictedScore": "2:3",
+            "actualScore": "1:3",
+            "favoredTeam": "AL",
+            "actualWinner": "AL",
+            "confidence": 58,
+            "headline": "老衲先押 AL",
+            "risk": "但 IG 若真把比赛拖进久持之局，IG 若迟迟拿不到主动，后手会越来越重，老衲这句也得改口。",
+            "verdict": "胜负押中",
+            "hitWinner": true,
+            "hitExact": false,
+            "factors": [
+              {
+                "label": "账面",
+                "value": "IG 4-10，AL 9-3"
+              },
+              {
+                "label": "近势",
+                "value": "IG 胜 负 胜 负 负，AL 负 胜 胜 胜 胜"
+              },
+              {
+                "label": "局口",
+                "value": "IG -11，AL +11"
+              },
+              {
+                "label": "旧账",
+                "value": "赛前旧账 IG 0-2 AL"
+              },
+              {
+                "label": "歇脚",
+                "value": "IG 48h，AL 120h"
+              }
+            ]
+          },
+          {
+            "id": "history-AL-2026-02-26 17:00:00",
+            "matchLabel": "JDG vs AL",
+            "stageLabel": "LPL / 第一赛段淘汰赛",
+            "timeLabel": "2月26日周四 17:00 / BO5",
+            "predictedScore": "2:3",
+            "actualScore": "3:2",
+            "favoredTeam": "AL",
+            "actualWinner": "JDG",
+            "confidence": 58,
+            "headline": "老衲先押 AL",
+            "risk": "但 JDG 若真把比赛拖进久持之局，若前十五分钟连续掉资源，后段再稳也要先补窟窿，老衲这句也得改口。",
+            "verdict": "断局失手",
+            "hitWinner": false,
+            "hitExact": false,
+            "factors": [
+              {
+                "label": "账面",
+                "value": "JDG 6-5，AL 9-2"
+              },
+              {
+                "label": "近势",
+                "value": "JDG 胜 负 胜 负 负，AL 胜 胜 胜 胜 胜"
+              },
+              {
+                "label": "局口",
+                "value": "JDG +1，AL +12"
+              },
+              {
+                "label": "旧账",
+                "value": "赛前旧账 JDG 1-1 AL"
+              },
+              {
+                "label": "歇脚",
+                "value": "JDG 51h，AL 48h"
+              }
+            ]
+          },
+          {
+            "id": "history-AL-2026-02-24 17:00:00",
+            "matchLabel": "AL vs WE",
+            "stageLabel": "LPL / 第一赛段淘汰赛",
+            "timeLabel": "2月24日周二 17:00 / BO5",
+            "predictedScore": "3:1",
+            "actualScore": "3:0",
+            "favoredTeam": "AL",
+            "actualWinner": "AL",
+            "confidence": 84,
+            "headline": "老衲先押 AL",
+            "risk": "但 WE 若真把比赛拖进久持之局，若前中期资源换得太软，后面会被逼着打自己不爱的硬团，老衲这句也得改口。",
+            "verdict": "胜负押中",
+            "hitWinner": true,
+            "hitExact": false,
+            "factors": [
+              {
+                "label": "账面",
+                "value": "AL 8-2，WE 5-4"
+              },
+              {
+                "label": "近势",
+                "value": "AL 胜 胜 胜 胜 胜，WE 胜 负 负 负 胜"
+              },
+              {
+                "label": "局口",
+                "value": "AL +9，WE +3"
+              },
+              {
+                "label": "旧账",
+                "value": "赛前无已完结交手"
+              },
+              {
+                "label": "歇脚",
+                "value": "AL 432h，WE 312h"
+              }
+            ]
+          }
+        ]
       },
       {
         "id": "prediction-WBG",
@@ -9592,7 +10018,161 @@
         ],
         "headline": "等待官源排表",
         "line": "赛程未落纸前，不妄开口。",
-        "risk": "对阵没定，先不写比分。"
+        "risk": "对阵没定，先不写比分。",
+        "history": [
+          {
+            "id": "history-WBG-2026-03-07 17:00:00",
+            "matchLabel": "WBG vs JDG",
+            "stageLabel": "LPL / 第一赛段淘汰赛",
+            "timeLabel": "3月7日周六 17:00 / BO5",
+            "predictedScore": "3:1",
+            "actualScore": "0:3",
+            "favoredTeam": "WBG",
+            "actualWinner": "JDG",
+            "confidence": 71,
+            "headline": "老衲先押 WBG",
+            "risk": "但 JDG 若真把比赛拖进久持之局，若前十五分钟连续掉资源，后段再稳也要先补窟窿，老衲这句也得改口。",
+            "verdict": "断局失手",
+            "hitWinner": false,
+            "hitExact": false,
+            "factors": [
+              {
+                "label": "账面",
+                "value": "WBG 8-6，JDG 7-6"
+              },
+              {
+                "label": "近势",
+                "value": "WBG 胜 胜 负 胜 胜，JDG 负 胜 胜 负 胜"
+              },
+              {
+                "label": "局口",
+                "value": "WBG +3，JDG +1"
+              },
+              {
+                "label": "旧账",
+                "value": "赛前旧账 WBG 2-0 JDG"
+              },
+              {
+                "label": "歇脚",
+                "value": "WBG 48h，JDG 72h"
+              }
+            ]
+          },
+          {
+            "id": "history-WBG-2026-03-05 17:00:00",
+            "matchLabel": "WBG vs AL",
+            "stageLabel": "LPL / 第一赛段淘汰赛",
+            "timeLabel": "3月5日周四 17:00 / BO5",
+            "predictedScore": "2:3",
+            "actualScore": "3:1",
+            "favoredTeam": "AL",
+            "actualWinner": "WBG",
+            "confidence": 58,
+            "headline": "老衲先押 AL",
+            "risk": "但 WBG 若真把比赛拖进久持之局，若线上连着失血，后续想腾挪就会被兵线和视野一起锁住，老衲这句也得改口。",
+            "verdict": "断局失手",
+            "hitWinner": false,
+            "hitExact": false,
+            "factors": [
+              {
+                "label": "账面",
+                "value": "WBG 7-6，AL 10-3"
+              },
+              {
+                "label": "近势",
+                "value": "WBG 胜 负 胜 胜 负，AL 胜 负 胜 胜 胜"
+              },
+              {
+                "label": "局口",
+                "value": "WBG +1，AL +13"
+              },
+              {
+                "label": "旧账",
+                "value": "赛前旧账 WBG 0-2 AL"
+              },
+              {
+                "label": "歇脚",
+                "value": "WBG 72h，AL 48h"
+              }
+            ]
+          },
+          {
+            "id": "history-WBG-2026-03-02 17:00:00",
+            "matchLabel": "TES vs WBG",
+            "stageLabel": "LPL / 第一赛段淘汰赛",
+            "timeLabel": "3月2日周一 17:00 / BO5",
+            "predictedScore": "2:3",
+            "actualScore": "2:3",
+            "favoredTeam": "WBG",
+            "actualWinner": "WBG",
+            "confidence": 45,
+            "headline": "老衲先押 WBG",
+            "risk": "但 TES 若真把比赛拖进久持之局，若前排和后手脱节，整队会在一波团里同时露口子，老衲这句也得改口。",
+            "verdict": "胜负押中",
+            "hitWinner": true,
+            "hitExact": true,
+            "factors": [
+              {
+                "label": "账面",
+                "value": "TES 6-7，WBG 6-6"
+              },
+              {
+                "label": "近势",
+                "value": "TES 胜 负 胜 胜 负，WBG 负 胜 胜 负 负"
+              },
+              {
+                "label": "局口",
+                "value": "TES 0，WBG 0"
+              },
+              {
+                "label": "旧账",
+                "value": "赛前旧账 TES 1-1 WBG"
+              },
+              {
+                "label": "歇脚",
+                "value": "TES 48h，WBG 72h"
+              }
+            ]
+          },
+          {
+            "id": "history-WBG-2026-02-27 17:00:00",
+            "matchLabel": "WBG vs BLG",
+            "stageLabel": "LPL / 第一赛段淘汰赛",
+            "timeLabel": "2月27日周五 17:00 / BO5",
+            "predictedScore": "2:3",
+            "actualScore": "0:3",
+            "favoredTeam": "BLG",
+            "actualWinner": "BLG",
+            "confidence": 58,
+            "headline": "老衲先押 BLG",
+            "risk": "但 WBG 若真把比赛拖进久持之局，若线上连着失血，后续想腾挪就会被兵线和视野一起锁住，老衲这句也得改口。",
+            "verdict": "胜负押中",
+            "hitWinner": true,
+            "hitExact": false,
+            "factors": [
+              {
+                "label": "账面",
+                "value": "WBG 6-5，BLG 7-4"
+              },
+              {
+                "label": "近势",
+                "value": "WBG 胜 胜 负 负 胜，BLG 胜 负 胜 胜 负"
+              },
+              {
+                "label": "局口",
+                "value": "WBG +3，BLG +8"
+              },
+              {
+                "label": "旧账",
+                "value": "赛前旧账 WBG 0-2 BLG"
+              },
+              {
+                "label": "歇脚",
+                "value": "WBG 51h，BLG 48h"
+              }
+            ]
+          }
+        ]
       },
       {
         "id": "prediction-LNG",
@@ -9620,7 +10200,161 @@
         ],
         "headline": "等待官源排表",
         "line": "赛程未落纸前，不妄开口。",
-        "risk": "对阵没定，先不写比分。"
+        "risk": "对阵没定，先不写比分。",
+        "history": [
+          {
+            "id": "history-LNG-2026-02-11 17:00:00",
+            "matchLabel": "WE vs LNG",
+            "stageLabel": "LPL / 第一赛段骑士之路",
+            "timeLabel": "2月11日周三 17:00 / BO5",
+            "predictedScore": "2:3",
+            "actualScore": "3:1",
+            "favoredTeam": "LNG",
+            "actualWinner": "WE",
+            "confidence": 58,
+            "headline": "老衲先押 LNG",
+            "risk": "但 WE 若真把比赛拖进久持之局，若前中期资源换得太软，后面会被逼着打自己不爱的硬团，老衲这句也得改口。",
+            "verdict": "断局失手",
+            "hitWinner": false,
+            "hitExact": false,
+            "factors": [
+              {
+                "label": "账面",
+                "value": "WE 4-4，LNG 7-0"
+              },
+              {
+                "label": "近势",
+                "value": "WE 负 负 负 胜 胜，LNG 胜 胜 胜 胜 胜"
+              },
+              {
+                "label": "局口",
+                "value": "WE +1，LNG +13"
+              },
+              {
+                "label": "旧账",
+                "value": "赛前无已完结交手"
+              },
+              {
+                "label": "歇脚",
+                "value": "WE 51h，LNG 27h"
+              }
+            ]
+          },
+          {
+            "id": "history-LNG-2026-02-10 14:00:00",
+            "matchLabel": "TT vs LNG",
+            "stageLabel": "LPL / 第一赛段骑士之路",
+            "timeLabel": "2月10日周二 14:00 / BO5",
+            "predictedScore": "2:3",
+            "actualScore": "0:3",
+            "favoredTeam": "LNG",
+            "actualWinner": "LNG",
+            "confidence": 58,
+            "headline": "老衲先押 LNG",
+            "risk": "但 TT 若真把比赛拖进久持之局，TT 若迟迟拿不到主动，后手会越来越重，老衲这句也得改口。",
+            "verdict": "胜负押中",
+            "hitWinner": true,
+            "hitExact": false,
+            "factors": [
+              {
+                "label": "账面",
+                "value": "TT 0-6，LNG 6-0"
+              },
+              {
+                "label": "近势",
+                "value": "TT 负 负 负 负 负，LNG 胜 胜 胜 胜 胜"
+              },
+              {
+                "label": "局口",
+                "value": "TT -11，LNG +10"
+              },
+              {
+                "label": "旧账",
+                "value": "赛前无已完结交手"
+              },
+              {
+                "label": "歇脚",
+                "value": "TT 117h，LNG 165h"
+              }
+            ]
+          },
+          {
+            "id": "history-LNG-2026-02-03 17:00:00",
+            "matchLabel": "LNG vs UP",
+            "stageLabel": "LPL / 第一赛段组内赛",
+            "timeLabel": "2月3日周二 17:00 / BO3",
+            "predictedScore": "2:0",
+            "actualScore": "2:0",
+            "favoredTeam": "LNG",
+            "actualWinner": "LNG",
+            "confidence": 84,
+            "headline": "老衲先押 LNG",
+            "risk": "但 UP 若真把比赛拖进久持之局，UP 若迟迟拿不到主动，后手会越来越重，老衲这句也得改口。",
+            "verdict": "胜负押中",
+            "hitWinner": true,
+            "hitExact": true,
+            "factors": [
+              {
+                "label": "账面",
+                "value": "LNG 5-0，UP 1-4"
+              },
+              {
+                "label": "近势",
+                "value": "LNG 胜 胜 胜 胜 胜，UP 负 负 负 胜 负"
+              },
+              {
+                "label": "局口",
+                "value": "LNG +8，UP -5"
+              },
+              {
+                "label": "旧账",
+                "value": "赛前旧账 LNG 1-0 UP"
+              },
+              {
+                "label": "歇脚",
+                "value": "LNG 48h，UP 96h"
+              }
+            ]
+          },
+          {
+            "id": "history-LNG-2026-02-01 17:00:00",
+            "matchLabel": "LGD vs LNG",
+            "stageLabel": "LPL / 第一赛段组内赛",
+            "timeLabel": "2月1日周日 17:00 / BO3",
+            "predictedScore": "1:2",
+            "actualScore": "1:2",
+            "favoredTeam": "LNG",
+            "actualWinner": "LNG",
+            "confidence": 58,
+            "headline": "老衲先押 LNG",
+            "risk": "但 LGD 若真把比赛拖进久持之局，LGD 若迟迟拿不到主动，后手会越来越重，老衲这句也得改口。",
+            "verdict": "胜负押中",
+            "hitWinner": true,
+            "hitExact": true,
+            "factors": [
+              {
+                "label": "账面",
+                "value": "LGD 2-2，LNG 4-0"
+              },
+              {
+                "label": "近势",
+                "value": "LGD 胜 负 负 胜，LNG 胜 胜 胜 胜"
+              },
+              {
+                "label": "局口",
+                "value": "LGD +1，LNG +7"
+              },
+              {
+                "label": "旧账",
+                "value": "赛前旧账 LGD 0-1 LNG"
+              },
+              {
+                "label": "歇脚",
+                "value": "LGD 98h，LNG 96h"
+              }
+            ]
+          }
+        ]
       },
       {
         "id": "prediction-TES",
@@ -9648,7 +10382,161 @@
         ],
         "headline": "等待官源排表",
         "line": "赛程未落纸前，不妄开口。",
-        "risk": "对阵没定，先不写比分。"
+        "risk": "对阵没定，先不写比分。",
+        "history": [
+          {
+            "id": "history-TES-2026-03-02 17:00:00",
+            "matchLabel": "TES vs WBG",
+            "stageLabel": "LPL / 第一赛段淘汰赛",
+            "timeLabel": "3月2日周一 17:00 / BO5",
+            "predictedScore": "2:3",
+            "actualScore": "2:3",
+            "favoredTeam": "WBG",
+            "actualWinner": "WBG",
+            "confidence": 45,
+            "headline": "老衲先押 WBG",
+            "risk": "但 TES 若真把比赛拖进久持之局，若前排和后手脱节，整队会在一波团里同时露口子，老衲这句也得改口。",
+            "verdict": "胜负押中",
+            "hitWinner": true,
+            "hitExact": true,
+            "factors": [
+              {
+                "label": "账面",
+                "value": "TES 6-7，WBG 6-6"
+              },
+              {
+                "label": "近势",
+                "value": "TES 胜 负 胜 胜 负，WBG 负 胜 胜 负 负"
+              },
+              {
+                "label": "局口",
+                "value": "TES 0，WBG 0"
+              },
+              {
+                "label": "旧账",
+                "value": "赛前旧账 TES 1-1 WBG"
+              },
+              {
+                "label": "歇脚",
+                "value": "TES 48h，WBG 72h"
+              }
+            ]
+          },
+          {
+            "id": "history-TES-2026-02-28 17:00:00",
+            "matchLabel": "TES vs WE",
+            "stageLabel": "LPL / 第一赛段淘汰赛",
+            "timeLabel": "2月28日周六 17:00 / BO5",
+            "predictedScore": "3:2",
+            "actualScore": "3:0",
+            "favoredTeam": "TES",
+            "actualWinner": "TES",
+            "confidence": 66,
+            "headline": "老衲先押 TES",
+            "risk": "但 WE 若真把比赛拖进久持之局，若前中期资源换得太软，后面会被逼着打自己不爱的硬团，老衲这句也得改口。",
+            "verdict": "胜负押中",
+            "hitWinner": true,
+            "hitExact": false,
+            "factors": [
+              {
+                "label": "账面",
+                "value": "TES 5-7，WE 5-5"
+              },
+              {
+                "label": "近势",
+                "value": "TES 负 胜 胜 负 胜，WE 负 胜 负 负 负"
+              },
+              {
+                "label": "局口",
+                "value": "TES -3，WE 0"
+              },
+              {
+                "label": "旧账",
+                "value": "赛前旧账 TES 1-0 WE"
+              },
+              {
+                "label": "歇脚",
+                "value": "TES 99h，WE 96h"
+              }
+            ]
+          },
+          {
+            "id": "history-TES-2026-02-24 14:00:00",
+            "matchLabel": "JDG vs TES",
+            "stageLabel": "LPL / 第一赛段淘汰赛",
+            "timeLabel": "2月24日周二 14:00 / BO5",
+            "predictedScore": "3:2",
+            "actualScore": "3:2",
+            "favoredTeam": "JDG",
+            "actualWinner": "JDG",
+            "confidence": 62,
+            "headline": "老衲先押 JDG",
+            "risk": "但 TES 若真把比赛拖进久持之局，若前排和后手脱节，整队会在一波团里同时露口子，老衲这句也得改口。",
+            "verdict": "胜负押中",
+            "hitWinner": true,
+            "hitExact": true,
+            "factors": [
+              {
+                "label": "账面",
+                "value": "JDG 5-5，TES 5-6"
+              },
+              {
+                "label": "近势",
+                "value": "JDG 负 胜 负 负 胜，TES 胜 胜 负 胜 负"
+              },
+              {
+                "label": "局口",
+                "value": "JDG 0，TES -2"
+              },
+              {
+                "label": "旧账",
+                "value": "赛前旧账 JDG 1-1 TES"
+              },
+              {
+                "label": "歇脚",
+                "value": "JDG 451h，TES 360h"
+              }
+            ]
+          },
+          {
+            "id": "history-TES-2026-02-09 14:00:00",
+            "matchLabel": "TES vs WE",
+            "stageLabel": "LPL / 第一赛段骑士之路",
+            "timeLabel": "2月9日周一 14:00 / BO5",
+            "predictedScore": "3:2",
+            "actualScore": "3:2",
+            "favoredTeam": "TES",
+            "actualWinner": "TES",
+            "confidence": 56,
+            "headline": "老衲先押 TES",
+            "risk": "但 WE 若真把比赛拖进久持之局，若前中期资源换得太软，后面会被逼着打自己不爱的硬团，老衲这句也得改口。",
+            "verdict": "胜负押中",
+            "hitWinner": true,
+            "hitExact": true,
+            "factors": [
+              {
+                "label": "账面",
+                "value": "TES 4-6，WE 4-3"
+              },
+              {
+                "label": "近势",
+                "value": "TES 胜 负 胜 负 胜，WE 负 负 胜 胜 负"
+              },
+              {
+                "label": "局口",
+                "value": "TES -3，WE +2"
+              },
+              {
+                "label": "旧账",
+                "value": "赛前无已完结交手"
+              },
+              {
+                "label": "歇脚",
+                "value": "TES 91h，WE 43h"
+              }
+            ]
+          }
+        ]
       },
       {
         "id": "prediction-NIP",
@@ -9676,7 +10564,161 @@
         ],
         "headline": "等待官源排表",
         "line": "赛程未落纸前，不妄开口。",
-        "risk": "对阵没定，先不写比分。"
+        "risk": "对阵没定，先不写比分。",
+        "history": [
+          {
+            "id": "history-NIP-2026-03-01 17:00:00",
+            "matchLabel": "IG vs NIP",
+            "stageLabel": "LPL / 第一赛段淘汰赛",
+            "timeLabel": "3月1日周日 17:00 / BO5",
+            "predictedScore": "2:3",
+            "actualScore": "3:1",
+            "favoredTeam": "NIP",
+            "actualWinner": "IG",
+            "confidence": 58,
+            "headline": "老衲先押 NIP",
+            "risk": "但 IG 若真把比赛拖进久持之局，IG 若迟迟拿不到主动，后手会越来越重，老衲这句也得改口。",
+            "verdict": "断局失手",
+            "hitWinner": false,
+            "hitExact": false,
+            "factors": [
+              {
+                "label": "账面",
+                "value": "IG 3-10，NIP 6-3"
+              },
+              {
+                "label": "近势",
+                "value": "IG 负 胜 负 负 负，NIP 负 胜 胜 胜 胜"
+              },
+              {
+                "label": "局口",
+                "value": "IG -13，NIP +5"
+              },
+              {
+                "label": "旧账",
+                "value": "赛前旧账 IG 0-1 NIP"
+              },
+              {
+                "label": "歇脚",
+                "value": "IG 99h，NIP 96h"
+              }
+            ]
+          },
+          {
+            "id": "history-NIP-2026-02-25 17:00:00",
+            "matchLabel": "BLG vs NIP",
+            "stageLabel": "LPL / 第一赛段淘汰赛",
+            "timeLabel": "2月25日周三 17:00 / BO5",
+            "predictedScore": "2:3",
+            "actualScore": "3:0",
+            "favoredTeam": "NIP",
+            "actualWinner": "BLG",
+            "confidence": 53,
+            "headline": "老衲先押 NIP",
+            "risk": "但 BLG 若真把比赛拖进久持之局，若前中期连续失手，后段容易把本该稳住的局面再打成对冲，老衲这句也得改口。",
+            "verdict": "断局失手",
+            "hitWinner": false,
+            "hitExact": false,
+            "factors": [
+              {
+                "label": "账面",
+                "value": "BLG 6-4，NIP 6-2"
+              },
+              {
+                "label": "近势",
+                "value": "BLG 负 胜 胜 负 负，NIP 胜 胜 胜 胜 负"
+              },
+              {
+                "label": "局口",
+                "value": "BLG +5，NIP +8"
+              },
+              {
+                "label": "旧账",
+                "value": "赛前无已完结交手"
+              },
+              {
+                "label": "歇脚",
+                "value": "BLG 456h，NIP 384h"
+              }
+            ]
+          },
+          {
+            "id": "history-NIP-2026-02-09 17:00:00",
+            "matchLabel": "IG vs NIP",
+            "stageLabel": "LPL / 第一赛段骑士之路",
+            "timeLabel": "2月9日周一 17:00 / BO5",
+            "predictedScore": "2:3",
+            "actualScore": "1:3",
+            "favoredTeam": "NIP",
+            "actualWinner": "NIP",
+            "confidence": 58,
+            "headline": "老衲先押 NIP",
+            "risk": "但 IG 若真把比赛拖进久持之局，IG 若迟迟拿不到主动，后手会越来越重，老衲这句也得改口。",
+            "verdict": "胜负押中",
+            "hitWinner": true,
+            "hitExact": false,
+            "factors": [
+              {
+                "label": "账面",
+                "value": "IG 2-8，NIP 5-2"
+              },
+              {
+                "label": "近势",
+                "value": "IG 负 负 负 负 负，NIP 胜 胜 胜 负 负"
+              },
+              {
+                "label": "局口",
+                "value": "IG -11，NIP +6"
+              },
+              {
+                "label": "旧账",
+                "value": "赛前无已完结交手"
+              },
+              {
+                "label": "歇脚",
+                "value": "IG 74h，NIP 46h"
+              }
+            ]
+          },
+          {
+            "id": "history-NIP-2026-02-07 19:00:00",
+            "matchLabel": "NIP vs WE",
+            "stageLabel": "LPL / 第一赛段组内赛",
+            "timeLabel": "2月7日周六 19:00 / BO3",
+            "predictedScore": "1:2",
+            "actualScore": "2:0",
+            "favoredTeam": "WE",
+            "actualWinner": "NIP",
+            "confidence": 50,
+            "headline": "老衲先押 WE",
+            "risk": "但 NIP 若真把比赛拖进久持之局，若前两波出手没打出血量差，后面容易被迫用站位去还前账，老衲这句也得改口。",
+            "verdict": "断局失手",
+            "hitWinner": false,
+            "hitExact": false,
+            "factors": [
+              {
+                "label": "账面",
+                "value": "NIP 4-2，WE 4-2"
+              },
+              {
+                "label": "近势",
+                "value": "NIP 胜 胜 负 负 胜，WE 负 胜 胜 负 胜"
+              },
+              {
+                "label": "局口",
+                "value": "NIP +4，WE +4"
+              },
+              {
+                "label": "旧账",
+                "value": "赛前旧账 NIP 1-1 WE"
+              },
+              {
+                "label": "歇脚",
+                "value": "NIP 50h，WE 74h"
+              }
+            ]
+          }
+        ]
       },
       {
         "id": "prediction-WE",
@@ -9704,7 +10746,161 @@
         ],
         "headline": "等待官源排表",
         "line": "赛程未落纸前，不妄开口。",
-        "risk": "对阵没定，先不写比分。"
+        "risk": "对阵没定，先不写比分。",
+        "history": [
+          {
+            "id": "history-WE-2026-02-28 17:00:00",
+            "matchLabel": "TES vs WE",
+            "stageLabel": "LPL / 第一赛段淘汰赛",
+            "timeLabel": "2月28日周六 17:00 / BO5",
+            "predictedScore": "3:2",
+            "actualScore": "3:0",
+            "favoredTeam": "TES",
+            "actualWinner": "TES",
+            "confidence": 66,
+            "headline": "老衲先押 TES",
+            "risk": "但 WE 若真把比赛拖进久持之局，若前中期资源换得太软，后面会被逼着打自己不爱的硬团，老衲这句也得改口。",
+            "verdict": "胜负押中",
+            "hitWinner": true,
+            "hitExact": false,
+            "factors": [
+              {
+                "label": "账面",
+                "value": "TES 5-7，WE 5-5"
+              },
+              {
+                "label": "近势",
+                "value": "TES 负 胜 胜 负 胜，WE 负 胜 负 负 负"
+              },
+              {
+                "label": "局口",
+                "value": "TES -3，WE 0"
+              },
+              {
+                "label": "旧账",
+                "value": "赛前旧账 TES 1-0 WE"
+              },
+              {
+                "label": "歇脚",
+                "value": "TES 99h，WE 96h"
+              }
+            ]
+          },
+          {
+            "id": "history-WE-2026-02-24 17:00:00",
+            "matchLabel": "AL vs WE",
+            "stageLabel": "LPL / 第一赛段淘汰赛",
+            "timeLabel": "2月24日周二 17:00 / BO5",
+            "predictedScore": "3:1",
+            "actualScore": "3:0",
+            "favoredTeam": "AL",
+            "actualWinner": "AL",
+            "confidence": 84,
+            "headline": "老衲先押 AL",
+            "risk": "但 WE 若真把比赛拖进久持之局，若前中期资源换得太软，后面会被逼着打自己不爱的硬团，老衲这句也得改口。",
+            "verdict": "胜负押中",
+            "hitWinner": true,
+            "hitExact": false,
+            "factors": [
+              {
+                "label": "账面",
+                "value": "AL 8-2，WE 5-4"
+              },
+              {
+                "label": "近势",
+                "value": "AL 胜 胜 胜 胜 胜，WE 胜 负 负 负 胜"
+              },
+              {
+                "label": "局口",
+                "value": "AL +9，WE +3"
+              },
+              {
+                "label": "旧账",
+                "value": "赛前无已完结交手"
+              },
+              {
+                "label": "歇脚",
+                "value": "AL 432h，WE 312h"
+              }
+            ]
+          },
+          {
+            "id": "history-WE-2026-02-11 17:00:00",
+            "matchLabel": "WE vs LNG",
+            "stageLabel": "LPL / 第一赛段骑士之路",
+            "timeLabel": "2月11日周三 17:00 / BO5",
+            "predictedScore": "2:3",
+            "actualScore": "3:1",
+            "favoredTeam": "LNG",
+            "actualWinner": "WE",
+            "confidence": 58,
+            "headline": "老衲先押 LNG",
+            "risk": "但 WE 若真把比赛拖进久持之局，若前中期资源换得太软，后面会被逼着打自己不爱的硬团，老衲这句也得改口。",
+            "verdict": "断局失手",
+            "hitWinner": false,
+            "hitExact": false,
+            "factors": [
+              {
+                "label": "账面",
+                "value": "WE 4-4，LNG 7-0"
+              },
+              {
+                "label": "近势",
+                "value": "WE 负 负 负 胜 胜，LNG 胜 胜 胜 胜 胜"
+              },
+              {
+                "label": "局口",
+                "value": "WE +1，LNG +13"
+              },
+              {
+                "label": "旧账",
+                "value": "赛前无已完结交手"
+              },
+              {
+                "label": "歇脚",
+                "value": "WE 51h，LNG 27h"
+              }
+            ]
+          },
+          {
+            "id": "history-WE-2026-02-09 14:00:00",
+            "matchLabel": "TES vs WE",
+            "stageLabel": "LPL / 第一赛段骑士之路",
+            "timeLabel": "2月9日周一 14:00 / BO5",
+            "predictedScore": "3:2",
+            "actualScore": "3:2",
+            "favoredTeam": "TES",
+            "actualWinner": "TES",
+            "confidence": 56,
+            "headline": "老衲先押 TES",
+            "risk": "但 WE 若真把比赛拖进久持之局，若前中期资源换得太软，后面会被逼着打自己不爱的硬团，老衲这句也得改口。",
+            "verdict": "胜负押中",
+            "hitWinner": true,
+            "hitExact": true,
+            "factors": [
+              {
+                "label": "账面",
+                "value": "TES 4-6，WE 4-3"
+              },
+              {
+                "label": "近势",
+                "value": "TES 胜 负 胜 负 胜，WE 负 负 胜 胜 负"
+              },
+              {
+                "label": "局口",
+                "value": "TES -3，WE +2"
+              },
+              {
+                "label": "旧账",
+                "value": "赛前无已完结交手"
+              },
+              {
+                "label": "歇脚",
+                "value": "TES 91h，WE 43h"
+              }
+            ]
+          }
+        ]
       },
       {
         "id": "prediction-GEN",
@@ -9732,7 +10928,123 @@
         ],
         "headline": "等待官源排表",
         "line": "赛程未落纸前，不妄开口。",
-        "risk": "对阵没定，先不写比分。"
+        "risk": "对阵没定，先不写比分。",
+        "history": [
+          {
+            "id": "history-GEN-2026-03-21 21:00:00",
+            "matchLabel": "GEN vs G2",
+            "stageLabel": "First Stand / 淘汰赛",
+            "timeLabel": "3月21日周六 21:00 / BO5",
+            "predictedScore": "3:1",
+            "actualScore": "0:3",
+            "favoredTeam": "GEN",
+            "actualWinner": "G2",
+            "confidence": 75,
+            "headline": "老衲先押 GEN",
+            "risk": "但 G2 若真把比赛拖进久持之局，若前段换线和试探都没赚到时间，后面会被迫正面接算力题，老衲这句也得改口。",
+            "verdict": "断局失手",
+            "hitWinner": false,
+            "hitExact": false,
+            "factors": [
+              {
+                "label": "账面",
+                "value": "GEN 2-0，G2 2-1"
+              },
+              {
+                "label": "近势",
+                "value": "GEN 胜 胜，G2 胜 负 胜"
+              },
+              {
+                "label": "局口",
+                "value": "GEN +6，G2 +3"
+              },
+              {
+                "label": "旧账",
+                "value": "赛前无已完结交手"
+              },
+              {
+                "label": "歇脚",
+                "value": "GEN 48h，G2 24h"
+              }
+            ]
+          },
+          {
+            "id": "history-GEN-2026-03-19 21:00:00",
+            "matchLabel": "GEN vs LYON",
+            "stageLabel": "First Stand / 小组赛",
+            "timeLabel": "3月19日周四 21:00 / BO5",
+            "predictedScore": "3:2",
+            "actualScore": "3:0",
+            "favoredTeam": "GEN",
+            "actualWinner": "GEN",
+            "confidence": 60,
+            "headline": "老衲先押 GEN",
+            "risk": "但 LYON 若真把比赛拖进久持之局，若前十五分钟被连续压掉河道与视野，后面只能靠个人手法补局，老衲这句也得改口。",
+            "verdict": "胜负押中",
+            "hitWinner": true,
+            "hitExact": false,
+            "factors": [
+              {
+                "label": "账面",
+                "value": "GEN 1-0，LYON 1-0"
+              },
+              {
+                "label": "近势",
+                "value": "GEN 胜，LYON 胜"
+              },
+              {
+                "label": "局口",
+                "value": "GEN +3，LYON +1"
+              },
+              {
+                "label": "旧账",
+                "value": "赛前无已完结交手"
+              },
+              {
+                "label": "歇脚",
+                "value": "GEN 48h，LYON 43h"
+              }
+            ]
+          },
+          {
+            "id": "history-GEN-2026-03-17 21:00:00",
+            "matchLabel": "GEN vs JDG",
+            "stageLabel": "First Stand / 小组赛",
+            "timeLabel": "3月17日周二 21:00 / BO5",
+            "predictedScore": "2:3",
+            "actualScore": "3:0",
+            "favoredTeam": "JDG",
+            "actualWinner": "GEN",
+            "confidence": 58,
+            "headline": "老衲先押 JDG",
+            "risk": "但 GEN 若真把比赛拖进久持之局，若前期两线同时失血，它也得先花时辰把中轴扶正，老衲这句也得改口。",
+            "verdict": "断局失手",
+            "hitWinner": false,
+            "hitExact": false,
+            "factors": [
+              {
+                "label": "账面",
+                "value": "GEN 0-0，JDG 8-7"
+              },
+              {
+                "label": "近势",
+                "value": "GEN 暂无，JDG 负 胜 负 胜 胜"
+              },
+              {
+                "label": "局口",
+                "value": "GEN 0，JDG +2"
+              },
+              {
+                "label": "旧账",
+                "value": "赛前无已完结交手"
+              },
+              {
+                "label": "歇脚",
+                "value": "GEN 0h，JDG 220h"
+              }
+            ]
+          }
+        ]
       },
       {
         "id": "prediction-G2",
@@ -9753,12 +11065,12 @@
         "teamB": {
           "code": "BLG",
           "logo": "https://img.crawler.qq.com/lolwebvideo/20250618144525/49342dadcecf162e8ac94fad6eb91540/0",
-          "recordText": "系列 12-4 / 局差 +18"
+          "recordText": "系列 13-4 / 局差 +21"
         },
         "factors": [
           {
             "label": "账面",
-            "value": "G2 3-1，BLG 12-4"
+            "value": "G2 3-1，BLG 13-4"
           },
           {
             "label": "近势",
@@ -9766,7 +11078,7 @@
           },
           {
             "label": "局口",
-            "value": "G2 +6，BLG +18"
+            "value": "G2 +6，BLG +21"
           },
           {
             "label": "旧账",
@@ -9774,7 +11086,7 @@
           },
           {
             "label": "歇脚",
-            "value": "G2 24h，BLG 96h"
+            "value": "G2 24h，BLG 19h"
           },
           {
             "label": "英雄池",
@@ -9805,8 +11117,8 @@
         "line": "老衲看此局，先押 BLG，不为别的，只因它在赛前这张账面上更容易先把第一口气抢出来。前中期争先意愿强 是它眼下最能压住局面的刀口，上中野肯先落子，盘面一旦抢到前手，常把河道、边线与团前站位一并压出来 又正好对得上这场的起手路数。若前两波资源先归它手里，河道、边线与团前站位都会顺着它的气往下走，后面多半是它来写章法。\n\n可老衲也不替它遮丑，热起来时脚步会压得过深，纪律偶尔松一口，给人反咬的缝。这种队最怕赢得太顺，手一热，脚步便会压过应有的分寸，原本该稳着收的回合，反倒会因为贪一口气把口子露给对面。真到转折处，比的不是谁喊得响，而是谁还能守住那一下分寸，不把本该赢的局打成对冲。\n\n再往深处看，G2 原是脑子活，转线快，常用非常规换位和节奏岔口把人带出熟路，它若想翻案，路只有一条，先把前十五分钟拖慢，再把 BLG 逼进补线、回防和二次落位的苦差里，让这口快气自己泄掉。若做不到，比赛多半还没走到长局，就已经要顺着前手分出生死。Bin 这一点，看的不是热闹，是 边线敢压，见口就追，最容易把上路打成单点破局；毛病也在这里，手热时站位会伸过河道，给反手留缝。 XUN 这一点，看的不是热闹，是 管的是 BLG 第一口气。河道先踩住，先锋先碰到，整队的刀就会一齐往前走；若前两趟慢拍，锋口会先钝。 Knight 这一点，看的不是热闹，是 强在把线权、转线和团前脚步拆得细。中段若由他把局心拢住，整队章法会很整；若被逼着长时间守线，BLG 的中轴会先沉。",
         "risk": "但 G2 若真把比赛拖进久持之局，若前段换线和试探都没赚到时间，后面会被迫正面接算力题，老衲这句也得改口。",
         "knowledge": {
-          "teamA": "G2：门风是脑子活，转线快，常用非常规换位和节奏岔口把人带出熟路；长板是中段转线多变、敢做非常规落子、临场找角度能力强；明病是局势若被人逼成正面账本，它也会露出前排不够厚、硬解不够稳的问题；翻船点是若前段换线和试探都没赚到时间，后面会被迫正面接算力题",
-          "teamB": "BLG：门风是上中野肯先落子，盘面一旦抢到前手，常把河道、边线与团前站位一并压出来；长板是前中期争先意愿强、资源逼抢凶、一旦拿到主动便很会把局面压窄；明病是热起来时脚步会压得过深，纪律偶尔松一口，给人反咬的缝；翻船点是若前中期连续失手，后段容易把本该稳住的局面再打成对冲",
+          "teamA": "G2 的门风是脑子活，转线快，常用非常规换位和节奏岔口把人带出熟路。长板落在中段转线多变、敢做非常规落子、临场找角度能力强。明病在于局势若被人逼成正面账本，它也会露出前排不够厚、硬解不够稳的问题。当前账面 3-1，近五 胜 胜 负 胜，局差 +6。人头上主看BrokenBlade主看敢走边线高压，也敢接奇形怪状的对位。若他先把边线带出岔口，G2 的换位和奇手就更好落。，常用 赛恩 / 1 局 / 100% ｜ 慎 / 1 局 / 100% ｜ 奎桑提 / 1 局 / 100%；SkewMond主看喜欢把比赛带出熟路，前两波路径很会做文章；可若被人看穿节拍，G2 的花活会先少一层。，常用 嘉文四世 / 1 局 / 100% ｜ 潘森 / 1 局 / 100% ｜ 亚恒 / 1 局 / 100%。近闻可参 fst-2026-primer。",
+          "teamB": "BLG 的门风是上中野肯先落子，盘面一旦抢到前手，常把河道、边线与团前站位一并压出来。长板落在前中期争先意愿强、资源逼抢凶、一旦拿到主动便很会把局面压窄。明病在于热起来时脚步会压得过深，纪律偶尔松一口，给人反咬的缝。当前账面 13-4，近五 胜 胜 胜 胜 胜，局差 +21。人头上主看Bin主看边线敢压，见口就追，最容易把上路打成单点破局；毛病也在这里，手热时站位会伸过河道，给反手留缝。，常用 赛恩 / 1 局 / 100% ｜ 纳尔 / 1 局 / 100%；XUN主看管的是 BLG 第一口气。河道先踩住，先锋先碰到，整队的刀就会一齐往前走；若前两趟慢拍，锋口会先钝。，常用 魔腾 / 1 局 / 100% ｜ 波比 / 1 局 / 100%。",
           "focusPlayers": "Bin：边线敢压，见口就追，最容易把上路打成单点破局；毛病也在这里，手热时站位会伸过河道，给反手留缝。 账面 KDA 4.24，分均伤害 735，参团 48%。 常用 赛恩 / 1 局 / 100% ｜ 纳尔 / 1 局 / 100%。；XUN：管的是 BLG 第一口气。河道先踩住，先锋先碰到，整队的刀就会一齐往前走；若前两趟慢拍，锋口会先钝。 账面 KDA 6.53，分均伤害 485，参团 67%。 常用 魔腾 / 1 局 / 100% ｜ 波比 / 1 局 / 100%。；Knight：强在把线权、转线和团前脚步拆得细。中段若由他把局心拢住，整队章法会很整；若被逼着长时间守线，BLG 的中轴会先沉。 账面 KDA 6.39，分均伤害 674，参团 62%。 常用 奥莉安娜 / 1 局 / 100% ｜ 梅尔 / 1 局 / 100%。；Viper：收束能力极强，残局给半步就能把伤害算满；可前排若先断，他再稳也得先替全队还站位的债。 账面 KDA 6.61，分均伤害 944，参团 64%。 常用 芸阿娜 / 1 局 / 100% ｜ 库奇 / 1 局 / 100%。；ON：价值全在先手准不准、回身稳不稳。开团若正，BLG 能一口压进；回身若慢，后排会先吃满苦头。 账面 KDA 5.07，分均伤害 310，参团 74%。 常用 巴德 / 1 局 / 100% ｜ 妮蔻 / 1 局 / 100%。；BrokenBlade：敢走边线高压，也敢接奇形怪状的对位。若他先把边线带出岔口，G2 的换位和奇手就更好落。 账面 KDA 4.75，分均伤害 666，参团 54%。 常用 赛恩 / 1 局 / 100% ｜ 慎 / 1 局 / 100% ｜ 奎桑提 / 1 局 / 100%。；SkewMond：喜欢把比赛带出熟路，前两波路径很会做文章；可若被人看穿节拍，G2 的花活会先少一层。 账面 KDA 5.17，分均伤害 560，参团 71%。 常用 嘉文四世 / 1 局 / 100% ｜ 潘森 / 1 局 / 100% ｜ 亚恒 / 1 局 / 100%。；Caps：中段最会拆局的人，转线、换位和团前拉扯都敢玩；可若比赛被逼成正面算力题，他也得先补稳字。 账面 KDA 3.85，分均伤害 790，参团 62%。 常用 阿卡丽 / 1 局 / 100% ｜ 维克托 / 1 局 / 100% ｜ 阿萝拉 / 1 局 / 100%。；Hans Sama：重在团里持续输出和跟队友连段。队友给出奇手时，他很会顺势补刀；可前排若先塌，站位也会先被掐。 账面 KDA 4.48，分均伤害 780，参团 62%。 常用 厄运小姐 / 1 局 / 100% ｜ 克格莫 / 1 局 / 100% ｜ 韦鲁斯 / 1 局 / 100%。；Labrov：敢先动，也敢陪着做非常规转线。若第一拍做成，G2 的局很怪也很难防；可空一拍，后头会被逼回正面。 账面 KDA 4.53，分均伤害 230，参团 77%。 常用 布隆 / 1 局 / 100% ｜ 诺提勒斯 / 1 局 / 100% ｜ 璐璐 / 1 局 / 100%。",
           "heroPool": "G2：G2 池深 3.0，近战术切牌 3.0，舒适池胜率 100%；BLG：BLG 池深 2.0，近战术切牌 2.0，舒适池胜率 100%",
           "recentAnalysis": "fst-2026-primer：© 2026 Riot Games. All Rights Reserved. Privacy Notice Terms of Service Accessibility Cookie Preferences What is the First Stand Tournament?；2026-lcs-lock-in-playoffs-and-finals-primer：© 2026 Riot Games. All Rights Reserved. Privacy Notice Terms of Service Accessibility Cookie Preferences LoL Esports | Only one team will em；season-start-2026-lol-esports：© 2026 Riot Games. All Rights Reserved. Privacy Notice Terms of Service Accessibility Cookie Preferences The 2026 League of Legends Esports "
@@ -9846,16 +11158,170 @@
             "mentions": {}
           }
         ],
+        "history": [
+          {
+            "id": "history-G2-2026-03-21 21:00:00",
+            "matchLabel": "GEN vs G2",
+            "stageLabel": "First Stand / 淘汰赛",
+            "timeLabel": "3月21日周六 21:00 / BO5",
+            "predictedScore": "3:1",
+            "actualScore": "0:3",
+            "favoredTeam": "GEN",
+            "actualWinner": "G2",
+            "confidence": 75,
+            "headline": "老衲先押 GEN",
+            "risk": "但 G2 若真把比赛拖进久持之局，若前段换线和试探都没赚到时间，后面会被迫正面接算力题，老衲这句也得改口。",
+            "verdict": "断局失手",
+            "hitWinner": false,
+            "hitExact": false,
+            "factors": [
+              {
+                "label": "账面",
+                "value": "GEN 2-0，G2 2-1"
+              },
+              {
+                "label": "近势",
+                "value": "GEN 胜 胜，G2 胜 负 胜"
+              },
+              {
+                "label": "局口",
+                "value": "GEN +6，G2 +3"
+              },
+              {
+                "label": "旧账",
+                "value": "赛前无已完结交手"
+              },
+              {
+                "label": "歇脚",
+                "value": "GEN 48h，G2 24h"
+              }
+            ]
+          },
+          {
+            "id": "history-G2-2026-03-20 21:00:00",
+            "matchLabel": "G2 vs BFX",
+            "stageLabel": "First Stand / 小组赛",
+            "timeLabel": "3月20日周五 21:00 / BO5",
+            "predictedScore": "3:2",
+            "actualScore": "3:0",
+            "favoredTeam": "G2",
+            "actualWinner": "G2",
+            "confidence": 56,
+            "headline": "老衲先押 G2",
+            "risk": "但 BFX 若真把比赛拖进久持之局，若先锋和第一条龙都慢半拍，整队会被迫一边补线一边挨揍，老衲这句也得改口。",
+            "verdict": "胜负押中",
+            "hitWinner": true,
+            "hitExact": false,
+            "factors": [
+              {
+                "label": "账面",
+                "value": "G2 1-1，BFX 1-1"
+              },
+              {
+                "label": "近势",
+                "value": "G2 负 胜，BFX 胜 负"
+              },
+              {
+                "label": "局口",
+                "value": "G2 0，BFX +2"
+              },
+              {
+                "label": "旧账",
+                "value": "赛前无已完结交手"
+              },
+              {
+                "label": "歇脚",
+                "value": "G2 48h，BFX 43h"
+              }
+            ]
+          },
+          {
+            "id": "history-G2-2026-03-18 21:00:00",
+            "matchLabel": "BLG vs G2",
+            "stageLabel": "First Stand / 小组赛",
+            "timeLabel": "3月18日周三 21:00 / BO5",
+            "predictedScore": "3:1",
+            "actualScore": "3:0",
+            "favoredTeam": "BLG",
+            "actualWinner": "BLG",
+            "confidence": 75,
+            "headline": "老衲先押 BLG",
+            "risk": "但 G2 若真把比赛拖进久持之局，若前段换线和试探都没赚到时间，后面会被迫正面接算力题，老衲这句也得改口。",
+            "verdict": "胜负押中",
+            "hitWinner": true,
+            "hitExact": false,
+            "factors": [
+              {
+                "label": "账面",
+                "value": "BLG 11-4，G2 1-0"
+              },
+              {
+                "label": "近势",
+                "value": "BLG 胜 胜 胜 胜 胜，G2 胜"
+              },
+              {
+                "label": "局口",
+                "value": "BLG +15，G2 +3"
+              },
+              {
+                "label": "旧账",
+                "value": "赛前无已完结交手"
+              },
+              {
+                "label": "歇脚",
+                "value": "BLG 48h，G2 43h"
+              }
+            ]
+          },
+          {
+            "id": "history-G2-2026-03-17 02:00:00",
+            "matchLabel": "G2 vs TSW",
+            "stageLabel": "First Stand / 小组赛",
+            "timeLabel": "3月17日周二 02:00 / BO5",
+            "predictedScore": "3:2",
+            "actualScore": "3:0",
+            "favoredTeam": "G2",
+            "actualWinner": "G2",
+            "confidence": 57,
+            "headline": "老衲先押 G2",
+            "risk": "但 TSW 若真把比赛拖进久持之局，中线一旦先亏，双边再想抬手就会先被迫看野区脸色，老衲这句也得改口。",
+            "verdict": "胜负押中",
+            "hitWinner": true,
+            "hitExact": false,
+            "factors": [
+              {
+                "label": "账面",
+                "value": "G2 0-0，TSW 0-0"
+              },
+              {
+                "label": "近势",
+                "value": "G2 暂无，TSW 暂无"
+              },
+              {
+                "label": "局口",
+                "value": "G2 0，TSW 0"
+              },
+              {
+                "label": "旧账",
+                "value": "赛前无已完结交手"
+              },
+              {
+                "label": "歇脚",
+                "value": "G2 0h，TSW 0h"
+              }
+            ]
+          }
+        ],
         "resources": {
           "seriesRecord": [
             3,
             1,
-            12,
+            13,
             4
           ],
           "gameDiff": [
             6,
-            18
+            21
           ],
           "recentForm": [
             "胜 胜 负 胜",
@@ -9864,7 +11330,7 @@
           "headToHead": "交手 G2 0-1 BLG",
           "restHours": [
             24,
-            96
+            19
           ],
           "heroProfiles": [
             {
@@ -9886,8 +11352,8 @@
           ],
           "bo": "BO5",
           "style": {
-            "teamA": "G2：门风是脑子活，转线快，常用非常规换位和节奏岔口把人带出熟路；长板是中段转线多变、敢做非常规落子、临场找角度能力强；明病是局势若被人逼成正面账本，它也会露出前排不够厚、硬解不够稳的问题；翻船点是若前段换线和试探都没赚到时间，后面会被迫正面接算力题",
-            "teamB": "BLG：门风是上中野肯先落子，盘面一旦抢到前手，常把河道、边线与团前站位一并压出来；长板是前中期争先意愿强、资源逼抢凶、一旦拿到主动便很会把局面压窄；明病是热起来时脚步会压得过深，纪律偶尔松一口，给人反咬的缝；翻船点是若前中期连续失手，后段容易把本该稳住的局面再打成对冲",
+            "teamA": "G2 的门风是脑子活，转线快，常用非常规换位和节奏岔口把人带出熟路。长板落在中段转线多变、敢做非常规落子、临场找角度能力强。明病在于局势若被人逼成正面账本，它也会露出前排不够厚、硬解不够稳的问题。当前账面 3-1，近五 胜 胜 负 胜，局差 +6。人头上主看BrokenBlade主看敢走边线高压，也敢接奇形怪状的对位。若他先把边线带出岔口，G2 的换位和奇手就更好落。，常用 赛恩 / 1 局 / 100% ｜ 慎 / 1 局 / 100% ｜ 奎桑提 / 1 局 / 100%；SkewMond主看喜欢把比赛带出熟路，前两波路径很会做文章；可若被人看穿节拍，G2 的花活会先少一层。，常用 嘉文四世 / 1 局 / 100% ｜ 潘森 / 1 局 / 100% ｜ 亚恒 / 1 局 / 100%。近闻可参 fst-2026-primer。",
+            "teamB": "BLG 的门风是上中野肯先落子，盘面一旦抢到前手，常把河道、边线与团前站位一并压出来。长板落在前中期争先意愿强、资源逼抢凶、一旦拿到主动便很会把局面压窄。明病在于热起来时脚步会压得过深，纪律偶尔松一口，给人反咬的缝。当前账面 13-4，近五 胜 胜 胜 胜 胜，局差 +21。人头上主看Bin主看边线敢压，见口就追，最容易把上路打成单点破局；毛病也在这里，手热时站位会伸过河道，给反手留缝。，常用 赛恩 / 1 局 / 100% ｜ 纳尔 / 1 局 / 100%；XUN主看管的是 BLG 第一口气。河道先踩住，先锋先碰到，整队的刀就会一齐往前走；若前两趟慢拍，锋口会先钝。，常用 魔腾 / 1 局 / 100% ｜ 波比 / 1 局 / 100%。",
             "focusPlayers": "Bin：边线敢压，见口就追，最容易把上路打成单点破局；毛病也在这里，手热时站位会伸过河道，给反手留缝。 账面 KDA 4.24，分均伤害 735，参团 48%。 常用 赛恩 / 1 局 / 100% ｜ 纳尔 / 1 局 / 100%。；XUN：管的是 BLG 第一口气。河道先踩住，先锋先碰到，整队的刀就会一齐往前走；若前两趟慢拍，锋口会先钝。 账面 KDA 6.53，分均伤害 485，参团 67%。 常用 魔腾 / 1 局 / 100% ｜ 波比 / 1 局 / 100%。；Knight：强在把线权、转线和团前脚步拆得细。中段若由他把局心拢住，整队章法会很整；若被逼着长时间守线，BLG 的中轴会先沉。 账面 KDA 6.39，分均伤害 674，参团 62%。 常用 奥莉安娜 / 1 局 / 100% ｜ 梅尔 / 1 局 / 100%。；Viper：收束能力极强，残局给半步就能把伤害算满；可前排若先断，他再稳也得先替全队还站位的债。 账面 KDA 6.61，分均伤害 944，参团 64%。 常用 芸阿娜 / 1 局 / 100% ｜ 库奇 / 1 局 / 100%。；ON：价值全在先手准不准、回身稳不稳。开团若正，BLG 能一口压进；回身若慢，后排会先吃满苦头。 账面 KDA 5.07，分均伤害 310，参团 74%。 常用 巴德 / 1 局 / 100% ｜ 妮蔻 / 1 局 / 100%。；BrokenBlade：敢走边线高压，也敢接奇形怪状的对位。若他先把边线带出岔口，G2 的换位和奇手就更好落。 账面 KDA 4.75，分均伤害 666，参团 54%。 常用 赛恩 / 1 局 / 100% ｜ 慎 / 1 局 / 100% ｜ 奎桑提 / 1 局 / 100%。；SkewMond：喜欢把比赛带出熟路，前两波路径很会做文章；可若被人看穿节拍，G2 的花活会先少一层。 账面 KDA 5.17，分均伤害 560，参团 71%。 常用 嘉文四世 / 1 局 / 100% ｜ 潘森 / 1 局 / 100% ｜ 亚恒 / 1 局 / 100%。；Caps：中段最会拆局的人，转线、换位和团前拉扯都敢玩；可若比赛被逼成正面算力题，他也得先补稳字。 账面 KDA 3.85，分均伤害 790，参团 62%。 常用 阿卡丽 / 1 局 / 100% ｜ 维克托 / 1 局 / 100% ｜ 阿萝拉 / 1 局 / 100%。；Hans Sama：重在团里持续输出和跟队友连段。队友给出奇手时，他很会顺势补刀；可前排若先塌，站位也会先被掐。 账面 KDA 4.48，分均伤害 780，参团 62%。 常用 厄运小姐 / 1 局 / 100% ｜ 克格莫 / 1 局 / 100% ｜ 韦鲁斯 / 1 局 / 100%。；Labrov：敢先动，也敢陪着做非常规转线。若第一拍做成，G2 的局很怪也很难防；可空一拍，后头会被逼回正面。 账面 KDA 4.53，分均伤害 230，参团 77%。 常用 布隆 / 1 局 / 100% ｜ 诺提勒斯 / 1 局 / 100% ｜ 璐璐 / 1 局 / 100%。",
             "heroPool": "G2：G2 池深 3.0，近战术切牌 3.0，舒适池胜率 100%；BLG：BLG 池深 2.0，近战术切牌 2.0，舒适池胜率 100%",
             "recentAnalysis": "fst-2026-primer：© 2026 Riot Games. All Rights Reserved. Privacy Notice Terms of Service Accessibility Cookie Preferences What is the First Stand Tournament?；2026-lcs-lock-in-playoffs-and-finals-primer：© 2026 Riot Games. All Rights Reserved. Privacy Notice Terms of Service Accessibility Cookie Preferences LoL Esports | Only one team will em；season-start-2026-lol-esports：© 2026 Riot Games. All Rights Reserved. Privacy Notice Terms of Service Accessibility Cookie Preferences The 2026 League of Legends Esports "
@@ -9920,7 +11386,123 @@
         ],
         "headline": "等待官源排表",
         "line": "赛程未落纸前，不妄开口。",
-        "risk": "对阵没定，先不写比分。"
+        "risk": "对阵没定，先不写比分。",
+        "history": [
+          {
+            "id": "history-BFX-2026-03-20 21:00:00",
+            "matchLabel": "G2 vs BFX",
+            "stageLabel": "First Stand / 小组赛",
+            "timeLabel": "3月20日周五 21:00 / BO5",
+            "predictedScore": "3:2",
+            "actualScore": "3:0",
+            "favoredTeam": "G2",
+            "actualWinner": "G2",
+            "confidence": 56,
+            "headline": "老衲先押 G2",
+            "risk": "但 BFX 若真把比赛拖进久持之局，若先锋和第一条龙都慢半拍，整队会被迫一边补线一边挨揍，老衲这句也得改口。",
+            "verdict": "胜负押中",
+            "hitWinner": true,
+            "hitExact": false,
+            "factors": [
+              {
+                "label": "账面",
+                "value": "G2 1-1，BFX 1-1"
+              },
+              {
+                "label": "近势",
+                "value": "G2 负 胜，BFX 胜 负"
+              },
+              {
+                "label": "局口",
+                "value": "G2 0，BFX +2"
+              },
+              {
+                "label": "旧账",
+                "value": "赛前无已完结交手"
+              },
+              {
+                "label": "歇脚",
+                "value": "G2 48h，BFX 43h"
+              }
+            ]
+          },
+          {
+            "id": "history-BFX-2026-03-19 02:00:00",
+            "matchLabel": "BFX vs TSW",
+            "stageLabel": "First Stand / 小组赛",
+            "timeLabel": "3月19日周四 02:00 / BO5",
+            "predictedScore": "3:2",
+            "actualScore": "3:0",
+            "favoredTeam": "BFX",
+            "actualWinner": "BFX",
+            "confidence": 60,
+            "headline": "老衲先押 BFX",
+            "risk": "但 TSW 若真把比赛拖进久持之局，中线一旦先亏，双边再想抬手就会先被迫看野区脸色，老衲这句也得改口。",
+            "verdict": "胜负押中",
+            "hitWinner": true,
+            "hitExact": false,
+            "factors": [
+              {
+                "label": "账面",
+                "value": "BFX 0-1，TSW 0-1"
+              },
+              {
+                "label": "近势",
+                "value": "BFX 负，TSW 负"
+              },
+              {
+                "label": "局口",
+                "value": "BFX -1，TSW -3"
+              },
+              {
+                "label": "旧账",
+                "value": "赛前无已完结交手"
+              },
+              {
+                "label": "歇脚",
+                "value": "BFX 53h，TSW 48h"
+              }
+            ]
+          },
+          {
+            "id": "history-BFX-2026-03-16 21:00:00",
+            "matchLabel": "BLG vs BFX",
+            "stageLabel": "First Stand / 小组赛",
+            "timeLabel": "3月16日周一 21:00 / BO5",
+            "predictedScore": "3:1",
+            "actualScore": "3:2",
+            "favoredTeam": "BLG",
+            "actualWinner": "BLG",
+            "confidence": 84,
+            "headline": "老衲先押 BLG",
+            "risk": "但 BFX 若真把比赛拖进久持之局，若先锋和第一条龙都慢半拍，整队会被迫一边补线一边挨揍，老衲这句也得改口。",
+            "verdict": "胜负押中",
+            "hitWinner": true,
+            "hitExact": false,
+            "factors": [
+              {
+                "label": "账面",
+                "value": "BLG 10-4，BFX 0-0"
+              },
+              {
+                "label": "近势",
+                "value": "BLG 胜 胜 胜 胜 负，BFX 暂无"
+              },
+              {
+                "label": "局口",
+                "value": "BLG +14，BFX 0"
+              },
+              {
+                "label": "旧账",
+                "value": "赛前无已完结交手"
+              },
+              {
+                "label": "歇脚",
+                "value": "BLG 196h，BFX 0h"
+              }
+            ]
+          }
+        ]
       },
       {
         "id": "prediction-LOUD",
@@ -9948,7 +11530,85 @@
         ],
         "headline": "等待官源排表",
         "line": "赛程未落纸前，不妄开口。",
-        "risk": "对阵没定，先不写比分。"
+        "risk": "对阵没定，先不写比分。",
+        "history": [
+          {
+            "id": "history-LOUD-2026-03-20 02:00:00",
+            "matchLabel": "JDG vs LOUD",
+            "stageLabel": "First Stand / 小组赛",
+            "timeLabel": "3月20日周五 02:00 / BO5",
+            "predictedScore": "3:1",
+            "actualScore": "3:0",
+            "favoredTeam": "JDG",
+            "actualWinner": "JDG",
+            "confidence": 82,
+            "headline": "老衲先押 JDG",
+            "risk": "但 LOUD 若真把比赛拖进久持之局，若中线守不住，双边再想绕也只是在替正面补洞，老衲这句也得改口。",
+            "verdict": "胜负押中",
+            "hitWinner": true,
+            "hitExact": false,
+            "factors": [
+              {
+                "label": "账面",
+                "value": "JDG 8-8，LOUD 0-1"
+              },
+              {
+                "label": "近势",
+                "value": "JDG 负 负 胜 负 胜，LOUD 负"
+              },
+              {
+                "label": "局口",
+                "value": "JDG -1，LOUD -1"
+              },
+              {
+                "label": "旧账",
+                "value": "赛前无已完结交手"
+              },
+              {
+                "label": "歇脚",
+                "value": "JDG 53h，LOUD 48h"
+              }
+            ]
+          },
+          {
+            "id": "history-LOUD-2026-03-18 02:00:00",
+            "matchLabel": "LYON vs LOUD",
+            "stageLabel": "First Stand / 小组赛",
+            "timeLabel": "3月18日周三 02:00 / BO5",
+            "predictedScore": "3:2",
+            "actualScore": "3:2",
+            "favoredTeam": "LYON",
+            "actualWinner": "LYON",
+            "confidence": 57,
+            "headline": "老衲先押 LYON",
+            "risk": "但 LOUD 若真把比赛拖进久持之局，若中线守不住，双边再想绕也只是在替正面补洞，老衲这句也得改口。",
+            "verdict": "胜负押中",
+            "hitWinner": true,
+            "hitExact": true,
+            "factors": [
+              {
+                "label": "账面",
+                "value": "LYON 0-0，LOUD 0-0"
+              },
+              {
+                "label": "近势",
+                "value": "LYON 暂无，LOUD 暂无"
+              },
+              {
+                "label": "局口",
+                "value": "LYON 0，LOUD 0"
+              },
+              {
+                "label": "旧账",
+                "value": "赛前无已完结交手"
+              },
+              {
+                "label": "歇脚",
+                "value": "LYON 0h，LOUD 0h"
+              }
+            ]
+          }
+        ]
       },
       {
         "id": "prediction-LYON",
@@ -9976,7 +11636,123 @@
         ],
         "headline": "等待官源排表",
         "line": "赛程未落纸前，不妄开口。",
-        "risk": "对阵没定，先不写比分。"
+        "risk": "对阵没定，先不写比分。",
+        "history": [
+          {
+            "id": "history-LYON-2026-03-21 02:00:00",
+            "matchLabel": "JDG vs LYON",
+            "stageLabel": "First Stand / 小组赛",
+            "timeLabel": "3月21日周六 02:00 / BO5",
+            "predictedScore": "3:2",
+            "actualScore": "3:1",
+            "favoredTeam": "JDG",
+            "actualWinner": "JDG",
+            "confidence": 64,
+            "headline": "老衲先押 JDG",
+            "risk": "但 LYON 若真把比赛拖进久持之局，若前十五分钟被连续压掉河道与视野，后面只能靠个人手法补局，老衲这句也得改口。",
+            "verdict": "胜负押中",
+            "hitWinner": true,
+            "hitExact": false,
+            "factors": [
+              {
+                "label": "账面",
+                "value": "JDG 9-8，LYON 1-1"
+              },
+              {
+                "label": "近势",
+                "value": "JDG 胜 负 负 胜 负，LYON 负 胜"
+              },
+              {
+                "label": "局口",
+                "value": "JDG +2，LYON -2"
+              },
+              {
+                "label": "旧账",
+                "value": "赛前无已完结交手"
+              },
+              {
+                "label": "歇脚",
+                "value": "JDG 24h，LYON 29h"
+              }
+            ]
+          },
+          {
+            "id": "history-LYON-2026-03-19 21:00:00",
+            "matchLabel": "GEN vs LYON",
+            "stageLabel": "First Stand / 小组赛",
+            "timeLabel": "3月19日周四 21:00 / BO5",
+            "predictedScore": "3:2",
+            "actualScore": "3:0",
+            "favoredTeam": "GEN",
+            "actualWinner": "GEN",
+            "confidence": 60,
+            "headline": "老衲先押 GEN",
+            "risk": "但 LYON 若真把比赛拖进久持之局，若前十五分钟被连续压掉河道与视野，后面只能靠个人手法补局，老衲这句也得改口。",
+            "verdict": "胜负押中",
+            "hitWinner": true,
+            "hitExact": false,
+            "factors": [
+              {
+                "label": "账面",
+                "value": "GEN 1-0，LYON 1-0"
+              },
+              {
+                "label": "近势",
+                "value": "GEN 胜，LYON 胜"
+              },
+              {
+                "label": "局口",
+                "value": "GEN +3，LYON +1"
+              },
+              {
+                "label": "旧账",
+                "value": "赛前无已完结交手"
+              },
+              {
+                "label": "歇脚",
+                "value": "GEN 48h，LYON 43h"
+              }
+            ]
+          },
+          {
+            "id": "history-LYON-2026-03-18 02:00:00",
+            "matchLabel": "LYON vs LOUD",
+            "stageLabel": "First Stand / 小组赛",
+            "timeLabel": "3月18日周三 02:00 / BO5",
+            "predictedScore": "3:2",
+            "actualScore": "3:2",
+            "favoredTeam": "LYON",
+            "actualWinner": "LYON",
+            "confidence": 57,
+            "headline": "老衲先押 LYON",
+            "risk": "但 LOUD 若真把比赛拖进久持之局，若中线守不住，双边再想绕也只是在替正面补洞，老衲这句也得改口。",
+            "verdict": "胜负押中",
+            "hitWinner": true,
+            "hitExact": true,
+            "factors": [
+              {
+                "label": "账面",
+                "value": "LYON 0-0，LOUD 0-0"
+              },
+              {
+                "label": "近势",
+                "value": "LYON 暂无，LOUD 暂无"
+              },
+              {
+                "label": "局口",
+                "value": "LYON 0，LOUD 0"
+              },
+              {
+                "label": "旧账",
+                "value": "赛前无已完结交手"
+              },
+              {
+                "label": "歇脚",
+                "value": "LYON 0h，LOUD 0h"
+              }
+            ]
+          }
+        ]
       },
       {
         "id": "prediction-TSW",
@@ -10004,7 +11780,85 @@
         ],
         "headline": "等待官源排表",
         "line": "赛程未落纸前，不妄开口。",
-        "risk": "对阵没定，先不写比分。"
+        "risk": "对阵没定，先不写比分。",
+        "history": [
+          {
+            "id": "history-TSW-2026-03-19 02:00:00",
+            "matchLabel": "BFX vs TSW",
+            "stageLabel": "First Stand / 小组赛",
+            "timeLabel": "3月19日周四 02:00 / BO5",
+            "predictedScore": "3:2",
+            "actualScore": "3:0",
+            "favoredTeam": "BFX",
+            "actualWinner": "BFX",
+            "confidence": 60,
+            "headline": "老衲先押 BFX",
+            "risk": "但 TSW 若真把比赛拖进久持之局，中线一旦先亏，双边再想抬手就会先被迫看野区脸色，老衲这句也得改口。",
+            "verdict": "胜负押中",
+            "hitWinner": true,
+            "hitExact": false,
+            "factors": [
+              {
+                "label": "账面",
+                "value": "BFX 0-1，TSW 0-1"
+              },
+              {
+                "label": "近势",
+                "value": "BFX 负，TSW 负"
+              },
+              {
+                "label": "局口",
+                "value": "BFX -1，TSW -3"
+              },
+              {
+                "label": "旧账",
+                "value": "赛前无已完结交手"
+              },
+              {
+                "label": "歇脚",
+                "value": "BFX 53h，TSW 48h"
+              }
+            ]
+          },
+          {
+            "id": "history-TSW-2026-03-17 02:00:00",
+            "matchLabel": "G2 vs TSW",
+            "stageLabel": "First Stand / 小组赛",
+            "timeLabel": "3月17日周二 02:00 / BO5",
+            "predictedScore": "3:2",
+            "actualScore": "3:0",
+            "favoredTeam": "G2",
+            "actualWinner": "G2",
+            "confidence": 57,
+            "headline": "老衲先押 G2",
+            "risk": "但 TSW 若真把比赛拖进久持之局，中线一旦先亏，双边再想抬手就会先被迫看野区脸色，老衲这句也得改口。",
+            "verdict": "胜负押中",
+            "hitWinner": true,
+            "hitExact": false,
+            "factors": [
+              {
+                "label": "账面",
+                "value": "G2 0-0，TSW 0-0"
+              },
+              {
+                "label": "近势",
+                "value": "G2 暂无，TSW 暂无"
+              },
+              {
+                "label": "局口",
+                "value": "G2 0，TSW 0"
+              },
+              {
+                "label": "旧账",
+                "value": "赛前无已完结交手"
+              },
+              {
+                "label": "歇脚",
+                "value": "G2 0h，TSW 0h"
+              }
+            ]
+          }
+        ]
       }
     ]
   }

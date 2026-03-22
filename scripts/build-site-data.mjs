@@ -321,6 +321,39 @@ function buildPlayerHeroPool(profile) {
   return pool.slice(0, 3);
 }
 
+function buildPlayerHeroPoolBefore(profile, cutoffDate) {
+  const cutoff = parseMatchDate(cutoffDate);
+  const heroMap = new Map();
+
+  for (const match of profile?.recentMatches || []) {
+    const startAt = parseMatchDate(match.startTime || match.matchDate || cutoffDate);
+    if (!(startAt < cutoff)) continue;
+    const name = String(match.heroName || "").trim();
+    if (!name) continue;
+    const key = name.toLowerCase();
+    const row = heroMap.get(key) || {
+      heroCnName: name,
+      heroName: name,
+      games: 0,
+      wins: 0,
+      losses: 0,
+    };
+    row.games += 1;
+    if (String(match.winTeamId || "") && String(match.winTeamId) === String(profile.teamId || "")) {
+      row.wins += 1;
+    }
+    heroMap.set(key, row);
+  }
+
+  return [...heroMap.values()]
+    .map((hero) => ({
+      ...hero,
+      winRate: hero.games ? hero.wins / hero.games : null,
+    }))
+    .sort((a, b) => b.games - a.games)
+    .slice(0, 3);
+}
+
 function buildPlayerHeroLine(profile) {
   const heroes = buildPlayerHeroPool(profile)
     .map((hero) => {
@@ -346,6 +379,17 @@ function average(values) {
 
 function getTeamPlayerProfiles(teamCode, playerProfiles) {
   return Object.values(playerProfiles).filter((profile) => profile?.teamCode === teamCode);
+}
+
+function buildPlayerHeroLineBefore(profile, cutoffDate) {
+  const heroes = buildPlayerHeroPoolBefore(profile, cutoffDate)
+    .map((hero) => {
+      const rate = Number.isFinite(Number(hero.winRate)) ? `${Math.round(Number(hero.winRate) * 100)}%` : "";
+      const games = Number.isFinite(Number(hero.games)) ? `${hero.games} 局` : "";
+      return [hero.heroCnName || hero.heroName, games, rate].filter(Boolean).join(" / ");
+    })
+    .filter(Boolean);
+  return heroes.join("；");
 }
 
 function buildTeamHeroProfile(teamCode, playerProfiles) {
@@ -398,9 +442,85 @@ function buildTeamHeroProfile(teamCode, playerProfiles) {
   };
 }
 
+function buildTeamHeroProfileAt(teamCode, playerProfiles, cutoffDate) {
+  const profiles = getTeamPlayerProfiles(teamCode, playerProfiles);
+  if (!profiles.length) {
+    return {
+      heroDepth: 0,
+      recentFlex: 0,
+      comfortWinRate: 0,
+      avgKda: 0,
+      avgParticipation: 0,
+      summary: `${teamCode} 赛前无可用英雄池资料`,
+    };
+  }
+
+  const heroPools = profiles.map((profile) => buildPlayerHeroPoolBefore(profile, cutoffDate));
+  const historicalMatches = profiles.flatMap((profile) =>
+    (profile?.recentMatches || []).filter(
+      (match) => parseMatchDate(match.startTime || match.matchDate || cutoffDate) < parseMatchDate(cutoffDate),
+    ),
+  );
+  const heroDepth = average(heroPools.map((pool) => pool.length));
+  const recentFlex = average(
+    profiles.map((profile) => {
+      const cutoff = parseMatchDate(cutoffDate);
+      const uniqueHeroes = new Set(
+        (profile?.recentMatches || [])
+          .filter((match) => parseMatchDate(match.startTime || match.matchDate || cutoffDate) < cutoff)
+          .map((match) => String(match?.heroName || "").trim())
+          .filter(Boolean),
+      );
+      return uniqueHeroes.size;
+    }),
+  );
+  const comfortWinRate = average(
+    heroPools.flatMap((pool) =>
+      pool.map((hero) => Number(hero.winRate)).filter((value) => Number.isFinite(value)),
+    ),
+  );
+  const avgKda = average(
+    historicalMatches.map((match) => {
+      const kills = Number(match?.kill || 0);
+      const assists = Number(match?.assist || 0);
+      const deaths = Number(match?.death || 0);
+      return (kills + assists) / Math.max(1, deaths);
+    }),
+  );
+  const avgParticipation = 0;
+
+  return {
+    heroDepth,
+    recentFlex,
+    comfortWinRate,
+    avgKda,
+    avgParticipation,
+    summary: `${teamCode} 赛前池深 ${heroDepth.toFixed(1)}，近战术切牌 ${recentFlex.toFixed(1)}，舒适池胜率 ${Math.round(
+      comfortWinRate * 100,
+    )}%`,
+  };
+}
+
 function computeHeroProfileEdge(teamA, teamB, playerProfiles) {
   const profileA = buildTeamHeroProfile(teamA, playerProfiles);
   const profileB = buildTeamHeroProfile(teamB, playerProfiles);
+  const edge =
+    (profileA.heroDepth - profileB.heroDepth) * 2.4 +
+    (profileA.recentFlex - profileB.recentFlex) * 1.8 +
+    (profileA.comfortWinRate - profileB.comfortWinRate) * 12 +
+    (profileA.avgKda - profileB.avgKda) * 1.1 +
+    (profileA.avgParticipation - profileB.avgParticipation) * 2.4;
+
+  return {
+    edge,
+    profileA,
+    profileB,
+  };
+}
+
+function computeHeroProfileEdgeAt(teamA, teamB, playerProfiles, cutoffDate) {
+  const profileA = buildTeamHeroProfileAt(teamA, playerProfiles, cutoffDate);
+  const profileB = buildTeamHeroProfileAt(teamB, playerProfiles, cutoffDate);
   const edge =
     (profileA.heroDepth - profileB.heroDepth) * 2.4 +
     (profileA.recentFlex - profileB.recentFlex) * 1.8 +
@@ -930,6 +1050,62 @@ function buildAllTeamRecords(data) {
   );
 }
 
+function buildTeamRecordAt(data, teamCode, cutoffDate) {
+  const cutoff = parseMatchDate(cutoffDate);
+  const completed = sortMatches(
+    getTeamMatches(data, teamCode).filter(
+      (match) => match.status === "completed" && parseMatchDate(match.matchDate) < cutoff,
+    ),
+    -1,
+  );
+  const latestMatch = completed[0] || null;
+  const wins = completed.filter((match) => getSeriesResult(match, teamCode) === "win").length;
+  const losses = completed.filter((match) => getSeriesResult(match, teamCode) === "loss").length;
+  const gameWins = completed.reduce((sum, match) => sum + getPerspective(match, teamCode).scoreFor, 0);
+  const gameLosses = completed.reduce((sum, match) => sum + getPerspective(match, teamCode).scoreAgainst, 0);
+  const recent = completed.slice(0, 5).map((match) => getSeriesResult(match, teamCode));
+  const recentWins = recent.filter((result) => result === "win").length;
+
+  let streakType = null;
+  let streakCount = 0;
+  for (const result of recent) {
+    if (!result || result === "draw") break;
+    if (!streakType) {
+      streakType = result;
+      streakCount += 1;
+      continue;
+    }
+    if (streakType !== result) break;
+    streakCount += 1;
+  }
+
+  const played = wins + losses;
+  const winRate = played ? Math.round((wins / played) * 100) : 0;
+  const gameDiff = gameWins - gameLosses;
+
+  return {
+    teamCode,
+    completed,
+    liveMatch: null,
+    nextKnownMatch: null,
+    nextMatch: null,
+    latestMatch,
+    wins,
+    losses,
+    played,
+    winRate,
+    gameWins,
+    gameLosses,
+    gameDiff,
+    recent,
+    recentWins,
+    recentText: renderRecentForm(recent),
+    streakType,
+    streakCount,
+    streakLabel: streakCount ? `${streakCount}连${streakType === "win" ? "胜" : "负"}` : "无连续走势",
+  };
+}
+
 function buildMetricBars(record) {
   const stability = clamp(record.winRate, 30, 96);
   const pressure = clamp(50 + record.gameDiff * 4, 18, 98);
@@ -1201,6 +1377,30 @@ function findHeadToHead(data, teamA, teamB) {
   };
 }
 
+function findHeadToHeadAt(data, teamA, teamB, cutoffDate) {
+  const cutoff = parseMatchDate(cutoffDate);
+  const matches = sortMatches(
+    data.matches.filter(
+      (match) =>
+        match.status === "completed" &&
+        parseMatchDate(match.matchDate) < cutoff &&
+        ((match.teamA.shortName === teamA && match.teamB.shortName === teamB) ||
+          (match.teamA.shortName === teamB && match.teamB.shortName === teamA)),
+    ),
+    -1,
+  );
+
+  const teamAWins = matches.filter((match) => getSeriesResult(match, teamA) === "win").length;
+  const teamBWins = matches.filter((match) => getSeriesResult(match, teamB) === "win").length;
+
+  return {
+    teamAWins,
+    teamBWins,
+    edge: teamAWins - teamBWins,
+    text: matches.length ? `赛前旧账 ${teamA} ${teamAWins}-${teamBWins} ${teamB}` : "赛前无已完结交手",
+  };
+}
+
 function getRestHours(record, nextMatchDate) {
   const latestMatch = record.latestMatch;
   if (!latestMatch) return 0;
@@ -1281,7 +1481,63 @@ function buildPredictionFactors(match, recordA, recordB, headToHead, restA, rest
   ].filter(Boolean);
 }
 
-function buildPredictionKnowledge(match, playerProfiles, analysisDocs) {
+function buildPredictionFactorsAt(match, recordA, recordB, headToHead, restA, restB, playerProfiles, cutoffDate) {
+  const styleA = TEAM_STYLE_GUIDE[match.teamA.shortName];
+  const styleB = TEAM_STYLE_GUIDE[match.teamB.shortName];
+  const heroEdge = computeHeroProfileEdgeAt(match.teamA.shortName, match.teamB.shortName, playerProfiles, cutoffDate);
+  const focusNotes = FOCUS_PLAYERS.filter(
+    (player) => player.teamCode === match.teamA.shortName || player.teamCode === match.teamB.shortName,
+  )
+    .slice(0, 2)
+    .map((player) => {
+      const profile = playerProfiles[player.id];
+      const heroLine = buildPlayerHeroLineBefore(profile, cutoffDate);
+      return {
+        label: `刀口 / ${player.name}`,
+        value: [player.watch, heroLine ? `赛前常用 ${heroLine}` : ""].filter(Boolean).join(" "),
+      };
+    });
+
+  return [
+    {
+      label: "账面",
+      value: `${match.teamA.shortName} ${recordA.wins}-${recordA.losses}，${match.teamB.shortName} ${recordB.wins}-${recordB.losses}`,
+    },
+    {
+      label: "近势",
+      value: `${match.teamA.shortName} ${recordA.recentText}，${match.teamB.shortName} ${recordB.recentText}`,
+    },
+    {
+      label: "局口",
+      value: `${match.teamA.shortName} ${signed(recordA.gameDiff)}，${match.teamB.shortName} ${signed(recordB.gameDiff)}`,
+    },
+    {
+      label: "旧账",
+      value: headToHead.text,
+    },
+    {
+      label: "歇脚",
+      value: `${match.teamA.shortName} ${restA}h，${match.teamB.shortName} ${restB}h`,
+    },
+    {
+      label: "英雄池",
+      value: `${heroEdge.profileA.summary}；${heroEdge.profileB.summary}`,
+    },
+    styleA && styleB
+      ? {
+          label: "门风",
+          value: `${match.teamA.shortName} ${styleA.strengths[0]}，${match.teamB.shortName} ${styleB.strengths[0]}`,
+        }
+      : null,
+    ...focusNotes,
+    {
+      label: "局制",
+      value: `${match.bo} / ${match.tournamentLabel} / ${match.stageName}`,
+    },
+  ].filter(Boolean);
+}
+
+function buildPredictionKnowledge(match, playerProfiles, analysisDocs, teamDossiers = {}) {
   const teamAGuide = TEAM_STYLE_GUIDE[match.teamA.shortName];
   const teamBGuide = TEAM_STYLE_GUIDE[match.teamB.shortName];
   const heroEdge = computeHeroProfileEdge(match.teamA.shortName, match.teamB.shortName, playerProfiles);
@@ -1294,18 +1550,51 @@ function buildPredictionKnowledge(match, playerProfiles, analysisDocs) {
     return `${player.name}：${player.watch}${stats ? ` 账面 ${stats}。` : ""}${heroLine ? ` 常用 ${heroLine}。` : ""}`;
   });
   return {
-    teamA: teamAGuide
+    teamA: teamDossiers[match.teamA.shortName] ||
+      (teamAGuide
       ? `${match.teamA.shortName}：门风是${teamAGuide.identity}；长板是${teamAGuide.strengths.join("、")}；明病是${teamAGuide.flaw}；翻船点是${teamAGuide.risk}`
-      : `${match.teamA.shortName}：当前没有补充风格注释。`,
-    teamB: teamBGuide
+      : `${match.teamA.shortName}：当前没有补充风格注释。`),
+    teamB: teamDossiers[match.teamB.shortName] ||
+      (teamBGuide
       ? `${match.teamB.shortName}：门风是${teamBGuide.identity}；长板是${teamBGuide.strengths.join("、")}；明病是${teamBGuide.flaw}；翻船点是${teamBGuide.risk}`
-      : `${match.teamB.shortName}：当前没有补充风格注释。`,
+      : `${match.teamB.shortName}：当前没有补充风格注释。`),
     focusPlayers: focusPlayers.length ? focusPlayers.join("；") : "当前没有接入该场重点选手的手法注释。",
     heroPool: `${match.teamA.shortName}：${heroEdge.profileA.summary}；${match.teamB.shortName}：${heroEdge.profileB.summary}`,
     recentAnalysis: analysisDocs?.length
       ? analysisDocs.map((doc) => `${doc.title}：${(doc.description || doc.excerpt).slice(0, 140)}`).join("；")
       : "当前没有抓到最近赛事解读。",
   };
+}
+
+function buildTeamDossiers(records, playerProfiles, analysisLibrary) {
+  const dossiers = {};
+  for (const teamCode of FOCUS_TEAM_IDS) {
+    const guide = TEAM_STYLE_GUIDE[teamCode];
+    const record = records[teamCode];
+    const playerLines = FOCUS_PLAYERS.filter((player) => player.teamCode === teamCode)
+      .slice(0, 2)
+      .map((player) => {
+        const profile = playerProfiles[player.id];
+        const heroLine = buildPlayerHeroLine(profile);
+        return `${player.name}主看${player.watch}${heroLine ? `，常用 ${heroLine}` : ""}`;
+      });
+    const docs = (analysisLibrary?.items || [])
+      .filter((doc) => (doc.mentions?.[teamCode] || 0) > 0)
+      .slice(0, 2)
+      .map((doc) => doc.title);
+
+    dossiers[teamCode] = [
+      guide ? `${teamCode} 的门风是${guide.identity}。` : "",
+      guide?.strengths?.length ? `长板落在${guide.strengths.join("、")}。` : "",
+      guide?.flaw ? `明病在于${guide.flaw}。` : "",
+      record ? `当前账面 ${record.wins}-${record.losses}，近五 ${record.recentText}，局差 ${signed(record.gameDiff)}。` : "",
+      playerLines.length ? `人头上主看${playerLines.join("；")}。` : "",
+      docs.length ? `近闻可参 ${docs.join("；")}。` : "",
+    ]
+      .filter(Boolean)
+      .join("");
+  }
+  return dossiers;
 }
 
 function fallbackPredictionCopy(item) {
@@ -1329,10 +1618,63 @@ function fallbackPredictionCopy(item) {
   };
 }
 
-function buildTeamPredictions(data, records, playerProfiles, analysisLibrary) {
+function buildHistoricalPredictionHistory(data, teamId, playerProfiles) {
+  const completed = sortMatches(
+    getTeamMatches(data, teamId).filter(
+      (match) =>
+        match.status === "completed" &&
+        isKnownTeam(match.teamA.shortName) &&
+        isKnownTeam(match.teamB.shortName),
+    ),
+    -1,
+  ).slice(0, 4);
+
+  return completed.map((match) => {
+    const recordA = buildTeamRecordAt(data, match.teamA.shortName, match.matchDate);
+    const recordB = buildTeamRecordAt(data, match.teamB.shortName, match.matchDate);
+    const headToHead = findHeadToHeadAt(data, match.teamA.shortName, match.teamB.shortName, match.matchDate);
+    const restA = getRestHours(recordA, match.matchDate);
+    const restB = getRestHours(recordB, match.matchDate);
+    const heroProfileEdge = computeHeroProfileEdgeAt(match.teamA.shortName, match.teamB.shortName, playerProfiles, match.matchDate);
+    const confidenceA = computeConfidence(recordA, recordB, headToHead, restA - restB, match.bo, heroProfileEdge.edge);
+    const favoredTeam = confidenceA >= 56 ? match.teamA.shortName : match.teamB.shortName;
+    const confidence =
+      favoredTeam === match.teamA.shortName
+        ? confidenceA
+        : clamp(100 - confidenceA, 42, 84);
+    const predictedScore = buildPredictedScore(match, favoredTeam, confidence);
+    const actualScore = `${match.scoreA}:${match.scoreB}`;
+    const actualWinner = Number(match.scoreA) > Number(match.scoreB) ? match.teamA.shortName : match.teamB.shortName;
+    const fallback = fallbackPredictionCopy({
+      favoredTeam,
+      underdogTeam: favoredTeam === match.teamA.shortName ? match.teamB.shortName : match.teamA.shortName,
+    });
+
+    return {
+      id: `history-${teamId}-${match.matchId || match.matchDate}`,
+      matchLabel: `${match.teamA.shortName} vs ${match.teamB.shortName}`,
+      stageLabel: `${match.tournamentLabel} / ${match.stageName}`,
+      timeLabel: `${formatDateLong(match.matchDate)} / ${match.bo}`,
+      predictedScore,
+      actualScore,
+      favoredTeam,
+      actualWinner,
+      confidence,
+      headline: fallback.headline,
+      risk: fallback.risk,
+      verdict: favoredTeam === actualWinner ? "胜负押中" : "断局失手",
+      hitWinner: favoredTeam === actualWinner,
+      hitExact: predictedScore === actualScore,
+      factors: buildPredictionFactorsAt(match, recordA, recordB, headToHead, restA, restB, playerProfiles, match.matchDate).slice(0, 5),
+    };
+  });
+}
+
+function buildTeamPredictions(data, records, playerProfiles, analysisLibrary, teamDossiers) {
   return FOCUS_TEAM_IDS.map((teamId) => {
     const record = records[teamId];
     const match = record?.nextKnownMatch || null;
+    const history = record ? buildHistoricalPredictionHistory(data, teamId, playerProfiles) : [];
     if (!record || !match) {
       return {
         id: `prediction-${teamId}`,
@@ -1351,6 +1693,7 @@ function buildTeamPredictions(data, records, playerProfiles, analysisLibrary) {
         headline: "等待官源排表",
         line: "赛程未落纸前，不妄开口。",
         risk: "对阵没定，先不写比分。",
+        history,
       };
     }
 
@@ -1372,7 +1715,7 @@ function buildTeamPredictions(data, records, playerProfiles, analysisLibrary) {
       favoredTeam,
       underdogTeam: favoredTeam === match.teamA.shortName ? match.teamB.shortName : match.teamA.shortName,
     });
-    const knowledge = buildPredictionKnowledge(match, playerProfiles, analysisDocs);
+    const knowledge = buildPredictionKnowledge(match, playerProfiles, analysisDocs, teamDossiers);
 
     return {
       id: `prediction-${teamId}`,
@@ -1401,6 +1744,7 @@ function buildTeamPredictions(data, records, playerProfiles, analysisLibrary) {
       risk: fallback.risk,
       knowledge,
       analysisDocs,
+      history,
       resources: {
         seriesRecord: [recordA.wins, recordA.losses, recordB.wins, recordB.losses],
         gameDiff: [recordA.gameDiff, recordB.gameDiff],
@@ -1529,10 +1873,17 @@ async function main() {
   const rankingRows = buildRankingRows(data, teamMap);
   const stageAwards = buildStageAwards(data);
   const records = buildAllTeamRecords(data);
+  const teamDossiers = buildTeamDossiers(records, playerProfiles, analysisLibrary);
   const teamCards = buildTeamCards(data, teamMap, records, stageAwards, rankingRows);
   const playerCards = buildPlayerCards(records, playerProfiles);
   const overview = buildOverview(data, teamMap, rankingRows, playerCards);
-  const predictions = buildTeamPredictions(data, records, playerProfiles, analysisLibrary);
+  const predictions = buildTeamPredictions(
+    data,
+    records,
+    playerProfiles,
+    analysisLibrary,
+    teamDossiers,
+  );
 
   let siteData = {
     generatedAt: data.generatedAt,
