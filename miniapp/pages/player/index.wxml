@@ -1,0 +1,42 @@
+<view class="page-shell">
+  <view class="panel section-stack" wx:if="{{players.length}}">
+    <view class="section-eyebrow">选手切换</view>
+    <view class="chip-row">
+      <view wx:for="{{players}}" wx:key="id" class="chip {{item.id === selectedPlayer ? 'is-active' : ''}}" style="{{item.id === selectedPlayer ? 'background:' + themeColor : ''}}" data-player-id="{{item.id}}" bindtap="handlePlayerTap">{{item.name}}</view>
+    </view>
+  </view>
+  <view class="panel section-stack" wx:if="{{activePlayer}}">
+    <view class="portrait-card">
+      <view class="portrait-frame">
+        <image wx:if="{{activePlayer.portrait}}" src="{{activePlayer.portrait}}" mode="aspectFill"></image>
+        <view wx:else class="portrait-frame portrait-fallback">{{activePlayer.name.slice(0,1)}}</view>
+      </view>
+      <view class="section-stack" style="flex:1;">
+        <view class="section-eyebrow">{{activePlayer.teamCode}} / {{activePlayer.role}}</view>
+        <view class="card-title">{{activePlayer.name}}</view>
+        <view class="card-copy">{{activePlayer.summary}}</view>
+      </view>
+    </view>
+    <view class="hero-list" wx:if="{{activePlayer.favoriteHeroes.length}}">
+      <view class="hero-chip" wx:for="{{activePlayer.favoriteHeroes}}" wx:key="heroCnName">
+        <image wx:if="{{item.heroLogo}}" src="{{item.heroLogo}}" mode="aspectFill"></image>
+        <view>{{item.heroCnName}} · {{item.games}}局</view>
+      </view>
+    </view>
+    <view class="card-copy">{{activePlayer.note}}</view>
+  </view>
+  <view class="panel section-stack" wx:if="{{activePlayer && activePlayer.profileStats.length}}">
+    <view class="card-title">账面</view>
+    <view class="hero-list">
+      <view class="hero-chip" wx:for="{{activePlayer.profileStats}}" wx:key="*this">{{item}}</view>
+    </view>
+  </view>
+  <view class="panel section-stack" wx:if="{{activePlayer && activePlayer.observation.length}}">
+    <view class="card-title">观赛要点</view>
+    <view class="list-stack">
+      <view class="list-item" wx:for="{{activePlayer.observation}}" wx:key="*this">
+        <view class="card-copy">{{item}}</view>
+      </view>
+    </view>
+  </view>
+</view>

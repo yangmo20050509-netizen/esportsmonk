@@ -1,0 +1,21 @@
+{
+  "miniprogramRoot": "./",
+  "projectname": "esportsmonk-miniapp",
+  "description": "Esports Monk WeChat Mini Program",
+  "appid": "touristappid",
+  "compileType": "miniprogram",
+  "setting": {
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "minified": true,
+    "coverView": true,
+    "showShadowRootInWxmlPanel": true,
+    "packNpmManually": false,
+    "compileHotReLoad": true,
+    "lazyloadPlaceholderEnable": true,
+    "useApiHook": true
+  },
+  "libVersion": "trial",
+  "condition": {}
+}

@@ -1,0 +1,29 @@
+{
+  "pages": [
+    "pages/home/index",
+    "pages/team/index",
+    "pages/player/index",
+    "pages/prediction/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "电竞高僧",
+    "navigationBarBackgroundColor": "#f7f1e6",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f4efe6",
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "color": "#7d6b52",
+    "selectedColor": "#3d78d7",
+    "backgroundColor": "#fbf8f2",
+    "borderStyle": "white",
+    "list": [
+      { "pagePath": "pages/home/index", "text": "山门" },
+      { "pagePath": "pages/team/index", "text": "战队" },
+      { "pagePath": "pages/player/index", "text": "选手" },
+      { "pagePath": "pages/prediction/index", "text": "高僧预测" }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,45 @@
+<view class="page-shell">
+  <view class="panel section-stack">
+    <view class="section-eyebrow">主队切换</view>
+    <view class="chip-row">
+      <view wx:for="{{teams}}" wx:key="id" class="chip {{item.id === selectedTeam ? 'is-active' : ''}}" style="{{item.id === selectedTeam ? 'background:' + themeColor : ''}}" data-team-id="{{item.id}}" bindtap="handleTeamTap">{{item.shortName}}</view>
+    </view>
+  </view>
+  <view class="panel section-stack" wx:if="{{activeTeam}}">
+    <view class="split-head">
+      <view>
+        <view class="section-eyebrow">{{activeTeam.region}}</view>
+        <view class="card-title">{{activeTeam.name}}</view>
+      </view>
+      <view class="subtle-pill">{{activeTeam.stageAward}}</view>
+    </view>
+    <view class="card-copy">{{activeTeam.statement}}</view>
+    <view class="metric-grid">
+      <view class="metric-card" wx:for="{{activeTeam.metrics}}" wx:key="label">
+        <view class="metric-label">{{item.label}}</view>
+        <view class="metric-value">{{item.text}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="panel section-stack" wx:if="{{activeTeam && activeTeam.docket}}">
+    <view class="card-title">赛程与赛果</view>
+    <view class="list-stack">
+      <view class="list-item" wx:for="{{activeTeam.docket}}" wx:key="label">
+        <view class="list-title">{{item.label}} · {{item.value}}</view>
+        <view class="list-meta">{{item.note}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="panel section-stack" wx:if="{{players.length}}">
+    <view class="card-title">选手</view>
+    <view class="list-stack">
+      <view class="list-item" wx:for="{{players}}" wx:key="id" data-player-id="{{item.id}}" bindtap="handlePlayerTap">
+        <view class="history-head">
+          <view class="list-title">{{item.name}} / {{item.role}}</view>
+          <view class="history-tag">进入选手页</view>
+        </view>
+        <view class="list-meta">{{item.tags.join(' · ')}}</view>
+      </view>
+    </view>
+  </view>
+</view>

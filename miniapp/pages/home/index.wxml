@@ -1,0 +1,83 @@
+<view class="page-shell">
+  <view class="section-stack panel" style="border-color: {{themeColor}}22;">
+    <view class="split-head">
+      <view>
+        <view class="section-eyebrow">主队动态</view>
+        <view class="section-title">{{selectedTeam}}</view>
+      </view>
+      <view class="subtle-pill">{{activeTeam.stageAward || '关注主队'}}</view>
+    </view>
+    <view class="section-stack">
+      <view class="section-eyebrow">主队</view>
+      <view class="chip-row">
+        <view wx:for="{{teams}}" wx:key="id" class="chip {{item.id === selectedTeam ? 'is-active' : ''}}" style="{{item.id === selectedTeam ? 'background:' + themeColor : ''}}" data-team-id="{{item.id}}" bindtap="handleTeamTap">{{item.shortName}}</view>
+      </view>
+    </view>
+    <view class="section-stack" wx:if="{{players.length}}">
+      <view class="section-eyebrow">选手</view>
+      <view class="chip-row">
+        <view wx:for="{{players}}" wx:key="id" class="chip {{item.id === selectedPlayer ? 'is-active' : ''}}" style="{{item.id === selectedPlayer ? 'background:' + themeColor : ''}}" data-player-id="{{item.id}}" bindtap="handlePlayerTap">{{item.name}}</view>
+      </view>
+    </view>
+    <view class="portrait-card" wx:if="{{activePlayer}}">
+      <view class="portrait-frame">
+        <image wx:if="{{activePlayer.portrait}}" src="{{activePlayer.portrait}}" mode="aspectFill"></image>
+        <view wx:else class="portrait-frame portrait-fallback">{{activePlayer.name.slice(0,1)}}</view>
+      </view>
+      <view class="section-stack" style="flex:1;">
+        <view class="section-eyebrow">{{activeTeam.shortName}} / {{activePlayer.role}}</view>
+        <view class="card-title">{{activePlayer.name}}</view>
+        <view class="card-copy">{{activePlayer.summary}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="panel section-stack" wx:if="{{focusMatch}}">
+    <view class="split-head">
+      <view>
+        <view class="section-eyebrow">赛程提醒</view>
+        <view class="card-title">{{focusMatch.status === 'in_progress' ? '当前比赛' : '下一场'}}</view>
+      </view>
+      <button class="button-primary" style="background: {{themeColor}};" bindtap="handleSubscribeTap">订阅提醒</button>
+    </view>
+    <view class="list-item">
+      <view class="history-head">
+        <view class="list-title">{{focusMatch.teamA.shortName}} vs {{focusMatch.teamB.shortName}}</view>
+        <view class="history-tag">{{focusMatch.bo}}</view>
+      </view>
+      <view class="list-meta">{{focusMatch.tournamentLabel}} / {{focusMatch.stageName}}</view>
+      <view class="list-meta">{{focusMatch.matchDate}}</view>
+    </view>
+  </view>
+
+  <view class="panel section-stack" wx:if="{{activeTeam}}">
+    <view class="split-head">
+      <view>
+        <view class="section-eyebrow">主队近况</view>
+        <view class="card-title">{{activeTeam.shortName}}</view>
+      </view>
+      <button class="button-ghost" bindtap="goTeam">看战队</button>
+    </view>
+    <view class="card-copy">{{activeTeam.statement}}</view>
+    <view class="metric-grid">
+      <view class="metric-card" wx:for="{{activeTeam.metrics}}" wx:key="label">
+        <view class="metric-label">{{item.label}}</view>
+        <view class="metric-value">{{item.text}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="panel section-stack" wx:if="{{focusPrediction}}">
+    <view class="split-head">
+      <view>
+        <view class="section-eyebrow">高僧预测</view>
+        <view class="card-title">{{focusPrediction.predictedScore}}</view>
+      </view>
+      <button class="button-ghost" bindtap="goPrediction">看全量</button>
+    </view>
+    <view class="card-copy">{{focusPrediction.headline}}</view>
+    <view class="card-copy">{{focusPrediction.line}}</view>
+  </view>
+
+  <view class="empty-state" wx:if="{{loading}}">正在收官源赛程。</view>
+</view>

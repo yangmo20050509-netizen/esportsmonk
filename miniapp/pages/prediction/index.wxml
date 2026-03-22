@@ -1,0 +1,52 @@
+<view class="page-shell">
+  <view class="panel section-stack">
+    <view class="section-eyebrow">高僧预测</view>
+    <view class="chip-row">
+      <view wx:for="{{teams}}" wx:key="id" class="chip {{item.id === selectedTeam ? 'is-active' : ''}}" style="{{item.id === selectedTeam ? 'background:' + themeColor : ''}}" data-team-id="{{item.id}}" bindtap="handleTeamTap">{{item.shortName}}</view>
+    </view>
+  </view>
+  <view class="panel section-stack" wx:if="{{prediction}}">
+    <view class="split-head">
+      <view>
+        <view class="section-eyebrow">{{prediction.stageLabel}}</view>
+        <view class="card-title">{{prediction.matchLabel}}</view>
+      </view>
+      <view class="subtle-pill">{{prediction.statusText}}</view>
+    </view>
+    <view class="metric-grid">
+      <view class="metric-card">
+        <view class="metric-label">高僧置信</view>
+        <view class="metric-value">{{prediction.confidence}}%</view>
+      </view>
+      <view class="metric-card">
+        <view class="metric-label">赛前比分</view>
+        <view class="metric-value">{{prediction.predictedScore}}</view>
+      </view>
+    </view>
+    <view class="card-title">{{prediction.headline}}</view>
+    <view class="card-copy">{{prediction.line}}</view>
+    <view class="card-copy">变数：{{prediction.risk}}</view>
+  </view>
+  <view class="panel section-stack" wx:if="{{prediction && prediction.factors.length}}">
+    <view class="card-title">因子</view>
+    <view class="list-stack">
+      <view class="factor-card" wx:for="{{prediction.factors}}" wx:key="label">
+        <view class="factor-label">{{item.label}}</view>
+        <view class="factor-value">{{item.value}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="panel section-stack" wx:if="{{prediction && prediction.history.length}}">
+    <view class="card-title">往期断局</view>
+    <view class="list-stack">
+      <view class="history-item" wx:for="{{prediction.history}}" wx:key="id">
+        <view class="history-head">
+          <view class="history-title">{{item.matchLabel}}</view>
+          <view class="history-tag">{{item.verdict}}</view>
+        </view>
+        <view class="list-meta">{{item.timeLabel}}</view>
+        <view class="card-copy">赛前断 {{item.predictedScore}}，实战 {{item.actualScore}}</view>
+      </view>
+    </view>
+  </view>
+</view>
