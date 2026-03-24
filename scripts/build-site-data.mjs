@@ -1,17 +1,12 @@
-import { execFile } from "node:child_process";
 import { existsSync } from "node:fs";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
-import { promisify } from "node:util";
 import { fileURLToPath } from "node:url";
-
-const execFileAsync = promisify(execFile);
+import { buildScheduleData } from "./build-self-use-data.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const projectRoot = path.resolve(__dirname, "..");
-const scheduleScript = path.join(projectRoot, "scripts", "build-self-use-data.mjs");
-const schedulePath = path.join(projectRoot, "app", "data", "tencent-schedule.json");
 const tencentPlayerProfilesPath = path.join(projectRoot, "app", "data", "tencent-player-profiles.json");
 const outputPath = path.join(projectRoot, "app", "data", "site-data.json");
 const inlineOutputPath = path.join(projectRoot, "app", "data", "site-data.inline.js");
@@ -20,11 +15,17 @@ const sapphireKnowledgePath = path.join(projectRoot, "知识库", "蓝宝石结�
 const playerAssetDir = path.join(projectRoot, "app", "assets", "players");
 const PLAYER_PORTRAIT_EXTENSIONS = [".png", ".webp", ".jpg", ".jpeg", ".avif"];
 
-const GEMINI_MODEL = process.env.GEMINI_MODEL || "gemini-3-flash-preview";
-const GEMINI_API_KEY = process.env.GEMINI_API_KEY || "";
+const DEFAULT_GEMINI_MODEL = "gemini-3-flash-preview";
 const ANALYSIS_SOURCE_LIMIT = 10;
 const ANALYSIS_SOURCE_ROOT = "https://lolesports.com";
 const ANALYSIS_DISCOVERY_URL = "https://lolesports.com/en-US/news";
+
+function resolveRuntimeEnv(runtimeEnv = {}) {
+  return {
+    GEMINI_API_KEY: runtimeEnv.GEMINI_API_KEY || process.env.GEMINI_API_KEY || "",
+    GEMINI_MODEL: runtimeEnv.GEMINI_MODEL || process.env.GEMINI_MODEL || DEFAULT_GEMINI_MODEL,
+  };
+}
 
 const NAV_LABELS = {
   overview: "首页",
@@ -1873,7 +1874,8 @@ function sanitizeAiPredictionText(value, fallback) {
   return hit ? fallback : text;
 }
 
-async function callGeminiJson(prompt) {
+async function callGeminiJson(prompt, runtimeEnv = {}) {
+  const { GEMINI_API_KEY, GEMINI_MODEL } = resolveRuntimeEnv(runtimeEnv);
   if (!GEMINI_API_KEY) return null;
 
   try {
@@ -1902,7 +1904,7 @@ async function callGeminiJson(prompt) {
   }
 }
 
-async function buildAiPredictionCopy(predictions) {
+async function buildAiPredictionCopy(predictions, runtimeEnv = {}) {
   const payload = predictions
     .filter((item) => item.predictedScore !== "--")
     .map((item) => ({
@@ -1938,10 +1940,11 @@ async function buildAiPredictionCopy(predictions) {
     JSON.stringify(payload, null, 2),
   ].join("\n");
 
-  return callGeminiJson(prompt);
+  return callGeminiJson(prompt, runtimeEnv);
 }
 
-function applyAiPredictionCopy(siteData, aiCopy) {
+function applyAiPredictionCopy(siteData, aiCopy, runtimeEnv = {}) {
+  const { GEMINI_MODEL } = resolveRuntimeEnv(runtimeEnv);
   if (!aiCopy?.predictions) {
     siteData.copy.aiSource = "fallback";
     return siteData;
@@ -1959,12 +1962,10 @@ function applyAiPredictionCopy(siteData, aiCopy) {
   return siteData;
 }
 
-async function main() {
-  await execFileAsync(process.execPath, [scheduleScript], {
-    cwd: projectRoot,
-  });
-
-  const data = JSON.parse(await readFile(schedulePath, "utf8"));
+export async function generateSiteData(options = {}) {
+  const persist = options.persist !== false;
+  const runtimeEnv = options.runtimeEnv || process.env;
+  const data = await buildScheduleData({ persist });
   const playerProfiles = await loadTencentPlayerProfiles();
   const sapphireKnowledge = await loadSapphireKnowledge(playerProfiles);
   const teamMap = teamNameLookup(data);
@@ -2023,16 +2024,24 @@ async function main() {
     },
   };
 
-  const aiCopy = await buildAiPredictionCopy(predictions);
-  siteData = applyAiPredictionCopy(siteData, aiCopy);
+  const aiCopy = await buildAiPredictionCopy(predictions, runtimeEnv);
+  siteData = applyAiPredictionCopy(siteData, aiCopy, runtimeEnv);
 
-  await mkdir(path.dirname(outputPath), { recursive: true });
-  await writeFile(outputPath, `${JSON.stringify(siteData, null, 2)}\n`, "utf8");
-  await writeFile(
-    inlineOutputPath,
-    `window.__SITE_DATA__ = ${JSON.stringify(siteData, null, 2)};\n`,
-    "utf8",
-  );
+  if (persist) {
+    await mkdir(path.dirname(outputPath), { recursive: true });
+    await writeFile(outputPath, `${JSON.stringify(siteData, null, 2)}\n`, "utf8");
+    await writeFile(
+      inlineOutputPath,
+      `window.__SITE_DATA__ = ${JSON.stringify(siteData, null, 2)};\n`,
+      "utf8",
+    );
+  }
+
+  return siteData;
+}
+
+async function main() {
+  const siteData = await generateSiteData({ persist: true, runtimeEnv: process.env });
 
   console.log(
     JSON.stringify(
@@ -2051,7 +2060,9 @@ async function main() {
   );
 }
 
-main().catch((error) => {
-  console.error(error);
-  process.exitCode = 1;
-});
+if (process.argv[1] && path.resolve(process.argv[1]) === __filename) {
+  main().catch((error) => {
+    console.error(error);
+    process.exitCode = 1;
+  });
+}

@@ -1,4 +1,4 @@
-const PROD_SITE_DATA_URL = "https://esportsmonk.earfquake.online/data/site-data.json";
+const PROD_SITE_DATA_URL = "https://esportsmonk.earfquake.online/api/site-data";
 
 module.exports = {
   PROD_SITE_DATA_URL,

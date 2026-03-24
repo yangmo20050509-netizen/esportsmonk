@@ -976,27 +976,34 @@ function bindEvents() {
 }
 
 async function loadData() {
+  const candidates = [
+    { url: "./api/site-data", cache: "no-store" },
+    { url: `./data/site-data.json?ts=${Date.now()}`, cache: "no-store" },
+  ];
+
+  let lastError = null;
+
+  for (const candidate of candidates) {
+    try {
+      const response = await fetch(candidate.url, {
+        cache: candidate.cache,
+      });
+
+      if (!response.ok) {
+        throw new Error(`加载站点数据失败 ${response.status}`);
+      }
+
+      return response.json();
+    } catch (error) {
+      lastError = error;
+    }
+  }
+
   if (window.__SITE_DATA__) {
     return window.__SITE_DATA__;
   }
 
-  try {
-    const response = await fetch(`./data/site-data.json?ts=${Date.now()}`, {
-      cache: "no-store",
-    });
-
-    if (!response.ok) {
-      throw new Error(`加载站点数据失败 ${response.status}`);
-    }
-
-    return response.json();
-  } catch (error) {
-    if (window.__SITE_DATA__) {
-      return window.__SITE_DATA__;
-    }
-
-    throw error;
-  }
+  throw lastError || new Error("站点数据暂时不可用");
 }
 
 async function init() {

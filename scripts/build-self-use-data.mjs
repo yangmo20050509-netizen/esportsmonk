@@ -169,8 +169,9 @@ function collectTeams(matches) {
   return [...seen.values()].sort((left, right) => left.shortName.localeCompare(right.shortName));
 }
 
-async function main() {
-  const now = new Date();
+export async function buildScheduleData(options = {}) {
+  const now = options.now instanceof Date ? options.now : new Date();
+  const persist = options.persist !== false;
   const [teamListRaw, gameListRaw] = await Promise.all([
     fetchText(URLS.teamList),
     fetchText(URLS.gameList),
@@ -244,9 +245,16 @@ async function main() {
     matches,
   };
 
-  await mkdir(path.dirname(outputPath), { recursive: true });
-  await writeFile(outputPath, `${JSON.stringify(output, null, 2)}\n`, "utf8");
+  if (persist) {
+    await mkdir(path.dirname(outputPath), { recursive: true });
+    await writeFile(outputPath, `${JSON.stringify(output, null, 2)}\n`, "utf8");
+  }
 
+  return output;
+}
+
+async function main() {
+  const output = await buildScheduleData();
   console.log(
     JSON.stringify(
       {
@@ -261,7 +269,9 @@ async function main() {
   );
 }
 
-main().catch((error) => {
-  console.error(error);
-  process.exitCode = 1;
-});
+if (process.argv[1] && path.resolve(process.argv[1]) === __filename) {
+  main().catch((error) => {
+    console.error(error);
+    process.exitCode = 1;
+  });
+}
