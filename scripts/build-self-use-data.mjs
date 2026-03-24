@@ -4,8 +4,17 @@ import { fileURLToPath } from "node:url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const projectRoot = path.resolve(__dirname, "..");
-const outputPath = path.join(projectRoot, "app", "data", "tencent-schedule.json");
+const defaultProjectRoot = path.resolve(__dirname, "..");
+
+function resolveSchedulePaths(options = {}) {
+  const projectRoot = options.projectRoot || defaultProjectRoot;
+  const appRoot = options.appRoot || path.join(projectRoot, "app");
+  return {
+    projectRoot,
+    appRoot,
+    outputPath: options.outputPath || path.join(appRoot, "data", "tencent-schedule.json"),
+  };
+}
 
 const URLS = {
   teamList: "https://lpl.qq.com/web201612/data/LOL_MATCH2_TEAM_LIST.js",
@@ -172,6 +181,7 @@ function collectTeams(matches) {
 export async function buildScheduleData(options = {}) {
   const now = options.now instanceof Date ? options.now : new Date();
   const persist = options.persist !== false;
+  const paths = resolveSchedulePaths(options);
   const [teamListRaw, gameListRaw] = await Promise.all([
     fetchText(URLS.teamList),
     fetchText(URLS.gameList),
@@ -246,20 +256,21 @@ export async function buildScheduleData(options = {}) {
   };
 
   if (persist) {
-    await mkdir(path.dirname(outputPath), { recursive: true });
-    await writeFile(outputPath, `${JSON.stringify(output, null, 2)}\n`, "utf8");
+    await mkdir(path.dirname(paths.outputPath), { recursive: true });
+    await writeFile(paths.outputPath, `${JSON.stringify(output, null, 2)}\n`, "utf8");
   }
 
   return output;
 }
 
 async function main() {
-  const output = await buildScheduleData();
+  const paths = resolveSchedulePaths();
+  const output = await buildScheduleData(paths);
   console.log(
     JSON.stringify(
       {
         ok: true,
-        output: outputPath,
+        output: paths.outputPath,
         tournamentCount: output.tournaments.length,
         matchCount: output.matches.length,
       },

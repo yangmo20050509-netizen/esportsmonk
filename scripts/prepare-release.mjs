@@ -8,6 +8,7 @@ const projectRoot = path.resolve(__dirname, "..");
 const appRoot = path.join(projectRoot, "app");
 const releaseRoot = path.join(projectRoot, "release");
 const outputRoot = path.join(releaseRoot, "esportsmonk-online");
+const buildRoot = path.join(outputRoot, "__build");
 
 async function ensure(pathLike) {
   await stat(pathLike);
@@ -21,6 +22,18 @@ async function main() {
   await mkdir(releaseRoot, { recursive: true });
   await rm(outputRoot, { recursive: true, force: true });
   await cp(appRoot, outputRoot, { recursive: true, force: true });
+  await mkdir(buildRoot, { recursive: true });
+  await cp(path.join(projectRoot, "scripts", "build-self-use-data.mjs"), path.join(buildRoot, "build-self-use-data.mjs"), {
+    force: true,
+  });
+  await cp(path.join(projectRoot, "scripts", "build-site-data.mjs"), path.join(buildRoot, "build-site-data.mjs"), {
+    force: true,
+  });
+  await cp(
+    path.join(projectRoot, "知识库", "蓝宝石结构化知识库.json"),
+    path.join(outputRoot, "data", "blue-sapphire-knowledge.json"),
+    { force: true },
+  );
 
   console.log(
     JSON.stringify(

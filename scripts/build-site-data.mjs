@@ -6,19 +6,32 @@ import { buildScheduleData } from "./build-self-use-data.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const projectRoot = path.resolve(__dirname, "..");
-const tencentPlayerProfilesPath = path.join(projectRoot, "app", "data", "tencent-player-profiles.json");
-const outputPath = path.join(projectRoot, "app", "data", "site-data.json");
-const inlineOutputPath = path.join(projectRoot, "app", "data", "site-data.inline.js");
-const analysisLibraryPath = path.join(projectRoot, "app", "data", "match-analysis-library.json");
-const sapphireKnowledgePath = path.join(projectRoot, "知识库", "蓝宝石结构化知识库.json");
-const playerAssetDir = path.join(projectRoot, "app", "assets", "players");
+const defaultProjectRoot = path.resolve(__dirname, "..");
 const PLAYER_PORTRAIT_EXTENSIONS = [".png", ".webp", ".jpg", ".jpeg", ".avif"];
 
 const DEFAULT_GEMINI_MODEL = "gemini-3-flash-preview";
 const ANALYSIS_SOURCE_LIMIT = 10;
 const ANALYSIS_SOURCE_ROOT = "https://lolesports.com";
 const ANALYSIS_DISCOVERY_URL = "https://lolesports.com/en-US/news";
+
+function resolveBuildPaths(options = {}) {
+  const projectRoot = options.projectRoot || defaultProjectRoot;
+  const appRoot = options.appRoot || path.join(projectRoot, "app");
+  const dataRoot = options.dataRoot || path.join(appRoot, "data");
+  return {
+    projectRoot,
+    appRoot,
+    dataRoot,
+    tencentPlayerProfilesPath:
+      options.tencentPlayerProfilesPath || path.join(dataRoot, "tencent-player-profiles.json"),
+    outputPath: options.outputPath || path.join(dataRoot, "site-data.json"),
+    inlineOutputPath: options.inlineOutputPath || path.join(dataRoot, "site-data.inline.js"),
+    analysisLibraryPath: options.analysisLibraryPath || path.join(dataRoot, "match-analysis-library.json"),
+    sapphireKnowledgePath:
+      options.sapphireKnowledgePath || path.join(projectRoot, "知识库", "蓝宝石结构化知识库.json"),
+    playerAssetDir: options.playerAssetDir || path.join(appRoot, "assets", "players"),
+  };
+}
 
 function resolveRuntimeEnv(runtimeEnv = {}) {
   return {
@@ -246,9 +259,9 @@ const FOCUS_PLAYERS = [
   { id: "bie", name: "Bie", role: "辅助", teamCode: "TSW", watch: "偏直给，先手和团前视野都很直接。若第一拍开到了，TSW 会很像一把直刀；若开偏，自己也会先露全身。" },
 ];
 
-function resolvePlayerPortrait(playerId) {
+function resolvePlayerPortrait(playerId, paths) {
   for (const ext of PLAYER_PORTRAIT_EXTENSIONS) {
-    const assetPath = path.join(playerAssetDir, `${playerId}${ext}`);
+    const assetPath = path.join(paths.playerAssetDir, `${playerId}${ext}`);
     if (existsSync(assetPath)) {
       return `./assets/players/${playerId}${ext}`;
     }
@@ -256,9 +269,9 @@ function resolvePlayerPortrait(playerId) {
   return "";
 }
 
-async function loadTencentPlayerProfiles() {
+async function loadTencentPlayerProfiles(paths) {
   try {
-    const raw = await readFile(tencentPlayerProfilesPath, "utf8");
+    const raw = await readFile(paths.tencentPlayerProfilesPath, "utf8");
     const parsed = JSON.parse(raw);
     return parsed?.players || {};
   } catch {
@@ -266,9 +279,9 @@ async function loadTencentPlayerProfiles() {
   }
 }
 
-async function loadSapphireKnowledge(playerProfiles) {
+async function loadSapphireKnowledge(playerProfiles, paths) {
   try {
-    const raw = await readFile(sapphireKnowledgePath, "utf8");
+    const raw = await readFile(paths.sapphireKnowledgePath, "utf8");
     const parsed = JSON.parse(raw);
     const players = Object.fromEntries(
       Object.entries(parsed.players || {}).map(([playerId, item]) => {
@@ -710,7 +723,7 @@ function dedupeAnalysisDocs(docs) {
   return unique;
 }
 
-async function fetchAnalysisLibrary(teamMap, playerProfiles) {
+async function fetchAnalysisLibrary(teamMap, playerProfiles, paths) {
   const aliases = buildEntityAliases(teamMap, playerProfiles);
   const urls = await discoverAnalysisUrls();
   const docs = [];
@@ -758,7 +771,7 @@ async function fetchAnalysisLibrary(teamMap, playerProfiles) {
     items: cleanedDocs,
   };
 
-  await writeFile(analysisLibraryPath, `${JSON.stringify(library, null, 2)}\n`, "utf8");
+  await writeFile(paths.analysisLibraryPath, `${JSON.stringify(library, null, 2)}\n`, "utf8");
   return library;
 }
 
@@ -1318,7 +1331,7 @@ function buildTeamCards(data, teamMap, records, stageAwards, rankingRows) {
   });
 }
 
-function buildPlayerCards(records, playerProfiles) {
+function buildPlayerCards(records, playerProfiles, paths) {
   return FOCUS_PLAYERS.map((player) => {
     const record = records[player.teamCode];
     const profile = playerProfiles[player.id] || null;
@@ -1344,7 +1357,7 @@ function buildPlayerCards(records, playerProfiles) {
       name: player.name,
       role: player.role,
       teamCode: player.teamCode,
-      portrait: resolvePlayerPortrait(player.id),
+      portrait: resolvePlayerPortrait(player.id, paths),
       summary: buildPlayerSummary(player, record, nextMatch, profile),
       note: buildPlayerHeroLine(profile) ? `${player.watch} 常用英雄看 ${buildPlayerHeroLine(profile)}。` : player.watch,
       tags: buildPlayerTags(player, profile),
@@ -1965,17 +1978,23 @@ function applyAiPredictionCopy(siteData, aiCopy, runtimeEnv = {}) {
 export async function generateSiteData(options = {}) {
   const persist = options.persist !== false;
   const runtimeEnv = options.runtimeEnv || process.env;
-  const data = await buildScheduleData({ persist });
-  const playerProfiles = await loadTencentPlayerProfiles();
-  const sapphireKnowledge = await loadSapphireKnowledge(playerProfiles);
+  const paths = resolveBuildPaths(options.paths || {});
+  const data = await buildScheduleData({
+    persist,
+    projectRoot: paths.projectRoot,
+    appRoot: paths.appRoot,
+    outputPath: path.join(paths.dataRoot, "tencent-schedule.json"),
+  });
+  const playerProfiles = await loadTencentPlayerProfiles(paths);
+  const sapphireKnowledge = await loadSapphireKnowledge(playerProfiles, paths);
   const teamMap = teamNameLookup(data);
-  const analysisLibrary = await fetchAnalysisLibrary(teamMap, playerProfiles);
+  const analysisLibrary = await fetchAnalysisLibrary(teamMap, playerProfiles, paths);
   const rankingRows = buildRankingRows(data, teamMap);
   const stageAwards = buildStageAwards(data);
   const records = buildAllTeamRecords(data);
   const teamDossiers = buildTeamDossiers(records, playerProfiles, analysisLibrary, sapphireKnowledge);
   const teamCards = buildTeamCards(data, teamMap, records, stageAwards, rankingRows);
-  const playerCards = buildPlayerCards(records, playerProfiles);
+  const playerCards = buildPlayerCards(records, playerProfiles, paths);
   const overview = buildOverview(data, teamMap, rankingRows, playerCards);
   const predictions = buildTeamPredictions(
     data,
@@ -2028,10 +2047,10 @@ export async function generateSiteData(options = {}) {
   siteData = applyAiPredictionCopy(siteData, aiCopy, runtimeEnv);
 
   if (persist) {
-    await mkdir(path.dirname(outputPath), { recursive: true });
-    await writeFile(outputPath, `${JSON.stringify(siteData, null, 2)}\n`, "utf8");
+    await mkdir(path.dirname(paths.outputPath), { recursive: true });
+    await writeFile(paths.outputPath, `${JSON.stringify(siteData, null, 2)}\n`, "utf8");
     await writeFile(
-      inlineOutputPath,
+      paths.inlineOutputPath,
       `window.__SITE_DATA__ = ${JSON.stringify(siteData, null, 2)};\n`,
       "utf8",
     );
@@ -2041,14 +2060,15 @@ export async function generateSiteData(options = {}) {
 }
 
 async function main() {
-  const siteData = await generateSiteData({ persist: true, runtimeEnv: process.env });
+  const paths = resolveBuildPaths();
+  const siteData = await generateSiteData({ persist: true, runtimeEnv: process.env, paths });
 
   console.log(
     JSON.stringify(
       {
         ok: true,
-        output: outputPath,
-        inlineOutput: inlineOutputPath,
+        output: paths.outputPath,
+        inlineOutput: paths.inlineOutputPath,
         aiSource: siteData.copy.aiSource,
         teamCount: siteData.teams.items.length,
         playerCount: siteData.players.items.length,

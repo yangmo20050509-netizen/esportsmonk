@@ -1,11 +1,12 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { generateSiteData } from "../../../scripts/build-site-data.mjs";
+import { generateSiteData } from "../../__build/build-site-data.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const fallbackPath = path.resolve(__dirname, "../../data/site-data.json");
+const deployedRoot = path.resolve(__dirname, "../..");
 const CACHE_TTL_MS = 10 * 60 * 1000;
 
 function getCacheBucket() {
@@ -54,6 +55,17 @@ export async function onRequestGet(context) {
     const payload = await generateSiteData({
       persist: false,
       runtimeEnv: context?.env || {},
+      paths: {
+        projectRoot: deployedRoot,
+        appRoot: deployedRoot,
+        dataRoot: path.join(deployedRoot, "data"),
+        tencentPlayerProfilesPath: path.join(deployedRoot, "data", "tencent-player-profiles.json"),
+        analysisLibraryPath: path.join(deployedRoot, "data", "match-analysis-library.json"),
+        sapphireKnowledgePath: path.join(deployedRoot, "data", "blue-sapphire-knowledge.json"),
+        playerAssetDir: path.join(deployedRoot, "assets", "players"),
+        outputPath: path.join(deployedRoot, "data", "site-data.json"),
+        inlineOutputPath: path.join(deployedRoot, "data", "site-data.inline.js"),
+      },
     });
 
     cache.payload = payload;
