@@ -34,3 +34,4 @@
 2026-03-24 17:45 build-self-use/build-site ??????? Pages ???????
 2026-03-24 18:07 build-site/build-self-use 支持可配置路径，release 可直接复用。
 2026-03-24 18:11 发布包追加 __build builder 与知识库，EdgeOne 运行时不再缺依赖。
+2026-03-26 11:01 prepare-release 改为校验并携带 node-functions，修正知识库拷贝路径乱码。

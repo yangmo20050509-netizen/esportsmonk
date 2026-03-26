@@ -43,3 +43,4 @@
 2026-03-24 17:45 ???? /api/site-data?????? JSON ??????
 2026-03-24 18:07 同域函数改吃发布包内 builder，避免 /api/site-data 在 EdgeOne 404。
 2026-03-24 18:11 Pages 函数目录改为 cloud-functions，站内 API 走平台支持的标准路径。
+2026-03-26 11:01 app 补回 node-functions 运行时接口目录，修正 EdgeOne Pages 的 API 路由识别。

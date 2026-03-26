@@ -9,6 +9,7 @@ const appRoot = path.join(projectRoot, "app");
 const releaseRoot = path.join(projectRoot, "release");
 const outputRoot = path.join(releaseRoot, "esportsmonk-online");
 const buildRoot = path.join(outputRoot, "__build");
+const sapphireKnowledgeSource = path.join(projectRoot, "知识库", "蓝宝石结构化知识库.json");
 
 async function ensure(pathLike) {
   await stat(pathLike);
@@ -18,6 +19,7 @@ async function main() {
   await ensure(path.join(appRoot, "index.html"));
   await ensure(path.join(appRoot, "data", "site-data.json"));
   await ensure(path.join(appRoot, "data", "site-data.inline.js"));
+  await ensure(path.join(appRoot, "node-functions", "api", "site-data.js"));
 
   await mkdir(releaseRoot, { recursive: true });
   await rm(outputRoot, { recursive: true, force: true });
@@ -29,11 +31,9 @@ async function main() {
   await cp(path.join(projectRoot, "scripts", "build-site-data.mjs"), path.join(buildRoot, "build-site-data.mjs"), {
     force: true,
   });
-  await cp(
-    path.join(projectRoot, "知识库", "蓝宝石结构化知识库.json"),
-    path.join(outputRoot, "data", "blue-sapphire-knowledge.json"),
-    { force: true },
-  );
+  await cp(sapphireKnowledgeSource, path.join(outputRoot, "data", "blue-sapphire-knowledge.json"), {
+    force: true,
+  });
 
   console.log(
     JSON.stringify(
