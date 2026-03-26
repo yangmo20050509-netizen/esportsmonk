@@ -1,0 +1,9 @@
+{
+  "node-functions": {
+    "included_files": [
+      "__build/**",
+      "data/**",
+      "assets/**"
+    ]
+  }
+}
