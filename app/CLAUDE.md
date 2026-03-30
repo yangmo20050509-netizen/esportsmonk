@@ -45,3 +45,5 @@
 2026-03-24 18:11 Pages 函数目录改为 cloud-functions，站内 API 走平台支持的标准路径。
 2026-03-26 11:01 app 补回 node-functions 运行时接口目录，修正 EdgeOne Pages 的 API 路由识别。
 2026-03-26 11:07 app 增加 EdgeOne package.json 和 edgeone.json，确保 Node Function 被识别并带上运行时依赖文件。
+2026-03-30 14:52 官网视觉层按 anthropic-style-cn 重写，首页与各视图改为纸面化信息结构。
+2026-03-30 15:01 localhost 预览不再探测 api/site-data，开发态控制台恢复干净。

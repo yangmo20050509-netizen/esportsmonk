@@ -976,8 +976,12 @@ function bindEvents() {
 }
 
 async function loadData() {
+  const shouldProbeLiveApi =
+    typeof window !== "undefined" &&
+    !["localhost", "127.0.0.1"].includes(window.location.hostname);
+
   const candidates = [
-    { url: "./api/site-data", cache: "no-store" },
+    ...(shouldProbeLiveApi ? [{ url: "./api/site-data", cache: "no-store" }] : []),
     { url: `./data/site-data.json?ts=${Date.now()}`, cache: "no-store" },
   ];
 
