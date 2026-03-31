@@ -3,3 +3,5 @@
 2026-03-22 17:22 新增 miniapp-wechat 文档，写清导入、域名、模板消息和当前限制。
 
 2026-03-31 18:15 新增 esportsmonk-project-dossier.md，整理完整项目经历与二面深挖题库。
+
+2026-03-31 19:54 新增 esportsmonk-interview-answers.md，整理腾讯二面口语答法。
